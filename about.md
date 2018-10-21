@@ -16,9 +16,6 @@ This was completed as an indepdendant project during miniterm at [NCSSM](https:/
 
 I will post a write-up of the project soon.
 
-[Here]({{ site.utl }}/resources/piCluster.pdf) is a write-up of the project
-
-
 
 ## Skills
 languages:
