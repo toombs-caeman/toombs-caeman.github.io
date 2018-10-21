@@ -15,7 +15,7 @@ The purpose of this project was to learn the process of setting up a net of comp
 This was completed as an indepdendant project during miniterm at [NCSSM](https://www.ncssm.edu/).
 
 I will post a write-up of the project soon.
-{% comment %}
+
 [Here]({{ site.utl }}/resources/piCluster.pdf) is a write-up of the project
 
 
