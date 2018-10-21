@@ -18,18 +18,6 @@ I will post a write-up of the project soon.
 {% comment %}
 [Here]({{ site.utl }}/resources/piCluster.pdf) is a write-up of the project
 
-### M
-This is a music management utilitiy I wrote that manages a list of URLs and downloads them using [Youtube-dl](https://github.com/rg3/youtube-dl).
-It was originally written as a bash script and I am in the process of making it pure python, since youtube-dl is pure python.
-I am also trying to add album cover support and library-wide gain balancing. I don't believe the current version on github works, which is not very professional, but I have more important things to work on.
-
-[Here](https://github.com/toombs-caeman/M/) is the project.
-{% endcomment %}
-
-### Three Wishes
-This is an android version of the iOS app [Three Wishes for a Meaningful Life ](https://itunes.apple.com/us/app/three-wishes-for-meaningful/id580025118)published by [sentosa](http://sentosa.us/).
-
-Right now it is a very rough prototype, but the plan is to eventually publish this on google play.
 
 
 ## Skills
@@ -40,8 +28,9 @@ languages:
     - pyplot
     - wx
 * java
-* android dev, basic proficiency
-* masm
+* javascript
+    - angular
+    - node
 
 other:
 * extensive experience installing \*nix systems on a variety of hardware
