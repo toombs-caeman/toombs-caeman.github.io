@@ -7,3 +7,4 @@ layout: default.html
 the current layout is {{ page.layout }}
 ## smaller header
 other content blah blah blah
+hook test
