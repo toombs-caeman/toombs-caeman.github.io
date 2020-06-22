@@ -6,16 +6,24 @@ description: Things to fix on the site.
 date: 2020-06-22
 ---
 
+## site fixes
 * check the rss subscription
+* links page
+
+references
+
+* https://jinja.palletsprojects.com/en/2.11.x/templates/
+* https://python-markdown.github.io/reference/
+
+## future posts
 * treadmill problem
 * trilateration problem
-* links page
-* write about how the site runs
+* about how the site runs. write into README?
 
 
-## Meta
-future site ideas
+## future site ideas
 
 * make a real color scheme
 * fix rss feed
 * if github pages ever stops given visitor stats, nginx logs can be used to [provide the same analytics](https://serverfault.com/questions/447370/how-to-count-unique-visitors-in-an-nginx-access-log)
+* [tag filters](https://webdesign.tutsplus.com/tutorials/how-to-build-a-filtering-component-in-pure-css--cms-33111)

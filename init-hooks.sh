@@ -2,11 +2,10 @@
 
 CMD=$(realpath -s ${BASH_SOURCE[0]})
 NAME=$(basename $CMD)
-git_root=$(git rev-parse --show-toplevel) || exit $?
 
-# link to pre-commit and exit if it was called via './init-hooks.sh'
+# link to pre-commit and exit if it was not called via git
 if [[ "$NAME" != "pre-commit" ]]; then
-    ln -s $CMD $git_root/.git/hooks/pre-commit
+    ln -s $CMD .git/hooks/pre-commit
     exit $?
 fi
 

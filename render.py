@@ -7,6 +7,7 @@ from os import path, walk, makedirs, remove
 from jinja2 import Environment, FileSystemLoader
 
 # CONFIG
+config_file = 'config.txt'
 template_dir = 'templates'
 content_dir = 'content'
 render_dir = 'site'
@@ -28,7 +29,7 @@ def render():
     env = Environment(loader=FileSystemLoader(template_dir))
     env.filters['date_to_rfc822'] = date_to_rfc822
     md = markdown.Markdown(extensions=['meta'])
-    with open('config.txt', 'r') as conf:
+    with open(config_file, 'r') as conf:
         md.convert(conf.read())
     SITE_CONFIG = {
         "date": datetime.today(),
