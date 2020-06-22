@@ -14,6 +14,6 @@ posts
 ===
 {%- for _, post in site.pages.items() %}
     {%- if post.date %}
-* {% if post.title %}{{ post.title }}{% endif %} {{site.domain}}/{{ post.origin }} {{ post.date }}
+* {% if post.title %}{{ post.title }}{% endif %} {{ post.date }} {{site.domain}}/{{ post.origin }}
     {%- endif %}
 {%- endfor %}
