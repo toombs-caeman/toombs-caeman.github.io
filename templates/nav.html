@@ -1,0 +1,23 @@
+<!-- https://www.w3schools.com/howto/howto_css_menu_icon.asp -->
+<!-- the order is important here since the css selector uses adjacency to see if the checkbox is checked -->
+<input type="checkbox" id="burger" style="display:none">
+<label for="burger" class="burger" >
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</label>
+
+<nav aria-label="Main Navigation">
+  <ul>
+    <li><a href="#">About</a></li>
+    <li class="dropdown"><span tabindex="-1" class="dropdown__title" id="dropdown-title">Sweets</span>
+      <ul class="dropdown__menu" aria-labelledby="dropdown-title">
+        <li><a href="#">Donuts</a></li>
+        <li><a href="#">Cupcakes</a></li>
+        <li><a href="#">Chocolate</a></li>
+        <li><a href="#">Bonbons</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Order</a></li>
+  </ul>
+</nav>

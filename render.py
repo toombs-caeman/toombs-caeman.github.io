@@ -12,6 +12,7 @@ SITE_CONFIG = {
     "title": "Caeman Toombs",
     "email": "toombs.caeman@gmail.com",
     "github_username": "toombs-caeman",
+    "description": "Just trying things out.",
     "template_dir": template_dir,
     "content_dir": content_dir,
     "render_dir": render_dir,
