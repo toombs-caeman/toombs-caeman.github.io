@@ -1,0 +1,21 @@
+---
+title: HOME
+nav: home
+layout: default.html
+---
+
+{{ site.description }}
+<hr>
+
+<div>
+<ul>
+{% for _, post in site.pages.items() %}
+    {% if post.date %}
+    <a href="/{{ post.url }}">
+    {% if post.title %}{{ post.title }}{% else %}{{ post.url }}{% endif %}
+    </a>
+    <span class="date">{{ post.date }}</span>
+    {% endif %}
+{% endfor %}
+</ul>
+</div>

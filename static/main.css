@@ -33,7 +33,6 @@ body {
     text-color: var(--c0);
 }
 h1 {
-  font-size: 4rem;
   text-align: center;
 }
 
@@ -46,7 +45,7 @@ p {
 }
 
 a:link {
-    color: var(--c12);
+    color: var(--c14);
 }
 a:active {
     color: var(--c4);
@@ -59,14 +58,17 @@ a:visited {
 
 header,
 footer {
-  align: left;
-  font-size: x-small;
+  text-align: left;
+  font-size: small;
 }
 
 
 .icon {
     width: 1.5ch;
     height: 1.5ch;
+}
+.date .view_raw {
+    float: right;
 }
 
 .burger {
@@ -96,8 +98,8 @@ footer {
 }
 
 #burger:checked~nav {
-  -webkit-transform: scaleY(100%);
-  transform: scaleY(100%);
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
   transition: 0.4s;
 }
 #burger:not(:checked)~nav {

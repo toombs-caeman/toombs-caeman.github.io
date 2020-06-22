@@ -1,0 +1,18 @@
+---
+title: DEBUG
+nav: debug
+layout: default.html
+---
+
+# Diagnostic
+this page simply shows the data rendered into the template, for debugging.
+
+## site data
+{% for k, v in site.items() %}
+<p>{{ k }}:{{ v }}</p>
+{% endfor %}
+
+# page data
+{% for k, v in page.items() %}
+<p>{{ k }}:{{ v }}</p>
+{% endfor %}

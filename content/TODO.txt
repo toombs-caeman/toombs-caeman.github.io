@@ -1,0 +1,21 @@
+---
+layout: default.html
+title: TODO
+nav: meta
+description: Things to fix on the site.
+date: 2020-06-22
+---
+
+* check the rss subscription
+* treadmill problem
+* trilateration problem
+* links page
+* write about how the site runs
+
+
+## Meta
+future site ideas
+
+* make a real color scheme
+* fix rss feed
+* if github pages ever stops given visitor stats, nginx logs can be used to [provide the same analytics](https://serverfault.com/questions/447370/how-to-count-unique-visitors-in-an-nginx-access-log)
