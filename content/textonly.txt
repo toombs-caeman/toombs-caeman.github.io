@@ -1,4 +1,3 @@
-nav: Text Only Site
 textonly:
 
 {{ site.description }}

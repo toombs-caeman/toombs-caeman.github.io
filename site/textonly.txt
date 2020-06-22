@@ -1,4 +1,3 @@
-nav: Text Only Site
 textonly:
 
 Just trying things out.
@@ -8,7 +7,6 @@ nav
 * meta https://toombs-caeman.github.io/content/TODO.txt
 * debug https://toombs-caeman.github.io/content/debug.txt
 * home https://toombs-caeman.github.io/content/index.txt
-* Text Only Site https://toombs-caeman.github.io/content/textonly.txt
 
 posts
 ===
