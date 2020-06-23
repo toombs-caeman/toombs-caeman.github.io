@@ -9,7 +9,7 @@ layout: default.html
 
 <div>
 <ul>
-{% for _, post in site.pages.items() %}
+{% for _, post in site.pages %}
     {% if post.date %}
     <a href="/{{ post.url }}">
     {% if post.title %}{{ post.title }}{% else %}{{ post.url }}{% endif %}

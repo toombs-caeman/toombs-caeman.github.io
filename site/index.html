@@ -8,36 +8,37 @@
   <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.jpg"/>
 </head>
   <body>
-    <header>
-        <!-- https://www.w3schools.com/howto/howto_css_menu_icon.asp -->
+    <!-- https://www.w3schools.com/howto/howto_css_menu_icon.asp -->
 <!-- the order is important here since the css selector uses adjacency to see if the checkbox is checked -->
-<input type="checkbox" id="burger" style="display:none">
-<label for="burger" class="burger" >
-    <div class="bar1"></div>
-    <div class="bar2"></div>
-    <div class="bar3"></div>
-</label>
-
-<nav aria-label="Main Navigation">
-    <ul>
-        
+<header>
+    <div class="nav-menu">
+    <input type="checkbox" id="burger" style="display:none">
+    <label for="burger" class="burger" >
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </label>
+    
+    <nav aria-label="Main Navigation">
+        <ul>
             
-        
+                
+                    <li><a href="/site/TODO.html">meta</a></li>
+                
             
-                <li><a href="/site/TODO.html">meta</a></li>
+                
             
-        
+                
+                    <li><a href="/site/index.html">home</a></li>
+                
             
-                <li><a href="/site/index.html">home</a></li>
+                
             
-        
-            
-        
-    </ul>
-</nav>
-<h1>HOME</h1>
-
-    </header>
+        </ul>
+    </nav>
+    </div>
+    <h1 class="title">HOME</h1>
+</header>
     <div class="page-content">
         <p>Just trying things out.
 <hr></p>
@@ -45,12 +46,12 @@
 <ul>
 
     
-
-    
     <a href="/site/TODO.html">
     TODO
     </a>
     <span class="date">2020-06-22</span>
+    
+
     
 
     

@@ -8,6 +8,7 @@ date: 2020-06-22
 
 ## site fixes
 * check the rss subscription
+* fix title centering/nav stuff
 * links page
 
 references

@@ -69,10 +69,11 @@ def render():
                 new_file = new_file.replace('.html', '.txt')
                 html = txt
             pages[new_file] = (html, meta)
-    SITE_CONFIG['pages'] = {k: v[1] for k, v in pages.items()}
+    pages = sorted(pages.items())
+    SITE_CONFIG['pages'] = [(k, v[1]) for k, v in pages]
 
     # render final output
-    for new_file, contents in pages.items():
+    for new_file, contents in pages:
         html, meta = contents
         print('processing', meta['origin'])
         layout = meta.get('layout')

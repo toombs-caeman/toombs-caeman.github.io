@@ -30,7 +30,7 @@
 /* COLORS & FONTS */
 body {
     background-color: var(--c15);
-    text-color: var(--c0);
+    color: var(--c0);
 }
 h1 {
   text-align: center;
@@ -40,10 +40,8 @@ p {
   line-height: 1.5;
 }
 
-.contact {
-    list-style-type: none;
-}
 
+/* link */
 a:link {
     color: var(--c14);
 }
@@ -54,21 +52,34 @@ a:visited {
     color: var(--c5);
 }
 
-/* NAV */
+header {
+  display: flex;
+}
 
 header,
 footer {
   text-align: left;
   font-size: small;
 }
-
+.contact {
+    list-style-type: none;
+}
 
 .icon {
     width: 1.5ch;
     height: 1.5ch;
 }
-.date .view_raw {
+.date {
     float: right;
+}
+
+.title {
+  text-align: center;
+  flex: 2;
+}
+
+.nav-menu {
+  flex: 1;
 }
 
 .burger {
@@ -108,4 +119,3 @@ footer {
   transition: 0.4s;
   height: 0px;
 }
-/* end NAV */

@@ -1,20 +1,23 @@
 <!-- https://www.w3schools.com/howto/howto_css_menu_icon.asp -->
 <!-- the order is important here since the css selector uses adjacency to see if the checkbox is checked -->
-<input type="checkbox" id="burger" style="display:none">
-<label for="burger" class="burger" >
-    <div class="bar1"></div>
-    <div class="bar2"></div>
-    <div class="bar3"></div>
-</label>
-
-<nav aria-label="Main Navigation">
-    <ul>
-        {% for ref, meta in site.pages.items() %}
-            {% if meta.nav %}
-                <li><a href="/{{ref}}">{{ meta.nav }}</a></li>
-            {% endif %}
-        {% endfor %}
-    </ul>
-</nav>
-<h1>{{ page.title }}</h1>
-
+<header>
+    <div class="nav-menu">
+    <input type="checkbox" id="burger" style="display:none">
+    <label for="burger" class="burger" >
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </label>
+    
+    <nav aria-label="Main Navigation">
+        <ul>
+            {% for ref, meta in site.pages %}
+                {% if meta.nav %}
+                    <li><a href="/{{ref}}">{{ meta.nav }}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </nav>
+    </div>
+    <h1 class="title">{{ page.title }}</h1>
+</header>
