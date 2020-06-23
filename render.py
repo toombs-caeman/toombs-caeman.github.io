@@ -23,7 +23,7 @@ def date_to_rfc822(date):
         date = datetime.strptime(date, '%Y-%m-%d')
     ctime = date.ctime()
     return (f'{ctime[0:3]}, {date.day:02d} {ctime[4:7]}'
-            + date.strftime(' %Y %H:%M:%S %z'))
+            + date.strftime(' %Y 00:00:00 %z'))
 
 def render():
     env = Environment(loader=FileSystemLoader(template_dir))
