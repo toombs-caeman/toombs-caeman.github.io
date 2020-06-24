@@ -1,14 +1,56 @@
 ---
 layout: bigf.html
 title: Lessons to unlearn
-start: 2020-06-22
-date: 2020-06-23
+start: 2020-06-24
 source: http://www.paulgraham.com/lesson.html
 ---
-here are some notes
+school was damaging because it taught you to get good grades (hack the test)
+
+* striking if someone cares more about what is learned than the grade
+* learning *for the test* is common. Why study harder before the test?
+* learning is conflated with grades
+* author realized later when running YC
+* map != territory
+* with the test upcoming, time is not best spent reading the best books or learning.
+    better to focus on trivia that seems like a test question
+* ignore deep concepts in favor of 'sharply defined' soundbites
+* also sometimes old tests are available
+* the mismatch between learning/good grades behavior forces a choice between the two
+* malthusian trap, everyone must 'play the game' or they won't get the grades
+
+so why are tests so hackable?
+
+* artificially imposed tests (by authority) are hackable by default, since map != territory
+* it takes effort to counteract this (by authority) which usually doesn't happen
+* the artificiality of high school and the size of the test-prep industry are proportional to the hackability of entrance exams
+* the measure of entrance exams is also wrong (taste rather than intelligence)
+* high schoolers feel alienated b/c (as a result) their life is so artificial
+
+story ab advising startup founders at YC
+
+* young founders overcomplicate
+* 'hack to raise money?' -> 'just make it a good investment' was met with confusion
+* 'what makes a good investement?' -> 'growth, ideally in revenue, otherwise users'
+    immediately sprung to growth hacking, when 'make a good product' is better
+* astonishment at simplicity, rejection
+* they had never faced a non-artificial test, and thought that's how the world worked. money must be the test.
+
+* the aversion to big companies is rooted in the culture of winning by hacking bad tests.
+* naming the elephant as an antidote
+* points to education reform, how an established company can 'become more like a startup'
+* interviewee question 'to what extent do you win this kind of work by hacking bad tests?'
+
+first approximation of bad tests
+* tests by authority are bad first, only unhackable through great effort
+* misapplying/ over generalizing results
+
+you may like hacking bad tests, but most people dislike the work
+
+there's an assumption that 'lots of money' -> 'bad tests in industry', but while that was true, now it's not.
+* used to be two paths, executive or engineer
+* hacking becomes less important as the link between work and authority erodes (flattening heirarchy)
+
 
 Recon
 -----
-
-here's the recreated content
 

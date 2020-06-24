@@ -2,7 +2,7 @@
 <html>
   <head>
   <meta charset="utf-8">
-  <title>TODO</title>
+  <title>About this site</title>
   <link rel="stylesheet" type="text/css" href="/static/main.css">
   <link rel="alternate" type="application/rss+xml" title="Caeman Toombs" href="/content/feed.xml">
   <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.jpg"/>
@@ -43,31 +43,37 @@
         </ul>
     </nav>
     </div>
-    <h1 class="title">TODO</h1>
+    <h1 class="title">About this site</h1>
 </header>
     <div class="page-content">
-        <h2>site fixes</h2>
+        <p>This site is served using <a href="https://pages.github.com/">github pages</a> for convenience.
+It is entirely static: No server side processing, no client side javascript (for now).
+Pages are rendered as part of the git pre-commit hook.
+You can view the <a href="https://github.com/toombs-caeman/toombs-caeman.github.io">project repo</a> here.</p>
+<p>If I ever have to move away from github for some reason, the site could be hosted as simply as nginx or httpd serving an up-to-date copy of the repository.
+Nginx logs can be captured to <a href="https://serverfault.com/questions/447370/how-to-count-unique-visitors-in-an-nginx-access-log">provide the same analytics</a>
+available on github, namely unique visitors per week. I use flask as the development server, but that's just me being lazy.</p>
+<h2>site fixes</h2>
 <ul>
 <li>check the rss subscription</li>
-<li>fix title centering/nav stuff</li>
-<li>links page</li>
 </ul>
 <p>references</p>
 <ul>
 <li>https://jinja.palletsprojects.com/en/2.11.x/templates/</li>
 <li>https://python-markdown.github.io/reference/</li>
 </ul>
-<h2>future posts</h2>
+<h2>future content</h2>
 <ul>
 <li>treadmill problem</li>
 <li>trilateration problem</li>
-<li>about how the site runs. write into README?</li>
+<li>more <a href="/site/bigf/index.html">bigf</a></li>
+<li>more <a href="/site/links.html">links</a></li>
+<li>links page</li>
 </ul>
 <h2>future site ideas</h2>
 <ul>
 <li>make a real color scheme</li>
-<li>fix rss feed</li>
-<li>if github pages ever stops given visitor stats, nginx logs can be used to <a href="https://serverfault.com/questions/447370/how-to-count-unique-visitors-in-an-nginx-access-log">provide the same analytics</a></li>
+<li>if github pages ever stops given visitor stats, nginx logs can be used to </li>
 <li><a href="https://webdesign.tutsplus.com/tutorials/how-to-build-a-filtering-component-in-pure-css--cms-33111">tag filters</a></li>
 </ul>
     </div>
@@ -82,7 +88,7 @@
       <li><a href="/content/TODO.txt">txt page</a></li>
       <li><a href="/site/textonly.txt">text site</a></li>
   </ul>
-    <p>Last updated 2020-06-23</p>
+    <p>Last updated 2020-06-24</p>
 </footer>
   </body>
 </html>

@@ -4,7 +4,10 @@ nav: benjamin franklin
 layout: default.html
 ---
 
+TODO description of the method
+
 <hr>
+<h2>Finished Reconstructions</h2>
 
 <div>
 <ul>
@@ -17,4 +20,19 @@ layout: default.html
     {% endif %}
 {% endfor %}
 </ul>
+
+
+<h2>Unfinished</h2>
+
+<ul>
+{% for _, post in site.pages %}
+    {% if not post.date and 'bigf/' in post.url %}
+    <a href="/{{ post.url }}">
+    {% if post.title %}{{ post.title }}{% else %}{{ post.url }}{% endif %}
+    </a>
+    <span class="date">{{ post.date }}</span>
+    {% endif %}
+{% endfor %}
+</ul>
+
 </div>

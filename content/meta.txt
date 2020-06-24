@@ -1,0 +1,32 @@
+---
+layout: default.html
+title: Meta
+nav: meta
+description: Things to fix on the site.
+date: 2020-06-22
+---
+
+This site is served using [github pages](https://pages.github.com/) and is entirely static.
+There's no server side processing and no client side javascript (for now). Pages are rendered as part of the git pre-commit hook.
+You can view the [project repo](https://github.com/toombs-caeman/toombs-caeman.github.io) here.
+
+If I ever have to move away from github for some reason, the site could be hosted as simply as nginx or httpd serving an up-to-date copy of the repository.
+Nginx logs can be captured to [provide the same analytics](https://serverfault.com/questions/447370/how-to-count-unique-visitors-in-an-nginx-access-log)
+available on github, namely unique visitors per week. I use flask as the development server, but that's just me being lazy.
+
+
+
+## future content
+* treadmill problem
+* trilateration problem
+* ricer
+* more [bigf](/{{site.render_dir}}/bigf/index.html)
+* more [links](/{{site.render_dir}}/links.html)
+
+## future site features/changes/fixes
+* [tag filters](https://webdesign.tutsplus.com/tutorials/how-to-build-a-filtering-component-in-pure-css--cms-33111)
+* a real color scheme
+* check the rss subscription
+
+
+
