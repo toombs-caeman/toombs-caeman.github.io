@@ -27,6 +27,10 @@ available on github, namely unique visitors per week. I use flask as the develop
 * [tag filters](https://webdesign.tutsplus.com/tutorials/how-to-build-a-filtering-component-in-pure-css--cms-33111)
 * a real color scheme
 * check the rss subscription
+* bash only rendering
+    - https://google.github.io/styleguide/htmlcssguide.html
+    - https://gist.github.com/rhysrhaven/7549226
+    - https://www.gnu.org/software/bash/manual/html_node/Pattern-Matching.html#Pattern-Matching
 
 
 

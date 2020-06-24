@@ -4,7 +4,24 @@ nav: benjamin franklin
 layout: default.html
 ---
 
-TODO description of the method
+This method for improving writing was described in Benjamin Franklin's Autobiography
+
+dissect and reconstruct
+-----------------------
+
+1. Take a short piece of writing, whose style you respect, and break it down to bullet points of the main ideas.
+2. Set both aside for a few days at least
+3. From your notes only, try to re-express the piece as completely as the original
+4. Compare your recreation with the original, correcting any faults
+    * note any points missed in your summary
+    * note awkwardness in phrasing, or dullness of vocabulary in the recreation
+
+For more complete mastery:
+
+* jumble the bullet points and compare and recreate the structure of the essay as well
+* do not keep notes, but keep the summary in memory only
+* instead, record your recreation as a speech to force a single chance at recreation
+* convert the prose to verse instead of bullets to train vocabulary and strength of metaphor and rhythm
 
 <hr>
 <h2>Finished Reconstructions</h2>
@@ -13,10 +30,12 @@ TODO description of the method
 <ul>
 {% for _, post in site.pages %}
     {% if post.date and 'bigf/' in post.url %}
+    <li>
     <a href="/{{ post.url }}">
     {% if post.title %}{{ post.title }}{% else %}{{ post.url }}{% endif %}
     </a>
     <span class="date">{{ post.date }}</span>
+    </li>
     {% endif %}
 {% endfor %}
 </ul>
@@ -26,11 +45,13 @@ TODO description of the method
 
 <ul>
 {% for _, post in site.pages %}
-    {% if not post.date and 'bigf/' in post.url %}
+    {% if not post.date and 'bigf/' in post.url and post.url != page.url %}
+    <li>
     <a href="/{{ post.url }}">
     {% if post.title %}{{ post.title }}{% else %}{{ post.url }}{% endif %}
     </a>
     <span class="date">{{ post.date }}</span>
+    </li>
     {% endif %}
 {% endfor %}
 </ul>
