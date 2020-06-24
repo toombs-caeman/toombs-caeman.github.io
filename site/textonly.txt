@@ -12,3 +12,4 @@ posts
 ===
 * TODO 2020-06-22 https://toombs-caeman.github.io/content/TODO.txt
 * Lessons to unlearn 2020-06-23 https://toombs-caeman.github.io/content/bigf/pglesson.txt
+* links 2020-06-22 https://toombs-caeman.github.io/content/links.txt

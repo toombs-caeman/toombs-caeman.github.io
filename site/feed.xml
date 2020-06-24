@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Caeman Toombs</title>
+    <description>Just trying things out.</description>
+    <link>https://toombs-caeman.github.io/</link>
+    <atom:link href="https://toombs-caeman.github.io/site/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 22 Jun 2020 00:00:00 </pubDate>
+    <lastBuildDate>Mon, 22 Jun 2020 00:00:00 </lastBuildDate>
+    
+        
+            <item>
+              <title>TODO</title>
+              <description>Things to fix on the site.</description>
+              <pubDate>Mon, 22 Jun 2020 00:00:00 </pubDate>
+              <link>https://toombs-caeman.github.io/site/TODO.html</link>
+              <guid isPermaLink="true">site/TODO.html</guid>
+              
+            </item>
+        
+    
+        
+    
+        
+    
+        
+            <item>
+              <title>links</title>
+              <description></description>
+              <pubDate>Mon, 22 Jun 2020 00:00:00 </pubDate>
+              <link>https://toombs-caeman.github.io/site/links.html</link>
+              <guid isPermaLink="true">site/links.html</guid>
+              
+            </item>
+        
+    
+        
+    
+  </channel>
+</rss>
