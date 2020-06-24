@@ -16,7 +16,8 @@ static_dir = 'static'
 def lsR(p):
     for dp, dn, filenames in walk(p):
         for f in filenames:
-            yield path.join(dp, f)
+            if path.splitext(f)[-1] == '.txt':
+                yield path.join(dp, f)
 
 def date_to_rfc822(date):
     if isinstance(date, str):
@@ -49,18 +50,20 @@ def render():
     name_map = {}
     for file in lsR(content_dir):
         sp = path.split(file)
-        new_file = path.join(render_dir, *sp[1:-1], sp[-1].replace(".txt", ".html"))
+        new_file = file.replace(content_dir, render_dir, 1).replace(".txt", ".html", 1)
         name_map[file] = new_file
         # make sure the directories exist
         makedirs(
-            path.join(*path.split(new_file)[:-1]),
+            path.split(new_file)[0],
             exist_ok=True,
         )
+    print(name_map)
 
     # convert raw markdown and collect site map
     pages = {}
     for file, new_file in name_map.items():
         with open(file, 'r') as source:
+            print('processing', file)
             txt = source.read()
             html = md.convert(txt)
             meta = {k: "\n".join(v) for k, v in md.Meta.items()}
@@ -75,7 +78,6 @@ def render():
     # render final output
     for new_file, contents in pages:
         html, meta = contents
-        print('processing', meta['origin'])
         layout = meta.get('layout')
         template = None
         if layout:

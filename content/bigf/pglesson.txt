@@ -1,0 +1,14 @@
+---
+layout: bigf.html
+title: Lessons to unlearn
+start: 2020-06-22
+date: 2020-06-23
+source: http://www.paulgraham.com/lesson.html
+---
+here are some notes
+
+Recon
+-----
+
+here's the recreated content
+
