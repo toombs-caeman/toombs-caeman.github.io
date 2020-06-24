@@ -16,7 +16,8 @@ static_dir = 'static'
 def lsR(p):
     for dp, dn, filenames in walk(p):
         for f in filenames:
-            yield path.join(dp, f)
+            if f.endswith(".txt"):
+                yield path.join(dp, f)
 
 def date_to_rfc822(date):
     if isinstance(date, str):
@@ -24,6 +25,9 @@ def date_to_rfc822(date):
     ctime = date.ctime()
     return (f'{ctime[0:3]}, {date.day:02d} {ctime[4:7]}'
             + date.strftime(' %Y 00:00:00 %z'))
+
+def process_meta(m):
+    return {k:"\n".join(v) for k, v in m.items()}
 
 def render():
     env = Environment(loader=FileSystemLoader(template_dir))
@@ -37,7 +41,7 @@ def render():
         "content_dir": content_dir,
         "render_dir": render_dir,
         "static_dir": static_dir,
-        **{k:"\n".join(v) for k, v in md.Meta.items()},
+        **process_meta(md.Meta),
 
     }
 
@@ -63,7 +67,7 @@ def render():
         with open(file, 'r') as source:
             txt = source.read()
             html = md.convert(txt)
-            meta = {k: "\n".join(v) for k, v in md.Meta.items()}
+            meta = process_meta(md.Meta)
             meta.update(origin=file, url=new_file)
             if 'textonly' in meta:
                 new_file = new_file.replace('.html', '.txt')

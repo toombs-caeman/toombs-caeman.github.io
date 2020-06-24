@@ -4,7 +4,8 @@
       <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
       <li>{% include 'icon-github.html' %} </li>
       <li>subscribe <a href="/{{ site.render_dir }}/feed.xml">via RSS</a></li>
-      <li><a href="/{{ site.render_dir }}/textonly.txt">text only</a></li>
+      <li><a href="/{{ page.origin }}">txt page</a></li>
+      <li><a href="/{{ site.render_dir }}/textonly.txt">text site</a></li>
   </ul>
     <p>Last updated {{ site.date.strftime("%Y-%m-%d") }}</p>
 </footer>

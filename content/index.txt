@@ -11,10 +11,12 @@ layout: default.html
 <ul>
 {% for _, post in site.pages %}
     {% if post.date %}
+    <li>
     <a href="/{{ post.url }}">
     {% if post.title %}{{ post.title }}{% else %}{{ post.url }}{% endif %}
     </a>
     <span class="date">{{ post.date }}</span>
+    </li>
     {% endif %}
 {% endfor %}
 </ul>

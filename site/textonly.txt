@@ -10,3 +10,4 @@ nav
 posts
 ===
 * TODO 2020-06-22 https://toombs-caeman.github.io/content/TODO.txt
+* links 2020-06-22 https://toombs-caeman.github.io/content/links.txt
