@@ -1,0 +1,54 @@
+#!/bin/bash
+
+# MDOWN CONFIG
+MDOWN="tools/mdown.awk -v Clean=1 -v StyleSheet=/site/md.css -v Pretty=1"
+
+# always run from the project root
+cd "$(git rev-parse --show-toplevel)" || exit $?
+
+# import
+. tools/html.sh
+
+# print the value of first variable that's non-empty
+opt() { while [[ -z "${!1}" ]]; do shift; done; echo "${!1}"; }
+
+# add content to the end of input
+defer() { echo "$@" >> $SOURCE; }
+
+# import and do pre-processing pass
+import() {
+    while read -a line; do
+        case "$line" in
+          \&) import "content/${line[@]:1}" ;;
+          \~) defer  "${line[@]:1}" ;;
+          !)  eval   "${line[@]:1}" ;;
+          *)  echo   "${line[@]}"   ;;
+        esac
+    done < $1
+}
+
+render() {
+    # copy source so we can modify it with the importor
+    SOURCE=$(mktemp)
+    cp $1 $SOURCE
+    (import "$SOURCE" | $MDOWN)
+    # cleanup tempfile
+    rm $SOURCE
+}
+
+
+# CORE
+rm -r site/*
+PAGES="$(cd content; ls **/*.txt)"
+for page in "${PAGES[@]}"; do
+  mkdir -p "$(dirname "$page")"
+  url="site/${page/%txt/html}"
+  render "content/$page" > "$url"
+done
+
+# GIT PRE-COMMIT HOOK
+if [[ "pre-commit" != "${0##*/}" ]]; then
+  ln -fs "${0##*/}" .git/hooks/pre-commit;
+else
+  git add site/
+fi
