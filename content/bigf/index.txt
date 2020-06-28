@@ -5,7 +5,6 @@ This method for improving writing was described in Benjamin Franklin's Autobiogr
 
 dissect and reconstruct
 -----------------------
-`adsf`
 
 1. Take a short piece of writing, whose style you respect, and break it down to bullet points of the main ideas.
 2. Set both aside for a few days at least
@@ -38,7 +37,7 @@ done`
 
 <ul>
 `for page in $pages; do \
-    if [[ "$page" == "bigf/"* && "$page" != "bigf/index.txt" ]] && quietly query $page date;then \
+    if [[ "$page" == "bigf/"* && "$page" != "bigf/index.txt" ]] && query $page date >/dev/null;then \
     echo "<li>"; page_link; \
     fi; done`
 </ul>

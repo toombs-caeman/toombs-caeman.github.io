@@ -1,8 +1,10 @@
 #!/bin/bash
+self="$(realpath -s "${BASH_SOURCE[0]}")"
 # only run from the project root
 cd "$(git rev-parse --show-toplevel)" || exit $?
 
 # CORE FUNCTIONS
+log() { echo "${self##*/}:${FUNCNAME[1]}: $*" >&2; }
 tag() {
   # extends html syntax to give it a similar syntax to css
   # <p #myid .myclass .class2 -> yo
@@ -37,7 +39,6 @@ tag() {
   done < /dev/stdin
 }
 
-log() { echo "${0##*/}:${FUNCNAME[1]}: $*" >&2; }
 rfc822() { date -R ${1:+-jf %Y-%m-%d $1}; }
 url_for() { echo "site/${1/%txt/html}"; }
 emit() { echo "$@" | tag; }
@@ -108,15 +109,14 @@ render_site() {
     url="$(url_for $page)"
     log "content/$page --> $url"
     mkdir -p "$(dirname "${url#/}")"
-    include "$page" | err | tag | err > "$url"
+    include "$page" | tag > "$url"
   done
   # render rss
   log "content/feed.xml --> site/feed.xml"
-  include feed.xml | err > site/feed.xml
+  include feed.xml > site/feed.xml
   # render css
   log "content/*.css --> site/min.css"
-  find -E content/ -regex ".*\.css" -exec cat {} + | css_minify | err >> "site/min.css"
-  return $err_
+  find -E content/ -regex ".*\.css" -exec cat {} + | css_minify  >> "site/min.css"
 }
 
 serve() {
@@ -130,12 +130,12 @@ serve() {
 }
 
 # MAIN
-case "${1:-${0##*/}}" in
+case "${1:-${self##*/}}" in
   init)
     # initialize self as pre-commit hook
-    ln -fs $0 .git/hooks/pre-commit ;;
+    ln -fs "$self" .git/hooks/pre-commit ;;
   render) render_site ;;
-  pre-commit) pre_commit
+  pre-commit)
     # run as git pre-commit hook
     render_site || exit $?
     git add site/
