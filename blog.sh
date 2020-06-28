@@ -6,23 +6,25 @@ cd "$(git rev-parse --show-toplevel)" || exit $?
 
 # CORE FUNCTIONS
 log() { echo "${self##*/}:${FUNCNAME[1]}: $*" >&2; }
+match() { [[ "$1" =~ $2 ]] && match=("${BASH_REMATCH[@]}"); }
 tag() {
   # extends html syntax to give it a similar syntax to css
   # <p #myid .myclass .class2 -> yo
   # <p id="myid" class="myclass class2"> yo</p>
   # the closing tag is inserted at the end of the line when '->' is used
   # in the opening tag
-  local pattern="^([^<]*)<([[:alnum:]]+)(([^>]?[^->])*)([-]?)>"
+  # TODO edit the whole line and emit at the end
+  # TODO subsume into include()
   while read line; do
     local close=""
-    while [[ "$line" =~ $pattern ]]; do
+    while match "$line" "^([^<]*)<([[:alnum:]]+)(([^>]?[^->])*)([-]?)>"; do
       # emit everything before the tag
-      echo -n "${BASH_REMATCH[1]}"
-      local tag="${BASH_REMATCH[2]}"
-      local raw_attr="${BASH_REMATCH[3]}"
-      close="${BASH_REMATCH[${#BASH_REMATCH[@]}-1]:+"</$tag>"}$close"
+      echo -n "${match[1]}"
+      local tag="${match[2]}"
+      local raw_attr="${match[3]}"
+      close="${match[${#match[@]} -1]:+"</$tag>"}$close"
       # chop the line
-      line="${line#*"${BASH_REMATCH[0]}"}"
+      line="${line#*"${match[0]}"}"
       # process attributes
       local id=''
       local class=()
@@ -45,37 +47,63 @@ url_for() { echo "site/${1/%txt/html}"; }
 emit() { echo "$@" | tag; }
 ?() { echo "${!@}"; }
 page_link() { emit "<a href=\"/$(url_for ${1:-$page})\"->$(query ${1:-$page} title || echo "${1:-$page}")"; }
+li_date_page() {
+  date="$(query ${1:-$page} date)"
+  [[ -n "$date" ]] && echo "<li>$(page_link ${1:-$page})<span class=\"date\">$date</span>"
+}
 
 query() {
   # prints the value of $2 as defined in file $1
-  local pattern="\`($2=[^\`]*)\`"
   while read line; do
-    [[ "$line" =~ $pattern ]] && eval "${BASH_REMATCH[1]}" && echo "${!2}" && return
+    match "$line" "\`($2=[^\`]*)\`" && eval "${match[1]}" && echo "${!2}" && return
   done < "content/$1"
   return 1 # return 1 if it wasn't defined
 }
+
 include() {
   # macros are denoted with backticks and are bash expressions
   #   because of this backticks are not allowed in macros
   # layout are denoted by setting the $layout in a macro like `layout=default`
   # layout receive the rendered file in $content (accessed like `? content`)
   local tmp="$(mktemp)"
-  # TODO markdown pass
-  # TODO    handle things like header and list shorhand
-  # macro pass
   local layout=""
-  local pattern='^([^`]*)`([^`]*)`'
   while read line; do
-    while [[ "$line" =~ $pattern ]]; do
-      echo -n "${BASH_REMATCH[1]}"
-      if [[ "${BASH_REMATCH[1]}" == *"->"* ]]; then
+    # paragraph and horizontal rules
+    # this match comes first, and intentionally matches an empty string
+    # which means that following patterns don't need to worry about that
+    if match "$line" '^([-*]*)$'; then
+      if (( ${#match[0]} )); then
+       	line="<hr>"
+      else
+	line="<p>"
+      fi
+    fi 
+    # lists
+    # TODO handle list depth, start and stop
+    if match "$line" '^([[:space:]]*)[-*] '; then
+      line="${match[1]}<li>${line#"${match[0]}"}"
+    fi 
+    # header
+    if match "$line" '^([[:space:]]*)([#]+)' ; then
+      line="${match[1]}<h${#match[2]}->${line#"${match[0]}"}"
+    fi 
+    # links
+    while match "$line" '^([^]]*)\[([^]]+)\]\(([^)]*)\)'; do
+      line="${match[1]}<a target="_blank" href=\"${match[3]}\">${match[2]}</a>${line#"${match[0]}"}"
+    done
+
+    # macro pass
+    # TODO modify the line in place, only emit at the end
+    while match "$line" '^([^`]*)`([^`]*)`'; do
+      echo -n "${match[1]}"
+      if [[ "${match[1]}" == *"->"* ]]; then
         # incase there's a self closing tag, put everything
         # on the same line.
-        eval "${BASH_REMATCH[2]}" | tr "\n" " "
+        eval "${match[2]}" | tr "\n" " "
       else
-        eval "${BASH_REMATCH[2]}"
+        eval "${match[2]}"
       fi
-      line="${line#*"${BASH_REMATCH[0]}"}"
+      line="${line#*"${match[0]}"}"
     done
     echo "$line"
   done < "content/$1" > "$tmp"
@@ -90,11 +118,11 @@ include() {
 
 css_minify() {
   local X="$(cat - | tr "\n" " ")"
-  while [[ "$X" =~ \/\*([^*]*|\*[^\/])*\*\/ ]]; do X="${X/"${BASH_REMATCH[0]}"}"; done
-  while [[ "$X" =~ ^([^[:space:]]*)[[:space:]]+(.?) ]]; do
-    echo -n "${BASH_REMATCH[1]}"
-    X="${X/"${BASH_REMATCH[0]}"/${BASH_REMATCH[2]}}"
-    [[ "${BASH_REMATCH[1]: -1}${BASH_REMATCH[2]}" =~ ^[[:alnum:]]*$ ]] && echo -n " "
+  while match "$X" '\/\*([^*]*|\*[^\/])*\*\/'; do X="${X/"${match[0]}"}"; done
+  while match "$X" '^([^[:space:]]*)[[:space:]]+(.?)'; do
+    echo -n "${match[1]}"
+    X="${X/"${match[0]}"/${match[2]}}"
+    [[ "${match[1]: -1}${match[2]}" =~ ^[[:alnum:]]*$ ]] && echo -n " "
   done
   return 0
 }
@@ -130,7 +158,8 @@ daemon() {
     local changed="$(cd content; find * -type f -newer "$tmp")"
     touch "$tmp"
     if [[ -n "$changed" ]]; then
-      render_site > /dev/null && log "reload complete: $changed"
+      render_site > /dev/null && log "reload complete: $changed" | tr "\n" " "
+      echo
     fi
     done
 }

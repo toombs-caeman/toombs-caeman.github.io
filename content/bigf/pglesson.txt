@@ -1,9 +1,8 @@
----
-layout: bigf.html
-title: Lessons to unlearn
-start: 2020-06-24
-source: http://www.paulgraham.com/lesson.html
----
+`title="Lessons to unlearn"`
+`layout=default`
+`start=2020-06-24`
+`source=http://www.paulgraham.com/lesson.html`
+
 school was damaging because it taught you to get good grades (hack the test)
 
 * striking if someone cares more about what is learned than the grade
@@ -50,7 +49,5 @@ there's an assumption that 'lots of money' -> 'bad tests in industry', but while
 * used to be two paths, executive or engineer
 * hacking becomes less important as the link between work and authority erodes (flattening heirarchy)
 
-
-Recon
------
+## Reconstructed `? date`
 

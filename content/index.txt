@@ -1,11 +1,12 @@
 `title=HOME`
 `layout=default`
 
-Just trying things out.
+`include ../README.md`
 
 <hr>
+
 <ul>
 `for page in $pages; do \
-[[ "$page" == "index.txt" ]] && continue; echo "<li>"; page_link; \
+[[ "$page" == "index.txt" ]] && continue; li_date_page; \
 done`
 </ul>

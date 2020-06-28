@@ -40,10 +40,8 @@
 
 nav {
     transform: scaleY(0);
-}
-
-#burger:checked~nav {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
     transition: 0.4s;
+}
+#burger:checked~nav {
+    transform: scaleY(1);
 }
