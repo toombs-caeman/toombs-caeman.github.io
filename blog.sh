@@ -1,4 +1,5 @@
 #!/bin/bash
+
 self="$(realpath -s "${BASH_SOURCE[0]}")"
 # only run from the project root
 cd "$(git rev-parse --show-toplevel)" || exit $?
@@ -116,16 +117,21 @@ render_site() {
   include feed.xml > site/feed.xml
   # render css
   log "content/*.css --> site/min.css"
-  find -E content/ -regex ".*\.css" -exec cat {} + | css_minify  >> "site/min.css"
+  find content/ -name "*.css" -exec cat {} + | css_minify  >> "site/min.css"
 }
 
-serve() {
+daemon() {
   render_site || exit $?
   log starting
-  trap 'kill $server_pid; exit' SIGINT
+  trap 'kill $server_pid;rm $tmp; exit' SIGINT
+  tmp="$(mktemp)"
   python -m SimpleHTTPServer 5000 & server_pid="$!"
   while sleep 1; do
-    ( [[ -n "$(find content/ -type f -mtime 1s)" ]] && render_site &)
+    local changed="$(cd content; find * -type f -newer "$tmp")"
+    touch "$tmp"
+    if [[ -n "$changed" ]]; then
+      render_site > /dev/null && log "reload complete: $changed"
+    fi
     done
 }
 
@@ -140,5 +146,5 @@ case "${1:-${self##*/}}" in
     render_site || exit $?
     git add site/
     ;;
-  *) serve ;;
+  *) daemon ;;
 esac
