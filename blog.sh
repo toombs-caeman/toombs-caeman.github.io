@@ -2,6 +2,7 @@
 # only run from the project root
 cd "$(git rev-parse --show-toplevel)" || exit $?
 
+# CORE FUNCTIONS
 tag() {
   # extends html syntax to give it a similar syntax to css
   # <p #myid .myclass .class2 -> yo
@@ -93,7 +94,10 @@ css_minify() {
     X="${X/"${BASH_REMATCH[0]}"/${BASH_REMATCH[2]}}"
     [[ "${BASH_REMATCH[1]: -1}${BASH_REMATCH[2]}" =~ ^[[:alnum:]]*$ ]] && echo -n " "
   done
+  return 0
 }
+
+log() { echo "${0##*/}:${FUNCNAME[1]}: $*"; }
 
 render_site() {
   # clean
@@ -104,31 +108,37 @@ render_site() {
     url="$(url_for $page)"
     log "content/$page --> $url"
     mkdir -p "$(dirname "${url#/}")"
-    include "$page" | tag > "$url"
+    include "$page" | err | tag | err > "$url"
   done
   # render rss
   log "content/feed.xml --> site/feed.xml"
-  include feed.xml > site/feed.xml
+  include feed.xml | err > site/feed.xml
   # render css
   log "content/*.css --> site/min.css"
-  find -E content/ -regex ".*\.css" -exec cat {} +  >> "site/min.css"
+  find -E content/ -regex ".*\.css" -exec cat {} + | css_minify | err >> "site/min.css"
+  return $err_
 }
 
-daemon() {
+serve() {
   render_site || exit $?
   log starting
   trap 'kill $server_pid; exit' SIGINT
   python -m SimpleHTTPServer 5000 & server_pid="$!"
   while sleep 1; do
-    ( [[ ! -z "$(find content/ -type f -mtime 1s)" ]] && render_site &)
+    ( [[ -n "$(find content/ -type f -mtime 1s)" ]] && render_site &)
     done
 }
 
 # MAIN
-if [[ "pre-commit" != "${0##*/}" ]]; then
-  ln -fs tools/blog .git/hooks/pre-commit
-  daemon
-else
-  render_site && git add site/
-fi
-
+case "${1:-${0##*/}}" in
+  init)
+    # initialize self as pre-commit hook
+    ln -fs $0 .git/hooks/pre-commit ;;
+  render) render_site ;;
+  pre-commit) pre_commit
+    # run as git pre-commit hook
+    render_site || exit $?
+    git add site/
+    ;;
+  *) serve ;;
+esac
