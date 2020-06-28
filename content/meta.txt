@@ -6,6 +6,12 @@ description: Things to fix on the site.
 date: 2020-06-22
 ---
 
+<blockquote cite="somebody.somewhere"-> You *NEED* to use Jekyll|Wordpress|Ghost|etc. in order to maintain your blog!
+Well if you want to enjoy the experience then maybe. But if you'd rather watch on forlornly as sections of your site break
+for no apparent reason and spend hours upon hours debugging regular expressions when you could be watching grass grow then have I got just the thing for you.
+Introducing <a href="/tools/blog.sh"->Blog.bash
+, a static site generator that's pure bs (bourne shell)
+
 This site is served using [github pages](https://pages.github.com/) and is entirely static.
 There's no server side processing and no client side javascript (for now). Pages are rendered as part of the git pre-commit hook.
 You can view the [project repo](https://github.com/toombs-caeman/toombs-caeman.github.io) here.
