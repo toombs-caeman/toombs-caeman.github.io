@@ -9,3 +9,4 @@
 ! for page in $pages; do     d="$(query $page date)" &&     item "$(title "$(query $page title)" --)" "$(pubDate "$(rfc822 "$d")" --)" $(link $(url_for $page) --) --;       done
 </channel>
 </rss>
+<p>

@@ -5,8 +5,4 @@
 
 <hr>
 
-<ul>
-`for page in $pages; do \
-[[ "$page" == "index.txt" ]] && continue; li_date_page; \
-done`
-</ul>
+<ul-> `for page in $pages; do [[ "$page" == "index.txt" ]] && continue; li_date_page; done`

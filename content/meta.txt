@@ -24,8 +24,8 @@ available on github, namely unique visitors per week. I use python for the devel
 * treadmill problem
 * trilateration problem
 * ricer
-* more here `page_link bigf/index.html`
-* more here `page_link bigf/index.html`
+* more here `page_link links.txt`
+* more here `page_link bigf/index.txt`
 </ul>
 
 ## future site features/changes/fixes
