@@ -1,5 +1,6 @@
-`title="Benjamin Franklin Method"`
-`layout=default`
+title="Benjamin Franklin Method"
+layout=default
+===
 
 This method for improving writing was described in Benjamin Franklin's Autobiography
 

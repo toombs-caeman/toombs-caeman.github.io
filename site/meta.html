@@ -9,12 +9,12 @@
 
 <header>
 <div class="nav-menu">
-<input id="burger" type='checkbox' style='display:none'>
-<label class="burger" for='burger'> <div class=bbar1><div class=bar1></div></div>
+    <input id="burger" type='checkbox' style='display:none'>
+    <label class="burger" for='burger'> <div class=bbar1><div class=bar1></div></div>
 <div class=bbar2><div class=bar2></div></div>
 <div class=bbar3><div class=bar3></div></div></label>
-<nav aria-label="Main Navigation"> <ul> <li>
-<a href="/site/index.html">HOME</a>
+    <nav aria-label="Main Navigation"> <ul> <li>
+<a href="/site/index.html"></a>
 <li>
 <a href="/site/bigf/index.html">Benjamin Franklin Method</a></ul></nav>
 </div>
@@ -23,48 +23,65 @@
 <p>
 <p>
 <div class="page-content">
-
-
-
-<p>
+    <p>
 <blockquote cite="somebody.somewhere"> You *NEED* to use Jekyll|Wordpress|Ghost|etc. in order to maintain your blog! 	-- Somebody, probably</blockquote>
 Well if you want to enjoy the experience then maybe. But if you'd rather watch on forlornly as sections of your site break
 for no apparent reason and spend hours upon hours debugging regular expressions when you could be watching grass grow then have I got just the thing for you.
 <p>
-Introducing <a target=_blank href="https://github.com/toombs-caeman/toombs-caeman.github.io/blob/master/blog.sh">blog.sh</a>
+Introducing <a target="_blank" href="https://github.com/toombs-caeman/toombs-caeman.github.io/blob/master/blog.sh">blog.sh</a>
 , a static site generator that's pure bs (bourne shell)
 <p>
-This site is served using <a target=_blank href="https://pages.github.com/">github pages</a> and is entirely static.
+This site is served using <a target="_blank" href="https://pages.github.com/">github pages</a> and is entirely static.
 There's no server side processing and no client side javascript (not even for the burger animation). Pages are rendered as part of the git pre-commit hook.
 <p>
 If I ever have to move away from github for some reason, the site could be hosted as simply as nginx or httpd serving an up-to-date copy of the repository.
-Nginx logs can be captured to <a target=_blank href="https://serverfault.com/questions/447370/how-to-count-unique-visitors-in-an-nginx-access-log">provide the same analytics</a>
+Nginx logs can be captured to <a target="_blank" href="https://serverfault.com/questions/447370/how-to-count-unique-visitors-in-an-nginx-access-log">provide the same analytics</a>
 available on github, namely unique visitors per week. I use python for the development server, but that's just me being lazy.
 <p>
+<h2> features</h2>
 <p>
+Templating
+<ul><li>based on Markdown
+<ul><li>blank lines converted to paragraph breaks
+<li>dashed lines converted to horizontal rules
+<li>headers
+<li>unordered lists (- or *)
+<li>links syntax works
+</ul><li>preamble to set metadata (before ===)
+<li>macros
+<ul><li>can insert bash script in between backticks (`). non-nestable
+<li>add helper functions in helpers.sh
+</ul><li>extended tags
+</ul><p>
+Special vars:
+<ul><li>pages - an IFS seperated list of filenames to be rendered
+<li>page - refers to the current filename being rendered
+<li>url - refers to the current url being rendered
+<li>content - contains the contents when rendering a layout
+</ul><p>
+Page scoped vars:
+<ul><li>actually stored globally with a prefix like "page_page name_var_name"
+</ul><p>
+<p>
+and this is top level
 <p>
 <h2> future content</h2>
-<ul>
-<li>treadmill problem
+<ul><li>treadmill problem
 <li>trilateration problem
 <li>ricer
-<li>more here <a href="/site/links.html">Links and Things</a>
+<li>more here <a href="/site/links.html"></a>
 <li>more here <a href="/site/bigf/index.html">Benjamin Franklin Method</a>
-</ul>
-<p>
+</ul><p>
 <h2> future site features/changes/fixes</h2>
-<ul>
-<li><a target=_blank href="https://webdesign.tutsplus.com/tutorials/how-to-build-a-filtering-component-in-pure-css--cms-33111">tag filters</a>
+<ul><li><a target="_blank" href="https://webdesign.tutsplus.com/tutorials/how-to-build-a-filtering-component-in-pure-css--cms-33111">tag filters</a>
 <li>a real color scheme
 <li>check the rss subscription
 <li>bash only rendering
-<ul>
-<li>https://google.github.io/styleguide/htmlcssguide.html
+<li>*busybox* only rendering
+<ul><li>https://google.github.io/styleguide/htmlcssguide.html
 <li>https://gist.github.com/rhysrhaven/7549226
 <li>https://www.gnu.org/software/bash/manual/html_node/Pattern-Matching.html#Pattern-Matching
-</ul>
-</ul>
-<p>
+</ul></ul><p>
 <p>
 <p>
 <p>
@@ -72,11 +89,11 @@ available on github, namely unique visitors per week. I use python for the devel
 <hr>
 <footer>
 <div style=text-align:center>
-<a href="mailto:toombs.caeman@gmail.com"> <img class="icon" src="/static/mail.svg" alt="email"></a>
-<a href="https://github.com/toombs-caeman"> <img class="icon" src="/static/github.svg" alt="github"></a>
-<a href="/site/feed.xml"> <img class="icon" src="/static/rss.svg" alt="rss"></a>
+    <a href="mailto:toombs.caeman@gmail.com"> <img class="icon" src="/static/mail.svg" alt="email"></a>
+    <a href="https://github.com/toombs-caeman"> <img class="icon" src="/static/github.svg" alt="github"></a>
+    <a href="/site/feed.xml"> <img class="icon" src="/static/rss.svg" alt="rss"></a>
 </div>
-last updated 2021-06-03
+last updated 2021-06-06
 </footer>
 <p>
 <p>

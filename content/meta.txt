@@ -1,6 +1,7 @@
-`title="Meta"`
-`date=2020-06-22`
-`layout=default`
+title="Meta"
+date=2020-06-22
+layout=default
+===
 
 <blockquote cite="somebody.somewhere"-> You *NEED* to use Jekyll|Wordpress|Ghost|etc. in order to maintain your blog! \
 	-- Somebody, probably
@@ -17,29 +18,49 @@ If I ever have to move away from github for some reason, the site could be hoste
 Nginx logs can be captured to [provide the same analytics](https://serverfault.com/questions/447370/how-to-count-unique-visitors-in-an-nginx-access-log)
 available on github, namely unique visitors per week. I use python for the development server, but that's just me being lazy.
 
+## features
 
+Templating
+* based on Markdown
+  * blank lines converted to paragraph breaks
+  * dashed lines converted to horizontal rules
+  * headers
+  * unordered lists (- or *)
+  * links syntax works
+* preamble to set metadata (before ===)
+* macros
+  * can insert bash script in between backticks (`). non-nestable
+  * add helper functions in helpers.sh
+* extended tags
+
+Special vars:
+* pages - an IFS seperated list of filenames to be rendered
+* page - refers to the current filename being rendered
+* url - refers to the current url being rendered
+* content - contains the contents when rendering a layout
+
+Page scoped vars:
+* actually stored globally with a prefix like "page_page name_var_name"
+
+
+and this is top level
 
 ## future content
-<ul>
 * treadmill problem
 * trilateration problem
 * ricer
 * more here `page_link links.txt`
 * more here `page_link bigf/index.txt`
-</ul>
 
 ## future site features/changes/fixes
-<ul>
 * [tag filters](https://webdesign.tutsplus.com/tutorials/how-to-build-a-filtering-component-in-pure-css--cms-33111)
 * a real color scheme
 * check the rss subscription
 * bash only rendering
-<ul>
+* *busybox* only rendering
     - https://google.github.io/styleguide/htmlcssguide.html
     - https://gist.github.com/rhysrhaven/7549226
     - https://www.gnu.org/software/bash/manual/html_node/Pattern-Matching.html#Pattern-Matching
-</ul>
-</ul>
 
 
 
