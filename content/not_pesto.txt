@@ -1,3 +1,6 @@
+title="Not Pesto"
+layout=default
+===
 grandma made pesto with cashews and romaine instead of pine nuts and basil. Every ingredient was subsituted for something else.
 Made me wonder what we should call it. Perhaps 'pesto' with every other letter substituted out for something else.
 total search space = 25**5 = 9765625 possible letter combinations

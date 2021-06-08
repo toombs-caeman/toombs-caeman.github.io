@@ -1,8 +1,8 @@
-`title=HOME`
-`layout=default`
+title=HOME
+===
 
 `include ../README.md`
 
 <hr>
 
-<ul-> `for page in $pages; do [[ "$page" == "index.txt" ]] && continue; li_date_page; done`
+<ul-> `for p in $pages; do [[ "$p" == "index.txt" ]] && continue; li_date_page $p; done`

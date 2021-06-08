@@ -1,12 +1,35 @@
-grandma made pesto with cashews and romaine instead of pine nuts and basil. Every ingredient was subsituted for something else.
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<title>Not Pesto</title>
+<link href="/site/min.css" rel="stylesheet" type="text/css">
+<link href="/site/feed.xml" rel="alternate" type="application/rss+xml">
+<link href="/static/favicon.jpg" rel="shortcut icon" type=image/x-icon">
+<p>
+
+<header>
+<div class="nav-menu">
+    <input id="burger" type='checkbox' style='display:none'>
+    <label class="burger" for='burger'> <div class=bbar1><div class=bar1></div></div>
+<div class=bbar2><div class=bar2></div></div>
+<div class=bbar3><div class=bar3></div></div></label>
+    <nav aria-label="Main Navigation"> <ul> <li><a href="/site/index.html">HOME</a>
+<li><a href="/site/bigf/index.html">Benjamin Franklin Method</a></ul></nav>
+</div>
+<h1 class="title"> Not Pesto</h1>
+</header>
+<p>
+<p>
+<div class="page-content">
+    grandma made pesto with cashews and romaine instead of pine nuts and basil. Every ingredient was subsituted for something else.
 Made me wonder what we should call it. Perhaps 'pesto' with every other letter substituted out for something else.
-total search space = 25**5 = 9765625 possible letter combinations
+total search space = 25<em></em>5 = 9765625 possible letter combinations
 number of matching words = <pre>
 <h1> total number of 5-letter combinations, excluding 'pesto'</h1>
-echo $((21 ** 5)) # 4084101
+echo $((21 <em></em> 5)) # 4084101
 <p>
 <h1> total number of 5-letter combinations, excluding one letter at each position</h1>
-echo $((25 ** 5)) # 9765625
+echo $((25 <em></em> 5)) # 9765625
 <p>
 <h1> count all defined words</h1>
 cat /usr/share/dict/words | wc -l # 235886
@@ -25,5 +48,18 @@ cat /usr/share/dict/words | sed -n '/^[^p][^e][^s][^t][^o]$/p' | wc -l # 7531
 <p>
 </pre>
 so 26.4% of 5 letter words share at least one letter in the same position with 'pesto'
+<p>
+<p>
+</div>
+<hr>
+<footer>
+<div style=text-align:center>
+    <a href="mailto:toombs.caeman@gmail.com"> <img class="icon" src="/static/mail.svg" alt="email"></a>
+    <a href="https://github.com/toombs-caeman"> <img class="icon" src="/static/github.svg" alt="github"></a>
+    <a href="/site/feed.xml"> <img class="icon" src="/static/rss.svg" alt="rss"></a>
+</div>
+last updated 2021-06-08
+</footer>
+<p>
 <p>
 <p>

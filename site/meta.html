@@ -13,10 +13,8 @@
     <label class="burger" for='burger'> <div class=bbar1><div class=bar1></div></div>
 <div class=bbar2><div class=bar2></div></div>
 <div class=bbar3><div class=bar3></div></div></label>
-    <nav aria-label="Main Navigation"> <ul> <li>
-<a href="/site/index.html"></a>
-<li>
-<a href="/site/bigf/index.html">Benjamin Franklin Method</a></ul></nav>
+    <nav aria-label="Main Navigation"> <ul> <li><a href="/site/index.html">HOME</a>
+<li><a href="/site/bigf/index.html">Benjamin Franklin Method</a></ul></nav>
 </div>
 <h1 class="title"> Meta</h1>
 </header>
@@ -24,19 +22,22 @@
 <p>
 <div class="page-content">
     <p>
-<blockquote cite="somebody.somewhere"> You *NEED* to use Jekyll|Wordpress|Ghost|etc. in order to maintain your blog! 	-- Somebody, probably</blockquote>
-Well if you want to enjoy the experience then maybe. But if you'd rather watch on forlornly as sections of your site break
+<blockquote cite="somebody.somewhere"> You <b>NEED</b> to use Jekyll | Wordpress | Ghost | etc. in order to maintain your blog! 	-- Somebody, probably</blockquote>
+Well if you want to enjoy the experience, then maybe. But if you'd rather watch on forlornly as sections of your site break
 for no apparent reason and spend hours upon hours debugging regular expressions when you could be watching grass grow then have I got just the thing for you.
 <p>
-Introducing <a target="_blank" href="https://github.com/toombs-caeman/toombs-caeman.github.io/blob/master/blog.sh">blog.sh</a>
-, a static site generator that's pure bs (bourne shell)
+Introducing <a target="_blank" href="https://github.com/toombs-caeman/toombs-caeman.github.io/blob/master/blog.sh">blog.sh</a>,
+a static site generator that's pure bs (bourne shell).
+As a single bash file with zero dependencies weighing in at      206 lines this is the best way to put your website rendering on a diet.
+I'm doing my part to fend off the <a target="_blank" href="https://idlewords.com/talks/website_obesity.htm">Website Obesity Crisis</a>.
 <p>
-This site is served using <a target="_blank" href="https://pages.github.com/">github pages</a> and is entirely static.
-There's no server side processing and no client side javascript (not even for the burger animation). Pages are rendered as part of the git pre-commit hook.
+This site is served using blog.sh and <a target="_blank" href="https://pages.github.com/">github pages</a>. It is entirely static.
+There's no server side processing (pages are rendered during pre-commit), no client side javascript
+(not even for the burger animation, though blog.sh doesn't forbid that), and no tracking/analytics.
 <p>
 If I ever have to move away from github for some reason, the site could be hosted as simply as nginx or httpd serving an up-to-date copy of the repository.
-Nginx logs can be captured to <a target="_blank" href="https://serverfault.com/questions/447370/how-to-count-unique-visitors-in-an-nginx-access-log">provide the same analytics</a>
-available on github, namely unique visitors per week. I use python for the development server, but that's just me being lazy.
+Nginx logs can be captured to provide <a target="_blank" href="https://serverfault.com/questions/447370/how-to-count-unique-visitors-in-an-nginx-access-log">unique visitors</a>,
+which would be sufficient for me to see that people are interested without tracking your every move.
 <p>
 <h2> features</h2>
 <p>
@@ -62,25 +63,31 @@ Special vars:
 Page scoped vars:
 <ul><li>actually stored globally with a prefix like "page_page name_var_name"
 </ul><p>
-<p>
-and this is top level
+<h2> References</h2>
+<ul><li><a target="_blank" href="https://google.github.io/styleguide/htmlcssguide.html#Optional_Tags">omitting html tags</a>
+<li><a target="_blank" href="https://www.gnu.org/software/bash/manual/html_node/Pattern-Matching.html#Pattern-Matching">bash regex</a>
+<li><a target="_blank" href="https://wiki-dev.bash-hackers.org/syntax/pe">bash parameter expansion</a>
+</ul><p>
 <p>
 <h2> future content</h2>
 <ul><li>treadmill problem
 <li>trilateration problem
-<li>ricer
-<li>more here <a href="/site/links.html"></a>
-<li>more here <a href="/site/bigf/index.html">Benjamin Franklin Method</a>
 </ul><p>
-<h2> future site features/changes/fixes</h2>
+<h2> future blog.sh updates</h2>
 <ul><li><a target="_blank" href="https://webdesign.tutsplus.com/tutorials/how-to-build-a-filtering-component-in-pure-css--cms-33111">tag filters</a>
 <li>a real color scheme
-<li>check the rss subscription
-<li>bash only rendering
-<li>*busybox* only rendering
-<ul><li>https://google.github.io/styleguide/htmlcssguide.html
-<li>https://gist.github.com/rhysrhaven/7549226
-<li>https://www.gnu.org/software/bash/manual/html_node/Pattern-Matching.html#Pattern-Matching
+<li>fix rss
+<li>generalize the development server using any of these <a target="_blank" href="https://gist.github.com/willurd/5720255">oneline servers</a>.
+<li>is it possible / not against TOS to kluge a github issue into providing a place for comments on the posts?
+<ul><li>I don't really want to tie blog.sh directly to github, but I also don't want to write that myself in bash. I've
+        been through enough.
+<li>CORS probably won't allow something like an iframe to include the issue thread, but just a link would do.
+<li>Disqus is another option... but ads and external dependencies... yuck
+</ul><li><em>busybox</em> only rendering
+<ul><li>call it <em>b.sh</em> and play a bit of <a target="_blank" href="https://code.golf/">golf</a> to really play up the absurd hyper minimalism
+<li>requires moving from bash to ash/dash, which doesn't have the =~ match operator
+<li>since this is really the hyper minimal case, don't even do git stuff
+<li>need to verify that the output is the same
 </ul></ul><p>
 <p>
 <p>
@@ -93,7 +100,7 @@ and this is top level
     <a href="https://github.com/toombs-caeman"> <img class="icon" src="/static/github.svg" alt="github"></a>
     <a href="/site/feed.xml"> <img class="icon" src="/static/rss.svg" alt="rss"></a>
 </div>
-last updated 2021-06-06
+last updated 2021-06-08
 </footer>
 <p>
 <p>

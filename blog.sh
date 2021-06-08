@@ -1,23 +1,19 @@
 #!/bin/bash
 
 ## Notes
-
-# special vars available in rendering
-#   $pages - a space seperated list of filenames to be rendered
-#   $page - refers to the current filename (corresponding to an output url) being rendered
-#     $page doesn't get updated for includes or layouts
-#   $url - refers to the current url being rendered
+# special vars you probably shouldn't set in macros: [pages, page, url]
+# TODO all these long match statements could really use some english explanation
 
 ## CONFIG
 content_dir="content"
 site_dir="site"
 helper_script="helpers.sh"
 preamble_marker="==="
+default_layout=default
 
 ## PRE-CHECKS
 
-# reference to the name of this file as it was invoked
-# this is exploited later to figure out if we're being run as a git pre-commit
+# name of this file as it was invoked. this is exploited later to figure out if we're being run as a git pre-commit
 self="$(realpath -s "${BASH_SOURCE[0]}")"
 
 # only run from the project root, and only while in git
@@ -35,15 +31,12 @@ match() { unset -v match; [[ "$1" =~ $2 ]] && match=("${BASH_REMATCH[@]}"); }
 # generate $url from $page
 url_for() { echo "$site_dir/${1/%txt/html}"; }
 
-
 # ?(page=$page, var) - get value defined in page scope
 ?() {
   set -- "$page" "$@"; set -- "${*:(-2)}"
   local var="page_${1//[.\/ ]/_}";
   echo "${!var}"
 }
-
-# TODO all these long match statements could really use some english explanation
 
 css_minify() {
   local X="$(cat - | tr "\n" " ")"
@@ -58,30 +51,30 @@ css_minify() {
 
 ## CORE FUNCTIONS
 
+# $indent is a coded string containing '([uo])([0-9]*)' pairs representing
+# ordered or unordered lists at the given indent level (number of spaces)
 indent() {
   local indent_s indent_t pre
-  # determine if there's a new list element (ordered or unordered)
+  # determine if there's a new list element, and if it's ordered or unordered
   if match "$line" '^( *)([-*]|[0-9]+\.) '; then
     line="${line#"${match[0]}"}"
     indent_s="${#match[1]}"
-    # determine if list is ordered or unordered
     if match "${match[2]}" "[0-9]"; then indent_t=o; else indent_t=u; fi
   else
+    # close everything if there's an empty line or horizontal rule
     if match "$line" '^([-*]*)$'; then
-      # close everything if there's an empty line or horizontal rule
       indent_s=-1
       if (( ${#match[0]} )); then line="<hr>"; else line="<p>"; fi;
     else
-      # this function exists separately so that this return can be effectively a goto
-      return
+      return # this function exists separately from include() so that this return can be effectively a goto
     fi
   fi
-  # add closing tags
+  # add list closing tags
   while match "$indent" '([uo])([0-9]*)' && [[ "$indent_s" -lt "${match[2]:-(-1)}" ]]; do
     indent="${indent#"${match[0]}"}"
     pre="$pre</${match[1]}l>"
   done
-  # add opening tag
+  # add list opening tag
   if match "$indent" '([uo])([0-9]*)'; [[ "$indent_s" -gt "${match[2]:-(-1)}" ]]; then
     indent="$indent_t$indent_s$indent"
     pre="$pre<${indent_t}l>"
@@ -91,21 +84,20 @@ indent() {
 }
 
 include() {
+  # TODO I think that $tmp can be removed if the redirects on the main while loop can be figured out beforehand
+  #      at this point do macros even need to avoid being a subshell?
   local tmp macro layout close line2 id class attr preamble
   tmp="$(mktemp)" macro="$(mktemp)" layout=""
   preamble="$(? "$1" has_preamble)"
   while IFS= read line; do
+    # TODO disallow rendering inside <pre> tags
+    # TODO the order of these sections is a little finicky, especially around macros
     # drop the preamble if there is one
     if [[ -n "$preamble" ]]; then match "$line" "^$preamble_marker\$" && preamble=''; continue; fi
     # list
     indent
-    # TODO bold asterisk?
     # header
     if match "$line" '^([[:space:]]*)([#]+)' ; then line="${match[1]}<h${#match[2]}->${line#"${match[0]}"}"; fi
-    # link
-    while match "$line" '^([^]]*)\[([^]]+)\]\(([^)]*)\)'; do
-      line="${match[1]}<a target=\"_blank\" href=\"${match[3]}\">${match[2]}</a>${line#"${match[0]}"}"
-    done
     # extended tag
     close="" line2=""
     while match "$line" "^([^<]*)<([[:alnum:]]+)(([^>]?[^->])*)([-]?)>"; do
@@ -127,6 +119,20 @@ include() {
       eval "${match[2]}" > "$macro"
       line="${match[1]}$(cat < "$macro")${line#*"${match[0]}"}"
     done
+    # links
+    while match "$line" '\[([^]]*)\]\((/?)([^)]*)\)'; do
+      if [[ -n "${match[2]}" ]]; then
+        # internal link display text defaults to page title
+        line="${line/"${match[0]}"/<a href=\"/$(url_for "${match[3]}")\">${match[1]:-$(? "${match[3]}" title)}</a>}"
+      else
+        # external links open in new tab
+        # TODO what about a default display text here? extract domain name? maybe after last slash is better?
+        line="${line/"${match[0]}"/<a target=\"_blank\" href=\"${match[3]}\">${match[1]}</a>}"
+      fi
+    done
+    # bold and em tags
+    while match "$line" '\*\*(.*)\*\*'; do line="${line/"$match"/<b>${match[1]}</b>}"; done
+    while match "$line" '\*(.*)\*'; do line="${line/"$match"/<em>${match[1]}</em>}"; done
     echo "$line"
   done < <(cat "$content_dir/$1"; echo)  > "$tmp"
   # layout
@@ -149,6 +155,7 @@ render_site() {
   for page in $pages; do
     local prefix="page_${page//[.\/ ]/_}_"
     local preamble=""
+    export ${prefix}layout="$default_layout"
     while read line; do
       # log "$preamble";
       if match "$line" "^$preamble_marker\$"; then

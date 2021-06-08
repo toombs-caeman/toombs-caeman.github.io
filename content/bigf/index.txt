@@ -6,25 +6,19 @@ This method for improving writing was described in Benjamin Franklin's Autobiogr
 
 ## dissect and reconstruct
 
-<ol>
-* Take a short piece of writing, whose style you respect, and break it down to bullet points of the main ideas.
-* Set both aside for a few days at least
-* From your notes only, try to re-express the piece as completely as the original
-* Compare your recreation with the original, correcting any faults
-<ul>
+1. Take a short piece of writing, whose style you respect, and break it down to bullet points of the main ideas.
+2. Set both aside for a few days at least
+3. From your notes only, try to re-express the piece as completely as the original
+4. Compare your recreation with the original, correcting any faults
     * note any points missed in your summary
     * note awkwardness in phrasing, or dullness of vocabulary in the recreation
-</ul>
-</ol>
 
 For more complete mastery:
 
-<ul>
 * jumble the bullet points and compare and recreate the structure of the essay as well
 * do not keep notes, but keep the summary in memory only
 * instead, record your recreation as a speech to force a single chance at recreation
 * convert the prose to verse instead of bullets to train vocabulary and strength of metaphor and rhythm
-</ul>
 
 ----
 
