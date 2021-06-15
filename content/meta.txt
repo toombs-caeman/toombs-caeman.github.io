@@ -20,45 +20,27 @@ If I ever have to move away from github for some reason, the site could be hoste
 Nginx logs can be captured to provide [unique visitors](https://serverfault.com/questions/447370/how-to-count-unique-visitors-in-an-nginx-access-log),
 which would be sufficient for me to see that people are interested without tracking your every move.
 
-## features
-
-Templating
-* based on Markdown
-  * blank lines converted to paragraph breaks
-  * dashed lines converted to horizontal rules
-  * headers
-  * unordered lists (- or *)
-  * links syntax works
-* preamble to set metadata (before ===)
-* macros
-  * can insert bash script in between backticks (`). non-nestable
-  * add helper functions in helpers.sh
-* extended tags
-
-Special vars:
-* pages - an IFS seperated list of filenames to be rendered
-* page - refers to the current filename being rendered
-* url - refers to the current url being rendered
-* content - contains the contents when rendering a layout
-
-Page scoped vars:
-* actually stored globally with a prefix like "page_page name_var_name"
+## Features
+* implements Markdown's [Basic Syntax](https://www.markdownguide.org/cheat-sheet/#basic-syntax)
+* front matter (metadata) comes before an optional triple equals (===)
+* the macro language is bash instead of the more common and more sensible jinja (have fun lol)
+* extended tags allow css-like syntax to be added to html tags
+    - (planned) extended syntax also allowed for headers, links, and images
 
 ## References
 * [omitting html tags](https://google.github.io/styleguide/htmlcssguide.html#Optional_Tags)
 * [bash regex](https://www.gnu.org/software/bash/manual/html_node/Pattern-Matching.html#Pattern-Matching)
 * [bash parameter expansion](https://wiki-dev.bash-hackers.org/syntax/pe)
+* [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
 
 
-## future content
-* treadmill problem
-* trilateration problem
-
-## future blog.sh updates
+## future site updates
 * [tag filters](https://webdesign.tutsplus.com/tutorials/how-to-build-a-filtering-component-in-pure-css--cms-33111)
 * a real color scheme
 * fix rss
-* generalize the development server using any of these [oneline servers](https://gist.github.com/willurd/5720255).
+
+## future blog.sh updates
+* generalize the development server using any of these [one-line servers](https://gist.github.com/willurd/5720255).
 * is it possible / not against TOS to kluge a github issue into providing a place for comments on the posts?
     - I don't really want to tie blog.sh directly to github, but I also don't want to write that myself in bash. I've
         been through enough.
@@ -70,5 +52,17 @@ Page scoped vars:
     - since this is really the hyper minimal case, don't even do git stuff
     - need to verify that the output is the same
 
+# manipulations
+* drop preamble
+* list - needs to know line start, blank lines, and indent
+* attribute expansion
+* self closing tag - needs to know line ends
+* macro -
+    * multiline input requires escaping (read() sees a single logical line)
+    * each line from output should be a closing marker
+    * self-closing tags outside of the macro will close around the whole output of the macro
+* links - self contained
+* bold tag - before em
+* em tag
 
 

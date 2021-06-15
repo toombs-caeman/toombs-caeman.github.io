@@ -25,17 +25,16 @@ For more complete mastery:
 ## Finished Reconstructions
 
 <ul>
-`for page in $pages; do [[ "$page" == "bigf/"* ]] && li_date_page; done`
+`for p in $pages; do [[ "$p" == "bigf/"* ]] && li_date_page "$p"; done`
 </ul>
 
 
 ## Unfinished
 
-<ul>
-`for page in $pages; do \
-  if [[ "$page" == "bigf/"* && "$page" != "bigf/index.txt" ]]; then \
-    echo -n "<li>"; page_link; \
+* `for p in $pages; do \
+  if [[ "$p" == "bigf/"* && "$p" != "bigf/index.txt" ]]; then \
+    echo "<li>[](/$p)"; \
   fi; \
 done`
-</ul>
+
 

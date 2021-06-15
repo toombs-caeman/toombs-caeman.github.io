@@ -1,8 +1,10 @@
 #!/bin/bash
 
 ## Notes
-# special vars you probably shouldn't set in macros: [pages, page, url]
+# special vars you probably shouldn't set in macros: [pages, page, url] iff macros aren't in a subshell
 # TODO all these long match statements could really use some english explanation
+# TODO what if we change the macro marker to {{}} like jinja2 and let backticks be <code> like markdown intended
+# TODO render pages in background then `wait`
 
 ## CONFIG
 content_dir="content"
@@ -40,24 +42,32 @@ url_for() { echo "$site_dir/${1/%txt/html}"; }
 
 css_minify() {
   local X="$(cat - | tr "\n" " ")"
-  while match "$X" '\/\*([^*]*|\*[^\/])*\*\/'; do X="${X/"${match[0]}"}"; done
+  while match "$X" '\/\*([^*]*|\*[^\/])*\*\/'; do X="${X/"$match"}"; done
   while match "$X" '^([^[:space:]]*)[[:space:]]+(.?)'; do
     echo -n "${match[1]}"
-    X="${X/"${match[0]}"/${match[2]}}"
+    X="${X/"$match"/${match[2]}}"
     [[ "${match[1]: -1}${match[2]}" =~ ^[[:alnum:]]*$ ]] && echo -n " "
   done
   return 0
 }
 
+# TODO attribute expansion happens twice (normal tags and []() construct), pull it out into this function
+# TODO attribute expansion is distinct from self-closing tags
+attrify() {
+  local id='' class=() attr=()
+  # shellcheck disable=SC2068
+  for a in $@; do case "$a" in \#*) id="${a#'#'}" ;; \.*) class+=("${a#.}") ;; *) attr+=("$a") ;; esac done
+  echo "${id:+ id=\"$id\"}${class:+ class=\"${class[@]}\"}${attr:+ ${attr[@]}}"
+}
 ## CORE FUNCTIONS
 
-# $indent is a coded string containing '([uo])([0-9]*)' pairs representing
+# $indent is a coded string containing '[uo][0-9]+' pairs representing
 # ordered or unordered lists at the given indent level (number of spaces)
 indent() {
   local indent_s indent_t pre
   # determine if there's a new list element, and if it's ordered or unordered
   if match "$line" '^( *)([-*]|[0-9]+\.) '; then
-    line="${line#"${match[0]}"}"
+    line="${line#"$match"}"
     indent_s="${#match[1]}"
     if match "${match[2]}" "[0-9]"; then indent_t=o; else indent_t=u; fi
   else
@@ -71,7 +81,7 @@ indent() {
   fi
   # add list closing tags
   while match "$indent" '([uo])([0-9]*)' && [[ "$indent_s" -lt "${match[2]:-(-1)}" ]]; do
-    indent="${indent#"${match[0]}"}"
+    indent="${indent#"$match"}"
     pre="$pre</${match[1]}l>"
   done
   # add list opening tag
@@ -85,19 +95,20 @@ indent() {
 
 include() {
   # TODO I think that $tmp can be removed if the redirects on the main while loop can be figured out beforehand
-  #      at this point do macros even need to avoid being a subshell?
+  #      now that the preamble is processed separately should a macro even be able to set vars?
   local tmp macro layout close line2 id class attr preamble
   tmp="$(mktemp)" macro="$(mktemp)" layout=""
   preamble="$(? "$1" has_preamble)"
   while IFS= read line; do
-    # TODO disallow rendering inside <pre> tags
-    # TODO the order of these sections is a little finicky, especially around macros
+    # TODO header links and header extended tags
+    # TODO <pre>, <code>, blockquotes, footnotes? emojis?
+    # TODO section ordering: tags/headers/blockquotes/lists all care about lines. can macro emit multiple lines?
     # drop the preamble if there is one
     if [[ -n "$preamble" ]]; then match "$line" "^$preamble_marker\$" && preamble=''; continue; fi
     # list
     indent
     # header
-    if match "$line" '^([[:space:]]*)([#]+)' ; then line="${match[1]}<h${#match[2]}->${line#"${match[0]}"}"; fi
+    if match "$line" '^([[:space:]]*)([#]+)' ; then line="${match[1]}<h${#match[2]}->${line#"$match"}"; fi
     # extended tag
     close="" line2=""
     while match "$line" "^([^<]*)<([[:alnum:]]+)(([^>]?[^->])*)([-]?)>"; do
@@ -110,27 +121,29 @@ include() {
           esac
       done
       line2+="${match[1]}<${match[2]}${id:+ id=\"$id\"}${class:+ class=\"${class[@]}\"}${attr:+ ${attr[@]}}>"
-      line="${line#"${match[0]}"}"
+      line="${line#"$match"}"
     done
     line="$line2$line$close"
     # macro
+    # TODO allow multiline macro. let {{ and }} be on separate lines. How does this play with <tags->?
     while match "$line" '^([^`]*)`([^`]*)`'; do
       # weird redirect to avoid subshells
       eval "${match[2]}" > "$macro"
-      line="${match[1]}$(cat < "$macro")${line#*"${match[0]}"}"
+      line="${match[1]}$(cat < "$macro")${line#*"$match"}"
     done
-    # links
-    while match "$line" '\[([^]]*)\]\((/?)([^)]*)\)'; do
-      if [[ -n "${match[2]}" ]]; then
-        # internal link display text defaults to page title
-        line="${line/"${match[0]}"/<a href=\"/$(url_for "${match[3]}")\">${match[1]:-$(? "${match[3]}" title)}</a>}"
-      else
-        # external links open in new tab
-        # TODO what about a default display text here? extract domain name? maybe after last slash is better?
-        line="${line/"${match[0]}"/<a target=\"_blank\" href=\"${match[3]}\">${match[1]}</a>}"
-      fi
+    # <img> and <a>
+    while match "$line" '(!?)\[ *([^]|]*) *\|?([^]]*)\]\(([^)]*:/)?/(([^)/]*)[^)]*)\)'; do
+      # matches 1: is_image, 2: display_text, 3: metadata, 4: protocol, 5: partial_url, 6: domain
+      local meta="$(attrify "${match[3]}")"
+      # separate cases for image (has !), external link (has protocol), and internal link (neither)
+      case "${match[1]}${match[4]}" in
+        "")line="${line/"$match"/<a href=\"/$(url_for "${match[5]}")\" $meta>${match[2]:-$(? "${match[5]}" title)}</a>}";;
+        !*)line="${line/"$match"/<img src=\"/${match[5]}\" alt=\"${match[2]}\" $meta>}";;
+        *) line="${line/"$match"/<a href=\"${match[4]}/${match[5]}\" $meta>${match[2]:-${match[6]}}</a>}";;
+      esac
     done
-    # bold and em tags
+    # TODO attribute expansion
+    # <b> and <em>
     while match "$line" '\*\*(.*)\*\*'; do line="${line/"$match"/<b>${match[1]}</b>}"; done
     while match "$line" '\*(.*)\*'; do line="${line/"$match"/<em>${match[1]}</em>}"; done
     echo "$line"
@@ -152,12 +165,12 @@ render_site() {
   rm -rf ${site_dir:?site}/*
   pages="$(cd $content_dir; find * -name "*.txt")"
   # load preambles
+  # TODO should preamble use `var: value` syntax instead of `var=value`. allow spaces after : and quote right hand side
   for page in $pages; do
     local prefix="page_${page//[.\/ ]/_}_"
     local preamble=""
     export ${prefix}layout="$default_layout"
     while read line; do
-      # log "$preamble";
       if match "$line" "^$preamble_marker\$"; then
         export ${prefix}has_preamble=1
         eval "$preamble"
@@ -184,8 +197,7 @@ development_server() {
   render_site || exit $?
   trap 'kill $server_pid;rm $timestamp; exit' SIGINT
   timestamp="$(mktemp)"
-  # TODO I'd like to remove the python dependancy
-  #      it is *technically* possible to serve a website using curl after all
+  # TODO ease python dependancy https://gist.github.com/willurd/5720255
   python -m SimpleHTTPServer 5000 & server_pid="$!"
   # check for changes every second and rebuild the site when necessary
   while sleep 1; do
