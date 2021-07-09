@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-`include head`
-`include nav`
+{{include head}}
+{{include nav}}
 <div .page-content>
-    `? content`
+    {{? content}}
 </div>
-`include footer`
+{{include footer}}
 

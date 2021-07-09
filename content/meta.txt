@@ -21,26 +21,38 @@ Nginx logs can be captured to provide [unique visitors](https://serverfault.com/
 which would be sufficient for me to see that people are interested without tracking your every move.
 
 ## Features
-* implements Markdown's [Basic Syntax](https://www.markdownguide.org/cheat-sheet/#basic-syntax)
-* front matter (metadata) comes before an optional triple equals (===)
-* the macro language is bash instead of the more common and more sensible jinja (have fun lol)
-* extended tags allow css-like syntax to be added to html tags
-    - (planned) extended syntax also allowed for headers, links, and images
+* text transformation
+    * implements Markdown's [Basic Syntax](https://www.markdownguide.org/cheat-sheet/#basic-syntax)
+    * yaml style front matter (===)
+    * the macro language is bash instead of the more common and more sensible jinja (have fun lol)
+    * allow css-like syntax to be added to html tags, headers, links, and images
+    * (todo) [tag filters](https://webdesign.tutsplus.com/tutorials/how-to-build-a-filtering-component-in-pure-css--cms-33111)
+    * (todo) automatically cross-link pages that refer to the title of other pages
+        - also use link anchors so that following the cross-link jumps to the part of the page
+* tools
+    * integrates nicely with git to auto-commit generated files (normal form purists can get bent).
+        This allows you to serve the site very simply from just a clone of the repository
+    * will watch for changes and re-render the site
+
 
 ## References
-* [omitting html tags](https://google.github.io/styleguide/htmlcssguide.html#Optional_Tags)
-* [bash regex](https://www.gnu.org/software/bash/manual/html_node/Pattern-Matching.html#Pattern-Matching)
-* [bash parameter expansion](https://wiki-dev.bash-hackers.org/syntax/pe)
-* [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
+* mechanics
+    * [bash regex](https://www.gnu.org/software/bash/manual/html_node/Pattern-Matching.html#Pattern-Matching)
+    * [bash parameter expansion](https://wiki-dev.bash-hackers.org/syntax/pe)
+    * [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
+* cleanliness
+    * [Cool URIs don't change](https://www.w3.org/Provider/Style/URI)
+    * [omitting html tags](https://google.github.io/styleguide/htmlcssguide.html#Optional_Tags)
 
 
 ## future site updates
-* [tag filters](https://webdesign.tutsplus.com/tutorials/how-to-build-a-filtering-component-in-pure-css--cms-33111)
 * a real color scheme
 * fix rss
 
 ## future blog.sh updates
 * generalize the development server using any of these [one-line servers](https://gist.github.com/willurd/5720255).
+
+probably bad ideas that I'm writing down so I won't think about them anymore:
 * is it possible / not against TOS to kluge a github issue into providing a place for comments on the posts?
     - I don't really want to tie blog.sh directly to github, but I also don't want to write that myself in bash. I've
         been through enough.
@@ -52,17 +64,17 @@ which would be sufficient for me to see that people are interested without track
     - since this is really the hyper minimal case, don't even do git stuff
     - need to verify that the output is the same
 
-# manipulations
+# terminal manipulations (don't contain others)
 * drop preamble
-* list - needs to know line start, blank lines, and indent
 * attribute expansion
-* self closing tag - needs to know line ends
-* macro -
-    * multiline input requires escaping (read() sees a single logical line)
-    * each line from output should be a closing marker
-    * self-closing tags outside of the macro will close around the whole output of the macro
 * links - self contained
 * bold tag - before em
 * em tag
+
+# block manipulations
+* list/blockquote - needs to know line start, blank lines, and indent
+* macro (multiline)
+* self closing tag (needs to know line ends)
+    * self-closing tags outside of the macro will close around the whole output of the macro
 
 

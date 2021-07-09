@@ -24,17 +24,19 @@ For more complete mastery:
 
 ## Finished Reconstructions
 
-<ul>
-`for p in $pages; do [[ "$p" == "bigf/"* ]] && li_date_page "$p"; done`
-</ul>
+* {{
+for p in $pages; do [[ "$p" == "bigf/"* ]] && li_date_page "$p"; done
+}}
 
 
 ## Unfinished
 
-* `for p in $pages; do \
-  if [[ "$p" == "bigf/"* && "$p" != "bigf/index.txt" ]]; then \
-    echo "<li>[](/$p)"; \
-  fi; \
-done`
+* {{
+for p in $pages; do
+  if [[ "$p" == "bigf/"* && "$p" != "bigf/index.txt" ]]; then
+    echo "<li>[](/$p)"
+  fi
+done
+}}
 
 

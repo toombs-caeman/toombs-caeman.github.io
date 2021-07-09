@@ -108,7 +108,7 @@ include() {
     # list
     indent
     # header
-    if match "$line" '^([[:space:]]*)([#]+)' ; then line="${match[1]}<h${#match[2]}->${line#"$match"}"; fi
+    if match "$line" '^[[:space:]]*(#+)([^|]*)\|?(.*)$' ; then line="<h${#match[1]} ${match[3]}->${match[2]}"; fi
     # extended tag
     close="" line2=""
     while match "$line" "^([^<]*)<([[:alnum:]]+)(([^>]?[^->])*)([-]?)>"; do
@@ -160,7 +160,6 @@ include() {
 }
 
 render_site() {
-  [[ -f "$helper_script" ]] && . "$helper_script"
   # default $site_dir to "site" to prevent expansion to `rm -rf /*`
   rm -rf ${site_dir:?site}/*
   pages="$(cd $content_dir; find * -name "*.txt")"
@@ -179,6 +178,7 @@ render_site() {
       preamble="${preamble}export $prefix$line;"
     done < "$content_dir/$page"
   done
+  [[ -f "$helper_script" ]] && . "$helper_script"
   # render pages
   for page in $pages; do
     url="$(url_for "$page")"

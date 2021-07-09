@@ -63,3 +63,28 @@ post/project ideas
         - parsing a string into json
         - data normalization in general
 
+* a theory of note taking is a partial theory of mind
+    * the purpose of notes is to extend the memory / reasoning ability of the user
+    * this is equivalent to a theory of how the mind can efficiently digest, retain and share information about the world
+    * qualities
+        - ease of creation
+        - ease of recovery (search/sort/structure)
+            * auto-indexing, full text search, deduplication and crosslinking
+            * mnemonic structure
+        - ease of sharing (external reference/permanence/jargon) (use by others, rather than by older you)
+        - appropriate depth placement (according to discovery/memorization/practice/identity structure)
+    * ref
+        - [memex](https://www.w3.org/History/1945/vbush/)
+        - https://thesephist.com/posts/inc/
+        - https://notes.andymatuschak.org/About_these_notes?stackedNotes=zUw5PuD8op9oq8kHvni6sug6eRTNtR9Wqma
+
+* the study of magic and magical thinking is useful because people turn towards alternative solutions when
+    * they can't or haven't been able to formulate the issue they're facing distinctly enough to address it directly
+    * there isn't an accepted/comprehensible/workable solution to the problems they face
+    * the magic works in some sense, though not necessarily through the proposed mechanisms.
+        Most likely for psychological or social issues.
+    * in all cases
+
+* tulpa/rapscallion/servitor
+    * https://en.wikipedia.org/wiki/Tulpa
+    * https://tulpanomicon.guide/

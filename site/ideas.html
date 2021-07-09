@@ -1,98 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="utf-8">
-<title>Ideas</title>
-<link href="/site/min.css" rel="stylesheet" type="text/css">
-<link href="/site/feed.xml" rel="alternate" type="application/rss+xml">
-<link href="/static/favicon.jpg" rel="shortcut icon" type=image/x-icon">
-<p>
-
-<header>
-<div class="nav-menu">
-    <input id="burger" type='checkbox' style='display:none'>
-    <label class="burger" for='burger'> <div class=bbar1><div class=bar1></div></div>
-<div class=bbar2><div class=bar2></div></div>
-<div class=bbar3><div class=bar3></div></div></label>
-    <nav aria-label="Main Navigation"> <ul> <li><a href="/site/index.html" >HOME</a>
-<li><a href="/site/bigf/index.html" >Benjamin Franklin Method</a></ul></nav>
-</div>
-<h1 class="title"> Ideas</h1>
-</header>
-<p>
-<p>
+{{include head}}
+{{include nav}}
 <div class="page-content">
-    <p>
-post/project ideas
-<p>
-<ul><li>A <a href="https://web.stanford.edu/~engler/tickc.pdf" >tcc</a> <a href="http://canonical.org/~kragen/bytebeat/" >bytebeat</a> interpreter/sample generator
-<li>treadmill problem - given that the human senses are all limited by an <a href="https://en.wikipedia.org/wiki/Absolute_threshold" >absolute threshold</a>
-    some small force could be applied to the body which would be guaranteed to be unnoticeable.
-    Additionally, there is a maximum force that the human body can exert.
-    If we built an omni-directional treadmill (or equivalent harness for 3d), which accelerated below that threshold in
-    order to dynamically keep it's user in the center, that would lay the framework for effectively infinite/boundaryless
-    virtual spaces (since in all cases the 'corrective' force applied to the user would be undetectable).
-<ul><li>Given that these limits exist, how large does the treadmill need to be?
-<li>The max force limit depends on the max speed being finite and small, so simulated vehicles might be problematic, though
-        relative force perception sensitivity decreases as absolute force increases, so perhaps this could be fudged.
-<li>the treadmill will essentially need to run some sort of <a href="https://en.wikipedia.org/wiki/PID_controller" >PID</a> loop based on the users location.
-</ul><li>trilateration problem - might be more readable with <a href="https://github.com/KaTeX/KaTeX" >KaTeX</a>.
-<li><a href="https://www.youtube.com/watch?v=cyW5z-M2yzw" >discordant</a> <a href="https://en.wikipedia.org/wiki/Hausdorff_dimension" >fractals</a>.
-    Does harmony have a visual analog in fractals, or do fractals with Hausdorff dimensions close to simple fractions
-    appear more orderly or aesthetic? Is there a way to generate diverse fractals with a specific hausdorff dimension?
-<li>can an EEG placed on the back of the neck do eye tracking based on detecting unconscious neck muscle twitches that correlate to eye movement?
-    This could offer a way to do eye tracking 'in the field' where you don't have anything obstructing the field of view.
-    If combined with a body cam, can you accurately locate the gaze on objects in the environment?
-    search cervico-ocular reflex
-</ul><p>
-<ul><li>areas of (possibly ad hoc) computer research/development that most things fall into.
-<ul><li>algorithmic - applied math. How can computers do things correctly and efficiently?
-<li>ergonomic - how can the language/tools/etc we use be more expressive/powerful/high-level/transparent/learnable
-        and help us avoid pitfalls.
-<ul><li>whereas algorithms can be as esoteric and complicated as they need to be, the tools we use cannot be because we are only human.
-            It must be possible to package performance code into a library with a relatively simple interface so that
-            most people won't have to interact with that complexity most of the time.
-<li>all (most) of the effort being put into new languages (or the constant rotation of new javascript frameworks) belongs here.
-</ul><li>hardware - applied physics. how do we put lightning in a bottle?
-<li>legal - licensing, right to privacy, right to repair, ethical hacking,
-<li>social - how do you manage a project? How do you manage project lifetimes, or attract maintainers? codes of conduct?
-        diversity and inclusion?
-<li>domain understanding - understanding a clients needs well enough to represent domain specific knowledge in a program.
-</ul></ul><p>
-<ul><li>there are a few classes of problems in computer science and engineering that get solved repeatedly in adhoc ways.
-<ul><li>The huge prevalence of copypasta code is a testament to the failure to capture complexity in a library.
-<li>can we use stats on copied code from StackOverflow as a way to design libraries/languages and better cover common complexity?
-</ul></ul><p>
-<ul><li>there's a very important class of computation that translates one set of symbols into another, sometimes called compiling or compilation.
-<ul><li>we can think of compiling abstractly as a translation (reversible or lossy) of a structured set of symbols into another.
-<li>The elements of the input don't necessarily need to be from the same set as elements in the output, nor does their structure (list, tree, etc) need to be the same.
-<li>my point is that there is a structural similarity between json-munging and compilers, between Terraform and LLVM.
-<ul><li>Perhaps this structure could be exploited to propagate optimizations up and down the tech stack (manually).
-            What can compiler developers learn from web developers, and vice versa?
-<li>Perhaps also this could be used to define a 'core' compute engine that self-optimizes (self-compiles?) based on properties
-            of the input and output  <a href="https://en.wikipedia.org/wiki/Category_theory" >languages</a>, but is capable of running
-            in a number of environments (bare metal, posix, JVM, etc.)
-<li>could we describe the various instruction sets and the translations between them in a unified, rigorous way?
-            all the way through logic gates -> x86 -> system calls -> JVM -> javascript. Could a monolithic 'compiler'
-            understand how to optimize in each of these contexts?
-</ul><li>example applications:
-<ul><li>compiling typescript to javascript
-<li>compiling javascript to bye code
-<li>generating configuration on the fly (aka turing complete wrappers for inept 'no code' tools)
-<li>translating between human languages
-<li>parsing a string into json
-<li>data normalization in general
-</ul></ul></ul><p>
-<p>
+    {{? content}}
 </div>
-<hr>
-<footer>
-<div style=text-align:center>
-    <a href="mailto:toombs.caeman@gmail.com"> <img class="icon" src="/static/mail.svg" alt="email"></a>
-    <a href="https://github.com/toombs-caeman"> <img class="icon" src="/static/github.svg" alt="github"></a>
-    <a href="/site/feed.xml"> <img class="icon" src="/static/rss.svg" alt="rss"></a>
-</div>
-last updated 2021-06-15
-</footer>
-<p>
-<p>
+{{include footer}}
+</ul></ul><p>
 <p>
