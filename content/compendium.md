@@ -1,5 +1,6 @@
-title=Compunomicon
----
+title: Compunomicon
+===
+
 I've been obsessing lately over the idea that there's no good reason why there is more than a single implementation of sort present on a single computer.
 Why is it that we need sort implemented in C, python, javascript, etc. each with a (potentially) different and arbitrary choice of algorithm?
 

@@ -1,5 +1,4 @@
-title="Meta"
-date=2020-06-22
+title: Meta
 ===
 
 <blockquote cite="somebody.somewhere"-> You **NEED** to use Jekyll | Wordpress | Ghost | etc. in order to maintain your blog! \
@@ -48,10 +47,9 @@ which would be sufficient for me to see that people are interested without track
 ## future site updates
 * a real color scheme
 * fix rss
-
-## future blog.sh updates
 * generalize the development server using any of these [one-line servers](https://gist.github.com/willurd/5720255).
 
+## abandoned ideas
 probably bad ideas that I'm writing down so I won't think about them anymore:
 * is it possible / not against TOS to kluge a github issue into providing a place for comments on the posts?
     - I don't really want to tie blog.sh directly to github, but I also don't want to write that myself in bash. I've
@@ -63,18 +61,4 @@ probably bad ideas that I'm writing down so I won't think about them anymore:
     - requires moving from bash to ash/dash, which doesn't have the =~ match operator
     - since this is really the hyper minimal case, don't even do git stuff
     - need to verify that the output is the same
-
-# terminal manipulations (don't contain others)
-* drop preamble
-* attribute expansion
-* links - self contained
-* bold tag - before em
-* em tag
-
-# block manipulations
-* list/blockquote - needs to know line start, blank lines, and indent
-* macro (multiline)
-* self closing tag (needs to know line ends)
-    * self-closing tags outside of the macro will close around the whole output of the macro
-
 

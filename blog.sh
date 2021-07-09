@@ -1,212 +1,187 @@
 #!/bin/bash
 
-## Notes
-# special vars you probably shouldn't set in macros: [pages, page, url] iff macros aren't in a subshell
-# TODO all these long match statements could really use some english explanation
-# TODO what if we change the macro marker to {{}} like jinja2 and let backticks be <code> like markdown intended
-# TODO render pages in background then `wait`
-
-## CONFIG
 content_dir="content"
 site_dir="site"
 helper_script="helpers.sh"
-preamble_marker="==="
-default_layout=default
+default_layout="default"
 
-## PRE-CHECKS
-
-# name of this file as it was invoked. this is exploited later to figure out if we're being run as a git pre-commit
-self="$(realpath -s "${BASH_SOURCE[0]}")"
-
-# only run from the project root, and only while in git
 cd "$(git rev-parse --show-toplevel)" || exit $?
-
-## UTILITY FUNCTIONS
-
-log() { echo "${self##*/}:${FUNCNAME[1]}: $*" >&2; }
-
-# in bash, function and variable namespaces are distinct.
-# this is a bit more readable than typing BASH_REMATCH all over the place
-# unset -v deletes previous match arrays so that there aren't old results hanging around
-match() { unset -v match; [[ "$1" =~ $2 ]] && match=("${BASH_REMATCH[@]}"); }
-
-# generate $url from $page
-url_for() { echo "$site_dir/${1/%txt/html}"; }
-
-# ?(page=$page, var) - get value defined in page scope
-?() {
-  set -- "$page" "$@"; set -- "${*:(-2)}"
-  local var="page_${1//[.\/ ]/_}";
-  echo "${!var}"
-}
-
-css_minify() {
-  local X="$(cat - | tr "\n" " ")"
-  while match "$X" '\/\*([^*]*|\*[^\/])*\*\/'; do X="${X/"$match"}"; done
-  while match "$X" '^([^[:space:]]*)[[:space:]]+(.?)'; do
-    echo -n "${match[1]}"
-    X="${X/"$match"/${match[2]}}"
-    [[ "${match[1]: -1}${match[2]}" =~ ^[[:alnum:]]*$ ]] && echo -n " "
-  done
-  return 0
-}
-
-# TODO attribute expansion happens twice (normal tags and []() construct), pull it out into this function
-# TODO attribute expansion is distinct from self-closing tags
-attrify() {
+self="$(realpath -s "${BASH_SOURCE[0]}")" # name of this file as it was invoked.
+n=$'\n' # parameter expansion is more consistent than escaping
+log() { echo "${self##*/}:${FUNCNAME[1]}:${BASH_LINENO[0]}: $*" >&2; }
+A() { # attribute extensions
+  # TODO don't split quoted attribute values
   local id='' class=() attr=()
   # shellcheck disable=SC2068
   for a in $@; do case "$a" in \#*) id="${a#'#'}" ;; \.*) class+=("${a#.}") ;; *) attr+=("$a") ;; esac done
   echo "${id:+ id=\"$id\"}${class:+ class=\"${class[@]}\"}${attr:+ ${attr[@]}}"
 }
-## CORE FUNCTIONS
+# generate url from page
+U() { U="${1:-$page}"; echo "$site_dir/${U%.md}"; }
+# get/set value defined in page scope. usage: V var [page [value]]
+V() { V="${2:-$page}"; V="page_${V//[.\/ ]/_}_$1"; [[ $# == 3 ]] && export "$V"="$3" || echo "${!V}" ; }
+# nicer match syntax
+M() { unset -v M; [[ "$1" =~ $2 ]] && M=("${BASH_REMATCH[@]}"); }
 
-# $indent is a coded string containing '[uo][0-9]+' pairs representing
-# ordered or unordered lists at the given indent level (number of spaces)
-indent() {
-  local indent_s indent_t pre
-  # determine if there's a new list element, and if it's ordered or unordered
-  if match "$line" '^( *)([-*]|[0-9]+\.) '; then
-    line="${line#"$match"}"
-    indent_s="${#match[1]}"
-    if match "${match[2]}" "[0-9]"; then indent_t=o; else indent_t=u; fi
-  else
-    # close everything if there's an empty line or horizontal rule
-    if match "$line" '^([-*]*)$'; then
-      indent_s=-1
-      if (( ${#match[0]} )); then line="<hr>"; else line="<p>"; fi;
-    else
-      return # this function exists separately from include() so that this return can be effectively a goto
-    fi
-  fi
-  # add list closing tags
-  while match "$indent" '([uo])([0-9]*)' && [[ "$indent_s" -lt "${match[2]:-(-1)}" ]]; do
-    indent="${indent#"$match"}"
-    pre="$pre</${match[1]}l>"
+# TODO revisit
+css_minify() {
+  local X="$(cat - | tr "\n" " ")"
+  while M "$X" '\/\*([^*]*|\*[^\/])*\*\/'; do X="${X/"$M"}"; done
+  while M "$X" '^([^[:space:]]*)[[:space:]]+(.?)'; do
+    echo -n "${M[1]}"
+    X="${X/"$M"/${M[2]}}"
+    [[ "${M[1]: -1}${M[2]}" =~ ^[[:alnum:]]*$ ]] && echo -n " "
   done
-  # add list opening tag
-  if match "$indent" '([uo])([0-9]*)'; [[ "$indent_s" -gt "${match[2]:-(-1)}" ]]; then
-    indent="$indent_t$indent_s$indent"
-    pre="$pre<${indent_t}l>"
-  fi
-  [[ -n "$indent_t" ]] && pre="$pre<li>"
-  line="$pre$line"
+  return 0
 }
 
 include() {
-  # TODO I think that $tmp can be removed if the redirects on the main while loop can be figured out beforehand
-  #      now that the preamble is processed separately should a macro even be able to set vars?
-  local tmp macro layout close line2 id class attr preamble
-  tmp="$(mktemp)" macro="$(mktemp)" layout=""
-  preamble="$(? "$1" has_preamble)"
-  while IFS= read line; do
-    # TODO header links and header extended tags
-    # TODO <pre>, <code>, blockquotes, footnotes? emojis?
-    # TODO section ordering: tags/headers/blockquotes/lists all care about lines. can macro emit multiple lines?
-    # drop the preamble if there is one
-    if [[ -n "$preamble" ]]; then match "$line" "^$preamble_marker\$" && preamble=''; continue; fi
-    # list
-    indent
-    # header
-    if match "$line" '^[[:space:]]*(#+)([^|]*)\|?(.*)$' ; then line="<h${#match[1]} ${match[3]}->${match[2]}"; fi
-    # extended tag
-    close="" line2=""
-    while match "$line" "^([^<]*)<([[:alnum:]]+)(([^>]?[^->])*)([-]?)>"; do
-      id='' class=() attr=() close="${match[${#match[@]}-1]:+"</${match[2]}>"}$close"
-      for a in ${match[3]}; do
-          case "$a" in
-              \#*) id="${a#'#'}" ;;
-              \.*) class+=("${a#.}") ;;
-              *) attr+=("$a") ;;
-          esac
-      done
-      line2+="${match[1]}<${match[2]}${id:+ id=\"$id\"}${class:+ class=\"${class[@]}\"}${attr:+ ${attr[@]}}>"
-      line="${line#"$match"}"
-    done
-    line="$line2$line$close"
-    # macro
-    # TODO allow multiline macro. let {{ and }} be on separate lines. How does this play with <tags->?
-    while match "$line" '^([^`]*)`([^`]*)`'; do
-      # weird redirect to avoid subshells
-      eval "${match[2]}" > "$macro"
-      line="${match[1]}$(cat < "$macro")${line#*"$match"}"
-    done
-    # <img> and <a>
-    while match "$line" '(!?)\[ *([^]|]*) *\|?([^]]*)\]\(([^)]*:/)?/(([^)/]*)[^)]*)\)'; do
-      # matches 1: is_image, 2: display_text, 3: metadata, 4: protocol, 5: partial_url, 6: domain
-      local meta="$(attrify "${match[3]}")"
+  local C="$(<"${1:+$content_dir/}${1:-/dev/stdin}")$n" # collect the file, make sure it ends in a newline
+  # strip: preamble
+  if M "$C" "^.*$n===$n"; then C="${C/"$M"/}"; fi
+
+  # `pre`
+  # TODO marker doesn't always get converted?
+  local pre=() pre_count=0 pre_marker="%pre%"
+  # TODO save pre in an array and leave a marker, then come back in later to paste it in
+  while M "$C" "\`([^\`]+)\`"; do C="${C/"$M"/$pre_marker}"; pre[${#pre[@]}]="${M[1]}"; done
+
+  # {{ macro }}
+  while M "$C" '{{((}?[^}])*)}}'; do C="${C/"$M"/$(eval "${M[1]}")}"; done
+
+  # auto-link
+  # TODO why is there an extra empty link for each of these?
+  # TODO anchor on first link
+  # TODO stop linking yourself
+  for p in $pages; do
+    if M "$C" "$(V title "$p")" && [[ "$p" != "$page" ]]; then
+      V backlink "$p" "$(V backlink "$p") $page"
+      C="${C//"$(V title "$p")"/[](/$p)}";
+    fi
+  done
+
+  # rendering in the following section is line based
+  local list_block=''
+  while IFS= read -r line; do
+    if [[ -z "$list_block" ]]; then
+      # see if we need to start a list
+      if M "$line" '^ *([-*>]|[0-9]+\.) '; then list_block="$n$line"; continue; fi
+    else
+      if [[ -z "$line" ]]; then
+#        log "list block: $list_block"
+        # close out list block
+        local tab_re='([a-z]+)([0-9]+)' tab=''
+        while M "$list_block" "$n( *)([-*>]|[0-9]+\.) "; do
+          local l_in="$M" l_out='' tab_s=${#M[1]} tab_t=''
+          case "${M[2]: -1}" in \.) tab_t=ol ;; \>) tab_t=blockquote ;; *) tab_t=ul ;; esac
+          # add list close tag
+          while M "$tab" "$tab_re" && [[ "$tab_s" -lt "${M[2]}" ]];do tab="${tab#"$M"}"; l_out="$l_out</${M[1]}>"; done
+          # add list opening tag
+          if M "$tab" "$tab_re";[[ "$tab_s" -gt "${M[2]:-(-1)}" ]];then tab="$tab_t$tab_s$tab"; l_out="$l_out$n<${tab_t}>"; fi
+          # add element tag or a space
+          [[ "blockquote" != "$tab_t" ]] && l_out="$l_out<li>" || l_out="$l_out "
+          list_block="${list_block/"$l_in"/$l_out}"
+        done
+        # close remaining tags
+        while M "$tab" "$tab_re"; do tab="${tab#"$M"}"; list_block="$list_block</${M[1]}>"; done
+        line="$list_block$n<p>" list_block=''
+      # otherwise scan for the end of the block
+      else list_block="$list_block$n$line"; continue; fi
+    fi
+    # TODO if we match a list, then continue reading until we hit \n\n and process the whole thing at once
+    # <p> <hr>
+    M "$line" '^-*$' && if (( ${#M} )); then line="<hr>"; else line="<p>"; fi;
+    # # headers
+    if M "$line" '^[[:space:]]*(#+)([^|]*)\|?(.*)$' ; then line="<h${#M[1]} ${M[3]}->${M[2]}"; fi
+    # **bold**
+    while M "$line" '\*\*((\*[^*]|[^*])*)\*\*'; do line="${line/"$M"/<b>${M[1]}</b>}"; done
+    # *italic*
+    while M "$line" '\*([^*]*)\*'; do line="${line/"$M"/<em>${M[1]}</em>}"; done
+    # ![images and links](/url.txt)
+    while M "$line" '(!?)\[ *([^]|]*) *\|?([^]]*)\]\(([^)]*:/)?/(([^)/]*)[^)]*)\)'; do
+      # Mes 1: is_image, 2: display_text, 3: metadata, 4: protocol, 5: partial_url, 6: domain
       # separate cases for image (has !), external link (has protocol), and internal link (neither)
-      case "${match[1]}${match[4]}" in
-        "")line="${line/"$match"/<a href=\"/$(url_for "${match[5]}")\" $meta>${match[2]:-$(? "${match[5]}" title)}</a>}";;
-        !*)line="${line/"$match"/<img src=\"/${match[5]}\" alt=\"${match[2]}\" $meta>}";;
-        *) line="${line/"$match"/<a href=\"${match[4]}/${match[5]}\" $meta>${match[2]:-${match[6]}}</a>}";;
+      case "${M[1]}${M[4]}" in
+        "")line="${line/"$M"/<a href=\"/$(U "${M[5]}")\" ${M[3]}>${M[2]:-$(V title "${M[5]}")}</a>}";;
+        !*)line="${line/"$M"/<img src=\"/${M[5]}\" alt=\"${M[2]}\" ${M[3]}>}";;
+        *) line="${line/"$M"/<a href=\"${M[4]}/${M[5]}\" ${M[3]}>${M[2]:-${M[6]}}</a>}";;
       esac
     done
-    # TODO attribute expansion
-    # <b> and <em>
-    while match "$line" '\*\*(.*)\*\*'; do line="${line/"$match"/<b>${match[1]}</b>}"; done
-    while match "$line" '\*(.*)\*'; do line="${line/"$match"/<em>${match[1]}</em>}"; done
+    # <self-closing-tags ->
+    local close=''
+    while M "$line" '<([^ >]+)([^>]*)->'; do
+      line="${line/"$M"/<${M[1]} ${M[2]}>}"
+      close="</${M[1]}>$close"
+    done
+    close="$line$close" line=''
+    # TODO extended attrs
+    while M "$close" '^([^<]*)<([^ >]+)([^>]*)>'; do
+      line="$line${M[1]}<${M[2]}$(A ${M[3]})>"
+      close="${close/"$M"/}"
+    done
+    line="$line$close"
+    while M "$line" "$pre_marker"; do
+      line="${line/"$M"/<code>${pre[$pre_count]}</code>}"
+      pre_count=$((pre_count + 1))
+    done
     echo "$line"
-  done < <(cat "$content_dir/$1"; echo)  > "$tmp"
-  # layout
-  layout="$(? "$1" layout)"
-  if [[ -n "$layout" ]]; then
-    declare -x "page_${page//[.\/]/_}_content=$(cat "$tmp")"
-    include "$layout"
-  else
-    cat "$tmp"
-  fi
-  rm "$tmp" "$macro"
+  done < <(printf '%s' "$C$n$n")
 }
 
+# render site
 render_site() {
   # default $site_dir to "site" to prevent expansion to `rm -rf /*`
   rm -rf ${site_dir:?site}/*
-  pages="$(cd $content_dir; find * -name "*.txt")"
-  # load preambles
-  # TODO should preamble use `var: value` syntax instead of `var=value`. allow spaces after : and quote right hand side
+  pages="$(cd "$content_dir"; find -- * \( -iname "*.md" -o -iname "*.html" \))"
+  # collect metadata, add in default layout, has_preamble, depth in order to allow relative links
   for page in $pages; do
-    local prefix="page_${page//[.\/ ]/_}_"
-    local preamble=""
-    export ${prefix}layout="$default_layout"
+    V title "$page" "$page"
+    V layout "$page" "$default_layout"
+    # it seems like date isn't aware of moving files
+    V date "$page" "$(git log --date=short --format=%ad -- "$content_dir/$page" | tail -1)"
+    # shellcheck disable=SC2162
     while read line; do
-      if match "$line" "^$preamble_marker\$"; then
-        export ${prefix}has_preamble=1
-        eval "$preamble"
-        break
-      fi
-      preamble="${preamble}export $prefix$line;"
+      if M "$line" '^([[:alnum:]]+): ?(.*)$'; then V "${M[1]}" "$page" "${M[2]}"; else break; fi
     done < "$content_dir/$page"
+    # shellcheck disable=SC2207
+    tags=("${tags[@]}" $(V tags))
   done
+  # deduplicate tags
+  IFS=$n sort <<<"${tags[@]}" | uniq | read -ra tags
+
   [[ -f "$helper_script" ]] && . "$helper_script"
-  # render pages
+
+  # render main contents for each page
+  for page in $pages; do V content "$page" "$(include "$page")"; done
+
+  # render min.css
+  find $content_dir/ -name "*.css" -exec cat {} + | css_minify >> "$site_dir/min.css"
+
+  # final render
   for page in $pages; do
-    url="$(url_for "$page")"
-    log "$content_dir/$page --> $url"
-    mkdir -p "$(dirname "${url#/}")" && include "$page" > "$url"
+    # add cross-links to content
+    local links=""
+    for backlink in $(V backlink | tr ' ' "$n" | sort | uniq); do links="$links* $(V title "$backlink")$n"; done
+    [[ -z "$links" ]] || V content "$page" "$(V content)$n---$n### backlinks$n$links"
+    # render layout
+    if [[ -n "$(V layout)" ]]; then include "$(V layout)" > "$(U)"; else V content > "$(U)"; fi
   done
-
-  log "$content_dir/feed.xml --> $site_dir/feed.xml"
-  include feed.xml > site/feed.xml
-
-  log "$content_dir/*.css --> $site_dir/min.css"
-  find $content_dir/ -name "*.css" -exec cat {} + | css_minify  >> "$site_dir/min.css"
 }
 
-development_server() {
+test_server() {
   render_site || exit $?
   trap 'kill $server_pid;rm $timestamp; exit' SIGINT
   timestamp="$(mktemp)"
   # TODO ease python dependancy https://gist.github.com/willurd/5720255
-  python -m SimpleHTTPServer 5000 & server_pid="$!"
+  php -S 127.0.0.1:5000 & server_pid="$!"
   # check for changes every second and rebuild the site when necessary
   while sleep 1; do
     changed="$(cd $content_dir; find * -newer "$timestamp")"
     touch "$timestamp"
-    [[ "$changed" ]] && render_site && log "reload complete: $changed" | tr "\n" " "
+    [[ "$changed" ]] && render_site && log "reload complete: ${changed//$n/ }"
   done
-}
 
+}
 ## MAIN
 case "${1:-${self##*/}}" in
   # link self as pre-commit hook
@@ -214,5 +189,5 @@ case "${1:-${self##*/}}" in
   # run as a precommit
   pre-commit) render_site || exit $?; git add site/ ;;
   render) render_site ;;
-  *) development_server ;;
+  *) test_server ;;
 esac

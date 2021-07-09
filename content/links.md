@@ -1,6 +1,8 @@
-title="Links and Things"
-date=2020-06-22
+title:Links and Things
 ===
+
+## best of
+* Diet
 
 ## Cooking
 * [It's Alive](https://www.youtube.com/watch?v=35Y06i7HnVo&list=PLKtIunYVkv_SUyXj_6Fe53okfzM9yVq1F)

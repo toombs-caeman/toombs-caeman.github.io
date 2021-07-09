@@ -3,7 +3,7 @@
 {{include head}}
 {{include nav}}
 <div .page-content>
-    {{? content}}
+    {{V content}}
 </div>
 {{include footer}}
 

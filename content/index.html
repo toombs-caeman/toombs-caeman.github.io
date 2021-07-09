@@ -1,0 +1,6 @@
+title: Home
+===
+
+{{ include ../README.md }}
+
+{{ for p in $pages; do [[ "$p" == "$page" ]] && continue; echo "* $(V title "$p") <span .date->$(V date "$p")"; done }}

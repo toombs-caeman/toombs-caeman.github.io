@@ -1,8 +1,0 @@
-title=HOME
-===
-
-`include ../README.md`
-
-<hr>
-
-<ul-> `for p in $pages; do [[ "$p" == "index.txt" ]] && continue; li_date_page $p; done`

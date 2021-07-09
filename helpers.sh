@@ -8,3 +8,4 @@ li_date_page() {
   date="$(? $1 date)" && echo "<li>[](/${1:-$page})<span class=\"date\">$date</span>"
 }
 
+nav_pages="index.html"

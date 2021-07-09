@@ -1,5 +1,4 @@
-title="Damn Small Diet"
-date=2021-06-06
+title: Diet
 ===
 
 The problem with dieting in general is that we talk about them as if food is the problem.

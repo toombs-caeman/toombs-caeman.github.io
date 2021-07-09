@@ -1,6 +1,4 @@
-title=Ideas
-layout=default
-date=2020-06-22
+title:Ideas
 ===
 
 post/project ideas

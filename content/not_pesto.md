@@ -1,7 +1,7 @@
-title="Not Pesto"
-layout=default
+title: Not Pesto
 ===
-grandma made pesto with cashews and romaine instead of pine nuts and basil. Every ingredient was subsituted for something else.
+
+grandma made pesto with cashews and romaine instead of pine nuts and basil. Every ingredient was substituted for something else.
 Made me wonder what we should call it. Perhaps 'pesto' with every other letter substituted out for something else.
 total search space = 25**5 = 9765625 possible letter combinations
 number of matching words = <pre>
@@ -26,6 +26,5 @@ cat /usr/share/dict/words | sed -n '/^[^pesto]\{5\}$/p' | wc -l # 1946
 # count 5-letter words that don't share a letter (in the same position) with 'pesto'
 cat /usr/share/dict/words | sed -n '/^[^p][^e][^s][^t][^o]$/p' | wc -l # 7531
 
-</pre>
 so 26.4% of 5 letter words share at least one letter in the same position with 'pesto'
 
