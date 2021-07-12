@@ -6,28 +6,27 @@
 body { color: black; background-color: oldlace; }
 p { line-height: 1.5; }
 h1 { text-align: center; }
-a { text-decoration: none; }
+a { text-decoration: none; font-weight: bold; }
 a:link { color: steelblue ; }
 a:active { color: midnightblue; }
-a:visited { color: darkorchid; }
-a:hover { color: violet; }
+a:visited { color: dimgray; }
+a:hover { color: darkslategray; }
 header { display: flex; }
 header, footer {
   text-align: left;
   font-size: small;
 }
-
+/* TODO
+ *  blockquote styling
+ *  link colors?
+ *  margin size?
+*/
 .page-content { margin: 0 10%; }
 .icon {
     width: 2ch;
     height: 2ch;
 }
 .date { float: right; }
-
-.nav-menu {
-    max-width: 35px;
-    flex: 1;
-}
 .title {
     text-align: center;
     flex: 2;

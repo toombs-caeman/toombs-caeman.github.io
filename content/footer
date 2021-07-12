@@ -1,9 +1,0 @@
-<hr>
-<footer>
-<div style=text-align:center>
-    <a href="mailto:toombs.caeman@gmail.com"-> <img .icon src="/static/mail.svg" alt="email">
-    <a href="https://github.com/toombs-caeman"-> <img .icon src="/static/github.svg" alt="github">
-    <a href="/site/feed.xml"-> <img .icon src="/static/rss.svg" alt="rss">
-</div>
-created {{ V date }}
-</footer>

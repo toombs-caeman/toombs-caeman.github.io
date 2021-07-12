@@ -1,9 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-{{include head}}
-{{include nav}}
+<meta charset="utf-8">
+<title->{{V title}}
+<link href="/site/min.css" rel="stylesheet" type="text/css">
+<link href="/site/feed.xml" rel="alternate" type="application/rss+xml">
+<link href="/static/favicon.jpg" rel="shortcut icon" type=image/x-icon">
+<!-- TODO title -->
 <div .page-content>
     {{V content}}
 </div>
-{{include footer}}
+
+
+---
+
+<!-- TODO tag filters -->
+{{ for backlink in $(V backlink | uniq); do printf '%s\n' "* $(V title "$backlink")"; done }}
+
+---
+
+<footer>
+<div style=text-align:center>
+    [![xxiivv webring| .icon](https://webring.xxiivv.com/icon.black.svg)](https://webring.xxiivv.com/#random)
+    [![github| .icon](/static/github.svg)](https://github.com/toombs-caeman)
+<!--[![email| .icon](/static/mail.svg)](mailto:toombs.caeman@gmail.com)-->
+</div>
+created {{ V date }}
+</footer>
 

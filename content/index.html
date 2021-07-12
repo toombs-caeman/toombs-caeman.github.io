@@ -1,6 +1,5 @@
 title: Home
-===
 
-{{ include ../README.md }}
 
-{{ for p in $pages; do [[ "$p" == "$page" ]] && continue; echo "* $(V title "$p") <span .date->$(V date "$p")"; done }}
+This site is served directly from its [git repo]({{ git remote get-url origin }})
+

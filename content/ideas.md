@@ -1,8 +1,19 @@
-title:Ideas
-===
-
 post/project ideas
 
+* depth of learning
+    * let this repo be the 'textbook' level, with full research, external links, and more powerful, computer-aided data manipulations
+    * let the notebook be more of a work in progress, include some personalizations
+    * make the esoterica for the final version, fully personalized
+    * internal memory is based on esoterica
+* journey - method of loci
+* explicit theory
+* theory of mind / theory of learning
+* memory
+* mechanical reasoning [](https://en.wikipedia.org/wiki/TRIZ)
+    * the tricky part of seeing the beauty of mathematical proof is knowing enough to know which parts are mechanical thought
+        and which are leaps of insight
+    * by automatically generating links between related ideas with no assistance from a human, a computer can suggest previously unknown associations
+        
 * A [tcc](https://web.stanford.edu/~engler/tickc.pdf) [bytebeat](http://canonical.org/~kragen/bytebeat/) interpreter/sample generator
 * treadmill problem - given that the human senses are all limited by an [absolute threshold](https://en.wikipedia.org/wiki/Absolute_threshold)
     some small force could be applied to the body which would be guaranteed to be unnoticeable.
@@ -61,21 +72,6 @@ post/project ideas
         - parsing a string into json
         - data normalization in general
 
-* a theory of note taking is a partial theory of mind
-    * the purpose of notes is to extend the memory / reasoning ability of the user
-    * this is equivalent to a theory of how the mind can efficiently digest, retain and share information about the world
-    * qualities
-        - ease of creation
-        - ease of recovery (search/sort/structure)
-            * auto-indexing, full text search, deduplication and crosslinking
-            * mnemonic structure
-        - ease of sharing (external reference/permanence/jargon) (use by others, rather than by older you)
-        - appropriate depth placement (according to discovery/memorization/practice/identity structure)
-    * ref
-        - [memex](https://www.w3.org/History/1945/vbush/)
-        - https://thesephist.com/posts/inc/
-        - https://notes.andymatuschak.org/About_these_notes?stackedNotes=zUw5PuD8op9oq8kHvni6sug6eRTNtR9Wqma
-
 * the study of magic and magical thinking is useful because people turn towards alternative solutions when
     * they can't or haven't been able to formulate the issue they're facing distinctly enough to address it directly
     * there isn't an accepted/comprehensible/workable solution to the problems they face
@@ -86,3 +82,14 @@ post/project ideas
 * tulpa/rapscallion/servitor
     * https://en.wikipedia.org/wiki/Tulpa
     * https://tulpanomicon.guide/
+    
+* the point of metaphysics isn't truth but ease of reasoning about physics
+    * this is why occam's razor is so powerful
+    * given two models that 'effectively' give the same predictions, using the one that requires less computation
+        allows us to predict more. and is therefore more pragmatic
+    * it isn't just about getting the right answer, but also doing so in time, with our limited brains
+    * once we move beyond the edge of where we can effectively find a 'correct' answer (which isn't very far)
+        we need to consider answers which instead have desirable consequences
+        (desirable here being subjective, and subject to manipulation)
+    * occam's razor then gives us a tool by which we can reason about belief.
+    * complex metaphysics are less performant and so would naturally be selected against (memetics) unless they had a hidden benefit.

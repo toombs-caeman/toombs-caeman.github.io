@@ -1,64 +1,50 @@
-title: Meta
-===
 
-<blockquote cite="somebody.somewhere"-> You **NEED** to use Jekyll | Wordpress | Ghost | etc. in order to maintain your blog! \
-	-- Somebody, probably
-Well if you want to enjoy the experience, then maybe. But if you'd rather watch on forlornly as sections of your site break
-for no apparent reason and spend hours upon hours debugging regular expressions when you could be watching grass grow then have I got just the thing for you.
+Here I attempt to answer the question 'why take notes, and why like this?'.
+If you want to know how the code implements this see the Site page.
 
-Introducing [blog.sh](https://github.com/toombs-caeman/toombs-caeman.github.io/blob/master/blog.sh),
-a static site generator that's pure bs (bourne shell).
-As a single bash file with zero dependencies weighing in at `wc -l < blog.sh` lines this is the best way to put your website rendering on a diet.
-I'm doing my part to fend off the [Website Obesity Crisis](https://idlewords.com/talks/website_obesity.htm).
+## Why take notes
+The Theory of Notes is a partial Theory of Mind.
+By understanding how memory works we can derive how to take good notes and vice versa.
+By surveying popular and powerful note-taking devices we can derive anecdotal evidence for how memory functions.
+This idea hails back to the classic [memex](https://www.w3.org/History/1945/vbush/) of Vannevar Bush.
 
-This site is served using blog.sh and [github pages](https://pages.github.com/). It is entirely static.
-There's no server side processing (pages are rendered during pre-commit), no client side javascript
-(not even for the burger animation, though blog.sh doesn't forbid that), and no tracking/analytics.
+## Qualities of bad note-taking systems
+* hard to enter information
+    * too much friction is the biggest reason I don't write something down.
+* hard to find information
+    * a 'Info black hole' where thoughts go to die
+* not persistent, or owned by someone else.
+    * In either case it is likely to disappear unexpectedly.
 
-If I ever have to move away from github for some reason, the site could be hosted as simply as nginx or httpd serving an up-to-date copy of the repository.
-Nginx logs can be captured to provide [unique visitors](https://serverfault.com/questions/447370/how-to-count-unique-visitors-in-an-nginx-access-log),
-which would be sufficient for me to see that people are interested without tracking your every move.
+## Qualities of good note-taking systems
+the extra complexity and friction of mechanical aids has to be justified by extra capability.
 
-## Features
-* text transformation
-    * implements Markdown's [Basic Syntax](https://www.markdownguide.org/cheat-sheet/#basic-syntax)
-    * yaml style front matter (===)
-    * the macro language is bash instead of the more common and more sensible jinja (have fun lol)
-    * allow css-like syntax to be added to html tags, headers, links, and images
-    * (todo) [tag filters](https://webdesign.tutsplus.com/tutorials/how-to-build-a-filtering-component-in-pure-css--cms-33111)
-    * (todo) automatically cross-link pages that refer to the title of other pages
-        - also use link anchors so that following the cross-link jumps to the part of the page
-* tools
-    * integrates nicely with git to auto-commit generated files (normal form purists can get bent).
-        This allows you to serve the site very simply from just a clone of the repository
-    * will watch for changes and re-render the site
-
-
-## References
-* mechanics
-    * [bash regex](https://www.gnu.org/software/bash/manual/html_node/Pattern-Matching.html#Pattern-Matching)
-    * [bash parameter expansion](https://wiki-dev.bash-hackers.org/syntax/pe)
-    * [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
-* cleanliness
-    * [Cool URIs don't change](https://www.w3.org/Provider/Style/URI)
-    * [omitting html tags](https://google.github.io/styleguide/htmlcssguide.html#Optional_Tags)
+* a human **should not** have to date things sort, search, cross-link, or index things by hand.
+    Computers can and should do this.
+* the indexes that the computer generates should be stable as the notes grow, and should reflect the natural associations 
+    formed by a human. The structure of notes is itself a useful piece of information that the human can learn, 
+    and at greater depth of learning than the data itself. As such it shouldn't change as fast as the data it indexes.
+    Computers can regenerate an index much faster than a human can re-learn it.
+    * Some people argue that [time is an essential component of organizing notes](https://thesephist.com/posts/inc/)
+    * Others argue that 'position on the page' is essential for recall of information. Both of these are true to an extent.
+    
+* The computer should generate unexpected insights through mechanical reasoning
+    * by automatically generating links between related ideas with no assistance from a human, a computer can suggest previously unknown associations
+* ease of sharing
+    * social learning
+* object permanence
 
 
-## future site updates
-* a real color scheme
-* fix rss
-* generalize the development server using any of these [one-line servers](https://gist.github.com/willurd/5720255).
+## good systems I've seen
 
-## abandoned ideas
-probably bad ideas that I'm writing down so I won't think about them anymore:
-* is it possible / not against TOS to kluge a github issue into providing a place for comments on the posts?
-    - I don't really want to tie blog.sh directly to github, but I also don't want to write that myself in bash. I've
-        been through enough.
-    - CORS probably won't allow something like an iframe to include the issue thread, but just a link would do.
-    - Disqus is another option... but ads and external dependencies... yuck
-* *busybox* only rendering
-    - call it *b.sh* and play a bit of [golf](https://code.golf/) to really play up the absurd hyper minimalism
-    - requires moving from bash to ash/dash, which doesn't have the =~ match operator
-    - since this is really the hyper minimal case, don't even do git stuff
-    - need to verify that the output is the same
+* Paper is hard to beat and is the golden standard for data entry.
+    * on the other hand, the paper can't assist you very much with indexing, dating, cross-linking, etc.
+        These things can be done by hand of course, but its not very efficient.
+    * it's difficult to share or rather it can't easily make use of the internet.
+    
+* [](https://notes.andymatuschak.org/About_these_notes)
+    * I love the 'association first' rather than 'index first' discovery
+    * the dudes content is fairly interesting too.
+    * unfortunately not available for use
+    
 

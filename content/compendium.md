@@ -61,7 +61,8 @@ compilation and compression are intimately linked.
 * consensus/networking/ipc
 * array of structs <=> struct of arrays (a la. JAI)
 
-# previous work
+# related
+* [](http://catern.com/caternetes.html)
 
 ## language design
 * [Racket](https://racket-lang.org/) has probably done the most on "langauge-oriented" programming, or meta-programming

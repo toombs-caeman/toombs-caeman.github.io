@@ -1,87 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<meta charset="utf-8">
-<title>Meta</title>
-<link href="/site/min.css" rel="stylesheet" type="text/css">
-<link href="/site/feed.xml" rel="alternate" type="application/rss+xml">
-<link href="/static/favicon.jpg" rel="shortcut icon" type=image/x-icon">
-<p>
-<p>
-<p>
-<header>
-<div class="nav-menu">
-    <input id="burger" type='checkbox' style='display:none'>
-    <label class="burger" for='burger'> <div class="bbar1"><div class="bar1"></div></div><div class="bbar2"><div class="bar2"></div></div><div class="bbar3"><div class="bar3"></div></div></label>
-    <nav aria-label="Main Navigation"> <ul> <li><a href="/site/index.html"><a href="/site/index.html">Home</a></a></ul></nav>
-</div>
-<h1 class="title"> Meta</h1>
-</header>
-<p>
-<p>
-<div class="page-content">
-    <p>
-<blockquote cite="somebody.somewhere"> You <b>NEED</b> to use Jekyll | Wordpress | Ghost | etc. in order to maintain your blog! \</blockquote>
-	-- Somebody, probably
-Well if you want to enjoy the experience, then maybe. But if you'd rather watch on forlornly as sections of your site break
-for no apparent reason and spend hours upon hours debugging regular expressions when you could be watching grass grow then have I got just the thing for you.
-<p>
-Introducing <a href="https://github.com/toombs-caeman/toombs-caeman.github.io/blob/master/blog.sh">blog.sh</a>,
-a static site generator that's pure bs (bourne shell).
-As a single bash file with zero dependencies weighing in at <code>wc -l < blog.sh</code> lines this is the best way to put your website rendering on a diet.
-I'm doing my part to fend off the <a href="https://idlewords.com/talks/website_obesity.htm">Website Obesity Crisis</a>.
-<p>
-This site is served using blog.sh and <a href="https://pages.github.com/">github pages</a>. It is entirely static.
-There's no server side processing (pages are rendered during pre-commit), no client side javascript
-(not even for the burger animation, though blog.sh doesn't forbid that), and no tracking/analytics.
-<p>
-If I ever have to move away from github for some reason, the site could be hosted as simply as nginx or httpd serving an up-to-date copy of the repository.
-Nginx logs can be captured to provide <a href="https://serverfault.com/questions/447370/how-to-count-unique-visitors-in-an-nginx-access-log">unique visitors</a>,
-which would be sufficient for me to see that people are interested without tracking your every move.
-<p>
-<h2> Features</h2>
-<p>
-<ul><li>text transformation
-<ul><li>implements Markdown's <a href="https://www.markdownguide.org/cheat-sheet/#basic-syntax">Basic Syntax</a><li>yaml style front matter (===)<li>the macro language is bash instead of the more common and more sensible jinja (have fun lol)<li>allow css-like syntax to be added to html tags, headers, links, and images<li>(todo) <a href="https://webdesign.tutsplus.com/tutorials/how-to-build-a-filtering-component-in-pure-css--cms-33111">tag filters</a><li>(todo) automatically cross-link pages that refer to the title of other pages
-<ul><li>also use link anchors so that following the cross-link jumps to the part of the page</ul></ul><li>tools
-<ul><li>integrates nicely with git to auto-commit generated files (normal form purists can get bent).
-        This allows you to serve the site very simply from just a clone of the repository<li>will watch for changes and re-render the site</ul></ul>
-<p>
-<p>
-<h2> References</h2>
-<p>
-<ul><li>mechanics
-<ul><li><a href="https://www.gnu.org/software/bash/manual/html_node/Pattern-Matching.html#Pattern-Matching">bash regex</a><li><a href="https://wiki-dev.bash-hackers.org/syntax/pe">bash parameter expansion</a><li><a href="https://www.markdownguide.org/cheat-sheet/">Markdown Cheat Sheet</a></ul><li>cleanliness
-<ul><li><a href="https://www.w3.org/Provider/Style/URI">Cool URIs don't change</a><li><a href="https://google.github.io/styleguide/htmlcssguide.html#Optional_Tags">omitting html tags</a></ul></ul>
-<p>
-<p>
-<h2> future site updates</h2>
-<p>
-<ul><li>a real color scheme<li>fix rss<li>generalize the development server using any of these <a href="https://gist.github.com/willurd/5720255">one-line servers</a>.</ul>
-<p>
-<h2> abandoned ideas</h2>
-probably bad ideas that I'm writing down so I won't think about them anymore:
-<p>
-<ul><li>is it possible / not against TOS to kluge a github issue into providing a place for comments on the posts?
-<ul><li>I don't really want to tie blog.sh directly to github, but I also don't want to write that myself in bash. I've
-        been through enough.<li>CORS probably won't allow something like an iframe to include the issue thread, but just a link would do.<li>Disqus is another option... but ads and external dependencies... yuck</ul><li><em>busybox</em> only rendering
-<ul><li>call it <em>b.sh</em> and play a bit of <a href="https://code.golf/">golf</a> to really play up the absurd hyper minimalism<li>requires moving from bash to ash/dash, which doesn't have the =~ match operator<li>since this is really the hyper minimal case, don't even do git stuff<li>need to verify that the output is the same</ul></ul>
-<p>
-<p>
-<hr>
-<h3> backlinks</h3>
-
-<ul><li><a href="/site/index.html">Home</a>
-</div>
-<hr>
-<footer>
-<div style=text-align:center>
-    <a href="mailto:toombs.caeman@gmail.com"> <img class="icon" src="/static/mail.svg" alt="email"></a>
-    <a href="https://github.com/toombs-caeman"> <img class="icon" src="/static/github.svg" alt="github"></a>
-    <a href="/site/feed.xml"> <img class="icon" src="/static/rss.svg" alt="rss"></a>
-</div>
-created 
-</footer>
-<p>
-<p></ul>
-<p>
-<p>
+<!DOCTYPE html><html lang="en"><meta charset="utf-8"><title>Meta</title><link href="/site/min.css" rel="stylesheet" type="text/css"><link href="/site/feed.xml" rel="alternate" type="application/rss+xml"><link href="/static/favicon.jpg" rel="shortcut icon" type=image/x-icon"><!-- TODO title></!--></!--><div class="page-content">    Here I attempt to answer the question 'why take notes, and why like this?'.If you want to know how the code implements this see the <a href="/site/Site">Site</a> page.<p><h2> Why take notes</h2>The <a href="/site/theory">Theory</a> of Notes is a partial Theory of Mind.By understanding how memory works we can derive how to take good notes and vice versa.By surveying popular and powerful note-taking devices we can derive anecdotal evidence for how memory functions.This idea hails back to the classic <a href="https://www.w3.org/History/1945/vbush/">memex</a> of Vannevar Bush.<p><h2> Qualities of bad note-taking systems</h2>
+<ul><li>hard to enter information
+<ul><li>too much friction is the biggest reason I don't write something down.</ul><li>hard to find information
+<ul><li>a 'Info black hole' where thoughts go to die</ul><li>not persistent, or owned by someone else.
+<ul><li>In either case it is likely to disappear unexpectedly.</ul></ul>
+<p><h2> Qualities of good note-taking systems</h2>the extra complexity and friction of mechanical aids has to be justified by extra capability.<p>
+<ul><li>a human <b>should not</b> have to date things sort, search, cross-link, or index things by hand.
+    Computers can and should do this.<li>the indexes that the computer generates should be stable as the notes grow, and should reflect the natural associations 
+    formed by a human. The structure of notes is itself a useful piece of information that the human can learn, 
+    and at greater depth of learning than the data itself. As such it shouldn't change as fast as the data it indexes.
+    Computers can regenerate an index much faster than a human can re-learn it.
+<ul><li>Some people argue that <a href="https://thesephist.com/posts/inc/">time is an essential component of organizing notes</a><li>Others argue that 'position on the page' is essential for recall of information. Both of these are true to an extent.
+    </ul><li>The computer should generate unexpected insights through mechanical reasoning
+<ul><li>by automatically generating links between related ideas with no assistance from a human, a computer can suggest previously unknown associations</ul><li>ease of sharing
+<ul><li>social learning</ul><li>object permanence</ul>
+<p><p><h2> good systems I've seen</h2><p>
+<ul><li>Paper is hard to beat and is the golden standard for data entry.
+<ul><li>on the other hand, the paper can't assist you very much with indexing, dating, cross-linking, etc.
+        These things can be done by hand of course, but its not very efficient.<li>it's difficult to share or rather it can't easily make use of the internet.
+    </ul><li><a href="https://notes.andymatuschak.org/About_these_notes">https://notes.andymatuschak.org/About_these_notes</a>
+<ul><li>I love the 'association first' rather than 'index first' discovery<li>the dudes content is fairly interesting too.<li>unfortunately not available for use
+    
+</div></ul></ul>
+<p><p><hr><p><!-- TODO tag filters></!--></!-->
+<ul><li><a href="/site/meta">Meta</a></ul>
+<p><hr><p><footer><div style=text-align:center>    <a href="https://webring.xxiivv.com/#random"><img class="icon" src="https://webring.xxiivv.com/icon.black.svg" alt="xxiivv webring" title="xxiivv webring"></a>    <a href="https://github.com/toombs-caeman"><img class="icon" src="/static/github.svg" alt="github" title="github"></a><!--<a href="mailto:toombs.caeman@gmail.com"><img class="icon" src="/static/mail.svg" alt="email" title="email"></a>--></div>created 2021-07-09</footer><p><p>

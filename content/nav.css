@@ -38,6 +38,11 @@
     background-color: tomato;
 }
 
+.nav-menu {
+    max-width: 35px;
+    flex: 1;
+}
+
 nav {
     transform: scaleY(0);
     transition: 0.4s;
