@@ -1,0 +1,40 @@
+My notebooks are one part of my external Memory
+
+When I got serious about taking notes a few years ago, one of the first systems I came across was the [Bullet Journal](https://bulletjournal.com/).
+I took it "seriously" for about a year before deciding that it didn't align with what I was looking for. It was a nice exercise.
+
+I do still love my notebooks and write almost every day, but the system is a bit different now.
+
+
+I like writing on paper because I feel it makes me think differently. Writing is slower than typing and I always use a pen.
+It forces me to be more sure of what I want to say, more precise, and more concise rather than typing first and editing later.
+This slowness is useful for long-form writing, and working through ideas, but less so for incidental, ephemeral writing like todo lists, reminders, appointments where speed is preferable to depth of thought.
+I see value in being able to look back in time with some accuracy, as I know you also do, but I believe 'review-value' density is more important than exhaustiveness. There's enough info overload in my life.
+
+## bullet journal
+I initially liked the idea of bullet journals because they promised a way to keep all your notes in one permanent place.
+'one true notebook' is still a nice idea, but it undervalues having just the right notes (and no clutter) in the right context.Sometimes that context is sitting at a computer and you need to be able to copy links. Sometimes it's better to have a calendar that can send you notifications.In general the system has a few good ideas that I've kept up with, but I've found it mostly focuses on things I don't much care about.
+
+So, what I kept/adapted:
+* All my notebooks are given a number in order and a name (often just the year) both of which are written on the edge so you can see it when the book is closed.
+* Pages are numbered in the top right corner.
+* References to other pages look like 'p3.14'. This refers to the 14th page of book 3. The bottom row of each page is reserved for references.
+* All pages are titled before anything is written. One topic per page, so it can be referenced.
+* There is a section in the front for an index.
+
+
+
+## current system
+Now the major changes:
+* Unlike the bullet journal, almost all pages are topical, rather than by date. Each book has a year, so I can approximate date from location well enough. 
+* I've dropped the calendar and future log sections as an electronic calendar is much more useful.
+* I keep todo items in contextual lists. I have a file on the computer for computer stuff, on my phone for being out and about, etc. It was a useful exercise to put all these in the same place for a while and only separate them again when it was necessary. Instead of 10 places a todo could be, now there are 3 and I always know where an item needs to go since each place has a specific reason for existing.
+* I consider the journal to be a 'permanent' record. The todo lists are deliberately transient. If I'm planning a larger project or something important happens it usually goes in the journal, but the day to day mechanics of doing it don't. I leave space by the index for a 'structured index' to be completed when the book is full. It groups pages by topic rather than the order in which I happened to write them.
+* I have other sections in the front for long-lived lists, like my reading list.
+
+So yeah, it comes down to a choice about what you keep and how to structure it (by date, topic, or context). The bullet journal was a useful first approximation of that for me but what I care about is different from what it was designed to capture.
+## materials
+I prefer the [Sapphire A5 dot-grid Rhodiarama Soft Cover (~$18)](https://rhodiapads.com/collections_premium_rhodiarama_soft.php)  notebook
+with a black [Pilot Metropolitan (~$19)](http://pilotpen.us/brands/mr-metropolitan/mr-metropolitan-fountain/?product=1164) fountain pen
+and Noodler's [Heart of Darkness (~$19)](https://noodlersink.com/product/19808-heart-of-darkness-4-5-oz/) ink.
+I use about one notebook a year. The ink lasts about 5 years.

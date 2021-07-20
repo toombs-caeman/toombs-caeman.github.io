@@ -1,5 +1,3 @@
-title: Diet
-===
 
 The problem with dieting in general is that we talk about them as if food is the problem.
 It's rarely a problem of the right nutrients being unavailable or even a lack of knowledge about what constitutes a healthy meal.

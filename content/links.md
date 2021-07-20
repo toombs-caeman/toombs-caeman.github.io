@@ -1,11 +1,4 @@
 title:Links and Things
-===
-
-## best of
-* Diet
-
-## Cooking
-* [It's Alive](https://www.youtube.com/watch?v=35Y06i7HnVo&list=PLKtIunYVkv_SUyXj_6Fe53okfzM9yVq1F)
 
 ## Philosophy?
 * [lessons to unlearn](http://paulgraham.com/lesson.html)

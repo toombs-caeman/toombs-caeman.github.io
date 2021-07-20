@@ -5,19 +5,36 @@
 <link href="/site/min.css" rel="stylesheet" type="text/css">
 <link href="/site/feed.xml" rel="alternate" type="application/rss+xml">
 <link href="/static/favicon.jpg" rel="shortcut icon" type=image/x-icon">
-<!-- TODO title -->
+# {{V title}}
 <div .page-content>
     {{V content}}
 </div>
-
-
 ---
-
-<!-- TODO tag filters -->
-{{ for backlink in $(V backlink | uniq); do printf '%s\n' "* $(V title "$backlink")"; done }}
-
+<div .links>
+filters:
+<input type='radio' id='index.html' name='link' checked><label for='index.html'-><em->[all]
+{{
+  link_count="$(V link | wc -l | tr -d ' ')"
+  for link in $(V link); do
+    result="$( sort <<<"$(V link "$link"; echo; V link)" )"
+    result_count="$( ( V link "$link"; echo; V link; ) | sort | uniq -d | wc -l | tr -d ' ')"
+    [[ "$page" == 'meta.md' ]] && log warning "$page:$link_count$link:$result_count-> ${result[@]}"
+    if (( result_count )) && (( result_count < link_count )); then
+        printf "<input type='radio' id='%s' name='link'><label for='%s'-><em->[%s]\n" \
+            "$link" "$link" "$(V title "$link" | tr [:upper:] [:lower:])"
+    fi
+  done
+}}
+<ul>
+    <li link="index.html">Index
+    {{
+        for link in $(V link | tr '\n' ' '); do
+            printf -- '<li link="index.html %s">%s\n' "$(V link "$link")" "$(V title "$link")";
+        done
+    }}
+</ul>
+</div>
 ---
-
 <footer>
 <div style=text-align:center>
     [![xxiivv webring| .icon](https://webring.xxiivv.com/icon.black.svg)](https://webring.xxiivv.com/#random)

@@ -14,3 +14,7 @@ Memory as I will talk of it here is specifically the explicit stage in depth of 
         Rules of mechanical reasoning captures complex behavior in finite mindshare
     )
 
+## external memory
+* Phone
+* Notebook
+* Site

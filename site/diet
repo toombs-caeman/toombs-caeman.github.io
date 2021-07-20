@@ -1,12 +1,49 @@
-<!DOCTYPE html><html lang="en"><meta charset="utf-8"><title>Diet</title><link href="/site/min.css" rel="stylesheet" type="text/css"><link href="/site/feed.xml" rel="alternate" type="application/rss+xml"><link href="/static/favicon.jpg" rel="shortcut icon" type=image/x-icon"><!-- TODO title></!--></!--><div class="page-content">    ===<p>The problem with dieting in general is that we talk about them as if food is the problem.It's rarely a problem of the right nutrients being unavailable or even a lack of knowledge about what constitutes a healthy meal.<p>The true problem lies in the difficulty of changing a habit that doesn't even appear to most people to be a habit.Your body is a reflection of how you use it. Short-term changes in behavior can only have short-term effects.<p><p>
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<title>Diet</title>
+<link href="/site/min.css" rel="stylesheet" type="text/css">
+<link href="/site/feed.xml" rel="alternate" type="application/rss+xml">
+<link href="/static/favicon.jpg" rel="shortcut icon" type=image/x-icon>
+<h1> Diet</h1>
+<div class="page-content">
+    
+The problem with dieting in general is that we talk about them as if food is the problem.
+It's rarely a problem of the right nutrients being unavailable or even a lack of knowledge about what constitutes a healthy meal.
+<p>
+The true problem lies in the difficulty of changing a habit that doesn't even appear to most people to be a habit.
+Your body is a reflection of how you use it. Short-term changes in behavior can only have short-term effects.
+<p>
+<p>
+
 <ul><li>basic knowledge
 <ul><li>calorie restriction<li>macro nutrients (carbs, fat, protein)<li>fiber, vitamins</ul></ul>
 <p>
+
 <ul><li>how common diets attempt calorie restriction<li>the value of having a named diet (or not, since talking about it acts as a reward. better to go solo)</ul>
 <p>
+
 <ul><li>my journey
 <ul><li>calorie tracking<li>realization that recording wasn't a long term solution<li>IF<li>salad WITH dinner, salad FOR dinner
-</div></ul></ul>
-<p><p><hr><p><!-- TODO tag filters></!--></!-->
-<ul><li><a href="/site/diet">Diet</a></ul>
-<p><hr><p><footer><div style=text-align:center>    <a href="https://webring.xxiivv.com/#random"><img class="icon" src="https://webring.xxiivv.com/icon.black.svg" alt="xxiivv webring" title="xxiivv webring"></a>    <a href="https://github.com/toombs-caeman"><img class="icon" src="/static/github.svg" alt="github" title="github"></a><!--<a href="mailto:toombs.caeman@gmail.com"><img class="icon" src="/static/mail.svg" alt="email" title="email"></a>--></div>created 2021-07-09</footer><p><p>
+</div>
+---
+<div class="links">
+filters:
+<input type='radio' id='index.html' name='link' checked><label for='index.html'><em>[all]</ul></ul>
+<p></em></label>
+<ul>
+    <li link="index.html"><a href="/site/">Index</a>
+    
+</ul>
+</div>
+<hr>
+<footer>
+<div style=text-align:center>
+    <a href="https://webring.xxiivv.com/#random"><img class="icon" src="https://webring.xxiivv.com/icon.black.svg" alt="xxiivv webring" title="xxiivv webring"></a>
+    <a href="https://github.com/toombs-caeman"><img class="icon" src="/static/github.svg" alt="github" title="github"></a>
+<!--<a href="mailto:toombs.caeman@gmail.com"><img class="icon" src="/static/mail.svg" alt="email" title="email"></a>-->
+</div>
+created 2021-07-09
+</footer>
+<p>
+<p>

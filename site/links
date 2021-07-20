@@ -1,18 +1,54 @@
-<!DOCTYPE html><html lang="en"><meta charset="utf-8"><title>Links And Things</title><link href="/site/min.css" rel="stylesheet" type="text/css"><link href="/site/feed.xml" rel="alternate" type="application/rss+xml"><link href="/static/favicon.jpg" rel="shortcut icon" type=image/x-icon"><!-- TODO title></!--></!--><div class="page-content">    ===<p><h2> best of</h2>
-<ul><li><a href="/site/diet">Diet</a></ul>
-<p><h2> Cooking</h2>
-<ul><li><a href="https://www.youtube.com/watch?v=35Y06i7HnVo&list=PLKtIunYVkv_SUyXj_6Fe53okfzM9yVq1F">It's Alive</a></ul>
-<p><h2> Philosophy?</h2>
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<title>Links And Things</title>
+<link href="/site/min.css" rel="stylesheet" type="text/css">
+<link href="/site/feed.xml" rel="alternate" type="application/rss+xml">
+<link href="/static/favicon.jpg" rel="shortcut icon" type=image/x-icon>
+<h1> Links And Things</h1>
+<div class="page-content">
+    
+<h2> Philosophy?</h2>
+
 <ul><li><a href="http://paulgraham.com/lesson.html">lessons to unlearn</a><li><a href="https://nadiaeghbal.com/ideas">The tyranny of ideas</a><li><a href="https://www.lesswrong.com/rationality">Rationality: A-Z</a></ul>
-<p><h2> Rebuilding</h2>
+<p>
+<h2> Rebuilding</h2>
+
 <ul><li><a href="https://www.youtube.com/watch?v=pW-SOdj4Kkk">preventing the collapse of civilization</a> an excellent talk on technological complexity<li><a href="https://simplifier.neocities.org/">computer hardware from scratch</a><li><a href="https://threadsofperu.com/pages/backstrap-weaving-in-peru">backstrap weaving</a><li><a href="https://github.com/danistefanovic/build-your-own-x">build your own x</a><li><a href="http://walkaway.wiki/">walkaway wiki</a> probably after the Cory Doctorow book by the same name.<li><a href="https://solar.lowtechmagazine.com/">low tech magazine</a></ul>
-<p><p><h2> Silliness</h2>
+<p>
+<p>
+<h2> Silliness</h2>
+
 <ul><li><a href="https://billwurtz.com/">Bill Wurtz</a><li><a href="https://www.mit.edu/~xela/tao.html">Tao of Programming</a></ul>
-<p><p><h2> Other things</h2>
+<p>
+<p>
+<h2> Other things</h2>
+
 <ul><li><a href="https://text.npr.org/">text only npr</a><li><a href="https://href.cool/">href cool</a><li><a href="https://n-o-d-e.net/">n-o-d-e</a><li><a href="https://www.youtube.com/user/CGPGrey">CGP Grey</a><li>also go support your libraries irl</ul>
-<p><p><h2> Uncategorized</h2>
+<p>
+<p>
+<h2> Uncategorized</h2>
+
 <ul><li><a href="https://en.wikipedia.org/wiki/Facial_Action_Coding_System">Facial Action Coding System</a>
-</div></ul>
-<p><p><hr><p><!-- TODO tag filters></!--></!-->
-<ul><li><a href="/site/links">Links And Things</a></ul>
-<p><hr><p><footer><div style=text-align:center>    <a href="https://webring.xxiivv.com/#random"><img class="icon" src="https://webring.xxiivv.com/icon.black.svg" alt="xxiivv webring" title="xxiivv webring"></a>    <a href="https://github.com/toombs-caeman"><img class="icon" src="/static/github.svg" alt="github" title="github"></a><!--<a href="mailto:toombs.caeman@gmail.com"><img class="icon" src="/static/mail.svg" alt="email" title="email"></a>--></div>created 2021-07-09</footer><p><p>
+</div>
+---
+<div class="links">
+filters:
+<input type='radio' id='index.html' name='link' checked><label for='index.html'><em>[all]</ul>
+<p></em></label>
+<ul>
+    <li link="index.html"><a href="/site/">Index</a>
+    
+</ul>
+</div>
+<hr>
+<footer>
+<div style=text-align:center>
+    <a href="https://webring.xxiivv.com/#random"><img class="icon" src="https://webring.xxiivv.com/icon.black.svg" alt="xxiivv webring" title="xxiivv webring"></a>
+    <a href="https://github.com/toombs-caeman"><img class="icon" src="/static/github.svg" alt="github" title="github"></a>
+<!--<a href="mailto:toombs.caeman@gmail.com"><img class="icon" src="/static/mail.svg" alt="email" title="email"></a>-->
+</div>
+created 2021-07-09
+</footer>
+<p>
+<p>

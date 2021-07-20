@@ -1,6 +1,38 @@
-<!DOCTYPE html><html lang="en"><meta charset="utf-8"><title>Inbox</title><link href="/site/min.css" rel="stylesheet" type="text/css"><link href="/site/feed.xml" rel="alternate" type="application/rss+xml"><link href="/static/favicon.jpg" rel="shortcut icon" type=image/x-icon"><!-- TODO title></!--></!--><div class="page-content">    ===a dumping ground of ideas and links which might be interesting,that I haven't looked at yet.<p><h2> External links</h2>
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<title>Inbox</title>
+<link href="/site/min.css" rel="stylesheet" type="text/css">
+<link href="/site/feed.xml" rel="alternate" type="application/rss+xml">
+<link href="/static/favicon.jpg" rel="shortcut icon" type=image/x-icon>
+<h1> Inbox</h1>
+<div class="page-content">
+    a dumping ground of links which might be interesting that I haven't looked at yet.
+<p>
+<h2> External links</h2>
+
 <ul><li><a href="https://moq.org">https://moq.org</a>, <a href="https://en.wikipedia.org/wiki/Pirsig%27s_Metaphysics_of_Quality">https://en.wikipedia.org/wiki/Pirsig%27s_Metaphysics_of_Quality</a><li><a href="https://github.com/ContextLab/human-memory">human memory</a><li><a href="https://greatergood.berkeley.edu/article/item/dear_christine_why_cant_i_sleep">why can't I sleep</a>
-</div></ul>
-<p><p><hr><p><!-- TODO tag filters></!--></!-->
-<ul><li><a href="/site/inbox">Inbox</a></ul>
-<p><hr><p><footer><div style=text-align:center>    <a href="https://webring.xxiivv.com/#random"><img class="icon" src="https://webring.xxiivv.com/icon.black.svg" alt="xxiivv webring" title="xxiivv webring"></a>    <a href="https://github.com/toombs-caeman"><img class="icon" src="/static/github.svg" alt="github" title="github"></a><!--<a href="mailto:toombs.caeman@gmail.com"><img class="icon" src="/static/mail.svg" alt="email" title="email"></a>--></div>created </footer><p><p>
+</div>
+---
+<div class="links">
+filters:
+<input type='radio' id='index.html' name='link' checked><label for='index.html'><em>[all]</ul>
+<p></em></label>
+<ul>
+    <li link="index.html"><a href="/site/">Index</a>
+    <li link="index.html inbox.md
+site.md
+theory.md">Meta
+</ul>
+</div>
+<hr>
+<footer>
+<div style=text-align:center>
+    <a href="https://webring.xxiivv.com/#random"><img class="icon" src="https://webring.xxiivv.com/icon.black.svg" alt="xxiivv webring" title="xxiivv webring"></a>
+    <a href="https://github.com/toombs-caeman"><img class="icon" src="/static/github.svg" alt="github" title="github"></a>
+<!--<a href="mailto:toombs.caeman@gmail.com"><img class="icon" src="/static/mail.svg" alt="email" title="email"></a>-->
+</div>
+created 2021-07-12
+</footer>
+<p>
+<p>

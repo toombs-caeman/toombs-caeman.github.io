@@ -16,12 +16,7 @@ header, footer {
   text-align: left;
   font-size: small;
 }
-/* TODO
- *  blockquote styling
- *  link colors?
- *  margin size?
-*/
-.page-content { margin: 0 10%; }
+.page-content { margin: 0 20%; }
 .icon {
     width: 2ch;
     height: 2ch;
@@ -31,3 +26,12 @@ header, footer {
     text-align: center;
     flex: 2;
 }
+.footer {
+    margin: 0 20%;
+}
+
+/* bold for the selected filter */
+input[type="radio"]:checked + label { font-weight: bold; }
+/* hide links that don't match the active filter */
+{{ for page in $pages; do printf '[id="%s"]:checked ~ ul li:not([link~="%s"]),' "$page" "$page"; done }}
+input[name="link"]{ display:none; }

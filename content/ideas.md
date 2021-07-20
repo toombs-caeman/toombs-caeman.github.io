@@ -93,3 +93,44 @@ post/project ideas
         (desirable here being subjective, and subject to manipulation)
     * occam's razor then gives us a tool by which we can reason about belief.
     * complex metaphysics are less performant and so would naturally be selected against (memetics) unless they had a hidden benefit.
+    
+* [mysterium](https://store.steampowered.com/app/556180/Mysterium_A_Psychic_Clue_Game/) (basically a simplified Clue)
+    but instead of visions you have to send out a limited number of emojis. Could be played in chat with a bot or something.
+    
+* explore gemini/gopherspace?
+
+* nomography with [Cistercian numerals](https://en.wikipedia.org/wiki/Cistercian_numerals) to make functional and aesthetic 'magic' diagrams
+    * [The Visual Display of Quantitative Information](https://www.goodreads.com/book/show/17744.The_Visual_Display_of_Quantitative_Information)
+    * [nomography](https://deadreckonings.com/category/nomography/)
+    * [Iskur's Guide to Electronic Music](https://music.ishkur.com/) is an excellent example of dense data visualization.
+    * culinary nomogram - imperial/metric volume on left, imperial/metric weight on right, densities of common ingredients on middle line
+        - perhaps include an unrelated Fahrenheit/Celsius temperature line
+        - how to make it physically easy to read with one hand? maybe a simple pivot lock on material?
+    
+* fortune telling as rorschach test
+    * many historical magics fall into this category
+        - astrology
+        - tarot
+        - bibliomancy (I Ching)
+        - [geomancy](http://www.princeton.edu/~ezb/geomancy/geohome.html)
+        - [astragalomancy](https://en.wikipedia.org/wiki/Astragalomancy)
+        - flipping a coin to see if you're disappointed with the result
+    * shared characteristics
+        1. starting with some random process.
+        2. Each possible result is associated with a huge variety of attributes/archetypes
+        3. interpretation is largely subjective, despite sometimes being legitimized through complicated process.
+            * it forces the brain to have an emotional response to a 'reality' rather than a 'possibility'
+* 'the sea isn't maliciously trying to kill you, it's just completely indifferent, which is worse'
+    * eldritch
+
+* practices of collective imagination/storytelling
+    * D&D
+    * dream culture
+    * mysterium
+
+* enabling environments
+    * designing spaces not necessarily for the physical activities they enable, but the mental processes they enable.
+    * what is the long term mental effect of living in a particular place?
+    * eudaimonia machine - david dewane via cal newport
+    * adaptation facilitation machine - bioneer
+    * what is the psychological effect of having a library at home instead of a tv?

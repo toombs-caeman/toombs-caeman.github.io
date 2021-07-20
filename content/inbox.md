@@ -1,7 +1,5 @@
-title: Inbox
-===
-a dumping ground of ideas and links which might be interesting,
-that I haven't looked at yet.
+tags: one boring
+a dumping ground of links which might be interesting that I haven't looked at yet.
 
 ## External links
 * [](https://moq.org), [](https://en.wikipedia.org/wiki/Pirsig%27s_Metaphysics_of_Quality)

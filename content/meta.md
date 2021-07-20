@@ -1,3 +1,4 @@
+tags: one two
 
 Here I attempt to answer the question 'why take notes, and why like this?'.
 If you want to know how the code implements this see the Site page.

@@ -1,1 +1,89 @@
-.burger{display:inline-block;cursor:pointer;}.bar1,.bar2,.bar3{width:35px;height:5px;border-radius:5px;background-color:lightsalmon;margin:6px 0;transition:0.2s 0s;}.bbar1,.bbar2,.bbar3{width:35px;height:5px;border-radius:5px;margin:6px 0;transition:0.2s 0.2s;}#burger:checked+label>.bbar1{transform:translate(0,11px);transition-delay:0s;}#burger:checked+label>.bbar3{transform:translate(0,-11px);transition-delay:0s;}#burger:checked+label>div>.bar1{transform:rotate(-45deg);transition-delay:0.2s;background-color:tomato;}.bar2{transition:0s step-start 0.2s;}#burger:checked+label>div>.bar2{opacity:0;}#burger:checked+label>div>.bar3{transform:rotate(45deg);transition-delay:0.2s;background-color:tomato;}.nav-menu{max-width:35px;flex:1;}nav{transform:scaleY(0);transition:0.4s;}#burger:checked~nav{transform:scaleY(1);}*{box-sizing:border-box;}body{color:black;background-color:oldlace;}p{line-height:1.5;}h1{text-align:center;}a{text-decoration:none;font-weight:bold;}a:link{color:steelblue;}a:active{color:midnightblue;}a:visited{color:dimgray;}a:hover{color:darkslategray;}header{display:flex;}header,footer{text-align:left;font-size:small;}.page-content{margin:0 10%;}.icon{width:2ch;height:2ch;}.date{float:right;}.title{text-align:center;flex:2;}
+.burger {
+    display: inline-block;
+    cursor: pointer;
+}
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: lightsalmon;
+    margin: 6px 0;
+    transition: 0.2s 0s;
+}
+.bbar1, .bbar2, .bbar3 {
+    width: 35px;
+    height: 5px;
+    border-radius: 5px;
+    margin: 6px 0;
+    transition: 0.2s 0.2s;
+}
+#burger:checked+label > .bbar1 {
+    transform: translate(0, 11px);
+    transition-delay: 0s;
+}
+#burger:checked+label > .bbar3 {
+    transform: translate(0, -11px);
+    transition-delay: 0s;
+}
+#burger:checked+label > div > .bar1 {
+    transform: rotate(-45deg);
+    transition-delay: 0.2s;
+    background-color: tomato;
+}
+.bar2 { transition: 0s step-start 0.2s; }
+#burger:checked+label > div > .bar2 {opacity: 0;}
+#burger:checked+label > div > .bar3 {
+    transform: rotate(45deg);
+    transition-delay: 0.2s;
+    background-color: tomato;
+}
+
+.nav-menu {
+    max-width: 35px;
+    flex: 1;
+}
+
+nav {
+    transform: scaleY(0);
+    transition: 0.4s;
+}
+#burger:checked~nav {
+    transform: scaleY(1);
+}
+/*
+    pick colors from here
+    https://www.w3schools.com/cssref/css_colors.asp
+*/
+* { box-sizing: border-box; }
+body { color: black; background-color: oldlace; }
+p { line-height: 1.5; }
+h1 { text-align: center; }
+a { text-decoration: none; font-weight: bold; }
+a:link { color: steelblue ; }
+a:active { color: midnightblue; }
+a:visited { color: dimgray; }
+a:hover { color: darkslategray; }
+header { display: flex; }
+header, footer {
+  text-align: left;
+  font-size: small;
+}
+.page-content { margin: 0 20%; }
+.icon {
+    width: 2ch;
+    height: 2ch;
+}
+.date { float: right; }
+.title {
+    text-align: center;
+    flex: 2;
+}
+.footer {
+    margin: 0 20%;
+}
+
+/* bold for the selected filter */
+input[type="radio"]:checked + label { font-weight: bold; }
+/* hide links that don't match the active filter */
+[id="theory_of_mind.md"]:checked ~ ul li:not([link~="theory_of_mind.md"]),[id="theory.md"]:checked ~ ul li:not([link~="theory.md"]),[id="site.md"]:checked ~ ul li:not([link~="site.md"]),[id="notebook.md"]:checked ~ ul li:not([link~="notebook.md"]),[id="not_pesto.md"]:checked ~ ul li:not([link~="not_pesto.md"]),[id="meta.md"]:checked ~ ul li:not([link~="meta.md"]),[id="memory.md"]:checked ~ ul li:not([link~="memory.md"]),[id="links.md"]:checked ~ ul li:not([link~="links.md"]),[id="learning.md"]:checked ~ ul li:not([link~="learning.md"]),[id="index.html"]:checked ~ ul li:not([link~="index.html"]),[id="inbox.md"]:checked ~ ul li:not([link~="inbox.md"]),[id="ideas.md"]:checked ~ ul li:not([link~="ideas.md"]),[id="first_principles.md"]:checked ~ ul li:not([link~="first_principles.md"]),[id="diet.md"]:checked ~ ul li:not([link~="diet.md"]),[id="compendium.md"]:checked ~ ul li:not([link~="compendium.md"]),
+input[name="link"]{ display:none; }
