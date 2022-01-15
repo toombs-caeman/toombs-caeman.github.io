@@ -103,9 +103,12 @@ post/project ideas
     * [The Visual Display of Quantitative Information](https://www.goodreads.com/book/show/17744.The_Visual_Display_of_Quantitative_Information)
     * [nomography](https://deadreckonings.com/category/nomography/)
     * [Iskur's Guide to Electronic Music](https://music.ishkur.com/) is an excellent example of dense data visualization.
+    * Roche metabolic pathways map
     * culinary nomogram - imperial/metric volume on left, imperial/metric weight on right, densities of common ingredients on middle line
         - perhaps include an unrelated Fahrenheit/Celsius temperature line
         - how to make it physically easy to read with one hand? maybe a simple pivot lock on material?
+    * DnD nomogram to represent enemy stats, percentage to make various dice checks
+        * can we represent game state with dice / rulers placed on a a nomogram
     
 * fortune telling as rorschach test
     * many historical magics fall into this category
@@ -134,3 +137,4 @@ post/project ideas
     * eudaimonia machine - david dewane via cal newport
     * adaptation facilitation machine - bioneer
     * what is the psychological effect of having a library at home instead of a tv?
+    

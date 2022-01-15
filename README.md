@@ -16,7 +16,12 @@ Code is 'simple' if I could (not that I would ever want to).
 If I can't, then either I don't understand it fully, or it relies on hidden complexity in the ecosystem.
 
 ## Features Present and Future
-* implements Markdown's [Basic Syntax](https://www.markdownguide.org/cheat-sheet/#basic-syntax)
+separate into a few components
+    * baffle - load data/ jinja templating
+    * barkdown - render a markdown dialect that's mostly the [Basic Syntax](https://www.markdownguide.org/cheat-sheet/#basic-syntax)
+    * blog - tie everything else together
+    
+this lets there be reuse between here and ricer
 * allow css-like syntax to be added to html tags, headers, links, and images
     * additional html attributes are added to headers links and images after |
     * `.cls .cls2` -> class='cls cls2'
@@ -27,9 +32,6 @@ If I can't, then either I don't understand it fully, or it relies on hidden comp
     * At the time of writing `jinja2` is the popular macro language of choice.
         As a text transformation DSL it's convenient, but doesn't allow for more powerful macros unless you extend it
         using its host language (typically python). Jinja2 is why I chose double curly brackets to delimit macros.
-* includes a development mode that spins up a local test server and rebuilds changes on the fly.
-    * (todo) current method of watching for changes is janky
-    * (todo) generalize using any of these [one-line servers](https://gist.github.com/willurd/5720255).
 * integrates with git
     * pages are dated by when they were first committed
     * generated artifacts are committed as part of the included pre-commit hook
@@ -40,11 +42,10 @@ If I can't, then either I don't understand it fully, or it relies on hidden comp
 * (todo) nginx logs can be captured to provide [unique visitors stats](https://serverfault.com/questions/447370/how-to-count-unique-visitors-in-an-nginx-access-log)
     * assuming I leave github for whatever reason.
     * would be sufficient to see that people are interested without tracking your every move.
-* (todo) figure out how to join background processes to do concurrent content rendering
 * a real color scheme
 * hack together a css macro/framework for [animations](https://medium.com/@dtinth/spring-animation-in-css-2039de6e1a03)
     * need to enable macros in css files
-* (todo) add [tag filters](https://webdesign.tutsplus.com/tutorials/how-to-build-a-filtering-component-in-pure-css--cms-33111)
+* [tag filters](https://webdesign.tutsplus.com/tutorials/how-to-build-a-filtering-component-in-pure-css--cms-33111)
     to group and filter the index
 
 

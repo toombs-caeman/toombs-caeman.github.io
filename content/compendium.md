@@ -45,6 +45,8 @@ compilation and compression are intimately linked.
     * this allows meta-algorithms to experiment with various implementations of sort in various contexts.
     * real performance statistics are used to find the optimal algorithm to apply in the human-facing scenario
     * this optimization / recompilation happens in the background
+* truly DAG filesystems or tag based systems
+    * use 'everything is a file' paradigm to expose dag query api
 
 # topics
 * desktop niceties
