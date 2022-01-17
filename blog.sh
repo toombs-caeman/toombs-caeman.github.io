@@ -6,7 +6,6 @@ bin="site"
 
 # TODO content subdirectories don't seem to work anymore?
 # TODO add CNAME record to make use of new domain
-
 main() {
   local self="$(realpath -s "${BASH_SOURCE[0]}")"
   cd "$(git rev-parse --show-toplevel)" || exit $?

@@ -64,6 +64,8 @@ compilation and compression are intimately linked.
         on the current context.
     * real performance statistics are used to find the optimal algorithm to apply in the human-facing scenario
     * this optimization / recompilation happens in the background
+* truly DAG filesystems or tag based systems
+    * use 'everything is a file' paradigm to expose dag query api
 
 * strong separation between persistent state and intermediate representations
   * what if we handle persistence as a type property?
