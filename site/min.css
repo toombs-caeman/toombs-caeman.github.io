@@ -85,5 +85,5 @@ header, footer {
 /* bold for the selected filter */
 input[type="radio"]:checked + label { font-weight: bold; }
 /* hide links that don't match the active filter */
-[id="theory_of_mind.md"]:checked ~ ul li:not([link~="theory_of_mind.md"]),[id="theory.md"]:checked ~ ul li:not([link~="theory.md"]),[id="site.md"]:checked ~ ul li:not([link~="site.md"]),[id="notebook.md"]:checked ~ ul li:not([link~="notebook.md"]),[id="not_pesto.md"]:checked ~ ul li:not([link~="not_pesto.md"]),[id="meta.md"]:checked ~ ul li:not([link~="meta.md"]),[id="memory.md"]:checked ~ ul li:not([link~="memory.md"]),[id="links.md"]:checked ~ ul li:not([link~="links.md"]),[id="learning.md"]:checked ~ ul li:not([link~="learning.md"]),[id="index.html"]:checked ~ ul li:not([link~="index.html"]),[id="inbox.md"]:checked ~ ul li:not([link~="inbox.md"]),[id="ideas.md"]:checked ~ ul li:not([link~="ideas.md"]),[id="first_principles.md"]:checked ~ ul li:not([link~="first_principles.md"]),[id="diet.md"]:checked ~ ul li:not([link~="diet.md"]),[id="compendium.md"]:checked ~ ul li:not([link~="compendium.md"]),
+{{ for page in $pages; do printf '[id="%s"]:checked ~ ul li:not([link~="%s"]),' "$page" "$page"; done }}
 input[name="link"]{ display:none; }

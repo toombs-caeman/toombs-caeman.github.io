@@ -46,6 +46,7 @@ If I can't, then either I don't understand it fully, or it relies on hidden comp
     * need to enable macros in css files
 * (todo) add [tag filters](https://webdesign.tutsplus.com/tutorials/how-to-build-a-filtering-component-in-pure-css--cms-33111)
     to group and filter the index
+* (todo) [auto-update google dns](https://gist.github.com/cyrusboadway/5a7b715665f33c237996)
 
 
 ## Mechanics
