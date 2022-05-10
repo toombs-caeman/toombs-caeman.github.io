@@ -48,6 +48,39 @@ post/project ideas
         diversity and inclusion?
     * domain understanding - understanding a clients needs well enough to represent domain specific knowledge in a program.
 
+* clean room compilers
+  * what level of computing is it possible to audit and construct in 4 years (perhaps as a college degree) in order
+    to circumvent the thompson attack? [Trusting Trust - Ken Thompson](https://www.cs.cmu.edu/~rdriley/487/papers/Thompson_1984_ReflectionsonTrustingTrust.pdf)
+  * what gains could be made by having a vertically integrated hardware and software stack in the hands of an individual,
+    including the tools/process needed to implement it? related to craft heritage.
+
+* crafting heritage
+  * manufacturing (the production of goods, including software) lies on a spectrum between totally manual and totally automated.
+    * by manual I mean a single person (or small group) can create some functional version of the product with locally 
+      available and unrefined materials
+  * in all industries the extreme manual end can be done with very minimal tooling
+  * in some industries, the automated end can become self-recursive / self-reliant 
+    * using steel cauldrons to smelt steel
+    * using compiled compilers to compile compilers
+  * for a self-reliant goods, a failure to recurse necessitates a sudden shift toward the manual end.
+  * In our current economy there is an extreme emphasis on automated production, because it scales better and is therefore more profitable.
+  * In the case of hobbyists, most only have the resources to experiment with very manual production.
+  * The middle ground is neglected. Lets call it 'semi-auto' or early industrial
+  * *cue tinfoil hat*
+  * this creates a potential for failure where a good is very self-reliant but unable to recurse for a short period.
+  * in response its industry is unable to sustain itself at current levels, and cannot effectively scale back to
+    early industrial levels because that 'middle knowledge' isn't actively kept by anyone.
+  * If the failure is bad enough or the good sufficiently dependent on high quality recursion, it takes more than
+    a generation to recover enough semi-auto capacity to start rebuilding fully automated capacities. 
+  * at this point, not only has a generation been lost to re-industrialization, but the high end production knowledge
+    has also degraded. Hopefully those running fully automated plants had the forethought to write down what they knew
+    as the plants had to shut down. Hopefully that knowledge wasn't kept as an 'industry secret' for a company that
+    could not possibly survive a full generation of reduced capacity.
+  * *proceeds to solve a problem that probably doesn't exist*
+  * support the working class of production by seizing... this isn't a shit post I swear.
+  * create an industry conservatory that works to refine 'clean room' toolchains and regularly rebuilds tools from
+    the ground up as a way to ensure that there's always someone around who has done it.
+
 * there are a few classes of problems in computer science and engineering that get solved repeatedly in adhoc ways.
     * The huge prevalence of copypasta code is a testament to the failure to capture complexity in a library.
     * can we use stats on copied code from StackOverflow as a way to design libraries/languages and better cover common complexity?

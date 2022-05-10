@@ -42,12 +42,19 @@ this lets there be reuse between here and ricer
 * (todo) nginx logs can be captured to provide [unique visitors stats](https://serverfault.com/questions/447370/how-to-count-unique-visitors-in-an-nginx-access-log)
     * assuming I leave github for whatever reason.
     * would be sufficient to see that people are interested without tracking your every move.
-* a real color scheme
+* a real color scheme (spacedust probably)
 * hack together a css macro/framework for [animations](https://medium.com/@dtinth/spring-animation-in-css-2039de6e1a03)
     * need to enable macros in css files
 * [tag filters](https://webdesign.tutsplus.com/tutorials/how-to-build-a-filtering-component-in-pure-css--cms-33111)
     to group and filter the index
 * (todo) [auto-update google dns](https://gist.github.com/cyrusboadway/5a7b715665f33c237996)
+* /now page
+* SVG pipeline for images
+  * [triangles](https://github.com/esimov/triangle)
+  * PCA to find delta between raw image and current svg, draw an overlapping transparent triangle, then repeat
+    * what if we use unicode instead of triangles
+  * [img swap](https://tendigits.space/site/imageswap.html)
+  * 
 
 
 ## Mechanics
@@ -95,7 +102,14 @@ probably bad ideas that I'm writing down so I won't think about them anymore:
     - since this is really the hyper minimal case, don't even do git stuff
     
 ## References
-* design
+* html design
     * [Website Obesity Crisis](https://idlewords.com/talks/website_obesity.htm)
     * [Cool URIs don't change](https://www.w3.org/Provider/Style/URI)
+    * [short urls](https://sive.rs/su)
     * [omitting html tags](https://google.github.io/styleguide/htmlcssguide.html#Optional_Tags)
+    * a good [example](view-source:http://www.davidchess.com/words/iaf.html) of clean html
+* rss
+    * [rss2 rfc](https://validator.w3.org/feed/docs/rss2.html)
+    * [styled rss](https://tomcritchlow.com/feed.xml)
+    * [best practices](https://kevincox.ca/2022/05/06/rss-feed-best-practices/)
+

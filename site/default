@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<title->
+<link href="/site/min.css" rel="stylesheet" type="text/css">
+<link href="/site/feed.xml" rel="alternate" type="application/rss+xml">
+<link href="/static/favicon.jpg" rel="shortcut icon" type=image/x-icon">
+# 
+<div .page-content>
+    
+</div>
+---
+<div .links>
+filters:
+<input type='radio' id='index.html' name='link' checked><label for='index.html'-><em->[all]
+
+<ul>
+    <li link="index.html">Index
+    
+</ul>
+</div>
+---
+<footer>
+<div style=text-align:center>
+    [![xxiivv webring| .icon](https://webring.xxiivv.com/icon.black.svg)](https://webring.xxiivv.com/#random)
+    [![github| .icon](/static/github.svg)](https://github.com/toombs-caeman)
+<!--[![email| .icon](/static/mail.svg)](mailto:toombs.caeman@gmail.com)-->
+</div>
+created 
+</footer>
+
