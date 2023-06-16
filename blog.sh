@@ -1,166 +1,223 @@
 #!/bin/bash
+shopt -s globstar
 
-self="$(realpath -s "${BASH_SOURCE[0]}")"
-# only run from the project root
-cd "$(git rev-parse --show-toplevel)" || exit $?
+n=$'\n' # newlines are hard to get right
 
-# CORE FUNCTIONS
-log() { echo "${self##*/}:${FUNCNAME[1]}: $*" >&2; }
-match() { [[ "$1" =~ $2 ]] && match=("${BASH_REMATCH[@]}"); }
-tag() {
-  # extends html syntax to give it a similar syntax to css
-  # <p #myid .myclass .class2 -> yo
-  # <p id="myid" class="myclass class2"> yo</p>
-  # the closing tag is inserted at the end of the line when '->' is used
-  # in the opening tag
-  # TODO edit the whole line and emit at the end
-  # TODO subsume into include()
-  while read line; do
-    local close=""
-    while match "$line" "^([^<]*)<([[:alnum:]]+)(([^>]?[^->])*)([-]?)>"; do
-      # emit everything before the tag
-      echo -n "${match[1]}"
-      local tag="${match[2]}"
-      local raw_attr="${match[3]}"
-      close="${match[${#match[@]} -1]:+"</$tag>"}$close"
-      # chop the line
-      line="${line#*"${match[0]}"}"
-      # process attributes
-      local id=''
-      local class=()
-      local attr=()
-      for a in $raw_attr; do
-          case "$a" in
-              \#*) id="${a#'#'}" ;;
-              \.*) class+=("${a#.}") ;;
-              *) attr+=("$a") ;;
-          esac
-      done
-      echo -n "<$tag${id:+ id=\"$id\"}${class:+ class=\"${class[@]}\"}${attr:+ ${attr[@]}}>"
+# stack operators
+pop() { : "$1[-1]"; eval "printf ${2:+-v} $2 %s \"\${$_}\"; [ -n \"\$ZSH_VERSIOn\" ] && $_=() || unset -v $_"; }
+peek() { : "$1[-1]"; eval "printf ${2:+-v} $2 %s \"\${$_}\""; }
+peek2() { : "$1[-2]"; eval "printf ${2:+-v} $2 %s \"\${$_}\""; }
+
+# perl style named capture groups
+M() { # <text> <pattern> [<match var=M>]
+    unset -v "${3:-M}"
+    set -- "$1" "$2" '\(\?P<([^>]*)>' "${3:-M}=(\"\${BASH_REMATCH[@]}\")"
+    while [[ "$2" =~ $3 ]] ; do
+        : "${2%%"${BASH_REMATCH[0]}"*}"; : "${_//'\('/}"; : "${_//[^(]/}"
+        set -- "$1" "${2//"${BASH_REMATCH[0]}"/(}" "${@:3}" "unset -v ${BASH_REMATCH[1]}" "${BASH_REMATCH[1]}=\"\${BASH_REMATCH[$((${#_} + 1))]}\""
     done
-    echo "$line$close"
-  done < /dev/stdin
+    [[ "$1" =~ $2 ]] || return 1
+    shift 3
+    while (($#)); do eval "$1"; shift; done
 }
 
-rfc822() { date -R ${1:+-jf %Y-%m-%d $1}; }
-url_for() { echo "site/${1/%txt/html}"; }
-emit() { echo "$@" | tag; }
-?() { echo "${!@}"; }
-page_link() { emit "<a href=\"/$(url_for ${1:-$page})\"->$(query ${1:-$page} title || echo "${1:-$page}")"; }
-li_date_page() {
-  date="$(query ${1:-$page} date)"
-  [[ -n "$date" ]] && echo "<li>$(page_link ${1:-$page})<span class=\"date\">$date</span>"
+fnames=() groups=0 re=''
+register() { # <function> <when regex>
+    # save the name of the function as a function of its group number
+    fnames[$groups]="$1"
+    # make sure the regex has at least one group
+    set -- "$1" "($2)"
+    # count number of groups in regex to increment the total group number
+    : "${2//'\('/}"; : "${_//[^(]/}"
+    groups=$((groups + ${#_}))
+    # append the regex
+    [[ -n "$re" ]] && re+="|$2" || re="$2"
 }
 
-query() {
-  # prints the value of $2 as defined in file $1
-  while read line; do
-    match "$line" "\`($2=[^\`]*)\`" && eval "${match[1]}" && echo "${!2}" && return
-  done < "content/$1"
-  return 1 # return 1 if it wasn't defined
-}
-
-include() {
-  # macros are denoted with backticks and are bash expressions
-  #   because of this backticks are not allowed in macros
-  # layout are denoted by setting the $layout in a macro like `layout=default`
-  # layout receive the rendered file in $content (accessed like `? content`)
-  local tmp="$(mktemp)"
-  local layout=""
-  while read line; do
-    # paragraph and horizontal rules
-    # this match comes first, and intentionally matches an empty string
-    # which means that following patterns don't need to worry about that
-    if match "$line" '^([-*]*)$'; then
-      if (( ${#match[0]} )); then
-       	line="<hr>"
-      else
-	line="<p>"
-      fi
-    fi 
-    # lists
-    # TODO handle list depth, start and stop
-    if match "$line" '^([[:space:]]*)[-*] '; then
-      line="${match[1]}<li>${line#"${match[0]}"}"
-    fi 
-    # header
-    if match "$line" '^([[:space:]]*)([#]+)' ; then
-      line="${match[1]}<h${#match[2]}->${line#"${match[0]}"}"
-    fi 
-    # links
-    while match "$line" '^([^]]*)\[([^]]+)\]\(([^)]*)\)'; do
-      line="${match[1]}<a target="_blank" href=\"${match[3]}\">${match[2]}</a>${line#"${match[0]}"}"
+file() {
+    local stack=() raw="$(echo;cat "$1";echo)"
+    while M "$raw" "$re"; do
+        final "${raw%%"${M[0]}"*}"
+        raw="${raw#*"${M[0]}"}"
+        M=("${M[@]:1}")
+        : "${M[*]}"; : "${_%%[^ ]*}" # index of first non-empty group
+        ${fnames[${#_}]} # call function
     done
-
-    # macro pass
-    # TODO modify the line in place, only emit at the end
-    while match "$line" '^([^`]*)`([^`]*)`'; do
-      echo -n "${match[1]}"
-      if [[ "${match[1]}" == *"->"* ]]; then
-        # incase there's a self closing tag, put everything
-        # on the same line.
-        eval "${match[2]}" | tr "\n" " "
-      else
-        eval "${match[2]}"
-      fi
-      line="${line#*"${match[0]}"}"
+    final "$raw"
+    eof "$2"
+}
+eof() { # <output>
+    local x t
+    local content='' # this must be a separate function for content to pass down
+    while (( ${#stack[@]} )); do
+        pop stack x
+        pop stack t
+        case "$t" in
+            layout)
+                local inner
+                file "$x" inner
+                content="$inner"
+                ;;
+            final) content="$x$content" ;;
+            *)
+                # TODO error state?
+                printf 'ERROR: unclosed tag: %s(%q)\n' "$t" "$x" >&2
+            ;;
+        esac
     done
-    echo "$line"
-  done < "content/$1" > "$tmp"
-  # layout pass
-  if [[ -n "$layout" ]]; then
-    local content="$(cat "$tmp")"
-    include "$layout"
-  else
-    cat "$tmp"
-  fi
+    # strip leading newlines
+    M "$content" "^$n*(?P<content>.*)$"
+    printf ${1:+-v} $1 %s "$content"
 }
 
-css_minify() {
-  local X="$(cat - | tr "\n" " ")"
-  while match "$X" '\/\*([^*]*|\*[^\/])*\*\/'; do X="${X/"${match[0]}"}"; done
-  while match "$X" '^([^[:space:]]*)[[:space:]]+(.?)'; do
-    echo -n "${match[1]}"
-    X="${X/"${match[0]}"/${match[2]}}"
-    [[ "${match[1]: -1}${match[2]}" =~ ^[[:alnum:]]*$ ]] && echo -n " "
-  done
-  return 0
-}
-
-log() { echo "${0##*/}:${FUNCNAME[1]}: $*"; }
-
-render_site() {
-  # clean
-  rm -rf site/*
-  # render html
-  pages="$(cd content; find * -name "*.txt")"
-  for page in $pages; do
-    url="$(url_for $page)"
-    log "content/$page --> $url"
-    mkdir -p "$(dirname "${url#/}")"
-    include "$page" | tag > "$url"
-  done
-  # render rss
-  log "content/feed.xml --> site/feed.xml"
-  include feed.xml > site/feed.xml
-  # render css
-  log "content/*.css --> site/min.css"
-  find content/ -name "*.css" -exec cat {} + | css_minify  >> "site/min.css"
-}
-
-daemon() {
-  render_site || exit $?
-  log starting
-  trap 'kill $server_pid;rm $tmp; exit' SIGINT
-  tmp="$(mktemp)"
-  python -m SimpleHTTPServer 5000 & server_pid="$!"
-  while sleep 1; do
-    local changed="$(cd content; find * -type f -newer "$tmp")"
-    touch "$tmp"
-    if [[ -n "$changed" ]]; then
-      render_site > /dev/null && log "reload complete: $changed" | tr "\n" " "
-      echo
+final() { # <content>
+    (( ${#1} )) || return
+    local t=''
+    peek2 stack t 2>/dev/null
+    if [[ "$t" == "final" ]]; then
+        pop stack t
+        stack+=("$t$1")
+    else
+        stack+=(final "$1")
     fi
+}
+
+register em '\*\*'
+em=0
+em() { (( em )) && final '</em>' || final '<em>'; em=$((em^1)); }
+
+register b '\*'
+b=0
+b() { (( b )) && final '</b>' || final '<b>'; b=$((b^1)); }
+
+
+register code '`(?P<Rcode>[^`]*)`'
+code() { final "<code>$Rcode</code>"; }
+
+register h "$n(?P<Rh>##*) "
+h=0
+h() { lf; h="${#Rh}"; final "<h$h>"; }
+
+register hr "$n(----*|====*)$n"
+hr() { lf; final '<hr>'; raw="$n$raw"; }
+
+register comment '\{\{\!(}?[^}])*}}'
+comment() { :; } # comments produce no output
+
+register content '\{\{\.}}'
+content() { final "$content"; }
+
+register layout '\{\{\?(?P<Rlayout>(}?[^}])*)}}'
+layout() { stack+=(layout "$Rlayout"); }
+
+register include '\{\{>(?P<Rinclude>(}?[^}])*)}}'
+include() { file "$Rinclude" Rinclude; final "$Rinclude"; }
+
+register Rtag '(?P<Rtag><[^<>]*>)'
+Rtag() { tag "$Rtag"; }
+tag=()
+tag() { # <tag>
+    local M x raw_attr line
+    if ! M "$1" '<(?P<x>[[:alnum:]]+)(?P<raw_attr>([^>]?[^->])*)(?P<line>-?)>';then
+        final "$1"; return
+    fi
+    # if '->', then add close tag at the end of the line
+    [[ -n "$line" ]] && tag+="</$x>"
+    # process attributes
+    local a id='' class=() attr=()
+    for a in $raw_attr; do # TODO raw word splitting is not good here
+        case "$a" in
+            \#*) id="${a#'#'}" ;;
+            \.*) class+=("${a#.}") ;;
+            *) attr+=("$a") ;;
+        esac
+    done
+    final "<$x${id:+ id=\"${id}\"}${class:+ class=\"${class[*]}\"}${attr:+ ${attr[*]}}>"
+}
+
+register aimg '(?P<Rimg>!?)\[(?P<desc>[^]]*)]\((?P<url>[^ )]*)(?P<meta>[^)]*)\)'
+aimg() {
+    if [[ -n "$Rimg" ]]; then
+        tag "<img src=\"$url\" alt=\"$desc\" $meta>"
+    else
+        tag "<a href=\"$url\" $meta>"; final "$desc</a>"
+    fi
+}
+
+register ulol "$n(?P<Rdepth> *)(?P<Rulol>[*-]|[0-9]+\\.) "
+ulol=''
+ulol() {
+    lf
+    local ptype pdepth
+    M "$ulol" '(?P<ptype>[^0-9]*)(?P<pdepth>[0-9]*)$'
+    [[ -n "$pdepth" ]] || pdepth='-1'
+    [[ "$Rulol" =~ [0-9] ]] && Rulol=ol || Rulol=ul
+    Rdepth="${#Rdepth}"
+    if (( Rdepth > pdepth )); then final "<$Rulol>$n<li>"; ulol+="$Rulol$Rdepth"; fi
+    if (( Rdepth == pdepth)); then final "</li>$n<li>"; fi
+    if (( Rdepth < pdepth)); then close_ulol "$Rdepth"; fi
+}
+close_ulol() { # <new depth>
+    while M "$ulol" '(?P<ptype>[^0-9]+)(?P<pdepth>[0-9]+)$'; do
+        (( "$1" < pdepth )) || break
+        final "</li></$ptype>"
+        ulol="${ulol%"${M[0]}"}"
+    done
+}
+
+register p "$n$n"
+p() { lf; close_ulol -1; final "<p>"; raw="$n$raw"; }
+
+register lf "$n"
+lf() {
+    local x
+    while (( ${#tag[@]} )); do
+        pop tag x
+        final "$x"
+    done
+    if (( h )); then
+        final "</h$h>"
+        h=0
+    fi
+    final $'\n'
+}
+# TODO moustache array, not, and end blocks
+# TODO moustache var, unsafe var
+# TODO md codeblock
+
+render() {
+    # TODO massage internal urls to be all relative
+    clean
+    for filename in **/**.md; do
+        echo "file $filename > ${filename%.md}"
+        file "$filename" > "${filename%.md}"
+        # TODO special case for index > index.html
+    done
+}
+clean() {
+    for filename in **/**; do
+        # filter only regular files that have no extension (.)
+        if M "$filename" '(^|/)[^.]*$' && [[ -f "$filename" ]]; then
+            echo "clean $filename"
+            rm "$filename"
+            # TODO special case for index.html
+        fi
+    done
+}
+daemon() {
+    render
+    local tmp server_pid
+    trap 'kill $server_pid;rm $tmp; exit' SIGINT
+    tmp="$(mktemp)"
+    python <<EOF & server_pid="$!"
+from http.server import HTTPServer, SimpleHTTPRequestHandler
+SimpleHTTPRequestHandler.extensions_map[''] = 'text/html'
+HTTPServer(('', 5000), SimpleHTTPRequestHandler).serve_forever()
+EOF
+    while sleep 1; do
+        local x="$(find * -type f -newer "$tmp" -print)"
+        [[ -n "$x" ]] && render
+        touch "$tmp"
     done
 }
 
@@ -169,11 +226,12 @@ case "${1:-${self##*/}}" in
   init)
     # initialize self as pre-commit hook
     ln -fs "$self" .git/hooks/pre-commit ;;
-  render) render_site ;;
+  render) render ;;
+  clean) clean ;;
   pre-commit)
     # run as git pre-commit hook
-    render_site || exit $?
-    git add site/
+    render || exit $?
+    git add *
     ;;
   *) daemon ;;
 esac
