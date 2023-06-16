@@ -1,0 +1,52 @@
+@font-face {
+  font-family: Comic Mono;
+  font-weight: normal;
+  src: url(/.ComicMono.ttf);
+}
+@font-face {
+  font-family: Comic Mono;
+  font-weight: bold;
+  src: url(/.ComicMono-Bold.ttf);
+}
+* { font-family: "Comic Mono"; }
+body {
+    color:royalblue;
+    background-color:cornsilk;
+    line-height: 1em;
+   /* dotgrid https://stackoverflow.com/questions/58391201/how-to-create-a-dotted-grid-graph-sheet-background-using-css */
+   --d: 0.1em;
+   background : radial-gradient(
+     circle at
+        var(--d)
+        var(--d),
+     lightgray calc(var(--d) - 1px),
+     cornsilk var(--d)
+   )
+   1em 1em / 2em 2em;
+}
+a:link { color: steelblue ; }
+a:active { color: midnightblue; }
+a:visited { color: mediumslateblue; }
+a:hover { color: darkorange; }
+b { color:darkorange; }
+h1, h2, h3, h4, h5, h6 { color:midnightblue; }
+h1:first-of-type {
+    text-align: center;
+    flex: 2;
+}
+code {
+    color:darkslategray;
+    background-color: lavender;
+    border-radius: 0.5em;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+}
+.page-content { margin: 1em 1em; }
+.icon {
+    width: 2ch;
+    height: 2ch;
+}
+.title {
+    text-align: center;
+    flex: 2;
+}

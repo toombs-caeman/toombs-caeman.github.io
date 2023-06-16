@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/.main.css" type="text/css">
+    <link rel="shortcut icon" href="/static/favicon.jpg" type=image/x-icon">
+    <script src="https://cdn.jsdelivr.net/gh/ncase/nutshell/nutshell.js"></script>
+</head>
+<body>
+    <div class="page-content">
+    
+this is a page for {{name}}
+list
+{{#l}}
+<div id="id" class="class class2">div text</div>
+not div text
+
+<ul>
+<li>test <code>wpcode</code>
+</li>
+<li>{{tag}}
+<ul>
+<li>second tier
+</li>
+<li>second tier again
+</li></ul></li></ul><p>
+<ol>
+<li>here's an ordered list
+</li>
+<li>with two items
+{{/l}}
+</li></ol><p>
+<b>bold</b>
+<em>em</em>
+<p>
+<hr>
+<h1>header1</h1>
+this should <a href="#hidden">:expand?</a>
+<h2>:x hidden</h2>
+I'm a ninja!
+<p>
+<h2>kilroy</h2>
+was here
+ok
+heroes <b>are</b> <em><a id="vcool" class="0"" href="a/coolink.txt" width="40>cool</a></em> arent they
+<img src="file.jpg" alt="description">
+    </div>
+    <hr>
+    <footer>
+        <div style=text-align:center>
+            <a href="mailto:toombs.caeman@gmail.com"> <img class="icon" src="/static/mail.svg" alt="email"></a>
+            <a href="https://github.com/toombs-caeman"> <img class="icon" src="/static/github.svg" alt="github"></a>
+        </div>
+    </footer>
+</body>
+</html>
