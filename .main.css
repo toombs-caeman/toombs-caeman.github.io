@@ -12,7 +12,7 @@
 body {
     color:royalblue;
     background-color:cornsilk;
-    line-height: 1em;
+    line-height: 1.5em;
    /* dotgrid https://stackoverflow.com/questions/58391201/how-to-create-a-dotted-grid-graph-sheet-background-using-css */
    --d: 0.1em;
    background : radial-gradient(
@@ -22,14 +22,14 @@ body {
      lightgray calc(var(--d) - 1px),
      cornsilk var(--d)
    )
-   1em 1em / 2em 2em;
+   1em 1em / 3em 3em;
 }
 a:link { color: steelblue ; }
 a:active { color: midnightblue; }
 a:visited { color: mediumslateblue; }
 a:hover { color: darkorange; }
 b { color:darkorange; }
-h1, h2, h3, h4, h5, h6 { color:midnightblue; }
+h1, h2, h3, h4, h5, h6, hr { color:midnightblue; }
 h1:first-of-type {
     text-align: center;
     flex: 2;

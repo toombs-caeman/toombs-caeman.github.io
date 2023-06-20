@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Productivity</title>
+    <link rel="stylesheet" href="/.main.css" type="text/css">
+    <link rel="shortcut icon" href="/.favicon.jpg" type=image/x-icon">
+    <script src="https://cdn.jsdelivr.net/gh/ncase/nutshell/nutshell.js"></script>
+</head>
+<body>
+    <div class="page-content">
+    
+<h1>Productivity</h1>
+The purpose of 'productivity' is to <a href="#agency">enable</a> one to <a href="#follow">accomplish</a> <a href="#goals">what one sets out to do</a> <a href="#impediments">with minimal fuss</a>.
+<p>
+<p>
+<p>
+There are any number of reasons plans fall through.
+Productivity systems typically focus on preventing particular failure cases that stem from ???
+<ul>
+<li>lack of or fading motivation <code>6.27</code> <code>7.25</code>
+</li>
+<li>time/priority management
+</li>
+<li>forgetting tasks
+</li>
+<li>unreasonable or misaligned goals
+</li></ul><p>
+<h2>philosophy</h2>
+"time is not money when you know you're going to die"
+-- <a href="https://www.youtube.com/watch?v=WXBA4eWskrc">:Brad Aeon</a>
+<p>
+<h1>types of systems</h1>
+<ul>
+<li>goal setting (how to know what to do)
+<ul>
+<li><a href="ifs#polarization">polarization</a>
+</li>
+<li>'yes is nothing without how' (never split the difference)
+<ul>
+<li>in IFS, getting motivated about a goal doesn't mean real emotional buyin without a realistic idea of the journey there
+</li></ul></li></ul>action management (how to get it done)
+<ul>
+<li>motivation/emotion focused. procrastination and alignment
+</li>
+<li>task tracking
+</li></ul>stuff management (how to have what you need to do it)
+<ul>
+<li>knowledge management
+</li>
+<li>'organizing' or thing management, differing from knowledge management mostly by the fact that it's physica
+</li></ul>avoiding specific failures and antidotes
+<ul>
+<li>procrastination (tim pychl <code>6.49</code>)
+</li>
+<li>perfectionism - moving the goalpost to avoid starting, or the fear of achievement
+</li>
+<li>distraction (pomodoro, deep work)
+</li>
+<li>continuous improvement (kaizen, seinfeld calendar)
+</li>
+<li>accountability
+</li>
+<li>vascillation/multitasking
+</li>
+<li>ok plateaus (moonwalking with einstein)
+</li></ul>generating ideas, brainstorming
+</li>
+<li>making things repeatable
+<ul>
+<li>habit formation (and addiction breaking)
+</li>
+<li>toyota production system
+</li>
+<li>process control <code>7.64</code>
+</li></ul></li></ul><p>
+<h2>system parts</h2>
+<ul>
+<li>master commitment document
+</li>
+<li>capture tools
+<ul>
+<li>zeigarnik effect
+</li></ul>execution contexts
+<ul>
+<li>context specific reminders
+</li></ul>timely reminders
+<ul>
+<li>calendars
+</li>
+<li>periodic review (weekly?)
+</li></ul>feng shui/workplace design
+</li>
+<li>building an index around reference materials
+</li>
+<li>planning actions
+</li>
+<li>runbooks, standard operating procedures (SOP)
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/The_Checklist_Manifesto">:checklists</a>
+</li></ul></li></ul><p>
+<h2>Physical or Digital</h2>
+There is a struggle with keeping every-thing in one place when some 'things' are digital and others physical.
+It's ultimately personal whether the 'source of truth' is digital or physical.
+<p>
+<h2>incremental adoption, overhead, lock-in, specificity</h2>
+<ul>
+<li>does the system require a radical restructuring all at once, or can it be adopted slowly, or in part?
+</li>
+<li>how flexible is the system? can it adapt to all ways of life, professions?
+</li>
+<li>once started with a tool, how difficult is it to migrate data to a new system?
+</li>
+<li>what is the cost/time overhead of buying/maintaining the system?
+</li></ul><p>
+<p>
+<h2>Productivity adjacent Systems</h2>
+<ul>
+<li>capture all incoming information
+<ul>
+<li>organize such that it biases towards action?
+</li></ul><a href="https://www.buildingasecondbrain.com/">building a second brain</a>
+</li>
+<li>process control, deming, <code>7.64</code>
+</li>
+<li><a href="https://www.theminimalists.com/pitch/">minimalism</a> as intentionality in adding complexity (to one's live)
+</li>
+<li><a href="#GTD">:Getting Things Done</a>
+</li>
+<li><a href="#ZK">:Zettelkasten</a>
+<h1>:x BuJo Bullet Journal</h1>
+<a href="https://bulletjournal.com/">bulletjournal</a> specifically created for tracking tasks and calendars using a physical notebook.
+<h1>:x GTD</h1>
+<a href="https://www.goodreads.com/book/show/1633.Getting_Things_Done">Getting Things Done</a> by <a href="https://gettingthingsdone.com/">David Allen</a>
+</li></ul><p>
+<a href="https://www.youtube.com/watch?v=4aD8WG49PY4">:video</a>
+<p>
+<a href="https://zenhabits.net/zen-to-done-ztd-the-ultimate-simple-productivity-system/">Zen to Done</a>
+<p>
+<h1>:x Anki</h1>
+a <a href="memory">spaced-repetition</a> flashcard program
+<ul>
+<li>anki - a memorization focused data store
+</li></ul><p>
+<h1>:x Zettelkasten ZK</h1>
+<a href="https://zettelkasten.de/posts/overview/">Zettelkasten</a>
+<p>
+<a href="https://www.youtube.com/watch?v=rOSZOCoqOo8">:video</a>
+<p>
+A knowledge management system.
+<ul>
+<li>fleeting notes <a href="#capture">:capture</a> ideas. They should be re-written in a few days to clarify meaning
+</li>
+<li>take notes in your own words
+<ul>
+<li>write notes as you read, watch, think in the shower, etc.
+</li>
+<li>simply linking or copying information is insufficient to actually learn
+</li></ul>establish connections between new notes and your topics of interest (which should also be captured as notes).
+<ul>
+<li>connections
+</li></ul>establish keyword-categories. This is not a place to store a note, but a context in which you would like to retrieve it.
+<ul>
+<li>in which curcumstances do I want to stumble upon this note. When would it be useful?
+</li>
+<li>keywords are established in relation to recurring topics rather than the note in isolation
+</li></ul>notes should be atomic
+<ul>
+<li>or be sequences of atomic notes (a train of though), but only when the sequence itself is important to generating information.
+</li></ul>notes should have an identity
+<ul>
+<li>this is used to reference/link notes to related stuff.
+</li></ul></li></ul><p>
+originally, a physical box with index cards
+could it work together with the <a href="#anki">:anki</a> file format?
+<p>
+enables seeing connections in cognition across long time scales
+my journal method can be seen as an implementation of many of these principles
+<h1>:x scrum</h1>
+team oriented task management rituals
+<p>
+<h1>:x Deep Work</h1>
+<a href="https://www.goodreads.com/book/show/25744928-deep-work">Deep Work</a> by <a href="https://calnewport.com/">Cal Newport</a>
+<p>
+<a href="https://www.youtube.com/watch?v=gTaJhjQHcf8">:video</a>
+<p>
+'Deep Work' is defined as professional actions taken in an a distraction-free environment that push your cognitive abilities o the limit. This is the source of new value. This is in contrast to 'Shallow Work', such as filling out paperwork, shuffling emails, etc.
+<p>
+<ol>
+<li>use <a href="ritual">:ritual</a> to quickly transition into (and out of) focused work
+<ul>
+<li>actively create a distinct psychological space for focus
+</li>
+<li>Try to get blocks quality focus rather than trying to work longer hours
+</li>
+<li>transition out of focus by <a href="#capture">:capturing</a> work that you're in the middle of. DO NOT CONTINUE WORKING after you've captured your final thoughts.
+</li></ul>use <a href="attention">:attention training</a> to enable higher quality focus
+<ul>
+<li>embrace boredom
+</li>
+<li>take breaks from focus rather than breaks from distraction. mindfulness should be the default. schedule distraction and structure serendipity
+</li>
+<li>one can severly limit and structure the time alloted to a goal. work at the cognitive limit train intensity
+</li>
+<li>avoid thought loops/rumination.
+</li></ul><a href="values">:drain the shallows</a>
+<ul>
+<li>invesitgate and drop low value behaviors
+</li>
+<li>do social media, entertainment, infotainment actually contribute to your goals? Do they actually help you unwind?
+</li>
+<li>In every moment keep in mind the value proposition of what you're doing. What goal are you working towards?
+</li>
+<li>be difficult to reach in order to cut down on low value interactions. Set expectations early, cut off back and forth communication/low stakes negotiation. Don't respond.
+</li></ul></li></ol><p>
+<p>
+<h1>:x craftman's tools</h1>
+adopt a tool only if it's positive impact on your success and happiness substantially outweighs the negative.
+Simplicity is a virtue.
+<p>
+<h1>:x aesthetic</h1>
+why is it that 'productivity gurus' seem to have converged on an aesthetic?
+is the intersection of 'people who care about productivity' and 'filmmaker/writer' that small?
+Does the intersection imply a certain aesthetic, or is it a group identifier?
+<p>
+Systems are typically presented in the <a href="style#concrete">concrete style</a>.
+<p>
+<h1>:x SMART goals</h1>
+Specific, Measurable, Attainable, Relevant, Time-bound
+<p>
+<p>
+<h1>:x inbox</h1>
+<a href="https://www.youtube.com/@ProductivityGame/videos">productivity game</a>
+    </div>
+    <hr>
+    <footer>
+        <div style=text-align:center>
+            <a href="mailto:toombs.caeman@gmail.com"> <img class="icon" src="/.mail.svg" alt="email"></a>
+            <a href="https://github.com/toombs-caeman"> <img class="icon" src="/.github.svg" alt="github"></a>
+        </div>
+    </footer>
+</body>
+</html>

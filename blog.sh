@@ -3,22 +3,25 @@ shopt -s globstar
 
 n=$'\n' # newlines are hard to get right
 
-# stack operators
-pop() { : "$1[-1]"; eval "printf ${2:+-v} $2 %s \"\${$_}\"; [ -n \"\$ZSH_VERSIOn\" ] && $_=() || unset -v $_"; }
-peek() { : "$1[-1]"; eval "printf ${2:+-v} $2 %s \"\${$_}\""; }
-peek2() { : "$1[-2]"; eval "printf ${2:+-v} $2 %s \"\${$_}\""; }
-
 # perl style named capture groups
+# with a cache
+declare -A _P _E
 M() { # <text> <pattern> [<match var=M>]
     unset -v "${3:-M}"
     set -- "$1" "$2" '\(\?P<([^>]*)>' "${3:-M}=(\"\${BASH_REMATCH[@]}\")"
-    while [[ "$2" =~ $3 ]] ; do
-        : "${2%%"${BASH_REMATCH[0]}"*}"; : "${_//'\('/}"; : "${_//[^(]/}"
-        set -- "$1" "${2//"${BASH_REMATCH[0]}"/(}" "${@:3}" "unset -v ${BASH_REMATCH[1]}" "${BASH_REMATCH[1]}=\"\${BASH_REMATCH[$((${#_} + 1))]}\""
-    done
+    if [[ -n "${_P["$2"]}" ]]; then
+        set -- "$1" "${_P["$2"]}" '' "${_E["$2"]}"
+    else
+        local original="$2"
+        while [[ "$2" =~ $3 ]] ; do
+            : "${2%%"${BASH_REMATCH[0]}"*}"; : "${_//'\('/}"; : "${_//[^(]/}"
+            set -- "$1" "${2//"${BASH_REMATCH[0]}"/(}" "$3" "$4;unset -v ${BASH_REMATCH[1]};${BASH_REMATCH[1]}=\"\${BASH_REMATCH[$((${#_} + 1))]}\""
+        done
+        _P["$original"]="$2"
+        _E["$original"]="$4"
+    fi
     [[ "$1" =~ $2 ]] || return 1
-    shift 3
-    while (($#)); do eval "$1"; shift; done
+    eval "$4"
 }
 
 fnames=() groups=0 re=''
@@ -36,6 +39,7 @@ register() { # <function> <when regex>
 
 file() {
     local stack=() raw="$(echo;cat "$1";echo)"
+    M "$raw" "$n# (?P<title>[^$n]*)"
     while M "$raw" "$re"; do
         final "${raw%%"${M[0]}"*}"
         raw="${raw#*"${M[0]}"}"
@@ -50,8 +54,11 @@ eof() { # <output>
     local x t
     local content='' # this must be a separate function for content to pass down
     while (( ${#stack[@]} )); do
-        pop stack x
-        pop stack t
+        # pop x and t off the stack
+        x="${stack[-1]}"
+        unset -v stack[-1]
+        t="${stack[-1]}"
+        unset -v stack[-1]
         case "$t" in
             layout)
                 local inner
@@ -70,17 +77,7 @@ eof() { # <output>
     printf ${1:+-v} $1 %s "$content"
 }
 
-final() { # <content>
-    (( ${#1} )) || return
-    local t=''
-    peek2 stack t 2>/dev/null
-    if [[ "$t" == "final" ]]; then
-        pop stack t
-        stack+=("$t$1")
-    else
-        stack+=(final "$1")
-    fi
-}
+final() { stack+=(final "$1"); }
 
 register em '\*\*'
 em=0
@@ -113,16 +110,20 @@ layout() { stack+=(layout "$Rlayout"); }
 register include '\{\{>(?P<Rinclude>(}?[^}])*)}}'
 include() { file "$Rinclude" Rinclude; final "$Rinclude"; }
 
+# TODO this should actually be unsafe var
+register var '\{\{(?P<Rvar>(}?[^}])*)}}'
+var() { eval "final \"\$$Rvar\""; }
+
 register Rtag '(?P<Rtag><[^<>]*>)'
 Rtag() { tag "$Rtag"; }
-tag=()
+tag=''
 tag() { # <tag>
     local M x raw_attr line
     if ! M "$1" '<(?P<x>[[:alnum:]]+)(?P<raw_attr>([^>]?[^->])*)(?P<line>-?)>';then
         final "$1"; return
     fi
     # if '->', then add close tag at the end of the line
-    [[ -n "$line" ]] && tag+="</$x>"
+    [[ -n "$line" ]] && tag="</$x>$tag"
     # process attributes
     local a id='' class=() attr=()
     for a in $raw_attr; do # TODO raw word splitting is not good here
@@ -135,12 +136,14 @@ tag() { # <tag>
     final "<$x${id:+ id=\"${id}\"}${class:+ class=\"${class[*]}\"}${attr:+ ${attr[*]}}>"
 }
 
-register aimg '(?P<Rimg>!?)\[(?P<desc>[^]]*)]\((?P<url>[^ )]*)(?P<meta>[^)]*)\)'
+register aimg '(?P<Rimg>!?)\[(?P<desc>[^]]*)]\((?P<url>[^ )]*)(?P<meta>[^)]*)\)(?P<Rwiki>\)?)'
 aimg() {
+    # TODO let internal .md links be renamed to point to the .md-less pages
+    # so following the link in vim works correctly
     if [[ -n "$Rimg" ]]; then
-        tag "<img src=\"$url\" alt=\"$desc\" $meta>"
+        tag "<img src=\"$url$Rwiki\" alt=\"$desc\" $meta>"
     else
-        tag "<a href=\"$url\" $meta>"; final "$desc</a>"
+        tag "<a href=\"$url$Rwiki\" $meta>"; final "$desc</a>"
     fi
 }
 
@@ -170,29 +173,28 @@ p() { lf; close_ulol -1; final "<p>"; raw="$n$raw"; }
 
 register lf "$n"
 lf() {
-    local x
-    while (( ${#tag[@]} )); do
-        pop tag x
-        final "$x"
-    done
-    if (( h )); then
-        final "</h$h>"
-        h=0
-    fi
-    final $'\n'
+    ((h))&& tag+="</h$h>"
+    final "$tag$n"
+    h=0 tag=''
 }
 # TODO moustache array, not, and end blocks
 # TODO moustache var, unsafe var
 # TODO md codeblock
+# TODO md [table](https://markdown.land/markdown-table) or two column layout
 
 render() {
-    # TODO massage internal urls to be all relative
     clean
+    local pid=() p
+    # process all files in parallel
     for filename in **/**.md; do
-        echo "file $filename > ${filename%.md}"
-        file "$filename" > "${filename%.md}"
-        # TODO special case for index > index.html
+        {
+            file "$filename" > "${filename%.md}"
+            echo "file $filename > ${filename%.md}"
+        } &
+        pid+=("$!")
     done
+    # wait for all processes
+    for p in "${pid[@]}"; do tail --pid="$p" -f /dev/null; done
 }
 clean() {
     for filename in **/**; do
@@ -200,7 +202,6 @@ clean() {
         if M "$filename" '(^|/)[^.]*$' && [[ -f "$filename" ]]; then
             echo "clean $filename"
             rm "$filename"
-            # TODO special case for index.html
         fi
     done
 }
@@ -214,6 +215,7 @@ from http.server import HTTPServer, SimpleHTTPRequestHandler
 SimpleHTTPRequestHandler.extensions_map[''] = 'text/html'
 HTTPServer(('', 5000), SimpleHTTPRequestHandler).serve_forever()
 EOF
+    echo '    http://0.0.0.0:5000'
     while sleep 1; do
         local x="$(find * -type f -newer "$tmp" -print)"
         [[ -n "$x" ]] && render

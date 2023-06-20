@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>VR</title>
+    <link rel="stylesheet" href="/.main.css" type="text/css">
+    <link rel="shortcut icon" href="/.favicon.jpg" type=image/x-icon">
+    <script src="https://cdn.jsdelivr.net/gh/ncase/nutshell/nutshell.js"></script>
+</head>
+<body>
+    <div class="page-content">
+    
+<h1>VR</h1>
+<p>
+<h2>The Treadmill Problem</h2>
+given that there is an absolute threshold of force perception, there is some small acceleration
+which could be applied to a person's body such that they will never be able to perceive it.
+<p>
+Humans have some maximum acceleration their bodies can safely experience and, a much lower max acceleration
+that they can generate with their own bodies over a sustained period.
+<p>
+Given this, and proper audio/visual/tactile feedback, it is possible for a human to be 
+placed on a finite omni-directional treadmill which the human would never be able to escape,
+nor would they be able to perceive that they are not moving in an unrestricted space.
+<p>
+This means that 'perfect' VR is possible in a finite space.
+    </div>
+    <hr>
+    <footer>
+        <div style=text-align:center>
+            <a href="mailto:toombs.caeman@gmail.com"> <img class="icon" src="/.mail.svg" alt="email"></a>
+            <a href="https://github.com/toombs-caeman"> <img class="icon" src="/.github.svg" alt="github"></a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,6 +1,5 @@
-{{?.layout.html}}
-# Site
-all about this site
+{{?.note}}
+# About the Site
 
 ## Concept
 This is mostly a public reflection of things I've written in my physical notebooks. I'm a fan of first thinking with pen and paper (and privately).
@@ -20,6 +19,20 @@ The websites are naturally a link based media, but I find it suits my thinking e
 
 Generally on the web a users has the option to explore links in tabs (spatially) or by backtracking through the history (temporal). Tabs struggle because the spatial metaphor gets collapsed to one dimension. Backtracking isn't great either since whole branches of history can easily be lost accidentally.
 I am using [nutshell](https://ncase.me/nutshell/) to turn links into expandable sections, which expands the spatial metaphor.
+
+{{! while zettlkasten is expected to work with atomic ideas, ideas aren't atomic. What is really important is that ideas are atomically
+a [zettlkasten](https://zettelkasten.de/posts/overview/) of ideas with longer form 'threads' of ideas layered on top.
+each node in the graph is an atomic (idea) but that idea also is related to other ideas in important ways.
+the type of relation is important.
+* competing hypothesis
+* supporting fact (perhaps ordered, as in a proof)
+* similar semantics (appending to a list, adding to a set)
+* similar context (set union and set difference, or two techniques related to drawing with charcoal)
+* asymmetric relations (specific idea makes use of general idea, but is mostly unrelated. Unlikely to want to find specific from general, though it should be possible).
+addressible, so that they can be referenced as such.
+Long form articles may address very specific chains of ideas but then be decomposed so that supporting arguments are separate items.
+References to part of an article should be decomposed through an intermediary article (avoiding anchored links)
+}}
 
 
 ## Hosting & Rendering
@@ -53,3 +66,6 @@ mixing build artifacts into the source history!? Oh my...
 
 #### :x motivation?
 [blogging myths](https://jvns.ca/blog/2023/06/05/some-blogging-myths/)
+
+#### :x fellows
+[peppe.rs](https://peppe.rs/posts/static_sites_with_bash/)

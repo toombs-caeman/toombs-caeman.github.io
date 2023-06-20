@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Dune</title>
+    <link rel="stylesheet" href="/.main.css" type="text/css">
+    <link rel="shortcut icon" href="/.favicon.jpg" type=image/x-icon">
+    <script src="https://cdn.jsdelivr.net/gh/ncase/nutshell/nutshell.js"></script>
+</head>
+<body>
+    <div class="page-content">
+    
+<h1>Dune</h1>
+<p>
+I love <a href="https://www.goodreads.com/book/show/44767458-dune">:Dune</a> as a novel.
+<p>
+The superhuman abilities shown in the novel are described in a way that seems all too possible, if training was deliberate and complete enough. Not that this would be necessarily healthy, but what <b>is</b> the limit of human performance?
+<p>
+<h1>Mentats</h1>
+<a href="https://dune.fandom.com/wiki/Mentat">:Mentats</a> are an order trained as 'human computers' which become necessary for the ruling class as 'thinking machines' are outlawed. They are trained to suppress all emotions and to devote themselves to logical rigour.
+<p>
+    Once men turned their thinking over to machines in the hope that this would set them free. But that only permitted other men with machines to enslave them.
+— Frank Herbert, Dune
+<p>
+<ul>
+<li><a href="memory">:memory training</a>
+<ul>
+<li>working memory
+</li></ul>logical inference (boolean, bayesian)
+</li>
+<li>wide knowledge basis upon which to do inference (strong <a href="https://en.wikipedia.org/wiki/Prior_probability">priors</a> across many disciplines)
+</li>
+<li>Samadhi - focus by withdrawing the senses
+</li>
+<li>'deciding like a computer' <code>6.36</code> <code>6.114</code>
+<ul>
+<li>human data structures - adapt known compsci data structures to inform organization of human ideas.
+</li></ul></li></ul><p>
+<p>
+<h1>Bene Gesserit</h1>
+<code>6.113</code>
+The <a href="https://dune.fandom.com/wiki/Bene_Gesserit">:Bene Gesserit</a> are an order of mostly women that control politics behind the scenes in order to advance a number of initiatives.
+<p>
+<ul>
+<li>prana-bindu - total control over the musculature
+<ul>
+<li>yoga
+</li>
+<li>some martial art
+</li>
+<li>muscle control (maxick) - emphasizing the mind-muscle connection
+</li></ul>cold reading
+</li>
+<li>vocal training + rhetoric
+</li></ul><p>
+<p>
+<ul>
+<li><a href="https://dune.fandom.com/wiki/Missionaria_Protectiva">Missionaria Protectiva</a> gaining control by flowing expecations into predictable patterns
+    </div>
+    <hr>
+    <footer>
+        <div style=text-align:center>
+            <a href="mailto:toombs.caeman@gmail.com"> <img class="icon" src="/.mail.svg" alt="email"></a>
+            <a href="https://github.com/toombs-caeman"> <img class="icon" src="/.github.svg" alt="github"></a>
+        </div>
+    </footer>
+</body>
+</html>

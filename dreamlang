@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Features of a Dream Language</title>
+    <link rel="stylesheet" href="/.main.css" type="text/css">
+    <link rel="shortcut icon" href="/.favicon.jpg" type=image/x-icon">
+    <script src="https://cdn.jsdelivr.net/gh/ncase/nutshell/nutshell.js"></script>
+</head>
+<body>
+    <div class="page-content">
+    
+<h1>Features of a Dream Language</h1>
+my dream answer to the questions of <a href="pl">:programming language design</a>
+<p>
+<h1>core</h1>
+<h2>coroutines | fibers | green threads, channels</h2>
+<a href="https://graphitemaster.github.io/fibers/">fibers oh my</a>
+<a href="https://go.dev/tour/concurrency/2">go channels</a>
+<p>
+<h2>laziness, generators, async</h2>
+<ul>
+<li>'lazy' values aren't computed until 'required'. This should allow for infinite generators and such
+</li>
+<li>async values are computed in parallel threads. They aren't lazy, but execution will wait for them to finish as if they were
+</li></ul><p>
+<h2>algebraic effects</h2>
+<a href="https://overreacted.io/algebraic-effects-for-the-rest-of-us/">algebraic effects</a>
+<p>
+<h2>option for declarative function interfaces</h2>
+<ul>
+<li>why let sql be the king of declarative syntax?
+</li>
+<li>if there are multiple implementations of how to select which one to use by collecting runtime statistics.
+</li>
+<li>efficiency depends on size of input, but also number of cpu cores
+</li>
+<li>highly parallel declarative functions should run on the gpu when it is efficient to do so. <b>This should not require any explicit change to the code</b>
+</li></ul><p>
+<h2>repl | compile-time</h2>
+<ul>
+<li>the full language should be available at compile-time
+</li></ul><p>
+<h2>memory management</h2>
+<ul>
+<li>rusty?
+</li></ul><p>
+<h1>syntax</h1>
+<p>
+<h1>tooling | ecosystem</h1>
+<ul>
+<li>imports like golang
+<ul>
+<li>vendoring?
+</li>
+<li>versioning freezing
+</li></ul>git aware
+<ul>
+<li>should be able to prove that all required source/resources are tracked in git
+</li></ul>'make'-like runbook
+</li></ul><p>
+<ul>
+<li>syntax highlighting lsp
+</li>
+<li>linter
+</li>
+<li>official color theme?
+</li>
+<li>official standard setup for common editors
+</li>
+<li>documentation generator / comment syntax
+</li>
+<li>serialization
+</li>
+<li>repl, despite having static types
+</li>
+<li>testing framework
+</li>
+<li>logging
+</li>
+<li>debugging
+</li>
+<li>FFI
+</li>
+<li>cross compiling
+</li>
+<li>a page like <a href="https://learnxinyminutes.com/">learnxiny</a>
+    </div>
+    <hr>
+    <footer>
+        <div style=text-align:center>
+            <a href="mailto:toombs.caeman@gmail.com"> <img class="icon" src="/.mail.svg" alt="email"></a>
+            <a href="https://github.com/toombs-caeman"> <img class="icon" src="/.github.svg" alt="github"></a>
+        </div>
+    </footer>
+</body>
+</html>

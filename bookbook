@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The Book of Books</title>
+    <link rel="stylesheet" href="/.main.css" type="text/css">
+    <link rel="shortcut icon" href="/.favicon.jpg" type=image/x-icon">
+    <script src="https://cdn.jsdelivr.net/gh/ncase/nutshell/nutshell.js"></script>
+</head>
+<body>
+    <div class="page-content">
+    
+<h1>The Book of Books</h1>
+<p>
+The book of books is a (as yet still imaginary) physical object which encodes its own method of creation.
+It's a book that was handcrafted using the instructions from the previous generation of books, with the text copied in and modified according to the new owners experience. It is an object with a legacy.
+<p>
+You can always borrow one, but to own it you must make it yourself.
+<p>
+<h2>chapters</h2>
+<h3>paper making</h3>
+<h3>binding</h3>
+<h4>thread</h4>
+<h3>writing instruments & ink</h3>
+<h4>brushes</h4>
+<h4>quill pens & dip pens</h4>
+<h4>fountain pens</h4>
+<h4>inks</h4>
+<h4>pencils</h4>
+<p>
+<h3>the begats</h3>
+I imagine a section that is just the names of those who borrow the book to make their own, like a guest book.
+<p>
+And perhaps a history, the lineage of books that lead to this one, ending in the makers own name, to be copied and added to by those that come later.
+<p>
+<h3>other</h3>
+And anything else could be included as well, but would the future generations bother to copy anything but the bare instructions?
+There are many ways of binding books, would you include alternate methods, or just the one you used? If you blindly copy instructions you haven't tested, how do you know they work?
+<p>
+What happens when a set of instructions fails to be sufficient for making the next generation? Does that lineage end, or does the would-be successor seek outside information to strengthen the meme pool?
+<p>
+<p>
+<h1>notes</h1>
+<ul>
+<li>embodied <a href="https://en.wikipedia.org/wiki/Quine_(computing)">:quines</a>
+</li>
+<li>you could make the same argument for a computer of computers, which contains on its harddrive all the information needed to recreate a functional computer capable of displaying the same information.
+</li>
+<li><a href="https://dl.acm.org/doi/10.1145/3306346.3322960">LayerCode</a> is a method of 3d printing an object so that it encodes its own source.
+<ul>
+<li>until recently in our history, books were a primary way to persist information
+</li></ul>fungible goods vs heirloom objects
+</li>
+<li><a href="https://www.youtube.com/watch?v=gNRnrn5DE58">:origins of precision</a>
+<ul>
+<li>precision lathes are sometimes touted as the first machine capable of making itself.
+</li>
+<li>machines make machines make machines. How far back does the unbroken chain of tool scraping tool go?
+</li>
+<li>we are now, the whole world, of one material legacy. To create objects of any complexity separate from that legacy is mighty difficult.
+</li>
+<li>if tools that make things are parents and tools that make tools potentially grandparents, then what are the two most distantly related made objects still in existence?
+    </div>
+    <hr>
+    <footer>
+        <div style=text-align:center>
+            <a href="mailto:toombs.caeman@gmail.com"> <img class="icon" src="/.mail.svg" alt="email"></a>
+            <a href="https://github.com/toombs-caeman"> <img class="icon" src="/.github.svg" alt="github"></a>
+        </div>
+    </footer>
+</body>
+</html>

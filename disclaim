@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Disclaimers</title>
+    <link rel="stylesheet" href="/.main.css" type="text/css">
+    <link rel="shortcut icon" href="/.favicon.jpg" type=image/x-icon">
+    <script src="https://cdn.jsdelivr.net/gh/ncase/nutshell/nutshell.js"></script>
+</head>
+<body>
+    <div class="page-content">
+    
+<h1>Disclaimers</h1>
+<p>
+I am not an expert.
+<p>
+<h1>:x Not Tested</h1>
+This seems sound theoretically, but I haven't verified it myself.
+<p>
+<h1>:x wfm</h1>
+This worked for me, but may not be generalized enough for me to endorse for others.
+<p>
+<h1>:x Lawyer</h1>
+I am not a lawyer.
+<p>
+<h1>:x Doctor</h1>
+I am not a doctor.
+<p>
+<h1>:x Joke</h1>
+This is a joke.
+    </div>
+    <hr>
+    <footer>
+        <div style=text-align:center>
+            <a href="mailto:toombs.caeman@gmail.com"> <img class="icon" src="/.mail.svg" alt="email"></a>
+            <a href="https://github.com/toombs-caeman"> <img class="icon" src="/.github.svg" alt="github"></a>
+        </div>
+    </footer>
+</body>
+</html>
