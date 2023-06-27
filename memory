@@ -1,6 +1,6 @@
-<h1>Memory</h1>
+<h1>Memory</h1><p>
 <p>
-<h1>Principles</h1>
+<h1>Principles</h1><p>
 <ul>
 <li>original awareness
 </li>
@@ -8,14 +8,14 @@
 </li>
 <li><a href="https://ncase.me/remember/">:spaced repetition</a>
 </li></ul><p>
-<h1>Domain general techniques</h1>
-<h1>Domain Specific Techniques</h1>
-<h2>Numbers</h2>
+<h1>Domain general techniques</h1><p>
+<h1>Domain Specific Techniques</h1><p>
+<h2>Numbers</h2><p>
 <ul>
 <li><a href="https://artofmemory.com/blog/pao-system/">PAO</a>
 </li></ul><p>
-<h1>Pedagogy</h1>
-> You might ask why we cannot teach physics by just giving the basic laws on page one and then showing how they work -- Richard Feynman
+<h1>Pedagogy</h1><p>
+&gt; You might ask why we cannot teach physics by just giving the basic laws on page one and then showing how they work -- Richard Feynman
 <p>
 pedagogy (teaching) is the inverse of learning, but there is asymmetry inherent in knowledge transfer, because one does not know what they don't know or what that's worth.
 <p>
@@ -26,7 +26,7 @@ and what to exclude (the less important). I will first make the principles I hav
 in the hope that it will help you to understand why I have selected the techniques that I have.
 </li>
 <li>(greene) value learning above all else. Make tradeoffs for prime learning opportunities. The goal is always to develop the mind and character, not fame or fortune
-<h2>Reference</h2>
+<h2>Reference</h2><p>
 </li>
 <li><a href="https://www.goodreads.com/book/show/349426.The_Memory_Book">:The Memory Book</a> - my first exposure to the ideas. It didn't sink in.
 </li>
@@ -34,7 +34,7 @@ in the hope that it will help you to understand why I have selected the techniqu
 </li>
 <li><a href="https://artofmemory.com/">Art of Memory</a> - for more resources and a community around memory competitions
 </li></ul><p>
-<h1>transference</h1>
+<h1>transference</h1><p>
 <ul>
 <li>knowledge between domains
 </li>
@@ -53,7 +53,7 @@ effective patterns.
 </li></ul><p>
 <p>
 <ul>
-<li>The memory book - harry lorayne & jerry lucas
+<li>The memory book - harry lorayne &amp; jerry lucas
 </li>
 <li>moonwalking with einstein
 esoteric encodings
@@ -61,3 +61,5 @@ esoteric encodings
 <li>how people better remember stories compared to straight facts
 </li>
 <li>the effectiveness of marketing jingles
+</li>
+<li>anki

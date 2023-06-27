@@ -1,44 +1,89 @@
 {{?.note}}
+
+* why
+* collected principles
+* common pain points/problems
+* practical decisions while implementing
+* example implementation (mine)
+* reference to other systems
+
 # Productivity
-The purpose of 'productivity' is to [enable](#agency) one to [accomplish](#follow) [what one sets out to do](#goals) [with minimal fuss](#impediments).
+The point of being productive is to efficiently [:realize](#realize) what you value.
+[:If you have things you care about](https://www.youtube.com/watch?v=WXBA4eWskrc), you should care about productivity.
 
+[:Stylistically](style) though, the genre of 'productivity hacks' is very much focused on the specifics of an implementation, devoid of the principles and the 'why' question. It often manages to be both too vauge to apply directly, and too specific to apply to me.
 
+And while tips and tricks are great, they only let you go faster. It's pretty pointless if you're going in the wrong direction so figuring out what you value is more important.
 
-There are any number of reasons plans fall through.
-Productivity systems typically focus on preventing particular failure cases that stem from ???
-* lack of or fading motivation `6.27` `7.25`
+Luckily the self-accountability that 'productivity' systems often create can be useful in figuring out your values, based on how you are acting currently. And if you don't like what you see, you've got the perfect hammer with which to change things.
+
+# :x realize
+Meaning both to 'make real' and 'to comprehend'
+
+## why aren't you already optimally productive
+There are any number of reasons plans fall through. Even when a project is [:personally important](#grandma).
+
+'Productivity Proper' typically focus on preventing a few failure cases:
+* lack of, or fading motivation `6.27` `7.25`
+* procrastination
+* decision fatigue
 * time/priority management
 * forgetting tasks
 * unreasonable or misaligned goals
 
-## philosophy
-"time is not money when you know you're going to die"
--- [:Brad Aeon](https://www.youtube.com/watch?v=WXBA4eWskrc)
+* study hacks
+
+## Aesthetic clusters
+A few sources of 'productivity' for [:contrast](style#contrast)
+
+### Productivity Proper
+The style is pretty exclusively aimed towards either personal improvement, or professional improvement (usually for executive/management types).
+* [:personality youtuber girl](https://www.youtube.com/watch?v=oX-rpV5PPQ4)
+with [:perfectly neat handwriting](https://www.youtube.com/watch?v=lf6qjA6K9Nk)
+in a [:scandinavian minimalist](https://www.youtube.com/watch?v=sJwtVFEiBLk) room with quiet lofi in the background.
+* [:tech bros](https://www.youtube.com/watch?v=6gi6SZyMGiA) does [:clickbait](https://www.youtube.com/watch?v=M_VLcEMPXzk)
+wearing [:minimalist monochrome](https://www.youtube.com/watch?v=31Wq_qv0dZM)
+* [:Corporate Memphis](https://en.wikipedia.org/wiki/Corporate_Memphis) listicles
+* books aimed at executives (4 hour work week, traction, GTD)
+
+
+### factory efficiency
+There's another genre stemming from the ideas of [:W. E. Deming](https://en.wikipedia.org/wiki/W._Edwards_Deming) speaks about techniques for factories and assembly lines. These ideas took a trip around the world [:through japan](https://en.wikipedia.org/wiki/Toyota_Production_System)
+and then returned a few decades later in [:american software development](https://en.wikipedia.org/wiki/Scrum_(software_development)).
+While the focus and tone of the writing are slightly different, many of the same ideas pop up. 
+`7.64`
+
+### Benjamin Franklin
+The writing of [:Benjamin Franklin](https://en.wikipedia.org/wiki/The_Autobiography_of_Benjamin_Franklin)
+also contains a bit of study advice between a lot of [:bawdiness](https://en.wikipedia.org/wiki/Advice_to_a_Friend_on_Choosing_a_Mistress)
 
 # types of systems
-    * goal setting (how to know what to do)
-        * [polarization](ifs#polarization)
-        * 'yes is nothing without how' (never split the difference)
-            * in IFS, getting motivated about a goal doesn't mean real emotional buyin without a realistic idea of the journey there
-    * action management (how to get it done)
-        * motivation/emotion focused. procrastination and alignment
-        * task tracking
-    * stuff management (how to have what you need to do it)
-        * knowledge management
-        * 'organizing' or thing management, differing from knowledge management mostly by the fact that it's physica
-    * avoiding specific failures and antidotes
-        * procrastination (tim pychl `6.49`)
-        * perfectionism - moving the goalpost to avoid starting, or the fear of achievement
-        * distraction (pomodoro, deep work)
-        * continuous improvement (kaizen, seinfeld calendar)
-        * accountability
-        * vascillation/multitasking
-        * ok plateaus (moonwalking with einstein)
-    * generating ideas, brainstorming
-    * making things repeatable
-        * habit formation (and addiction breaking)
-        * toyota production system
-        * process control `7.64`
+While sharing an underlying goal, there are different ways of describing
+* goal setting (how to know what to do)
+    * [polarization](ifs#polarization)
+    * 'yes is nothing without how' (never split the difference)
+        * in IFS, getting motivated about a goal doesn't mean real emotional buyin without a realistic idea of the journey there
+* action management (how to get it done)
+    * motivation/emotion focused. procrastination and alignment
+    * task tracking
+* stuff management (how to have what you need to do it)
+    * knowledge management
+    * 'organizing' or thing management, differing from knowledge management mostly by the fact that it's physica
+    * workplace organization (physical context)
+    * calendars (timely context)
+* avoiding specific failures and antidotes
+    * procrastination (tim pychl `6.49`)
+    * perfectionism - moving the goalpost to avoid starting, or the fear of achievement
+    * distraction (pomodoro, deep work)
+    * continuous improvement (kaizen, seinfeld calendar)
+    * accountability
+    * vascillation/multitasking
+    * ok plateaus (moonwalking with einstein)
+* generating ideas, brainstorming, creativity
+* making things repeatable
+    * habit formation (and addiction breaking)
+    * toyota production system
+    * process control `7.64`
 
 ## system parts
 * master commitment document
@@ -49,10 +94,13 @@ Productivity systems typically focus on preventing particular failure cases that
 * timely reminders
     * calendars
     * periodic review (weekly?)
+        * what worked? what didn't?
+        * what lessons did I learn?
+        * how did my habits go/where did my time go?
 * feng shui/workplace design
 * building an index around reference materials
 * planning actions
-* runbooks, standard operating procedures (SOP)
+* runbooks, standard operating procedures (SOP), spells
     * [:checklists](https://en.wikipedia.org/wiki/The_Checklist_Manifesto)
 
 ## Physical or Digital
@@ -70,7 +118,6 @@ It's ultimately personal whether the 'source of truth' is digital or physical.
 * capture all incoming information
     * organize such that it biases towards action?
 * [building a second brain](https://www.buildingasecondbrain.com/)
-* process control, deming, `7.64`
 * [minimalism](https://www.theminimalists.com/pitch/) as intentionality in adding complexity (to one's live)
 * [:Getting Things Done](#GTD)
 * [:Zettelkasten](#ZK)
@@ -81,7 +128,15 @@ It's ultimately personal whether the 'source of truth' is digital or physical.
 
 [:video](https://www.youtube.com/watch?v=4aD8WG49PY4)
 
+The book is definitely written for someone in a managerial or executive role, but there is no reason why the principles can't be adapted for anyone.
+
 [Zen to Done](https://zenhabits.net/zen-to-done-ztd-the-ultimate-simple-productivity-system/)
+
+# customization mandatory
+it seems like the 'systems as written' don't really work for many people. No system would work for everyone.
+
+> “Absorb what is useful, discard what is useless and add what is specifically your own”
+> ― Bruce Lee
 
 # :x Anki
 a [spaced-repetition](memory) flashcard program
@@ -152,7 +207,22 @@ Systems are typically presented in the [concrete style](style#concrete).
 # :x SMART goals
 Specific, Measurable, Attainable, Relevant, Time-bound
 
+# :x grandma
+A few years ago my grandma was seriously ill and thought she was going to die in the hospital.
+At the time the most important thing she wanted to do if she recovered was to write her memoirs.
+
+Then she recovered and started working, but her motivation flagged here and there. Writing a book is hard.
+Three years later it was finished and a small number were printed for family. My mom's a hero for helping her through that.
+
+My point is not that she used some crazy productivity hack™, but that without help and the accountability it's probable she never would have finished.
+Even though it was **literally her dying wish** (so she thought).
+
 
 # :x inbox
+[productivity method](https://productivitymethod.com/en-us)
 [productivity game](https://www.youtube.com/@ProductivityGame/videos)
-
+[GTD in 15 minutes](https://hamberg.no/gtd/)
+[GTD sucks for creative work](https://news.ycombinator.com/item?id=10765634)
+separate into a 'survey of productivity principle and systems' and an integrated approach for myself?
+[single .txt file](https://news.ycombinator.com/item?id=22276184)
+pomodoro music playlist? like two different genres for working and resting

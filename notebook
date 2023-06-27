@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Notebook System</title>
+    <script src="https://cdn.jsdelivr.net/gh/ncase/nutshell/nutshell.js"></script>
+    <link rel="stylesheet" href="/.main.css" type="text/css">
+    <link rel="shortcut icon" href="/.favicon.jpg" type=image/x-icon">
+    <script>Nutshell.hideHeadings()</script>
+</head>
+<body>
+    <div class="page-content">
+    
+<h1>Notebook System</h1><p>
+<p>
+I've kept <a href="pens">:physical notebooks</a> for over a decade now, I've used various analog task-tracking/planner systems and for the past five years or so I've been working on a project I call the <b>primer</b>. I'll spare you the <a href="#story">:origin story</a> and just focus on the method I use now.
+<p>
+Every notebook gets the same setup:
+<ul>
+<li>With the front of the notebook up, write along fore-edge in black.
+<ul>
+<li>The name of the book goes on the left and its number goes on the right.
+</li>
+<li>The name is usually the year in which it's started and the role it plays.
+</li>
+<li>The number just goes in sequence.
+</li></ul><li>Title page - the first page (on the right side) gets my name, contact info, and the name of the notebook. This is page zero.
+</li>
+<li>Even number pages are numbered in the top right corner (zero is even).
+</li>
+<li>Index spread - the first two page spread is for the Index.
+<ul>
+<li>Pages are referenced like <code>title:20</code>. Title <em>then</em> page number, so theres' room add more pages later.
+</li></ul><li>Page titles are centered.
+</li></ul><p>
+I usually have a few notebooks active at any given time. The division isn't so much topical as it is related to the context in which I would want to look back at something I've written.
+Right now I've got:
+<ul>
+<li>a journal/planner
+</li>
+<li>one for extended notes (usually for the primer)
+</li>
+<li>one for D&amp;D stuff
+</li></ul><p>
+Everything of importance is written into the notebooks. This ensures no writing can get lost without it being very obvious and also ensures that everything can be referenced in a uniform way.
+<p>
+<h2>References</h2><p>
+References are written shorthand that <a href="#link">:links</a> things together.
+I try to keep the topic of each page <b>atomic</b> so that references point to a <a href="#single">:single idea</a>.
+<p>
+here are some examples:
+<ul>
+<li><code>71</code> or <code>(71)</code> - page 71 in the current notebook
+</li>
+<li><code>7.71</code> - page 71 in notebook 7
+</li>
+<li><code>(dune 106)</code> - page 106 of the book <a href="dune">:Dune</a>. (at least of my copy, and if I care to reference it I probably have one)
+</li>
+<li><code>^site</code> - a bookmarked website. I don't write the url, but a keyword or something
+</li>
+<li><code>/file/path</code> - file in <code>~/Documents/</code>
+</li>
+<li><code>gg project/path</code> - a git repo, or a file in one
+<ul>
+<li>this is a reference to the tool <code>gg</code> I wrote for navigating git projects, which is itself a reference to vim's &quot;go to top&quot; command <code>gg</code> and golang's <code>go get</code>, both of which inspired the tool.
+</li></ul><li><code>YYYY-MM-DD</code> - date format
+</li></ul><p>
+<h3>Referencing Physical Locations</h3><p>
+I'm still working on this. It's a written shorthand used to identify locations in my own house.
+<p>
+Place names should be:
+<ul>
+<li>easy to create in an adhoc way
+</li>
+<li>effective to navigate to an object
+</li>
+<li>unambiguous, but not necessarily unique
+</li>
+<li>unambiguous even when spoken
+</li>
+<li>succinct to write
+</li></ul><p>
+The basic idea is that an identifier should read as directions leading to the location in question, since that is how it will be used. The natural structure for this is to start at the largest division and get <a href="#address">:increasingly specific</a>.
+<p>
+Parts of a name:
+<ul>
+<li>General areas (rooms usually) get unique <a href="#names">:names</a>. 
+</li>
+<li>common things get generic shorthand.
+<ul>
+<li><a href="#structures">:closets, shelves, etc.</a>
+</li>
+<li><a href="#direction">:relative direction</a>
+</li>
+<li><a href="#count">:counts</a>
+</li></ul></li></ul><p>
+Examples:
+<ul>
+<li><code>k_3+</code> (kitchen, floor, 3rd, cabinet) third cabinet from the left, of the lower cabinets in the kitchen
+<ul>
+<li>this could also be <code>kv3+</code>, but not <code>k3v+</code>
+</li></ul><li><code>2v-v</code> (2nd, down, shelf, front) second shelf down (count from the top) in the front
+</li>
+<li><code>2&lt;+^</code> (2nd, count from right, cupboard, back) second cupboard from the right in the back
+</li>
+<li><code>m&lt;c_&lt;</code> (master bedroom, leftmost, closet, floor, leftmost) on the floor of the leftmost master bedroom closet, to the left
+</li>
+<li><code>oc_3x</code> (office, closet, floor, 3rd from left, box) in the third box from the left on the floor of the office closet
+</li></ul><p>
+<p>
+<h1>:x addresses</h1><p>
+For some reason neither physical addresses or URLs use the convention
+<p>
+<h1>:x names</h1><p>
+These should be short, memorable, and unambiguous.
+<p>
+Example:
+<ul>
+<li><code>m</code> master bedroom
+</li>
+<li><code>b</code> master bathroom
+</li>
+<li><code>gb</code> guest bath
+</li>
+<li><code>k</code> kitchen
+</li>
+<li><code>i</code> kitchen island - this isn't a room, but it gets a name to differentiate <code>k+</code> and <code>i+</code> in my house
+</li>
+<li><code>w</code> workshop
+</li>
+<li><code>o</code> office
+</li>
+<li><code>cc</code> coat closet
+</li>
+<li><code>lc</code> linen closet
+</li></ul><p>
+<h1>:x structures</h1><p>
+Example:
+<ul>
+<li><code>_</code> floor
+</li>
+<li><code>/</code> wall
+</li>
+<li><code>-</code> shelf
+</li>
+<li><code>c</code> closet
+</li>
+<li><code>+</code> cupboard (shelf with a door)
+</li>
+<li><code>n</code> table
+</li>
+<li><code>x</code> box
+</li></ul><p>
+<h1>:x direction</h1><p>
+Does 'left' mean 'from the left' or 'to the left' which is the exact opposite?
+<p>
+Relative directions (left, right) are given to in relation to your orientation entering the room, or when looking at a shelf.
+It's ambiguous if there are multiple ways to enter a room, so just pick a 'canonical' orientation.
+<p>
+directions:
+<ul>
+<li><code>^</code> highest | count from the bottom | backmost | count from the front
+</li>
+<li><code>v</code> lowest | count from the top | frontmost | count from the back
+</li>
+<li><code>&lt;</code> leftmost | count to the right
+</li>
+<li><code>&gt;</code> right most | count from the left
+</li>
+<li><code>*</code> middle
+</li></ul><p>
+<h1>:x count</h1><p>
+first, second, etc.
+<p>
+When giving a count I often omit the direction in which to count if it's the 'natural' direction.
+<ul>
+<li>left to right
+</li>
+<li>bottom to top (lowest shelf is 1)
+</li>
+<li>front to back
+</li></ul><p>
+you can extend this to 2d if you have a grid of shelves, but you have to decide which is the major and minor axis.
+<code>3.4</code> would refer to the third major and 4 minor division.
+<p>
+<h1>:x story</h1><p>
+I started out using the <b>Bullet Journal</b> method but found it didn't suit me.
+<ul>
+<li>calendar bound tasks are better tracked on an electronic calendar which can send notifications (push rather than poll)
+</li>
+<li>some of the journaling and writing I do is worth revisiting but most of my day to day tasks are not. Keeping the two interspersed diluted both efforts. I keep two separate notebooks now.
+</li>
+<li>migration, which is central to the method, seemed wasteful and tedious.
+</li></ul><p>
+While I still use something like the bullet journal method of marking tasks, the higher level process is much more in the style of <b>Getting Things Done</b>.
+<p>
+<h1>:x single ideas</h1><p>
+This is tricky when some 'single ideas' are actually a connection between other ideas, some sort of narrative, or an argument that connects ideas in sequence. If an idea is worth refering to in isolation it gets its own page (and a backlink from the sequence).
+<p>
+<h2>:x folders vs tags vs links</h2><p>
+In the messy world of ideas, I've found that organizing things is a struggle.
+<p>
+The idea of tagging generally implies a duality between the task of generating content and categorizing it. One side or the other inevitably gets neglected, and ultimately it's a false duality anyway, since metadata is just data. What happens if you have thoughts on the category as a whole? Is there a privileged index which is somehow special? Pretty soon you'll have <a href="tao#42">:ten thousand kinds of data</a>.
+<p>
+Categories are like tags but worse, since they also enforce an unwarrented heirarchy. Also, because namespaces within two categories are separate, you must always copy the whole path to disambiguate references
+<p>
+I haven't gotten completely away from these problems with this reference system, but it's simple enough to keep using. References are unintrusive as possible. 'Categories' or 'Collections' and even the 'Index' are just pages that are referenced like any other.
+    </div>
+    <hr>
+    <footer>
+        <div style=text-align:center>
+            <a href="mailto:toombs.caeman@gmail.com"> <img class="icon" src="/.mail.svg" alt="email"></a>
+            <a href="https://github.com/toombs-caeman"> <img class="icon" src="/.github.svg" alt="github"></a>
+        </div>
+    </footer>
+</body>
+</html>

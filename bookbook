@@ -3,44 +3,45 @@
 <head>
     <meta charset="utf-8">
     <title>The Book of Books</title>
+    <script src="https://cdn.jsdelivr.net/gh/ncase/nutshell/nutshell.js"></script>
     <link rel="stylesheet" href="/.main.css" type="text/css">
     <link rel="shortcut icon" href="/.favicon.jpg" type=image/x-icon">
-    <script src="https://cdn.jsdelivr.net/gh/ncase/nutshell/nutshell.js"></script>
+    <script>Nutshell.hideHeadings()</script>
 </head>
 <body>
     <div class="page-content">
     
-<h1>The Book of Books</h1>
+<h1>The Book of Books</h1><p>
 <p>
 The book of books is a (as yet still imaginary) physical object which encodes its own method of creation.
 It's a book that was handcrafted using the instructions from the previous generation of books, with the text copied in and modified according to the new owners experience. It is an object with a legacy.
 <p>
 You can always borrow one, but to own it you must make it yourself.
 <p>
-<h2>chapters</h2>
-<h3>paper making</h3>
-<h3>binding</h3>
-<h4>thread</h4>
-<h3>writing instruments & ink</h3>
-<h4>brushes</h4>
-<h4>quill pens & dip pens</h4>
-<h4>fountain pens</h4>
-<h4>inks</h4>
-<h4>pencils</h4>
+<h2>chapters</h2><p>
+<h3>paper making</h3><p>
+<h3>binding</h3><p>
+<h4>thread</h4><p>
+<h3>writing instruments &amp; ink</h3><p>
+<h4>brushes</h4><p>
+<h4>quill pens &amp; dip pens</h4><p>
+<h4>fountain pens</h4><p>
+<h4>inks</h4><p>
+<h4>pencils</h4><p>
 <p>
-<h3>the begats</h3>
+<h3>the begats</h3><p>
 I imagine a section that is just the names of those who borrow the book to make their own, like a guest book.
 <p>
 And perhaps a history, the lineage of books that lead to this one, ending in the makers own name, to be copied and added to by those that come later.
 <p>
-<h3>other</h3>
+<h3>other</h3><p>
 And anything else could be included as well, but would the future generations bother to copy anything but the bare instructions?
 There are many ways of binding books, would you include alternate methods, or just the one you used? If you blindly copy instructions you haven't tested, how do you know they work?
 <p>
 What happens when a set of instructions fails to be sufficient for making the next generation? Does that lineage end, or does the would-be successor seek outside information to strengthen the meme pool?
 <p>
 <p>
-<h1>notes</h1>
+<h1>notes</h1><p>
 <ul>
 <li>embodied <a href="https://en.wikipedia.org/wiki/Quine_(computing)">:quines</a>
 </li>
@@ -49,7 +50,7 @@ What happens when a set of instructions fails to be sufficient for making the ne
 <li><a href="https://dl.acm.org/doi/10.1145/3306346.3322960">LayerCode</a> is a method of 3d printing an object so that it encodes its own source.
 <ul>
 <li>until recently in our history, books were a primary way to persist information
-</li></ul>fungible goods vs heirloom objects
+</li></ul><li>fungible goods vs heirloom objects
 </li>
 <li><a href="https://www.youtube.com/watch?v=gNRnrn5DE58">:origins of precision</a>
 <ul>

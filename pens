@@ -1,35 +1,98 @@
-</h1>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <title>Pen & Paper</title>
+    <script src="https://cdn.jsdelivr.net/gh/ncase/nutshell/nutshell.js"></script>
     <link rel="stylesheet" href="/.main.css" type="text/css">
     <link rel="shortcut icon" href="/.favicon.jpg" type=image/x-icon">
-    <script src="https://cdn.jsdelivr.net/gh/ncase/nutshell/nutshell.js"></script>
+    <script>Nutshell.hideHeadings()</script>
 </head>
 <body>
     <div class="page-content">
     
-<h1>Pen & Paper</h1>
-about fountain pens and notebooks.
-Maybe move the site's visual style section here.
+<h1>Pen &amp; Paper</h1><p>
 <p>
-<h1>Notebook system</h1>
+Writing by hand just feels <em>different</em> than typing. My thoughts tend to be more collected. Each word is slower to write but also more deliberate. The words are denser. Sentences less stuffed with filler. Hestitation, timidity or certainty are conveyed in the nuance of line weight and cramped half<span style="font-size:0.25em"> </span>space between words.
+<p>
+I fell in love with fountain pens a few years ago.
+<p>
+Fountain pens in particular have a certain grace. You don't have to force it. The lines flow and the inks are beautiful.
+<p>
+The <a href="#permanence">:permanence</a> of pens is comforting. There is no erasing mistakes, so I don't have to worry about editing and re-doing <a href="#website">:sections</a>. It's a stark contrast to the ever-changing nature of my profession.
+<p>
+Like any hobby, you can spend as much as you want on pens and paper, but it doesn't have to break the bank to be fulfilling.
+For me it's about enhancing the experience of writing, not having some <em>thing</em>.
+Some people seek out a <a href="#grail">:grail pen</a> and that's cool, but not why I'm here.
+<p>
+so anyway, here's some stuff I liked and some I didn't.
+<p>
+<h2>Pens</h2><p>
+<p>
+<h3>Pilot Metropolitan</h3><p>
+Ah, my first love. It's a solid pen, a bit heavy with a metal body.
+<p>
+After a few years the cap is a little loose and the body is scratched from carrying it everywhere.
+It tends to dry out now so I don't use it much.
+<p>
+<h3>TWSBI Eco</h3><p>
+My current pen of choice. Huge ink well. Neato demonstrator. Hefty. Smooth nib.
+<p>
+<h3>Brush Pens</h3><p>
+Maybe not technically fountain pens? Brushes with an internal ink resevoir.
+I got some rando chinese thing to try drawing with. It turns out the body of the pen was a lamy safari knockoff and it takes a standard converter.
+<p>
+It's just got a brush instead of a nib.
+<p>
+It's pretty fun and it can lay down the ink, though it's a bit weird that a brush doesn't have a round grip.
+<p>
+<h3>Vintage Esterbrook</h3><p>
+I bought it on ebay with the intent that I'd restore it. That hasn't happened yet but it will.
+The vintage stuff is a whole other side I haven't explored yet.
+<p>
+<h3>Pens I Didn't like</h3><p>
 <ul>
-<li>index
+<li>pilot kakuno - feels cheap, I'd rather use a metropolitan
 </li>
-<li>book list
+<li>lamy safari - super light and I had a scratchy nib. I disliked the faceted grip.
 </li>
-<li>references
-<ul>
-<li>all books numbered
+<li>Noodler charlie - an ok pen (especially for being free), but it smells weird and feels cheap
 </li>
-<li>all pages numbered
-</li></ul>separate concurrent books for dated and undated content
-<a href="productivity#bullet">:bullet journal</a>
+<li>MUJI aluminum - the grip is a knurled aluminum cylinder and not flared at the front as most pens are. I found it uncomforable to hold. Also had flow issues.
 </li></ul><p>
-<h1>why Physical books
+<h2>Inks</h2><p>
+<ul>
+<li>Noodler's Heart of Darkness - It's black. Came with a free pen. Dries quick and doesn't smudge (once dry) 10/10.
+</li>
+<li>Noodler's Black Swans in English Roses - Dark brownish red. Pretty, but I didn't take to it for whatever reason
+</li>
+<li>Waterman Serenity Blue - a flat dark blue
+</li>
+<li>Diamine Starlit Sea - dark blue with sparkles. Meh
+</li>
+<li>Pilot kon-peki - a little lighter than Waterman Serentiy Blue, and with more variation in light and dark, which I like. My current goto. Not <a href="https://www.jetpens.com/blog/The-Best-Waterproof-Fountain-Pen-Inks/pt/829">water safe</a> though, easily smudges with your finger
+</li></ul><p>
+<h2>Paper</h2><p>
+I write almost exclusively in rhodia dotgrid notebooks for things I intend to keep, or on loose copier paper for things I don't.
+The notebooks are more expensive than I'd like, but I'll be darned if they aren't everything I want.
+<p>
+Moleskine notebooks don't do it for me. Leuchtturm is ok, not my preference.
+<p>
+<h2>Other Stuff</h2><p>
+<a href="https://www.bookdarts.com/">Book Darts</a> are little points of folded metal that clip on the edge of the page like a fancy paperclip. The notebook closes flat even with them, and they don't bend the paper.
+I keep a few tucked in the back of each notebook just in case.
+<p>
+<h2>But what do I write?</h2><p>
+<a href="notebook">I'm so glad you asked.</a>
+<p>
+<h1>:x website</h1><p>
+unlike writing this website. I've written this introduction about five times and I still don't know if it would make sense to anyone else. Ugh, editing sucks.
+<p>
+<h1>:x permanence</h1><p>
+<a href="https://www.youtube.com/watch?v=0APlRcQMJac">:pants are an illusion</a> and so is permanence.
+<p>
+<h1>:x grail</h1><p>
+I don't plan to buy one but if I did it would be the black striped <a href="https://stutler.cc/pens/murex/index.html">Pilot Murex</a>.
     </div>
     <hr>
     <footer>

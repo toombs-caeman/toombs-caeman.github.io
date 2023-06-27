@@ -1388,7 +1388,15 @@ play store link, github link
 # attention revolution
 # conscilience
 
-two column article layout?
 rejection games
 
 targetted skill acquisition `7.69`
+* [markdown bible](https://miscellaneplans.gumroad.com/l/kjv-bible-markdown). Each book should be its own page probably
+    * this will most definitely be too large and slow for the current renderer.
+* [poetic edda](https://mythopedia.com/library/poetic-edda-bellows-1936)
+https://www.supermemo.com/en/blog/twenty-rules-of-formulating-knowledge
+https://www.wealthofthecommons.org/contents
+
+* caustic lenses + optical neural nets for lightspeed ML vision
+* multimodal esperanto
+

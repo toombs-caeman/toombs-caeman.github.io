@@ -3,20 +3,21 @@
 <head>
     <meta charset="utf-8">
     <title>Dune</title>
+    <script src="https://cdn.jsdelivr.net/gh/ncase/nutshell/nutshell.js"></script>
     <link rel="stylesheet" href="/.main.css" type="text/css">
     <link rel="shortcut icon" href="/.favicon.jpg" type=image/x-icon">
-    <script src="https://cdn.jsdelivr.net/gh/ncase/nutshell/nutshell.js"></script>
+    <script>Nutshell.hideHeadings()</script>
 </head>
 <body>
     <div class="page-content">
     
-<h1>Dune</h1>
+<h1>Dune</h1><p>
 <p>
 I love <a href="https://www.goodreads.com/book/show/44767458-dune">:Dune</a> as a novel.
 <p>
-The superhuman abilities shown in the novel are described in a way that seems all too possible, if training was deliberate and complete enough. Not that this would be necessarily healthy, but what <b>is</b> the limit of human performance?
+The superhuman abilities shown in the novel are described in a way that seems all too possible, if training was deliberate and complete enough. Not that this would be necessarily healthy, but what <em>is</em> the limit of human performance?
 <p>
-<h1>Mentats</h1>
+<h1>Mentats</h1><p>
 <a href="https://dune.fandom.com/wiki/Mentat">:Mentats</a> are an order trained as 'human computers' which become necessary for the ruling class as 'thinking machines' are outlawed. They are trained to suppress all emotions and to devote themselves to logical rigour.
 <p>
     Once men turned their thinking over to machines in the hope that this would set them free. But that only permitted other men with machines to enslave them.
@@ -26,7 +27,7 @@ The superhuman abilities shown in the novel are described in a way that seems al
 <li><a href="memory">:memory training</a>
 <ul>
 <li>working memory
-</li></ul>logical inference (boolean, bayesian)
+</li></ul><li>logical inference (boolean, bayesian)
 </li>
 <li>wide knowledge basis upon which to do inference (strong <a href="https://en.wikipedia.org/wiki/Prior_probability">priors</a> across many disciplines)
 </li>
@@ -37,7 +38,7 @@ The superhuman abilities shown in the novel are described in a way that seems al
 <li>human data structures - adapt known compsci data structures to inform organization of human ideas.
 </li></ul></li></ul><p>
 <p>
-<h1>Bene Gesserit</h1>
+<h1>Bene Gesserit</h1><p>
 <code>6.113</code>
 The <a href="https://dune.fandom.com/wiki/Bene_Gesserit">:Bene Gesserit</a> are an order of mostly women that control politics behind the scenes in order to advance a number of initiatives.
 <p>
@@ -49,7 +50,7 @@ The <a href="https://dune.fandom.com/wiki/Bene_Gesserit">:Bene Gesserit</a> are 
 <li>some martial art
 </li>
 <li>muscle control (maxick) - emphasizing the mind-muscle connection
-</li></ul>cold reading
+</li></ul><li>cold reading
 </li>
 <li>vocal training + rhetoric
 </li></ul><p>

@@ -3,20 +3,21 @@
 <head>
     <meta charset="utf-8">
     <title>Truisms</title>
+    <script src="https://cdn.jsdelivr.net/gh/ncase/nutshell/nutshell.js"></script>
     <link rel="stylesheet" href="/.main.css" type="text/css">
     <link rel="shortcut icon" href="/.favicon.jpg" type=image/x-icon">
-    <script src="https://cdn.jsdelivr.net/gh/ncase/nutshell/nutshell.js"></script>
+    <script>Nutshell.hideHeadings()</script>
 </head>
 <body>
     <div class="page-content">
     
-<h1>Truisms</h1>
+<h1>Truisms</h1><p>
 <p>
-<h2>Pareto 80-20</h2>
+<h2>Pareto 80-20</h2><p>
 Usually phrased as '80% of the benefit comes from 20% of the effort'.
 Across many different fields, <a href="https://en.wikipedia.org/wiki/Pareto_principle">roughly 80% of consequences come from 20% of causes</a>
 <p>
-<h2>Litany of Gendlin</h2>
+<h2>Litany of Gendlin</h2><p>
     What is true is already so.
     Owning up to it doesn't make it worse.
     Not being open about it doesn't make it go away.
@@ -28,13 +29,13 @@ Across many different fields, <a href="https://en.wikipedia.org/wiki/Pareto_prin
 <p>
 <a href="https://www.lesswrong.com/tag/litany-of-gendlin">lw</a>
 <p>
-<h2>Practice vs Theory</h2>
+<h2>Practice vs Theory</h2><p>
 The difference between practice and theory is greater in practice than in theory.
 <p>
-<h2>Clarke's three laws</h2>
+<h2>Clarke's three laws</h2><p>
 Any sufficiently advanced technology is indistinguishable from magic -- <a href="https://en.wikipedia.org/wiki/Arthur_C._Clarke">:Arthur C. Clarke</a>
 <p>
-<h2>Know Thyself</h2>
+<h2>Know Thyself</h2><p>
 <a href="https://en.wikipedia.org/wiki/Know_thyself">Know Thyself</a>,
 not as in thy autobiography, but as in thy operators's manual
     </div>

@@ -200,5 +200,9 @@ unifying similar language level concepts to produce a simplified (but no less po
 [crafting interpreters](https://craftinginterpreters.com/)
 is your language simple enough to embed in other contexts (like lua)?
 Does a market for your language exist or is there already something similar?
-Is your language a meme?
-How long do you expect it to take for a competant programmer who's not familiar with the language to become productive?
+* Is your language a meme?
+* How long do you expect it to take for a competant programmer who's not familiar with the language to become productive?
+* How do we minimize the cost associated with changing desicisions? Especially those made in the begining of a project? Can this even be a feature of the language, or only of the design pattern?
+algebraic effects
+* static numerical analysis
+[where's the config?](https://news.ycombinator.com/item?id=36465886)

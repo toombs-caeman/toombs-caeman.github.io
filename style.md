@@ -19,6 +19,9 @@ presenting things in very concrete terms is good for introductions, but it isn't
 After the initial introductory example, present the principles as an abstraction of just one or two layers.
 There is a sweet spot where being too abstract makes it difficult for a learner to apply concepts concretely, but being too concrete hides the fact that the ideas being discussed also apply generally.
 
+# contrasting styles clarify principles
+seeing the same ideas implemented in different contexts can make it more clear which aspects are specific to context and which generalize.
+
 # Esoteric encodings, or useful delusions
 >> One must still have chaos in oneself to be able to give birth to a dancing star -- Nietzsche
 

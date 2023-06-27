@@ -41,7 +41,7 @@ file() {
     local stack=() raw="$(echo;cat "$1";echo)"
     M "$raw" "$n# (?P<title>[^$n]*)"
     while M "$raw" "$re"; do
-        final "${raw%%"${M[0]}"*}"
+        escape "${raw%%"${M[0]}"*}"
         raw="${raw#*"${M[0]}"}"
         M=("${M[@]:1}")
         : "${M[*]}"; : "${_%%[^ ]*}" # index of first non-empty group
@@ -78,18 +78,22 @@ eof() { # <output>
 }
 
 final() { stack+=(final "$1"); }
+escape() {
+    local s="${*//&/&amp\;}"; s="${s//</&lt\;}"; s="${s//>/&gt\;}";
+    final "${s//"\""/&quot\;}";
+}
 
-register em '\*\*'
+register em '\*'
 em=0
 em() { (( em )) && final '</em>' || final '<em>'; em=$((em^1)); }
 
-register b '\*'
+register b '\*\*'
 b=0
 b() { (( b )) && final '</b>' || final '<b>'; b=$((b^1)); }
 
 
 register code '`(?P<Rcode>[^`]*)`'
-code() { final "<code>$Rcode</code>"; }
+code() { final "<code>"; escape "$Rcode"; final "</code>"; }
 
 register h "$n(?P<Rh>##*) "
 h=0
@@ -166,6 +170,7 @@ close_ulol() { # <new depth>
         final "</li></$ptype>"
         ulol="${ulol%"${M[0]}"}"
     done
+    (( $1 > -1 )) && final '<li>'
 }
 
 register p "$n$n"
@@ -173,7 +178,7 @@ p() { lf; close_ulol -1; final "<p>"; raw="$n$raw"; }
 
 register lf "$n"
 lf() {
-    ((h))&& tag+="</h$h>"
+    ((h))&& tag+="</h$h><p>"
     final "$tag$n"
     h=0 tag=''
 }
@@ -182,28 +187,31 @@ lf() {
 # TODO md codeblock
 # TODO md [table](https://markdown.land/markdown-table) or two column layout
 
+elapsed() { bc <<< "$(date -u +%s.%N)-${1:-0}"; }
+
 render() {
     clean
-    local pid=() p
+    local pid=() p start="$(elapsed)"
     # process all files in parallel
     for filename in **/**.md; do
         {
             file "$filename" > "${filename%.md}"
-            echo "file $filename > ${filename%.md}"
+            printf '%.3f %s\n' "$(elapsed "$start")" "${filename%.md}"
         } &
         pid+=("$!")
     done
     # wait for all processes
     for p in "${pid[@]}"; do tail --pid="$p" -f /dev/null; done
+    printf '%s %.3f\n' "render" "$(elapsed "$start")"
 }
 clean() {
     for filename in **/**; do
         # filter only regular files that have no extension (.)
         if M "$filename" '(^|/)[^.]*$' && [[ -f "$filename" ]]; then
-            echo "clean $filename"
             rm "$filename"
         fi
     done
+    echo "clean"
 }
 daemon() {
     render

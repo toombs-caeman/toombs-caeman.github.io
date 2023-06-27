@@ -3,9 +3,10 @@
 <head>
     <meta charset="utf-8">
     <title>relaxing the body ruths #1 into the magic shop</title>
+    <script src="https://cdn.jsdelivr.net/gh/ncase/nutshell/nutshell.js"></script>
     <link rel="stylesheet" href="/.main.css" type="text/css">
     <link rel="shortcut icon" href="/.favicon.jpg" type=image/x-icon">
-    <script src="https://cdn.jsdelivr.net/gh/ncase/nutshell/nutshell.js"></script>
+    <script>Nutshell.hideHeadings()</script>
 </head>
 <body>
     <div class="page-content">
@@ -22,7 +23,7 @@ the basic rule is that the body will adapt over time to the conditions placed on
 <li>effects on the vagal nerve
 </li>
 <li>techniques for anxiety
-</li></ul>posture 
+</li></ul><li>posture 
 </li>
 <li>diet (CICO, IF)
 <ul>
@@ -35,7 +36,7 @@ the basic rule is that the body will adapt over time to the conditions placed on
 <li>Consider a simple form of intermittent fasting. Limit the hours of the day when you eat, and for best effect, make it earlier in the day (between 7 am to 3 pm, or even 10 am to 6 pm, but definitely not in the evening before bed).
 </li>
 <li>Avoid snacking or eating at nighttime, all the time.
-</li></ul>the vagal nerve (effects of compassion, breathing, vagal tone)
+</li></ul><li>the vagal nerve (effects of compassion, breathing, vagal tone)
 </li>
 <li>sympathetic vs parasympathetic nervous system
 </li>
@@ -62,7 +63,7 @@ the basic rule is that the body will adapt over time to the conditions placed on
 <li>principles of speed
 </li>
 <li>principles of flexibility
-</li></ul>horton dance technique
+</li></ul><li>horton dance technique
 </li>
 <li>herbert methode naturale
 </li>
@@ -78,7 +79,7 @@ the basic rule is that the body will adapt over time to the conditions placed on
 </li>
 <li>lucid dreaming, aided by shamatha
 </li></ol><p>
-<h1>relaxing the body ruths #1 into the magic shop</h1>
+<h1>relaxing the body ruths #1 into the magic shop</h1><p>
 relaxing the body while undertaking meditation will ensure that no energy is wasted. The body should be as relaxed as
 appropriate in all activities.
 <p>
@@ -118,7 +119,7 @@ appropriate in all activities.
 </li></ol><p>
 <p>
 <p>
-<h1>References</h1>
+<h1>References</h1><p>
 <p>
 <ul>
 <li>https://greatergood.berkeley.edu/article/item/dear_christine_why_cant_i_sleep

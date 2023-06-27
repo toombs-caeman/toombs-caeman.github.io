@@ -1,11 +1,11 @@
-<h1>Style vs Concept</h1>
+<h1>Style vs Concept</h1><p>
 presentation vs content.
 What is the impact of aesthetics on <a href="knowledge#transfer">:conveyance of information</a>?
 <p>
 fluency - ease of data ingest correlates with apparent 'truthfulness'
 aphorisms, truisms, witticisms are sticky pith because they are memorable (highly fluent) even though they are obviously cached thoughts of dubious value.
 <p>
-<h1>metaphor</h1>
+<h1>metaphor</h1><p>
 good metaphors are predictive, the parts hang together in a way similar to the signified, so symbolic manipulation yields results that also apply to the signified.
 good metaphors also have lower cognitive load than direct manipulation.
 Math in its abstract form (as writing) is a metaphorical (symbolic) system for numbers (which are themselves abstractions of fungibles) in which manipulations are explicitly defined (while 'metaphor' is usually used when the system allows implicit operations).
@@ -15,14 +15,17 @@ Math in its abstract form (as writing) is a metaphorical (symbolic) system for n
 </li>
 <li>affordances
 </li></ul><p>
-<h1>concrete vs abstract style</h1>
+<h1>concrete vs abstract style</h1><p>
 <a href="computerthoughts">Tradeoff</a> between immediate practicality and generality
 presenting things in very concrete terms is good for introductions, but it isn't always clear how the ideas <a href="abstraction">generalize</a>.
 After the initial introductory example, present the principles as an abstraction of just one or two layers.
 There is a sweet spot where being too abstract makes it difficult for a learner to apply concepts concretely, but being too concrete hides the fact that the ideas being discussed also apply generally.
 <p>
-<h1>Esoteric encodings, or useful delusions</h1>
->> One must still have chaos in oneself to be able to give birth to a dancing star -- Nietzsche
+<h1>contrasting styles clarify principles</h1><p>
+seeing the same ideas implemented in different contexts can make it more clear which aspects are specific to context and which generalize.
+<p>
+<h1>Esoteric encodings, or useful delusions</h1><p>
+&gt;&gt; One must still have chaos in oneself to be able to give birth to a dancing star -- Nietzsche
 <p>
 Now that we have the why, let's lay out the mental models what will serve as a starting point or framework through which
 we can discuss the techniques used to cultivate the qualities discussed above.
@@ -52,7 +55,7 @@ modal will have an enormous effect on how you choose to live in and reaction to 
 the territory, so believing ironically will allow most of the benefit, without the dangers of dogma. Take the parts that
 are useful and ditch the rest.
 <p>
-<h3>Reversal</h3>
+<h3>Reversal</h3><p>
 esoteric encoding
 <ul>
 <li>ontological breakdown
@@ -85,7 +88,7 @@ ideascape
 <li>analysis paralysis
 </li></ul><p>
 <p>
-<h2>esoteric encodings</h2>
+<h2>esoteric encodings</h2><p>
 <ul>
 <li>more implicit
 <ul>
@@ -148,10 +151,10 @@ Possible encodings include:
 </li></ul></li></ul><p>
 Different formats of course appeal to different audiences, and are appropriate in different contexts.
 <p>
-<h1>phatic and anti-phatic</h1>
-<h2>shibboleths</h2>
+<h1>phatic and anti-phatic</h1><p>
+<h2>shibboleths</h2><p>
 <p>
-<h4>Placebo Triggers</h4>
+<h4>Placebo Triggers</h4><p>
 <ul>
 <li>self induction of the placebo effect
 Another topic for further research is the placebo effect in relation to the regulation of certain chemicals in the body.
@@ -163,7 +166,7 @@ transmission.
 Similarly, priming effects, like the one used by tarot and other divination, can be used more easily with some 
 encodings, and are worth considering as a way to add a subtle flexibility and robustness to the contained information.
 <p>
-<h1>inbox</h1>
+<h1>inbox</h1><p>
 benjamin franklin method
 <p>
 <ul>
@@ -176,9 +179,9 @@ benjamin franklin method
 <li>idea-jargon disconnect
 <ul>
 <li>separation of content and form
-</li></ul>category theory applied to concepts
+</li></ul><li>category theory applied to concepts
 <ul>
 <li>the meta-pattern of object and process applying to concepts, skills, habits
-</li></ul></li></ul>taxonomy of the interesting <code>7.62</code>
+</li></ul></li></ul><li>taxonomy of the interesting <code>7.62</code>
 </li>
 <li>rhetoric

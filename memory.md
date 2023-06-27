@@ -43,3 +43,4 @@ effective patterns.
 esoteric encodings
 * how people better remember stories compared to straight facts
 * the effectiveness of marketing jingles
+* anki

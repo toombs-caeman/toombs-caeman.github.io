@@ -3,16 +3,17 @@
 <head>
     <meta charset="utf-8">
     <title>VR</title>
+    <script src="https://cdn.jsdelivr.net/gh/ncase/nutshell/nutshell.js"></script>
     <link rel="stylesheet" href="/.main.css" type="text/css">
     <link rel="shortcut icon" href="/.favicon.jpg" type=image/x-icon">
-    <script src="https://cdn.jsdelivr.net/gh/ncase/nutshell/nutshell.js"></script>
+    <script>Nutshell.hideHeadings()</script>
 </head>
 <body>
     <div class="page-content">
     
-<h1>VR</h1>
+<h1>VR</h1><p>
 <p>
-<h2>The Treadmill Problem</h2>
+<h2>The Treadmill Problem</h2><p>
 given that there is an absolute threshold of force perception, there is some small acceleration
 which could be applied to a person's body such that they will never be able to perceive it.
 <p>

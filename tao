@@ -3,18 +3,19 @@
 <head>
     <meta charset="utf-8">
     <title>The Tao te Ching</title>
+    <script src="https://cdn.jsdelivr.net/gh/ncase/nutshell/nutshell.js"></script>
     <link rel="stylesheet" href="/.main.css" type="text/css">
     <link rel="shortcut icon" href="/.favicon.jpg" type=image/x-icon">
-    <script src="https://cdn.jsdelivr.net/gh/ncase/nutshell/nutshell.js"></script>
+    <script>Nutshell.hideHeadings()</script>
 </head>
 <body>
     <div class="page-content">
     
-<h1>The Tao te Ching</h1>
+<h1>The Tao te Ching</h1><p>
 <p>
 Copied under the original <a href="#license">:license</a>.
 <p>
-<h1>1</h1>
+<h1>1</h1><p>
 <pre>
 The Dao that can be stated, is not the eternal Dao;
 The name that can be named is not the eternal name.
@@ -28,7 +29,7 @@ Both are called Mystery.
 Mystery after Mystery, is the gate to all wonders.
 </pre>
 <p>
-<h1>2</h1>
+<h1>2</h1><p>
 <pre>
 Everyone knows what beauty is;
    That is because there is ugliness;
@@ -51,7 +52,7 @@ Hence,
 Only because he does not take credit, and thus the credit does not go away.
 </pre>
 <p>
-<h1>3</h1>
+<h1>3</h1><p>
 <pre>
 Not to quest for virtuous
  will keep the people from rivalry.
@@ -70,7 +71,7 @@ People are kept unknowing and undesiring,
  There is nothing left undone.
 </pre>
 <p>
-<h1>4</h1>
+<h1>4</h1><p>
 <pre>
 The Dao is empty,
 But when using it, it is impossible to use it up.
@@ -84,7 +85,7 @@ I do not know whose son it is,
 Maybe it was already created before the creator.
 </pre>
 <p>
-<h1>5</h1>
+<h1>5</h1><p>
 <pre>
 The sky and the earth do not care,
     They regard the myriad things as straw dogs;
@@ -96,17 +97,17 @@ The space between the sky and the earth, how much is it like large bellows!
     Much talk soon comes to nothing.
     It is better to be in between extremes.
 <p>
-Note: Chugou (芻狗, literally "grass dog") is a straw-made dog-shaped sacrifice used in ancient China. When sacrificing, people treat it very seriously; but once the sacrifice has ended, people treat the straw dogs in a very casual way.
+Note: Chugou (芻狗, literally &quot;grass dog&quot;) is a straw-made dog-shaped sacrifice used in ancient China. When sacrificing, people treat it very seriously; but once the sacrifice has ended, people treat the straw dogs in a very casual way.
 </pre>
 <p>
-<h1>6</h1>
+<h1>6</h1><p>
 <pre>
 The valley-spirit will not die, this is the primal mother.
 The gate of the primal mother is the root of the world.
 Her supplies were unending, exploitation of her shall never exhaust.
 </pre>
 <p>
-<h1>7</h1>
+<h1>7</h1><p>
 <pre>
 The heaven and the earth are eternal.
 The reason for the eternity of the heaven and the earth
@@ -120,7 +121,7 @@ Isn't it because he is selfless,
    therefore he eventually achieve selfness.
 </pre>
 <p>
-<h1>8</h1>
+<h1>8</h1><p>
 <pre>
 The best quality/character is like water.
    The water's goodness is that it benefits the myriad things but does not quarrel,
@@ -137,7 +138,7 @@ It is good to be/live on the ground,
    there will be no blame.
 </pre>
 <p>
-<h1>9</h1>
+<h1>9</h1><p>
 <pre>
 Rather than pour into a cup overflowed, It is better to stop it.
    To hammer and to sharpen, it won't take long to be broken.
@@ -146,7 +147,7 @@ Rather than pour into a cup overflowed, It is better to stop it.
    Resigning after succeeding fits with the principle of the universe.
 </pre>
 <p>
-<h1>10</h1>
+<h1>10</h1><p>
 <pre>
 If soul have been keeping on not being felt by the body,
    How can the body and the soul not part?
@@ -167,7 +168,7 @@ Quicken them, feed them,
 This is called profound virtue.
 </pre>
 <p>
-<h1>11</h1>
+<h1>11</h1><p>
 <pre>
 Put thirty spokes together to one hub,
    The original empty space makes the use of wheel.
@@ -179,7 +180,7 @@ So the things that are made are only conditions,
    What [we] are using is still the original empty space.
 </pre>
 <p>
-<h1>12</h1>
+<h1>12</h1><p>
 <pre>
 The beautiful colors blind people's eyes,
 The appealing music stuns people's ears
@@ -190,15 +191,15 @@ So, as the sage attends to the inner world, not the outer world,
 Throw away the latter and adopt the former.
 </pre>
 <p>
-<h1>13</h1>
+<h1>13</h1><p>
 <pre>
 Promotion and demotion are both horrifying,
 Regarding huge trouble as one's own body.
-What do we mean by "Promotion and demotion are both horrifying"?
+What do we mean by &quot;Promotion and demotion are both horrifying&quot;?
    Being promoted is despicable,
    It is frightening to get it. It is frightening to lose it.
-   This is the meaning of "Promotion and demotion are both horrifying".
-What do we mean by "regarding huge trouble as our own body"?
+   This is the meaning of &quot;Promotion and demotion are both horrifying&quot;.
+What do we mean by &quot;regarding huge trouble as our own body&quot;?
 The reason that I have trouble, is because I have a body.
    If I do not possess a body, what trouble do I have?
 Therefore, respecting your body over the Universe,
@@ -207,7 +208,7 @@ Therefore, respecting your body over the Universe,
    then you are worth to take care of the Universe.
 </pre>
 <p>
-<h1>14</h1>
+<h1>14</h1><p>
 <pre>
 That which is looked at yet never seen is known as invisible,
    That which is listened to yet never heard is known as soundless,
@@ -222,7 +223,7 @@ Hold the ancient Dao to know the present things, and thus know the ancient begin
    This is the principle of the Dao.
 </pre>
 <p>
-<h1>15</h1>
+<h1>15</h1><p>
 <pre>
 Once upon a time, those who knew the Way, were a mysterious and subtle people,
    Transient yet profound, tranquil yet utterly unfathomable.
@@ -240,7 +241,7 @@ Once upon a time, those who knew the Way, were a mysterious and subtle people,
    Only as they are forever unfulfilled, can such freshness be ever renewed.
 </pre>
 <p>
-<h1>16</h1>
+<h1>16</h1><p>
 <pre>
 Immersed within the heart of the void, keep tranquility's essence.
    The myriad things together arise,
@@ -260,7 +261,7 @@ Knowing the eternal is wide-ranging,
 One could see his body perish without fear.
 </pre>
 <p>
-<h1>17</h1>
+<h1>17</h1><p>
 <pre>
 Great rulers are hardly known by their subjects,
     Then come those the people draw near and praise,
@@ -272,7 +273,7 @@ Perform actions, accomplish deeds;
 The people will say it happened naturally.
 </pre>
 <p>
-<h1>18</h1>
+<h1>18</h1><p>
 <pre>
 When the Dao is lost, so there arises benevolence and righteousness.
 When prudence and wisdom appear, there is great hypocrisy.
@@ -280,7 +281,7 @@ When family relations are not right, there is filial piety and paternal affectio
 When the state is confused and chaotic, there is loyalty and faithfulness.
 </pre>
 <p>
-<h1>19</h1>
+<h1>19</h1><p>
 <pre>
 Abandon holiness, relinquish prudence; the people will flourish a hundredfold,
 Abandon benevolence, relinquish righteousness; and people will return to filial piety and affection.
@@ -291,7 +292,7 @@ Abandon cleverness, relinquish gain; and thieves and robbers will not appear.
     Lessen the self, diminish desires.
 </pre>
 <p>
-<h1>20</h1>
+<h1>20</h1><p>
 <pre>
 Discard conventional doctrines and be relieved from anxieties.
 Flattery or reprimand, what difference does it make?
@@ -316,7 +317,7 @@ I alone am different from the common,
 I find refuge in the womb of this profound conception.
 </pre>
 <p>
-<h1>21</h1>
+<h1>21</h1><p>
 <pre>
 Where the greatest Virtue resides,
 Only the Dao may reveal.
@@ -334,7 +335,7 @@ How do I know the essence of all marvels?
 By observing things that bestow the Dao.
 </pre>
 <p>
-<h1>22</h1>
+<h1>22</h1><p>
 <pre>
 Fractured, one asserts unity,
 Crooked, one acts straight,
@@ -355,7 +356,7 @@ Such timeless truth!
 With genuine integrity, one rediscovers self.
 </pre>
 <p>
-<h1>23</h1>
+<h1>23</h1><p>
 <pre>
 Less spoken, words speak for themselves naturally.
 Therefore gusts cannot chill the exuberant day,
@@ -374,7 +375,7 @@ Lack of belief,
 Explains the disbelief in this futility.
 </pre>
 <p>
-<h1>24</h1>
+<h1>24</h1><p>
 <pre>
 Ones who tip-toe do not stand,
 Ones who stride do not pace,
@@ -388,7 +389,7 @@ which the masses resent,
 Therefore those embracing the Dao dwells not.
 </pre>
 <p>
-<h1>25</h1>
+<h1>25</h1><p>
 <pre>
 Mired into existence,
 Before the conception of heaven and earth,
@@ -414,7 +415,7 @@ The heaven principles on the Dao,
 The Dao principles on nature.
 </pre>
 <p>
-<h1>26</h1>
+<h1>26</h1><p>
 <pre>
 Weightiness is the root of weightlessness,
 Temperance is the master of temperament.
@@ -427,7 +428,7 @@ Weightless, and lose the root,
 Tempestuous, and forfeit mastership.
 </pre>
 <p>
-<h1>27</h1>
+<h1>27</h1><p>
 <pre>
 Good traveling leaves no tracks;
 Good speech is without reproach;
@@ -447,7 +448,7 @@ However intelligent such a one may be, he is still greatly confused.
 This is the essential mystery!
 </pre>
 <p>
-<h1>28</h1>
+<h1>28</h1><p>
 <pre>
 Acquire knowledge of extroversions, but
 Acquaint with introversions, and
@@ -469,7 +470,7 @@ The master utilizes it and become respectful leaders.
 Therefore, a great tailor seldom trims.
 </pre>
 <p>
-<h1>29</h1>
+<h1>29</h1><p>
 <pre>
 It is futile trying to possess the universe,
 And act on shaping it in the direction of one's ambition.
@@ -485,7 +486,7 @@ Hence the master departs extremes.
 Departs extravagance, departs magnificence.
 </pre>
 <p>
-<h1>30</h1>
+<h1>30</h1><p>
 <pre>
 Ones who offer advice in the Art of governance,
 Offers not the use of forces to dominate the world,
@@ -504,7 +505,7 @@ That is not in the Art of the Dao,
 Without being in the Art would die prematurely.
 </pre>
 <p>
-<h1>31</h1>
+<h1>31</h1><p>
 <pre>
 Where everyone is well armed, is a state in vain,
 Matters alike are resented,
@@ -528,7 +529,7 @@ Casualties, are mourned in consolation.
 Victories, are remembered in solemness.
 </pre>
 <p>
-<h1>32</h1>
+<h1>32</h1><p>
 <pre>
 The Dao eternally remain unknowable.
 The unexploited nature may be insignificant,
@@ -545,7 +546,7 @@ Like that the Dao is manifested in the world,
 Is where rivers merge into oceans.
 </pre>
 <p>
-<h1>33</h1>
+<h1>33</h1><p>
 <pre>
 Knowing people is being intelligent,
 Knowing self is being enlightened.
@@ -557,7 +558,7 @@ Those who do not forget their principles endure,
 Those who die but are not forgotten live on.
 </pre>
 <p>
-<h1>34</h1>
+<h1>34</h1><p>
 <pre>
 Implications of the Tao are broad and extensive. Ubiquitous!
 Capable of contravening and swaying anything left or right.
@@ -572,7 +573,7 @@ Hence the master foregoes greatness,
 Therefore is capable of accomplishing great deeds.
 </pre>
 <p>
-<h1>35</h1>
+<h1>35</h1><p>
 <pre>
 Herald a great icon,
 And the people come;
@@ -587,7 +588,7 @@ Listen and it cannot be heard,
 Exploit and it cannot be exhausted.
 </pre>
 <p>
-<h1>36</h1>
+<h1>36</h1><p>
 <pre>
 If one desires to shrink something, one must indefinitely expand it;
 If one desires to weaken something, one must indefinitely strengthen it;
@@ -600,7 +601,7 @@ Fish cannot leave the depth,
 Deadly weapons should not be exposed to the people.
 </pre>
 <p>
-<h1>37</h1>
+<h1>37</h1><p>
 <pre>
 The Dao abides in non-action but there is nothing it does not do.
 When the leaders abide,
@@ -613,7 +614,7 @@ The world would correct by itself.
 Xia Pian
 </pre>
 <p>
-<h1>38</h1>
+<h1>38</h1><p>
 <pre>
 Those with great Virtue are not bound by virtues,
 Thus can be with Virtue;
@@ -639,7 +640,7 @@ Dwells on integrity, not on glory.
 Therefore, detach from exteriors and embrace interiors.
 </pre>
 <p>
-<h1>39</h1>
+<h1>39</h1><p>
 <pre>
 When at one with the Dao:
 When heaven is at one, it is clear,
@@ -666,7 +667,7 @@ Yearn not for crowns and jewels,
 And remain composed in grits and gravel.
 </pre>
 <p>
-<h1>40</h1>
+<h1>40</h1><p>
 <pre>
 Resilience is the Dao in action,
 Vulnerability is the Dao in expression.
@@ -674,7 +675,7 @@ The myriad things in the universe are conceived by existence,
 Existence is conceived by inexistence.
 </pre>
 <p>
-<h1>41</h1>
+<h1>41</h1><p>
 <pre>
 The learned discovers the Dao, duly obliges;
 The learning discovers the Dao, and questions its potency;
@@ -696,7 +697,7 @@ Great icons are shapeless.
 The Dao is a master of providing and empowering.
 </pre>
 <pre>
-<h1>42</h1>
+<h1>42</h1><p>
 <pre>
 The Dao gives birth to unity,
 Unity gives birth to duality,
@@ -714,7 +715,7 @@ Let this be the heart and soul of the message.
 </pre>
 </pre>
 <p>
-<h1>43</h1>
+<h1>43</h1><p>
 <pre>
 The world's softest,
 Steers the world's hardest,
@@ -725,7 +726,7 @@ Benefits of inaction,
 Rarely in this world could anything compare.
 </pre>
 <p>
-<h1>44</h1>
+<h1>44</h1><p>
 <pre>
 Fame and honor, which is more associable?
 Health and wealth, which is more vital?
@@ -736,7 +737,7 @@ Acquaint with humility and be unhumiliated,
 Know the limitations and be unlimited, be enduring.
 </pre>
 <p>
-<h1>45</h1>
+<h1>45</h1><p>
 <pre>
 Great support seems deficient,
 Employed it will not collapse;
@@ -750,7 +751,7 @@ Stillness overcomes heat,
 Tranquility makes the world become righteous.
 </pre>
 <p>
-<h1>46</h1>
+<h1>46</h1><p>
 <pre>
 When the world is with the Dao,
 Carriages are used to transport manure;
@@ -762,7 +763,7 @@ No greater guilt than yearning.
 Therefore know what is enough, and you will always have enough.
 </pre>
 <p>
-<h1>47</h1>
+<h1>47</h1><p>
 <pre>
 Without leaving home,
 You may be acquainted with the universe;
@@ -774,7 +775,7 @@ Sees not, yet pronounced,
 Acts not, yet accomplished.
 </pre>
 <p>
-<h1>48</h1>
+<h1>48</h1><p>
 <pre>
 Practicing scholarships, everyday there is something to gain,
 Practicing the Dao, everyday there is something to lose;
@@ -787,7 +788,7 @@ Those who are preoccupied,
 Cannot master the universe.
 </pre>
 <p>
-<h1>49</h1>
+<h1>49</h1><p>
 <pre>
 The masters never close up their mind,
 But base their mind on the people's mind.
@@ -803,7 +804,7 @@ The people attends to the master's words and expressions,
 The master fosters all in innocence.
 </pre>
 <p>
-<h1>50</h1>
+<h1>50</h1><p>
 <pre>
 Emerging from birth and disappearing into death:
 Three of ten are followers of life,
@@ -822,7 +823,7 @@ Why is it so?
 Because they never enter a death arena.
 </pre>
 <p>
-<h1>51</h1>
+<h1>51</h1><p>
 <pre>
 The Dao conceives,
 Virtue provides,
@@ -843,7 +844,7 @@ Leading but not dictating,
 These are the intricacies of Virtue.
 </pre>
 <p>
-<h1>52</h1>
+<h1>52</h1><p>
 <pre>
 The origin of existence began with the mother of all nature.
 Understand the mother,
@@ -865,7 +866,7 @@ Remember that trying to leave nothing behind leaves yourself in vain,
 That is practicing the timeless truth.
 </pre>
 <p>
-<h1>53</h1>
+<h1>53</h1><p>
 <pre>
 That which makes one principled is having knowledge,
 Walking the way of the Dao,
@@ -882,7 +883,7 @@ That is making out like bandits!
 Not the way of the Dao.
 </pre>
 <p>
-<h1>54</h1>
+<h1>54</h1><p>
 <pre>
 Proficient builders do not eradicate,
 Noble embracers do not abandon,
@@ -906,7 +907,7 @@ How do I know the essence of the universe?
 By seeing this.
 </pre>
 <p>
-<h1>55</h1>
+<h1>55</h1><p>
 <pre>
 The profoundness of being embraced with the Virtue,
 Is like a being a newborn.
@@ -927,7 +928,7 @@ Because they contradict the Dao,
 Contradict the Dao, and be brought to an early end.
 </pre>
 <p>
-<h1>56</h1>
+<h1>56</h1><p>
 <pre>
 Those who know talk not,
 Those who talk know not.
@@ -947,7 +948,7 @@ Cannot be possessed for despise.
 Therefore it is respected by the universe.
 </pre>
 <p>
-<h1>57</h1>
+<h1>57</h1><p>
 <pre>
 Be righteous in governance,
 Be unpredictable on the battlefield,
@@ -971,7 +972,7 @@ I am unoccupied and the people naturally becomes prosperous,
 I yearn not and the people naturally becomes serene.”
 </pre>
 <p>
-<h1>58</h1>
+<h1>58</h1><p>
 <pre>
 When the governance is idle,
 The people is mellow;
@@ -990,7 +991,7 @@ Straight without being thoughtless,
 Radiant without being glorious.
 </pre>
 <p>
-<h1>59</h1>
+<h1>59</h1><p>
 <pre>
 In governance and management, nothing compares to being conservative.
 Only being conservative,
@@ -1006,7 +1007,7 @@ That is being deeply rooted,
 In the viability and vision of the Dao.
 </pre>
 <p>
-<h1>60</h1>
+<h1>60</h1><p>
 <pre>
 Governing a nation is like frying small fish.
 Approach the world with the Dao,
@@ -1019,7 +1020,7 @@ When the master and the subjects bring no harm to each other,
 Virtue can hence be returned to another.
 </pre>
 <p>
-<h1>61</h1>
+<h1>61</h1><p>
 <pre>
 Superior nations are positioned downstream.
 Where heaven and earth meets,
@@ -1038,7 +1039,7 @@ Greatness is achieved only when the desires from both are fulfilled,
 Therefore the superior stay low.
 </pre>
 <p>
-<h1>62</h1>
+<h1>62</h1><p>
 <pre>
 The Dao holds the crux to the myriad things,
 It is the treasure of goodness,
@@ -1056,7 +1057,7 @@ Having sinned and be forgiven?
 Therefore it is cherished by the world.
 </pre>
 <p>
-<h1>63</h1>
+<h1>63</h1><p>
 <pre>
 Act without act,
 Work without work,
@@ -1075,7 +1076,7 @@ Hence the master addresses the complexity.
 Therefore may continually avoid complications.
 </pre>
 <p>
-<h1>64</h1>
+<h1>64</h1><p>
 <pre>
 That settled is easily maintained,
 That without signs is easily conspired,
@@ -1101,7 +1102,7 @@ Assist the myriad things in returning to their essence,
 And not dare act.
 </pre>
 <p>
-<h1>65</h1>
+<h1>65</h1><p>
 <pre>
 The timeless masters of the Dao,
 Is not about enlightening the people with it,
@@ -1117,7 +1118,7 @@ The intricate Virtue is profound! Farfetched!
 Contra to its objects! And leads towards favorable peacefulness.
 </pre>
 <p>
-<h1>66</h1>
+<h1>66</h1><p>
 <pre>
 Lakes and oceans can be the master of all streams,
 Because they are good at staying low,
@@ -1137,7 +1138,7 @@ If it seemed anything useful,
 Time would have diminished its greatness.
 </pre>
 <p>
-<h1>67</h1>
+<h1>67</h1><p>
 <pre>
 I have three precious things, that I hold onto and cherish.
 The first is called mercy,
@@ -1155,7 +1156,7 @@ Defence will be secure,
 The heavens will come to your rescue, and protection in its mercy.
 </pre>
 <p>
-<h1>68</h1>
+<h1>68</h1><p>
 <pre>
 Great gladiators are not violent,
 Great warriors are not enraged,
@@ -1166,7 +1167,7 @@ That is the power of leadership,
 That is the ultimate unity with timelessness.
 </pre>
 <p>
-<h1>69</h1>
+<h1>69</h1><p>
 <pre>
 There is a saying in the battlefield,
 “Dare not be the host thus be the guest,
@@ -1181,7 +1182,7 @@ Therefore upon the clashing of the forces,
 Those who are reserved are victorious!
 </pre>
 <p>
-<h1>70</h1>
+<h1>70</h1><p>
 <pre>
 These words are easy to understand, and easy to follow.
 Yet for worldly people, none can understand, none can follow.
@@ -1192,7 +1193,7 @@ Those who know are rare, those who abide are respectable,
 Hence the master bears humility in apparels and treasuries at heart.
 </pre>
 <p>
-<h1>71</h1>
+<h1>71</h1><p>
 <pre>
 Knowing that you do not know, is superiority;
 Not knowing this knowledge, is defectiveness.
@@ -1203,7 +1204,7 @@ Because of the defecting of defectives
 Hence is void of defectiveness.
 </pre>
 <p>
-<h1>72</h1>
+<h1>72</h1><p>
 <pre>
 When the people is not threatened by the imposing dignity,
 Dignity is imposed! Without intruding the people's dwellings,
@@ -1215,7 +1216,7 @@ Self-loving, and not self-righteous.
 Therefore liberated and resolved.
 </pre>
 <p>
-<h1>73</h1>
+<h1>73</h1><p>
 <pre>
 Courageous in daring and kill,
 Courageous in not daring and live.
@@ -1232,7 +1233,7 @@ The meshes of the heavenly dragnet is extensive,
 It may be sparse, nothing escapes its netting.
 </pre>
 <p>
-<h1>74</h1>
+<h1>74</h1><p>
 <pre>
 When people are not threatened by death,
 Why intimidate them with death?
@@ -1246,7 +1247,7 @@ Those who assume the carpenter's job to carve wood,
 Seldom avoid hurting their hands.
 </pre>
 <p>
-<h1>75</h1>
+<h1>75</h1><p>
 <pre>
 People's poverty,
 Is caused by parasitic exploitation by superiors,
@@ -1261,7 +1262,7 @@ Only those who are not ambitious for achievements in life,
 Are truly capable of appreciating life.
 </pre>
 <p>
-<h1>76</h1>
+<h1>76</h1><p>
 <pre>
 People are born gentle and fragile,
 They die stiff and tough.
@@ -1275,7 +1276,7 @@ It is with great strength when one stays low,
 It is with gentleness and fragility when one can assume superiority.
 </pre>
 <p>
-<h1>77</h1>
+<h1>77</h1><p>
 <pre>
 The heavenly Dao,
 Is like the arching bow!
@@ -1294,7 +1295,7 @@ Accomplishes and not dwell,
 That is being undesirous in showing-off one's capabilities!
 </pre>
 <p>
-<h1>78</h1>
+<h1>78</h1><p>
 <pre>
 Of all gentleness and submissiveness in the world
 Nothing compares to water,
@@ -1310,7 +1311,7 @@ Accepting the nation's adversities, is being majestic.”
 Righteous words seem contradictory.
 </pre>
 <p>
-<h1>79</h1>
+<h1>79</h1><p>
 <pre>
 When hateful hostility is resolved,
 There will be lingering hatred,
@@ -1323,7 +1324,7 @@ The Dao is unbiased,
 It will always bring cure to the people.
 </pre>
 <p>
-<h1>80</h1>
+<h1>80</h1><p>
 <pre>
 A small nation has a small population,
 Yet even without state of the art instruments to work with,
@@ -1342,7 +1343,7 @@ And the crowing and barking can be heard,
 People retire of old age without longing to give service to the other.
 </pre>
 <p>
-<h1>81</h1>
+<h1>81</h1><p>
 <pre>
 Truthful words are not pleasant,
 Pleasant words are not trustworthy;
@@ -1359,7 +1360,7 @@ The Way of the Sage,
 Is acting, not contending.
 </pre>
 <p>
-<h1>:x license</h1>
+<h1>:x license</h1><p>
 Creative Commons Attribution-ShareAlike 2.0 Generic
 [source](https://en.wikisource.org/wiki/Translation:Tao_Te_Ching#Chapter_42_(%E7%AC%AC%E5%9B%9B%E5%8D%81%E4%BA%8C%E7%AB%A0e
     </div>

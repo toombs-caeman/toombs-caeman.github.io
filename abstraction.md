@@ -10,7 +10,6 @@ The idea of numbers (at least the natural numbers) follows pretty directly from 
 what appears to be repetitive in fact cannot be so in reality, only in the abstract.
 The more abstract a label, the more often it will repeat (this may or may not be practically useful)
 
-# :x trilateration problem
 
 # :x objects
 'objects' themselves are not really a discrete thing. An apple is offgassing chemicals constantly, and the atmosphere diffuses into it. It is only conceptually distinct from its surroundings.

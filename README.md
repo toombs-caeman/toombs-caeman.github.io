@@ -2,51 +2,26 @@
 # About the Site
 
 ## Concept
-This is mostly a public reflection of things I've written in my physical notebooks. I'm a fan of first thinking with pen and paper (and privately).
+This is mostly a public reflection of things I've written in my physical notebooks. I'm a fan of first thinking with [:pen and paper](pens) (and privately).
 
-## Visual Style
-This site is meant to emulate writing in a Rhodia Sapphire dot-grid notebook
+The visual style of the site is meant to emulate writing in a Rhodia Sapphire dot-grid notebook
 with Waterman's Serenity Blue or Pilot's Iroshizuku Kon-peki ink, though I've limited myself to [css named colors](https://www.w3schools.com/cssref/css_colors.asp). The font is [comic mono](https://dtinth.github.io/comic-mono-font/).
-
-## Folders vs Tags vs Links
-In the messy world of ideas, I've found that categorizing things is a struggle.
-
-The idea of tagging generally implies a duality between the task of generating content and categorizing it. One side or the other inevitably gets neglected, and ultimately it's a [:false duality](tao#42) anyway, since metadata is just data. What happens if you have thoughts on the category as a whole? Is there a privileged `index` which is somehow special?
-
-Folders are like tags but worse, since they also enforce an unwarrented heirarchy.
-
-The websites are naturally a link based media, but I find it suits my thinking even when writing with pen and paper. All my notebooks, going back years, are numbered sequentially and all pages are numbered. 'Links' are in the form `7.71` (71st page of the 7th book). Its quick and easy to write.
-
-Generally on the web a users has the option to explore links in tabs (spatially) or by backtracking through the history (temporal). Tabs struggle because the spatial metaphor gets collapsed to one dimension. Backtracking isn't great either since whole branches of history can easily be lost accidentally.
-I am using [nutshell](https://ncase.me/nutshell/) to turn links into expandable sections, which expands the spatial metaphor.
-
-{{! while zettlkasten is expected to work with atomic ideas, ideas aren't atomic. What is really important is that ideas are atomically
-a [zettlkasten](https://zettelkasten.de/posts/overview/) of ideas with longer form 'threads' of ideas layered on top.
-each node in the graph is an atomic (idea) but that idea also is related to other ideas in important ways.
-the type of relation is important.
-* competing hypothesis
-* supporting fact (perhaps ordered, as in a proof)
-* similar semantics (appending to a list, adding to a set)
-* similar context (set union and set difference, or two techniques related to drawing with charcoal)
-* asymmetric relations (specific idea makes use of general idea, but is mostly unrelated. Unlikely to want to find specific from general, though it should be possible).
-addressible, so that they can be referenced as such.
-Long form articles may address very specific chains of ideas but then be decomposed so that supporting arguments are separate items.
-References to part of an article should be decomposed through an intermediary article (avoiding anchored links)
-}}
 
 
 ## Hosting & Rendering
 This site is hosted on [github](https://github.com/toombs-caeman/toombs-caeman.github.io) currently. The content is not and probably never will be interactive, so pages are rendered statically.
 
-The format I write in is mostly [markdown](https://www.markdownguide.org/basic-syntax/) with a touch of [moustache](http://mustache.github.io/mustache.5.html) templating, though it isn't fully compatible with either.
-Rendering to html is done through a [:pure bash](#why-bash) [script](./sta.sh).
+The format I write in is mostly [markdown](https://www.markdownguide.org/basic-syntax/) with a touch of [moustache templating](http://mustache.github.io/mustache.5.html), though it isn't fully compatible with either.
+Rendering to html is done through a [:pure bash](#why-bash) [script](blog.sh).
+{{! if you're reading the markdown, this is a comment gets removed during rendering. The first line of the file says to use the .note layout}}
 
+## Directory Structure
 
-Rendered html is saved in [:git](#history) right alongside the markdown that generated it.
-Templates and other static resources (images, css, etc.) are hidden files. Mostly I want to focus on the writing when I'm poking around the project directly.
+Rendered html is saved in [:git](#history) alongside the markdown that generated it. I'm trying to keep everything in a single folder for now. [Short urls](https://sive.rs/su) are better.
+Layout templates and other static resources (images, css, etc.) are hidden files. Mostly I want to focus on the writing when I'm poking around the project directly.
 
 #### :x why-bash
-[:I started learning bash because it was available.](#omni) But it really sucks, and it's a bit masochistic to use it for anything more than one-liners you copy off of stackoverflow. The syntax is crusty (verbose) and full of warts (bad defalts). Just look at parameter expansion: It's extremely common, verbose, has terrible and unpredictable default behaviors, etc, etc. Don't even get me started on arrays.
+[:I started learning bash because it was available.](#omni) However, bash sucks, and it's a bit masochistic to use it for anything more than one-liners you copy off of stackoverflow. The syntax is crusty (verbose) and full of warts (bad defalts). Just look at parameter expansion: It's extremely common, verbose, has terrible and unpredictable default behaviors, etc, etc. Don't even get me started on arrays.
 
 Another problem is its age, which means that searching for advice often leads to 'accepted answers' which use features either too new or too old to apply to your situation. It doesn't help that for a while macs were stuck with an ancient version of bash for licensing reasons.
 It's a common problem with unix utilities which have many different implementations and varieties of extensions (here's looking at you, gnu). A found script for `awk` cannot be expected to work 100% of the time with the binary called `awk` on your machine.

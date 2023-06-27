@@ -1,0 +1,94 @@
+<h1>@</h1><p>
+I'm designing a system for naming locations in the home where things are stored,
+like a filing system for papers, but in 3d space.
+<p>
+It should be:
+<ul>
+<li>easy to create in an adhoc way, like how you would direct someone to it by speaking
+</li>
+<li>effective to navigate to an object
+</li>
+<li>unambiguous even when spoken
+</li>
+<li>succinct to write
+</li></ul><p>
+status: not used, not tested
+<h1>heirarchy</h1><p>
+Give rooms unique names like <code>master</code> or <code>B</code> for the master bedroom.
+levels of a heirarchy are separated with <code>.</code>, starting with the largest division.
+<p>
+<h1>names</h1><p>
+give name such that the structure abbreviations will be obvious. Generally each room will have a name.
+<ul>
+<li><code>m</code> master bedroom
+</li>
+<li><code>mb</code> master bathroom
+</li>
+<li><code>gb</code> guest bath
+</li>
+<li><code>k</code> kitchen
+</li>
+<li><code>i</code> kitchen island - this isn't a room, but it gets a name to differentiate <code>k+</code> and <code>i+</code>
+</li>
+<li><code>w</code> workshop
+</li>
+<li><code>o</code> office
+</li>
+<li><code>cc</code> coat closet
+</li>
+<li><code>lc</code> linen closet
+</li></ul><p>
+<h1>axis</h1><p>
+cupboards are counted left to right.
+shelves are counted from the floor up.
+you can extend this to 2d if you have a grid of shelves, but you have to decide which is the major and minor axis.
+<code>3.4</code> would refer to the third major and 4 minor division.
+<p>
+relative directions (left, right) are given to in relation to your orientation entering the room, or when looking at a shelf.
+floors are counted normally.
+<p>
+<h1>generic abbreviations</h1><p>
+use <code>.</code> as a separator if needed
+structures
+<ul>
+<li><code>_</code> floor
+</li>
+<li><code>/</code> wall
+</li>
+<li><code>-</code> shelf
+</li>
+<li><code>c</code> closet
+</li>
+<li><code>+</code> cupboard (shelf with a door)
+</li>
+<li><code>n</code> table
+</li>
+<li><code>x</code> box
+</li></ul><p>
+counts - before what they describe
+<ul>
+<li><code>2-</code> second shelf (shelfs are implicitly counted from the bottom)
+</li>
+<li><code>2v</code> second from the top or second from the back
+</li></ul><p>
+directions - after what they describe (these are arrows)
+<ul>
+<li><code>^</code> highest | count from the bottom | backmost | count from the front
+</li>
+<li><code>v</code> lowest | count from the top | frontmost | count from the back
+</li>
+<li><code>&lt;</code> leftmost | count to the right
+</li>
+<li><code>&gt;</code> right most | count from the left
+</li>
+<li><code>*</code> middle
+<h1>examples</h1><p>
+counts are given before the thing being counted (as you would when speaking)
+</li>
+<li><code>2v-v</code> second shelf down (count from the top) in the front
+</li>
+<li><code>2&lt;+^</code> second cupboard from the right in the back (2nd, count from right, cupboard, back)
+</li>
+<li><code>m&lt;c_&lt;</code> (master bedroom, leftmost, closet, floor, leftmost) = on the floor of the leftmost master bedroom closet, to the left
+</li>
+<li><code>o.c_3x</code> (office, closet, floor, 3rd from left, box) = in the third box from the left on the floor of the office closet

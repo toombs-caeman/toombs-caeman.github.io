@@ -3,63 +3,220 @@
 <head>
     <meta charset="utf-8">
     <title>Features of a Dream Language</title>
+    <script src="https://cdn.jsdelivr.net/gh/ncase/nutshell/nutshell.js"></script>
     <link rel="stylesheet" href="/.main.css" type="text/css">
     <link rel="shortcut icon" href="/.favicon.jpg" type=image/x-icon">
-    <script src="https://cdn.jsdelivr.net/gh/ncase/nutshell/nutshell.js"></script>
+    <script>Nutshell.hideHeadings()</script>
 </head>
 <body>
     <div class="page-content">
     
-<h1>Features of a Dream Language</h1>
+<h1>Features of a Dream Language</h1><p>
 my dream answer to the questions of <a href="pl">:programming language design</a>
 <p>
-<h1>core</h1>
-<h2>coroutines | fibers | green threads, channels</h2>
-<a href="https://graphitemaster.github.io/fibers/">fibers oh my</a>
-<a href="https://go.dev/tour/concurrency/2">go channels</a>
-<p>
-<h2>laziness, generators, async</h2>
+<h1>TOC</h1><p>
 <ul>
-<li>'lazy' values aren't computed until 'required'. This should allow for infinite generators and such
+<li><a href="#values">values</a>
 </li>
-<li>async values are computed in parallel threads. They aren't lazy, but execution will wait for them to finish as if they were
+<li><a href="#syntax">syntax</a>
+</li>
+<li>execution
+<ul>
+<li><a href="#distributed">distributed</a>
+</li>
+<li><a href="#concurrency">parallel</a>
+</li></ul></li></ul><p>
+<p>
+<h1>variables | variable flags</h1><p>
+variables are references to values
+types are (potentially infinite) sets of values with common properties
+<h2>values</h2><p>
+kinds of values:
+<ul>
+<li><code>immediate</code> - value is evaluated when defined (assigned).
+</li>
+<li><code>symbol</code> - value is an ast, which must be explicitly evaluated
+<ul>
+<li>this is the homoiconic type, like lisp quote
+</li>
+<li>syntactically, symbols are functions of zero arguments
+</li></ul><li><code>lazy</code> - value is implicitly evaluated when required, but not when defined.
+<ul>
+<li>Current thread blocks during evaluation.
+</li>
+<li>implicitly memoized (threadsafe eval once? unless marked pure)
+</li>
+<li>can be used to create infinite lists and such
+</li>
+<li>how about pythonic <a href="https://docs.python.org/3/howto/descriptor.html">descriptors</a>?
+</li>
+<li>laziness is <a href="https://en.wikipedia.org/wiki/Referential_transparency">:transparent</a>.
+</li></ul><li><code>async</code>
+<ul>
+<li>computation starts in a separate thread when the value is defined
+</li>
+<li>unlike a lazy value, all async values will be evaluated eventually (unless program hard exits without join).
+</li>
+<li>current thread will block if async value isn't ready
+</li>
+<li>need an operator to check if a value has finished computing.
+</li></ul></li></ul><p>
+<h2>references</h2><p>
+reference flags:
+<ul>
+<li><code>persistent</code> initialized to types zero value or saved value. guaranteed to save to disk on program exit.
+</li>
+<li><code>mutable</code> like rust.
+</li>
+<li><code>scope</code> change the scoping of the reference (local)
 </li></ul><p>
-<h2>algebraic effects</h2>
-<a href="https://overreacted.io/algebraic-effects-for-the-rest-of-us/">algebraic effects</a>
-<p>
-<h2>option for declarative function interfaces</h2>
+<h2>memory management</h2><p>
 <ul>
-<li>why let sql be the king of declarative syntax?
+<li>rusty borrowing?
+</li></ul><p>
+<p>
+<h2>types | properties</h2><p>
+types can be derived from 'properties' which may be interfaces, or may give guarantees about behavior.
+Properties themselves may be derived from implementations.
+<ul>
+<li>Compile-time exception when there is no implementation that matches the requested property
 </li>
-<li>if there are multiple implementations of how to select which one to use by collecting runtime statistics.
+<li>Compiler chooses among options when multiple implementations exist.
+</li></ul><p>
+property types:
+<ul>
+<li><code>interface</code> type implements some method(s)
+</li>
+<li><code>algebraic</code> type has algebraic property (eg <a href="https://en.wikipedia.org/wiki/Commutative_property)">:commutative</a>
+<ul>
+<li>in order to enable compile-time optimizations by symbolic algebra
+</li></ul><li><code>side effect</code> type mutates global reference, depends on IO, or is pure.
+<ul>
+<li>functions may be <code>idempotent</code> even if they aren't pure
+</li></ul><li><code>threadsafe</code>
+</li>
+<li><code>ordering</code> type exhibits certain <a href="https://en.wikipedia.org/wiki/Total_order">:ordering properties</a>
+</li>
+<li><code>scale</code> efficient implementation may depend on the size of the input
+<ul>
+<li>a hash map may use a simpler hashing function for ~10 keys than ~10k
+</li>
+<li>a list that's &lt; n items might sort faster with <a href="https://en.wikipedia.org/wiki/Insertion_sort">insertion sort</a>
+</li>
+<li>10 threads may run faster on a single cpu, while 10k threads may be faster to run on a distributed cluster (if one is available)
+</li>
+<li>base on collecting runtime statistics?
 </li>
 <li>efficiency depends on size of input, but also number of cpu cores
+</li></ul></li></ul><p>
+<h2>builtin types</h2><p>
+<ul>
+<li><code>ast</code> lisp's quote type
 </li>
-<li>highly parallel declarative functions should run on the gpu when it is efficient to do so. <b>This should not require any explicit change to the code</b>
+<li><code>number</code> the programmer shouldn't have to decide if 32f or 64i unless they care
+</li>
+<li><code>collection</code> like python's collections
 </li></ul><p>
-<h2>repl | compile-time</h2>
+<h1>execution</h1><p>
+<h2>repl | compile-time | reflection</h2><p>
 <ul>
-<li>the full language should be available at compile-time
+<li><a href="https://en.wikipedia.org/wiki/Compile-time_function_execution">pure compile time</a>
+</li>
+<li>homoiconic
+</li>
+<li>the full language should be available in compile-time macros
+</li>
+<li>the repl is the compiler. Pausing the repl to create an executable
 </li></ul><p>
-<h2>memory management</h2>
+<h2>concurrency</h2><p>
 <ul>
-<li>rusty?
+<li><a href="https://graphitemaster.github.io/fibers/">fibers oh my</a>
+</li>
+<li><a href="https://go.dev/tour/concurrency/2">go channels</a>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/Semaphore_(programming">mutex/semaphore</a>#Semaphores_vs._mutexes)
 </li></ul><p>
-<h1>syntax</h1>
+<h2>distribution</h2><p>
+<ul>
+<li>highly parallel declarative functions should run on the gpu when it is efficient to do so. <em>This should not require any explicit change to the code</em>
+</li>
+<li>serialization &amp; networking should be such configuring a cluster of CPUs to distribute a program is straightforward and does not require special handling (the same code will run threads locally or distribute threads to the cluster if one is configured and it is efficient to do so.)
+</li></ul><p>
+<h1>control flow</h1><p>
+let <code>if</code> be a special case of <code>match case</code>
+unify <code>for</code> and <code>while</code> using lazy generators
+<h2>algebraic effects</h2><p>
+<a href="https://overreacted.io/algebraic-effects-for-the-rest-of-us/">algebraic effects</a>
 <p>
-<h1>tooling | ecosystem</h1>
+<h2>option for declarative function interfaces</h2><p>
 <ul>
+<li>why let sql be the king of declarative syntax?
+</li></ul><p>
+<p>
+<h1>syntax</h1><p>
+<ul>
+<li>modify syntax at compile-time
+</li></ul><p>
+<h1>= | := | ==</h1><p>
+<ul>
+<li><code>==</code> is equality
+<ul>
+<li>returns true if the left and right values are the same otherwise returns false
+</li>
+<li><code>1 == 1</code> returns true
+</li></ul><li><code>:=</code> is assignment
+<ul>
+<li>the left expression is made to be equal to the right expression at the time of evaluation.
+</li>
+<li>as an expression, return the left expression.
+</li>
+<li>equality may not hold as values are re-assigned.
+</li>
+<li><code>x := 3</code> returns <code>'x</code> and the value of <code>x</code> is 3
+<code></code><code>
+x := 3
+y := x - 1
+x := 2
+x # 2
+y # 2
+</code><code></code>
+</li></ul><li><code>=</code> is a bi-directional constraint
+<ul>
+<li>the left expression will always equal the right expression (within the current scope)
+</li>
+<li>functions on the left and right expressions must have an algebraic inverse
+</li>
+<li>underdetermined systems of equations are considered uninitialized
+</li>
+<li>adding a contradictory constraint is an error
+<code></code><code>
+x := 3
+y = x - 1
+x := 2
+x # 2
+y # 1 !!!
+y := 3
+x # 4 !!!
+2 * a + 5 * b = 19
+a - 2 * b = -4
+a # 2
+b # 3
+</code><code></code>
+<h1>tooling | ecosystem</h1><p>
+</li></ul><li>source uses <a href="https://en.wikipedia.org/wiki/UTF-8">utf-8</a>
+</li>
 <li>imports like golang
 <ul>
 <li>vendoring?
 </li>
 <li>versioning freezing
-</li></ul>git aware
+</li></ul><li>git aware
 <ul>
 <li>should be able to prove that all required source/resources are tracked in git
-</li></ul>'make'-like runbook
-</li></ul><p>
-<ul>
+</li>
+<li><a href="https://news.ycombinator.com/item?id=36465886">report config files</a>
+</li></ul><li>'make'-like runbook
+</li>
 <li>syntax highlighting lsp
 </li>
 <li>linter
@@ -80,11 +237,32 @@ my dream answer to the questions of <a href="pl">:programming language design</a
 </li>
 <li>debugging
 </li>
-<li>FFI
+<li>FFI, calling shell utilities
 </li>
 <li>cross compiling
 </li>
 <li>a page like <a href="https://learnxinyminutes.com/">learnxiny</a>
+</li></ul><p>
+<h1>inbox</h1><p>
+<ul>
+<li><a href="https://youtu.be/HB5TrK7A4pI?t=2346">: a real engineer doesn't want just a religion about how to solve a problem</a>
+<ul>
+<li>strangeloop 2011 gerald sussman <a href="https://youtu.be/HB5TrK7A4pI?t=3701">:summary</a>
+</li>
+<li>how can differing paradigms all fit into a language and talk, so the type of programming matches the thing it models
+</li>
+<li><a href="https://youtu.be/HB5TrK7A4pI?t=2431">constraint propogation (bi-directional equations)</a>
+</li>
+<li>advances in science are based on useful lies
+</li>
+<li>hardware design that implements information propogation instead of logic gates. Highly parallel machines that don't need to sync
+</li></ul><li>pointers?
+</li>
+<li>memoized functions
+</li>
+<li>assume lazy or assume eager? probably not assume async
+<ul>
+<li>pure values assumed lazy. non-local or threadsafe references assumed eager. IO is ordered async
     </div>
     <hr>
     <footer>
