@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <title>{{title}}</title>
-    <script src="/.nutshell.js"></script>
-    <link rel="stylesheet" href="/.main.css" type="text/css">
-    <link rel="shortcut icon" href="/.favicon.jpg" type=image/x-icon">
+    <script src=".nutshell.js"></script>
+    <link rel="stylesheet" href=".main.css" type="text/css">
+    <link rel="shortcut icon" href=".favicon.jpg" type=image/x-icon">
 </head>
 <body>
     <div .page-content>
@@ -14,8 +14,8 @@
     <hr>
     <footer>
         <div style=text-align:center>
-            <a href="mailto:toombs.caeman@gmail.com"-> <img .icon src="/.mail.svg" alt="email">
-            <a href="https://github.com/toombs-caeman"-> <img .icon src="/.github.svg" alt="github">
+            <a href="mailto:toombs.caeman@gmail.com"-> <img .icon src=".mail.svg" alt="email">
+            <a href="https://github.com/toombs-caeman"-> <img .icon src=".github.svg" alt="github">
         </div>
     </footer>
 </body>
