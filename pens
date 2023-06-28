@@ -3,10 +3,9 @@
 <head>
     <meta charset="utf-8">
     <title>Pen & Paper</title>
-    <script src="https://cdn.jsdelivr.net/gh/ncase/nutshell/nutshell.js"></script>
+    <script src="/.nutshell.js"></script>
     <link rel="stylesheet" href="/.main.css" type="text/css">
     <link rel="shortcut icon" href="/.favicon.jpg" type=image/x-icon">
-    <script>Nutshell.hideHeadings()</script>
 </head>
 <body>
     <div class="page-content">
@@ -83,7 +82,8 @@ Moleskine notebooks don't do it for me. Leuchtturm is ok, not my preference.
 I keep a few tucked in the back of each notebook just in case.
 <p>
 <h2>But what do I write?</h2><p>
-<a href="notebook">I'm so glad you asked.</a>
+Journal entries, task planning stuff, fiction
+<a href="notebook">:I'm so glad you asked.</a>
 <p>
 <h1>:x website</h1><p>
 unlike writing this website. I've written this introduction about five times and I still don't know if it would make sense to anyone else. Ugh, editing sucks.

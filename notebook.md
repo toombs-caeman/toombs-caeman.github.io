@@ -22,6 +22,16 @@ Right now I've got:
 
 Everything of importance is written into the notebooks. This ensures no writing can get lost without it being very obvious and also ensures that everything can be referenced in a uniform way.
 
+# :x story
+I started out using the **Bullet Journal** method but found it didn't suit me.
+* calendar bound tasks are better tracked on an electronic calendar which can send notifications (push rather than poll)
+* some of the journaling and writing I do is worth revisiting but most of my day to day tasks are not. Keeping the two interspersed diluted both efforts. I keep two separate notebooks now.
+* migration, which is central to the method, seemed wasteful and tedious.
+
+While I still use something like the bullet journal method of marking tasks, the higher level process is much more in the style of **Getting Things Done**.
+
+I've also taken some inspiration from the principles of **Zettelkasten**, but the idea of using loose index cards doesn't appeal to me (except for the **recipes** in my rolodex).
+
 ## References
 References are written shorthand that [:links](#link) things together.
 I try to keep the topic of each page **atomic** so that references point to a [:single idea](#single).
@@ -29,17 +39,29 @@ I try to keep the topic of each page **atomic** so that references point to a [:
 here are some examples:
 * `71` or `(71)` - page 71 in the current notebook
 * `7.71` - page 71 in notebook 7
-* `(dune 106)` - page 106 of the book [:Dune](dune). (at least of my copy, and if I care to reference it I probably have one)
+* `(dune 106)` - page 106 of the book **Dune**. (at least of my copy, and if I care to reference it I probably have one)
 * `^site` - a bookmarked website. I don't write the url, but a keyword or something
 * `/file/path` - file in `~/Documents/`
 * `gg project/path` - a git repo, or a file in one
     * this is a reference to the tool `gg` I wrote for navigating git projects, which is itself a reference to vim's "go to top" command `gg` and golang's `go get`, both of which inspired the tool.
 * `YYYY-MM-DD` - date format
 
-### Referencing Physical Locations
-I'm still working on this. It's a written shorthand used to identify locations in my own house.
+# :x single ideas
+This is tricky when some 'single ideas' are actually a connection between other ideas, some sort of narrative, or an argument that connects ideas in sequence. If an idea is worth refering to in isolation it gets its own page (and a backlink from the sequence).
 
-Place names should be:
+## :x folders vs tags vs links
+In the messy world of ideas, I've found that organizing things is a struggle.
+
+The idea of tagging generally implies a duality between the task of generating content and categorizing it. One side or the other inevitably gets neglected, and ultimately it's a false duality anyway, since metadata is just data. What happens if you have thoughts on the category as a whole? Is there a privileged index which is somehow special? Pretty soon you'll have [:ten thousand kinds of data](tao#42).
+
+Categories are like tags but worse, since they also enforce an unwarrented heirarchy. Also, because namespaces within two categories are separate, you must always copy the whole path to disambiguate references
+
+I haven't gotten completely away from these problems with this reference system, but it's simple enough to keep using. References are unintrusive as possible. 'Categories' or 'Collections' and even the 'Index' are just pages that are referenced like any other.
+
+### Referencing Physical Locations
+a written shorthand used to identify locations in my own house (I'm still refining this)
+
+Identifiers should be:
 * easy to create in an adhoc way
 * effective to navigate to an object
 * unambiguous, but not necessarily unique
@@ -48,7 +70,7 @@ Place names should be:
 
 The basic idea is that an identifier should read as directions leading to the location in question, since that is how it will be used. The natural structure for this is to start at the largest division and get [:increasingly specific](#address).
 
-Parts of a name:
+Parts of an identifier:
 * General areas (rooms usually) get unique [:names](#names). 
 * common things get generic shorthand.
     * [:closets, shelves, etc.](#structures)
@@ -115,25 +137,13 @@ When giving a count I often omit the direction in which to count if it's the 'na
 you can extend this to 2d if you have a grid of shelves, but you have to decide which is the major and minor axis.
 `3.4` would refer to the third major and 4 minor division.
 
-# :x story
-I started out using the **Bullet Journal** method but found it didn't suit me.
-* calendar bound tasks are better tracked on an electronic calendar which can send notifications (push rather than poll)
-* some of the journaling and writing I do is worth revisiting but most of my day to day tasks are not. Keeping the two interspersed diluted both efforts. I keep two separate notebooks now.
-* migration, which is central to the method, seemed wasteful and tedious.
 
-While I still use something like the bullet journal method of marking tasks, the higher level process is much more in the style of **Getting Things Done**.
+## Closing Thoughts
+This is the core of the system, just a uniform way to number things so they can be referenced, yet I've found it incredibly valuable to look back through my thoughts on occassion. Its simplicity and flexibility are the real strengths.
 
-# :x single ideas
-This is tricky when some 'single ideas' are actually a connection between other ideas, some sort of narrative, or an argument that connects ideas in sequence. If an idea is worth refering to in isolation it gets its own page (and a backlink from the sequence).
+In the future I'll polish up a few sections of notes to add to the site.
 
-## :x folders vs tags vs links
-In the messy world of ideas, I've found that organizing things is a struggle.
-
-The idea of tagging generally implies a duality between the task of generating content and categorizing it. One side or the other inevitably gets neglected, and ultimately it's a false duality anyway, since metadata is just data. What happens if you have thoughts on the category as a whole? Is there a privileged index which is somehow special? Pretty soon you'll have [:ten thousand kinds of data](tao#42).
-
-Categories are like tags but worse, since they also enforce an unwarrented heirarchy. Also, because namespaces within two categories are separate, you must always copy the whole path to disambiguate references
-
-I haven't gotten completely away from these problems with this reference system, but it's simple enough to keep using. References are unintrusive as possible. 'Categories' or 'Collections' and even the 'Index' are just pages that are referenced like any other.
-
-
-
+# :x TODO
+* describe planner
+* describe primer
+* describe D&D notes

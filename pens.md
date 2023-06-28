@@ -62,7 +62,8 @@ Moleskine notebooks don't do it for me. Leuchtturm is ok, not my preference.
 I keep a few tucked in the back of each notebook just in case.
 
 ## But what do I write?
-[I'm so glad you asked.](notebook)
+Journal entries, task planning stuff, fiction
+[:I'm so glad you asked.](notebook)
 
 # :x website
 unlike writing this website. I've written this introduction about five times and I still don't know if it would make sense to anyone else. Ugh, editing sucks.

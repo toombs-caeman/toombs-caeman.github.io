@@ -3,17 +3,16 @@
 <head>
     <meta charset="utf-8">
     <title>Dune</title>
-    <script src="https://cdn.jsdelivr.net/gh/ncase/nutshell/nutshell.js"></script>
+    <script src="/.nutshell.js"></script>
     <link rel="stylesheet" href="/.main.css" type="text/css">
     <link rel="shortcut icon" href="/.favicon.jpg" type=image/x-icon">
-    <script>Nutshell.hideHeadings()</script>
 </head>
 <body>
     <div class="page-content">
     
 <h1>Dune</h1><p>
 <p>
-I love <a href="https://www.goodreads.com/book/show/44767458-dune">:Dune</a> as a novel.
+I love <a href="https://www.goodreads.com/book/show/44767458-dune">Dune</a> as a novel.
 <p>
 The superhuman abilities shown in the novel are described in a way that seems all too possible, if training was deliberate and complete enough. Not that this would be necessarily healthy, but what <em>is</em> the limit of human performance?
 <p>

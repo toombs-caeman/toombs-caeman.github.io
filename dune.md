@@ -1,7 +1,7 @@
 {{?.note}}
 # Dune
 
-I love [:Dune](https://www.goodreads.com/book/show/44767458-dune) as a novel.
+I love [Dune](https://www.goodreads.com/book/show/44767458-dune) as a novel.
 
 The superhuman abilities shown in the novel are described in a way that seems all too possible, if training was deliberate and complete enough. Not that this would be necessarily healthy, but what *is* the limit of human performance?
 

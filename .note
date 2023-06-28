@@ -6,7 +6,6 @@
     <script src="/.nutshell.js"></script>
     <link rel="stylesheet" href="/.main.css" type="text/css">
     <link rel="shortcut icon" href="/.favicon.jpg" type=image/x-icon">
-    <script>Nutshell.hideHeadings()</script>
 </head>
 <body>
     <div .page-content>
