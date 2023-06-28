@@ -142,8 +142,9 @@ tag() { # <tag>
 
 register aimg '(?P<Rimg>!?)\[(?P<desc>[^]]*)]\((?P<url>[^ )]*)(?P<meta>[^)]*)\)(?P<Rwiki>\)?)'
 aimg() {
-    # TODO let internal .md links be renamed to point to the .md-less pages
-    # so following the link in vim works correctly
+    # TODO let internal .md links be renamed to point to the rendered .html pages
+    # so following the link works correctly in vim and in browser
+    [[ "$url" = *.md ]] && url="${url%.md}.html"
     if [[ -n "$Rimg" ]]; then
         tag "<img src=\"$url$Rwiki\" alt=\"$desc\" $meta>"
     else

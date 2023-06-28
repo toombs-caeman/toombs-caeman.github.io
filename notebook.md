@@ -1,7 +1,7 @@
 {{?.note}}
 # Notebook System
 
-I've kept [:physical notebooks](pens) for over a decade now, I've used various analog task-tracking/planner systems and for the past five years or so I've been working on a project I call the **primer**. I'll spare you the [:origin story](#story) and just focus on the method I use now.
+I've kept [:physical notebooks](pens.md) for over a decade now, I've used various analog task-tracking/planner systems and for the past five years or so I've been working on a project I call the **primer**. I'll spare you the [:origin story](#story) and just focus on the method I use now.
 
 Every notebook gets the same setup:
 * With the front of the notebook up, write along fore-edge in black.

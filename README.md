@@ -2,7 +2,7 @@
 # About the Site
 
 ## Concept
-This is mostly a public reflection of things I've written in my physical notebooks. I'm a fan of first thinking with [:pen and paper](pens) (and privately).
+This is mostly a public reflection of things I've written in my physical notebooks. I'm a fan of first thinking with [:pen and paper](pens.md) (and privately).
 
 The visual style of the site is meant to emulate writing in a Rhodia Sapphire dot-grid notebook
 with Waterman's Serenity Blue or Pilot's Iroshizuku Kon-peki ink, though I've limited myself to [css named colors](https://www.w3schools.com/cssref/css_colors.asp). The font is [comic mono](https://dtinth.github.io/comic-mono-font/).
