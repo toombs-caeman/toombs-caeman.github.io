@@ -195,7 +195,7 @@ render() {
     # process all files in parallel
     for filename in **/**.md; do
         {
-            file "$filename" > "${filename%.md}"
+            file "$filename" > "${filename%.md}.html"
             printf '%.3f %s\n' "$(elapsed "$start")" "${filename%.md}"
         } &
         pid+=("$!")
@@ -205,11 +205,9 @@ render() {
     printf '%s %.3f\n' "render" "$(elapsed "$start")"
 }
 clean() {
-    for filename in **/**; do
-        # filter only regular files that have no extension (.)
-        if M "$filename" '(^|/)[^.]*$' && [[ -f "$filename" ]]; then
-            rm "$filename"
-        fi
+    # filter only regular files that have .html extension
+    for filename in **/**.html; do
+        rm "$filename"
     done
     echo "clean"
 }
