@@ -141,3 +141,4 @@ benjamin franklin method
     * the meta-pattern of object and process applying to concepts, skills, habits
 * taxonomy of the interesting `7.62`
 * rhetoric
+* the separation of writing and editing mirrors GTD separation of inboxing and capture ritual

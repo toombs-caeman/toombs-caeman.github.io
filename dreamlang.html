@@ -13,8 +13,11 @@
 <h1>Features of a Dream Language</h1><p>
 my dream answer to the questions of <a href="pl">:programming language design</a>
 <p>
-<h1>TOC</h1><p>
+<h1>feature list | elevator pitch</h1><p>
 <ul>
+<li>
+<h1>TOC</h1><p>
+</li>
 <li><a href="#values">values</a>
 </li>
 <li><a href="#syntax">syntax</a>
@@ -25,6 +28,17 @@ my dream answer to the questions of <a href="pl">:programming language design</a
 </li>
 <li><a href="#concurrency">parallel</a>
 </li></ul></li></ul><p>
+<h1>base properties</h1><p>
+<h2>value properties</h2><p>
+<ul>
+<li>lazy, symbol, async
+<h2>variable properties</h2><p>
+</li>
+<li>&amp;reference, <em> dereference
+</li>
+<li>persistent, mutable
+<h2>type properties</h2><p>
+</li></ul><p>
 <p>
 <h1>variables | variable flags</h1><p>
 variables are references to values
@@ -100,95 +114,159 @@ property types:
 <ul>
 <li>a hash map may use a simpler hashing function for ~10 keys than ~10k
 </li>
-<li>a list that's &lt; n items might sort faster with <a href="https://en.wikipedia.org/wiki/Insertion_sort">insertion sort</a>
-</li>
-<li>10 threads may run faster on a single cpu, while 10k threads may be faster to run on a distributed cluster (if one is available)
-</li>
-<li>base on collecting runtime statistics?
-</li>
-<li>efficiency depends on size of input, but also number of cpu cores
-</li></ul></li></ul><p>
-<h2>builtin types</h2><p>
-<ul>
-<li><code>ast</code> lisp's quote type
-</li>
-<li><code>number</code> the programmer shouldn't have to decide if 32f or 64i unless they care
-</li>
-<li><code>collection</code> like python's collections
-</li></ul><p>
-<h1>execution</h1><p>
-<h2>repl | compile-time | reflection</h2><p>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Compile-time_function_execution">pure compile time</a>
-</li>
-<li>homoiconic
-</li>
-<li>the full language should be available in compile-time macros
-</li>
-<li>the repl is the compiler. Pausing the repl to create an executable
-</li></ul><p>
-<h2>concurrency</h2><p>
-<ul>
-<li><a href="https://graphitemaster.github.io/fibers/">fibers oh my</a>
-</li>
-<li><a href="https://go.dev/tour/concurrency/2">go channels</a>
-</li>
-<li><a href="https://en.wikipedia.org/wiki/Semaphore_(programming">mutex/semaphore</a>#Semaphores_vs._mutexes)
-</li></ul><p>
-<h2>distribution</h2><p>
-<ul>
-<li>highly parallel declarative functions should run on the gpu when it is efficient to do so. <em>This should not require any explicit change to the code</em>
-</li>
-<li>serialization &amp; networking should be such configuring a cluster of CPUs to distribute a program is straightforward and does not require special handling (the same code will run threads locally or distribute threads to the cluster if one is configured and it is efficient to do so.)
-</li></ul><p>
-<h1>control flow</h1><p>
-let <code>if</code> be a special case of <code>match case</code>
-unify <code>for</code> and <code>while</code> using lazy generators
-<h2>algebraic effects</h2><p>
-<a href="https://overreacted.io/algebraic-effects-for-the-rest-of-us/">algebraic effects</a>
-<p>
-<h2>option for declarative function interfaces</h2><p>
-<ul>
-<li>why let sql be the king of declarative syntax?
-</li></ul><p>
-<p>
-<h1>syntax</h1><p>
-<ul>
-<li>modify syntax at compile-time
-</li></ul><p>
-<h1>= | := | ==</h1><p>
-<ul>
-<li><code>==</code> is equality
-<ul>
-<li>returns true if the left and right values are the same otherwise returns false
-</li>
-<li><code>1 == 1</code> returns true
-</li></ul><li><code>:=</code> is assignment
-<ul>
-<li>the left expression is made to be equal to the right expression at the time of evaluation.
-</li>
-<li>as an expression, return the left expression.
-</li>
-<li>equality may not hold as values are re-assigned.
-</li>
-<li><code>x := 3</code> returns <code>'x</code> and the value of <code>x</code> is 3
-<code></code><code>
+<li>a list that's < n items might sort faster with [insertion sort](https://en.wikipedia.org/wiki/Insertion_sort)
+    * 10 threads may run faster on a single cpu, while 10k threads may be faster to run on a distributed cluster (if one is available)
+    * base on collecting runtime statistics?
+    * efficiency depends on size of input, but also number of cpu cores
+
+## builtin types
+* `ast` lisp's quote type
+* `number` the programmer shouldn't have to decide if 32f or 64i unless they care
+* `collection` like python's collections
+
+# execution
+## repl | compile-time | reflection
+* [pure compile time](https://en.wikipedia.org/wiki/Compile-time_function_execution)
+* homoiconic
+* the full language should be available in compile-time macros
+* the repl is the compiler. Pausing the repl to create an executable
+
+## concurrency
+* [fibers oh my](https://graphitemaster.github.io/fibers/)
+* [go channels](https://go.dev/tour/concurrency/2)
+* [mutex/semaphore](https://en.wikipedia.org/wiki/Semaphore_(programming))
+
+## distribution
+* highly parallel declarative functions should run on the gpu when it is efficient to do so. *This should not require any explicit change to the code*
+* serialization & networking should be such configuring a cluster of CPUs to distribute a program is straightforward and does not require special handling (the same code will run threads locally or distribute threads to the cluster if one is configured and it is efficient to do so.)
+
+# control flow
+lets enumerate the types of control flow using the concept of an evaluation atom.
+An atom consumes a [:single](#composite) value at the beginning and produces a [:single value](#return) at the end, and otherwise may be considered pure and atomic. The [:valence](https://en.wikipedia.org/wiki/Degree_(graph_theory)) of an atom is always 2.
+
+**Note:** atoms only need to be *considered* pure and atomic, but this may not be literally true.
+
+"Control Flow" usually refers to stuff like loops and ifs, but lets define it more exactly as any construct connects atoms together (like chemical bonds). 
+
+## Boundary of Computation
+Say a computer is hooked up to a light switch. The computer can both flip the switch and query its state.
+You could say that the state of the switch acts as a single bit of 'switch memory', where writing that bit sets the state of the switch, and reading queries the state.
+
+However, unlike memory a human could also flip the switch. Or the switch could be taped to the off position.
+
+Therefore writing `1` to the 'switch memory' does not causally imply that reading the 'switch memory' will result in `1` in the same way as normal memory.
+
+For the purpose of our model, the written and read value cannot be considered the same value. One value was written, and another was read, with only a tenuous correlational link between the two.
+
+Thus we can meaningfully talk about values being 'created' as they enter the boundary of computation, and 'destroyed' as they exit. They are [:a posteriori](https://en.wikipedia.org/wiki/A_priori_and_a_posteriori).
+
+## purity
+A function is usually considered pure if the function alway evaluates to the same result given the same arguments.
+The usual understanding is that 'arguments' refers to those explicitly passed.
+
+## Input Flow
+evaluation that produces a value 'from nothing'.
+* values are 'created' through input to the program
+* Literal values can be considered in this category, though they 'exist' within the boundary of computation as it is initialized.
+* the result of a random function is intended to be causally independent from the program state and so has to be treated as information entering the boundary of computation, regardless of whether or not the function is truly random.
+
+## Output Flow
+Evaluation that consumes a value and does not produce one (within the boundary).
+Evaluation can always be culled unless it potentially causes an effect outside the boundary.
+
+## Sequential Flow
+The simplest bond is to connect the output of one atom to the input of another atom.
+The molecule may be considered itself an atom, as it has a single input and a single result.
+
+This is like a list.
+
+## Duplicating Flow
+A single value is copied to the inputs of 2+ atoms
+* forth's `dup` is a very direct example of this
+* assignment is often used as preparation for duplication
+
+## Parallel Flow
+A single value may need to be routed to multiple independent atoms. These are explicitly copies, not references, as each atom must be independent.
+
+## Aggregating Flow
+Aggregation takes 2 or more and produces a single value.
+* functions of multiple arguments `f(a, b, c)`
+* dyadic operators
+* This can be like python's `functools.reduce()`
+* or simply `[x, y, z]` that produces a single list from many values
+
+## Conditional Flow
+Consumes
+    * if - equivalent to case(true, false)
+    * case 
+    * match
+
+* functions of one value, that return
+* assignment gives a name to the end of a chain of atoms
+* variables are a way of giving a name to a partial execution
+* sequential flow (single atom) - order of execution impacts final result
+    * line to line 'normal' flow
+    * function calls (which *could* be inlined)
+    * while loops - control is sequential until the condition returns
+    * non-pure for loops
+* parallel flow - the order of execution does not change the outcome
+    * foreach (w/o break) (ie pure for loops)
+    * atoms
+* aggregating flow - multiple branch
+let `if` be a special case of `match case`
+unify `for` and `while` using lazy generators
+
+This is like a dict
+
+# dataflow based editing primitives
+* find usage of a variable, push name up or down the evaluation flow
+* intersect a computation, putting it on a new line and assigning a name
+
+
+# :x composite
+The 'single' value may be a composite or aggregate type. The idea is that all arguments must be prepared before any evaluation of the thread may take place.
+Specifying 'one' value is useful so we can talk about aggregation separately.
+
+# :x return
+Again, the return type may be composite.
+A thread may also mutate a reference rather than explicitly returning a value, however the reference must be exclusive (like rust's mutable reference), write-only, or otherwise unable to affect the result after evaluation has begun.
+
+## : thread examples
+Some examples:
+
+## algebraic effects
+[algebraic effects](https://overreacted.io/algebraic-effects-for-the-rest-of-us/)
+
+## option for declarative function interfaces
+* why let sql be the king of declarative syntax?
+sql as an embedded dsl interacting with native types. APL with permanence and transaction guarantees
+
+
+# syntax
+* modify syntax at compile-time
+
+# = | := | ==
+* `==` is equality
+    * returns true if the left and right values are the same otherwise returns false
+    * `1 == 1` returns true
+* `:=` is assignment
+    * the left expression is made to be equal to the right expression at the time of evaluation.
+    * as an expression, return the left expression.
+    * equality may not hold as values are re-assigned.
+    * `x := 3` returns `'x` and the value of `x` is 3
+```
 x := 3
 y := x - 1
 x := 2
 x # 2
 y # 2
-</code><code></code>
-</li></ul><li><code>=</code> is a bi-directional constraint
-<ul>
-<li>the left expression will always equal the right expression (within the current scope)
-</li>
-<li>functions on the left and right expressions must have an algebraic inverse
-</li>
-<li>underdetermined systems of equations are considered uninitialized
-</li>
-<li>adding a contradictory constraint is an error
-<code></code><code>
+```
+* `=` is a bi-directional constraint
+    * the left expression will always equal the right expression (within the current scope)
+    * functions on the left and right expressions must have an algebraic inverse
+    * underdetermined systems of equations are considered uninitialized
+    * adding a contradictory constraint is an error
+```
 x := 3
 y = x - 1
 x := 2
@@ -200,68 +278,136 @@ x # 4 !!!
 a - 2 * b = -4
 a # 2
 b # 3
-</code><code></code>
-<h1>tooling | ecosystem</h1><p>
-</li></ul><li>source uses <a href="https://en.wikipedia.org/wiki/UTF-8">utf-8</a>
+```
+# tooling | ecosystem
+* source uses [utf-8](https://en.wikipedia.org/wiki/UTF-8)
+* imports like golang
+    * vendoring?
+    * versioning freezing
+* git aware
+    * should be able to prove that all required source/resources are tracked in git
+    * [report config files](https://news.ycombinator.com/item?id=36465886)
+* 'make'-like runbook
+* syntax highlighting lsp
+* linter
+* official color theme?
+* official standard setup for common editors
+* documentation generator / comment syntax
+* serialization
+* repl, despite having static types
+* testing framework
+* logging
+* debugging
+* FFI, calling shell utilities
+* cross compiling
+* a page like [learnxiny](https://learnxinyminutes.com/)
+
+# inbox
+* [: a real engineer doesn't want just a religion about how to solve a problem](https://youtu.be/HB5TrK7A4pI?t=2346)
+    * strangeloop 2011 gerald sussman [:summary](https://youtu.be/HB5TrK7A4pI?t=3701)
+    * how can differing paradigms all fit into a language and talk, so the type of programming matches the thing it models
+    * [constraint propogation (bi-directional equations)](https://youtu.be/HB5TrK7A4pI?t=2431)
+    * advances in science are based on useful lies
+    * hardware design that implements information propogation instead of logic gates. Highly parallel machines that don't need to sync
+* pointers?
+* memoized functions
+* assume lazy or assume eager? probably not assume async
+    * pure values assumed lazy. non-local or threadsafe references assumed eager. IO is ordered async
+* [bi-directional type inference](https://whileydave.com/2022/06/15/type-checking-in-whiley-goes-both-ways/)
+* formal verification/probabilistic verification?
+    * verification of declared properties rather than full
+* resumable exceptions are just calls to undefined functions? Unwind the call stack to find a namespace containing the matching signature, or a traditional try/catch
+* un/boxing | splat | un/packing
+    * ⊙ ∈ (set containing, or element of)
+* [:function domain](https://en.wikipedia.org/wiki/Domain_of_a_function)
+* [:information flow diagram](https://en.wikipedia.org/wiki/Information_flow_diagram)
+* abstract away the order of evaluation (which is the focus of procedural programming)
+    * focus on functions (composition?)
+    * focus on data (causal flow?)
+
+* comparators should return >0 if greater than, 0 if equal, &lt;0 if less than
 </li>
-<li>imports like golang
+<li>greater numbers hint at larger distances between values (relative to total type space).
+</li>
+<li>for numbers, cmp(n, o) =: n-o
+</li></ul><li><a href="https://code.jsoftware.com/wiki/NuVoc">j nuvoc</a>
 <ul>
-<li>vendoring?
-</li>
-<li>versioning freezing
-</li></ul><li>git aware
+<li>filter in terms of sieve, define sort in terms fo permute
 <ul>
-<li>should be able to prove that all required source/resources are tracked in git
+<li>slice is filter
+</li></ul></li></ul><li>automatic function lifting (map) for <code>vector&lt;T&gt;</code> when <code>T</code> is expected
+<ul>
+<li><code>f(T)-&gt;U</code> lifts to <code>f(vector&lt;T&gt;)-&gt;vector&lt;U&gt;</code>
+</li></ul><li>null types
+<ul>
+<li><code>⊥</code> cannot appear in lists, so can map and filter are the same, a filtered out function returning <code>⊥</code>
+</li></ul><li>enums are numbers given names and treated as a distinct unit, finite const set?
 </li>
-<li><a href="https://news.ycombinator.com/item?id=36465886">report config files</a>
-</li></ul><li>'make'-like runbook
+<li><code>count of element</code> operator defined for containers is equivalent to <code>contains</code> for sets
 </li>
-<li>syntax highlighting lsp
+<li>list comprehensions
 </li>
-<li>linter
-</li>
-<li>official color theme?
-</li>
-<li>official standard setup for common editors
-</li>
-<li>documentation generator / comment syntax
-</li>
-<li>serialization
-</li>
-<li>repl, despite having static types
-</li>
-<li>testing framework
-</li>
-<li>logging
-</li>
-<li>debugging
-</li>
-<li>FFI, calling shell utilities
-</li>
-<li>cross compiling
-</li>
-<li>a page like <a href="https://learnxinyminutes.com/">learnxiny</a>
+<li>partials + assignment allow for naming any stage of evaluation
 </li></ul><p>
-<h1>inbox</h1><p>
 <ul>
-<li><a href="https://youtu.be/HB5TrK7A4pI?t=2346">: a real engineer doesn't want just a religion about how to solve a problem</a>
-<ul>
-<li>strangeloop 2011 gerald sussman <a href="https://youtu.be/HB5TrK7A4pI?t=3701">:summary</a>
+<li>can we do auto AOS↔SOA conversion
 </li>
-<li>how can differing paradigms all fit into a language and talk, so the type of programming matches the thing it models
-</li>
-<li><a href="https://youtu.be/HB5TrK7A4pI?t=2431">constraint propogation (bi-directional equations)</a>
-</li>
-<li>advances in science are based on useful lies
-</li>
-<li>hardware design that implements information propogation instead of logic gates. Highly parallel machines that don't need to sync
-</li></ul><li>pointers?
-</li>
-<li>memoized functions
-</li>
-<li>assume lazy or assume eager? probably not assume async
-<ul>
-<li>pure values assumed lazy. non-local or threadsafe references assumed eager. IO is ordered async
+<li>functions are closures, symbols are not
+«a b c»
+</li></ul><p>
+<h1>operators (functions of one or two arguments)</h1><p>
+|base   | dyadic    | monadic   | <code>/</code> prefix    | <code>!</code> prefix    | <code>:</code> prefix |
+|<span class="overline"></span><span class="overline">-|</span><span class="overline"></span><span class="overline"></span>-|<span class="overline"></span><span class="overline"></span><span class="overline">-|</span><span class="overline"></span><span class="overline"></span><span class="overline"></span>-|<span class="overline"></span><span class="overline"></span><span class="overline"></span><span class="overline">-|</span><span class="overline"></span><span class="overline"></span><span class="overline">|
+| <code>=</code>   | equation  |           | equal         | not equal     | assign     |
+| <code>*</code>   | multiply  |           | and           | nand          | bit and    |
+| <code>+</code>   | add       | abs       | or            | nor           | bit or     |
+| <code>-</code>   | subtract  | invert    | xor           | xnor          | bit xor    |
+| <code>/</code>   | divide    |           | int div       | modulo        |            |
+| <code>&lt;</code>   |           |           | less than     | not less than | lshift     |
+| <code>&gt;</code>   |           |           | greater than  | not less than | rshift     |
+| <code>.</code>   | access    |           |               | safe access   |            |
+| <code>&amp;</code>   |           | ref to    |               | deref         |            |
+| <code>!</code>   |           | not       |               |               | bit not    |
+| <code>_</code>   |           | floor     |               | ceiling       |            |
+| <code>|</code>   | map/filter| lambda    |               |               | mask       |
+| <code>:</code>   |           |           | zip?          |               | parse      |
+|</span><span class="overline"></span>-|<span class="overline"></span><span class="overline"></span><span class="overline">-|</span><span class="overline"></span><span class="overline"></span>-|<span class="overline"></span><span class="overline"></span><span class="overline"></span><span class="overline">-|</span><span class="overline"></span><span class="overline"></span><span class="overline"></span>-|<span class="overline"></span><span class="overline"></span><span class="overline"></span>|
+<p>
+<h1>special values</h1><p>
+| name | usage              |
+|<span class="overline"></span><span class="overline">|</span><span class="overline"></span><span class="overline"></span><span class="overline"></span><span class="overline"></span><span class="overline">|
+| <code>!|</code> | filter out         |
+| <code>$</code>  | mono argument      |
+| <code>.$</code> | left argument      |
+| <code>:$</code> | right argument     |
+|</span><span class="overline"></span>|<span class="overline"></span><span class="overline"></span><span class="overline"></span><span class="overline"></span><span class="overline"></span>|
+<p>
+<h1>unused symbols</h1><p>
+@#%^~\&quot;
+<p>
+<h1>literal types</h1><p>
+| delimiter     | name              |
+|<span class="overline"></span><span class="overline"></span><span class="overline"></span><span class="overline">-|</span><span class="overline"></span><span class="overline"></span><span class="overline"></span><span class="overline"></span>-|
+| <code>(</code> <code>,</code> <code>)</code>   | block/group       |
+| <code>[</code> <code>,</code> <code>]</code>   | list              |
+| <code>{</code> <code>,</code> <code>}</code>   | set               |
+|<code>{</code> <code>:</code> <code>,</code> <code>}</code>| dict              |
+| <code>&lt;</code> <code>&gt;</code>       | symbol            |
+| <code>'</code>           | string            |
+| <code></code> <code> </code><code>       | comment?          |
+| </code>r'<code> </code>'<code>      | raw string        |
+| </code>f'<code> </code>'<code>      | format string     |
+| </code>R'<code> </code>'<code>      | regex             |
+|---------------|-------------------|
+
+# control flow
+| delimiter     | name              |
+|---------------|-------------------|
+| if then else  | ternary           |
+| </code>/?<code> </code>:<code> </code>:<code>  | cmp               |
+
+# Fibonacci sequence
+</code>fib := | $ !> 2 ? 1 : fib($-1) + fib($-2)`
     </div>
     <hr>
     <footer>

@@ -4,6 +4,7 @@ what is a programming language?
 or So you want to design a language.
 and bits and pieces to consider when designing a language
 
+* [:Programming Language Theory](https://en.wikipedia.org/wiki/Programming_language_theory)
 ----------------------------------------------------------------------------------------
 # syntax semantics mechanics tooling ecosystem
 syntax, the form of the code written in a language, is distinct but not separate from
@@ -194,6 +195,7 @@ unifying similar language level concepts to produce a simplified (but no less po
 * regex/sed/match
 * looping control flow
 * branching control flow
+
 * object/dictionary
 
 # inbox
@@ -205,4 +207,19 @@ Does a market for your language exist or is there already something similar?
 * How do we minimize the cost associated with changing desicisions? Especially those made in the begining of a project? Can this even be a feature of the language, or only of the design pattern?
 algebraic effects
 * static numerical analysis
-[where's the config?](https://news.ycombinator.com/item?id=36465886)
+* [where's the config?](https://news.ycombinator.com/item?id=36465886)
+* does your language use hard to type symbols(apl)? this probably hinders adoption
+* what form of type inference?
+* [where to start](https://claucece.github.io/2020/06/05/programming-language-design-and-compilers.html)
+* scrapscript
+* is there a separate list type with uniform element types `Array<T>`
+* what's the process for RFC/[PEP](https://peps.python.org/)
+* ergonomics
+    * correctness through the easy path (good defaults)
+    * write only what's necessary (good defaults)
+    * powerful primitives
+    * readability
+    * helpful error messages
+* efficiency of generated binary
+    * time/space/compute
+* [notation as a tool of thought](https://www.jsoftware.com/papers/tot.htm)

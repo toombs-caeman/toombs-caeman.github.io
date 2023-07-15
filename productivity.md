@@ -226,3 +226,4 @@ Even though it was **literally her dying wish** (so she thought).
 separate into a 'survey of productivity principle and systems' and an integrated approach for myself?
 [single .txt file](https://news.ycombinator.com/item?id=22276184)
 pomodoro music playlist? like two different genres for working and resting
+* is there a there there? or is 'productivity' too heterogenous of a category to form a narrative?

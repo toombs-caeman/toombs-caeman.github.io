@@ -13,6 +13,7 @@ html { background:cornsilk; }
 body {
     color:royalblue;
     line-height: 1.5em;
+    height: 100vh;
    /* dotgrid https://stackoverflow.com/questions/58391201/how-to-create-a-dotted-grid-graph-sheet-background-using-css */
    --d: 0.1em;
    background : radial-gradient(
@@ -35,7 +36,7 @@ h1:first-of-type {
     text-align: center;
     flex: 2;
 }
-code {
+pre, code {
     color:darkslategray;
     background-color: lavender;
     border-radius: 0.5em;
@@ -50,4 +51,22 @@ code {
 .title {
     text-align: center;
     flex: 2;
+}
+/* https://stackoverflow.com/questions/3742975/subscript-and-superscript-for-the-same-element */
+sup, sub {
+    font-size: .75em;
+    line-height: 1.0;
+}
+.supsub {
+    display: inline-block;
+}
+.supsub sup, .supsub sub {
+    position: relative;
+    display: block;
+}
+.supsub sub {
+    top: .3em;
+}
+.overline {
+    text-decoration: overline;
 }

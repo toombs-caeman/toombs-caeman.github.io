@@ -3,8 +3,7 @@ shopt -s globstar
 
 n=$'\n' # newlines are hard to get right
 
-# perl style named capture groups
-# with a cache
+# perl style named capture groups with a cache
 declare -A _P _E
 M() { # <text> <pattern> [<match var=M>]
     unset -v "${3:-M}"
@@ -15,7 +14,7 @@ M() { # <text> <pattern> [<match var=M>]
         local original="$2"
         while [[ "$2" =~ $3 ]] ; do
             : "${2%%"${BASH_REMATCH[0]}"*}"; : "${_//'\('/}"; : "${_//[^(]/}"
-            set -- "$1" "${2//"${BASH_REMATCH[0]}"/(}" "$3" "$4;unset -v ${BASH_REMATCH[1]};${BASH_REMATCH[1]}=\"\${BASH_REMATCH[$((${#_} + 1))]}\""
+            set -- "$1" "${2//"${BASH_REMATCH[0]}"/(}" "$3" "$4 ${BASH_REMATCH[1]}=\"\${BASH_REMATCH[$((${#_} + 1))]}\""
         done
         _P["$original"]="$2"
         _E["$original"]="$4"
@@ -87,13 +86,61 @@ register em '\*'
 em=0
 em() { (( em )) && final '</em>' || final '<em>'; em=$((em^1)); }
 
+. .emoji.sh
+register emoji "(?P<Remoji>:[a-z_]+:)"
+emoji() { final "${emoji[$Remoji]}"; }
+
 register b '\*\*'
 b=0
 b() { (( b )) && final '</b>' || final '<b>'; b=$((b^1)); }
 
+# strikethrough
+register del '~~'
+del=0
+del() { (( del )) && final '</del>' || final '<del>'; del=$((del^1)); }
+
+register sup '\^\^'
+sup=0
+sup() { (( sup )) && final '</sup>' || final '<sup>'; sup=$((sup^1)); }
+
+register supsub '\^\^__'
+supsub=0
+supsub() {
+    # look back to find <sup>
+    local i
+    for ((i=${#stack[@]}; i>0; i--)); do
+        if [[ "${stack[$i]}" = '<sup>' ]]; then
+            stack[$i]='<span class="supsub"><sup>'
+            sup; sub
+            supsub=1
+            break
+        fi
+    done
+}
+
+register sub '__'
+sub=0
+sub() {
+    if ((sub)); then
+        final '</sub>'
+        ((supsub)) && final '</span>'
+        supsub=0
+    else
+        final '<sub>'
+    fi
+    sub=$((sub^1));
+}
+
+#register overline '--'
+#overline=0
+#overline() { ((overline)) && final '</span>' || final '<span class="overline">'; overline=$((overline^1)); }
+
+
 
 register code '`(?P<Rcode>[^`]*)`'
 code() { final "<code>"; escape "$Rcode"; final "</code>"; }
+register ecode '``(?P<Recode>(`?[^`]+)*)``'
+ecode() { final "<code>"; escape "$Recode"; final "</code>"; }
 
 register h "$n(?P<Rh>##*) "
 h=0
@@ -114,9 +161,10 @@ layout() { stack+=(layout "$Rlayout"); }
 register include '\{\{>(?P<Rinclude>(}?[^}])*)}}'
 include() { file "$Rinclude" Rinclude; final "$Rinclude"; }
 
-# TODO this should actually be unsafe var
 register var '\{\{(?P<Rvar>(}?[^}])*)}}'
-var() { eval "final \"\$$Rvar\""; }
+var() { eval "escape \"\$$Rvar\""; }
+register uvar '\{\{&(?P<Ruvar>(}?[^}])*)}}'
+uvar() { eval "final \"\$$Ruvar\""; }
 
 register Rtag '(?P<Rtag><[^<>]*>)'
 Rtag() { tag "$Rtag"; }
@@ -142,7 +190,7 @@ tag() { # <tag>
 
 register aimg '(?P<Rimg>!?)\[(?P<desc>[^]]*)]\((?P<url>[^ )]*)(?P<meta>[^)]*)\)(?P<Rwiki>\)?)'
 aimg() {
-    # TODO let internal .md links be renamed to point to the rendered .html pages
+    # let internal .md links be renamed to point to the rendered .html pages
     # so following the link works correctly in vim and in browser
     [[ "$url" = *.md ]] && url="${url%.md}.html"
     if [[ -n "$Rimg" ]]; then
@@ -152,7 +200,7 @@ aimg() {
     fi
 }
 
-register ulol "$n(?P<Rdepth> *)(?P<Rulol>[*-]|[0-9]+\\.) "
+register ulol "$n(?P<Rdepth> *)(?P<Rulol>[*+-]|[0-9]+\\.) "
 ulol=''
 ulol() {
     lf
@@ -174,19 +222,23 @@ close_ulol() { # <new depth>
     (( $1 > -1 )) && final '<li>'
 }
 
+register codeblock '```(?P<codeblock>(`?`?[^`]+)+)```'
+codeblock() {
+    final '<pre><code>'
+    escape "${codeblock#"$n"}"
+    final '</code></pre>'
+}
+
 register p "$n$n"
 p() { lf; close_ulol -1; final "<p>"; raw="$n$raw"; }
 
 register lf "$n"
 lf() {
+    # TODO give headers ids equal to their text content 's/ /-/g' for jumps
     ((h))&& tag+="</h$h><p>"
     final "$tag$n"
     h=0 tag=''
 }
-# TODO moustache array, not, and end blocks
-# TODO moustache var, unsafe var
-# TODO md codeblock
-# TODO md [table](https://markdown.land/markdown-table) or two column layout
 
 elapsed() { bc <<< "$(date -u +%s.%N)-${1:-0}"; }
 
@@ -205,27 +257,16 @@ render() {
     for p in "${pid[@]}"; do tail --pid="$p" -f /dev/null; done
     printf '%s %.3f\n' "render" "$(elapsed "$start")"
 }
-clean() {
-    # filter only regular files that have .html extension
-    for filename in **/**.html; do
-        rm "$filename"
-    done
-    echo "clean"
-}
+clean() { for filename in **/**.html; do rm "$filename"; done; echo "clean"; }
 daemon() {
     render
     local tmp server_pid
     trap 'kill $server_pid;rm $tmp; exit' SIGINT
     tmp="$(mktemp)"
-    python <<EOF & server_pid="$!"
-from http.server import HTTPServer, SimpleHTTPRequestHandler
-SimpleHTTPRequestHandler.extensions_map[''] = 'text/html'
-HTTPServer(('', 5000), SimpleHTTPRequestHandler).serve_forever()
-EOF
+    python -m http.server 5000 & server_pid="$!"
     echo '    http://0.0.0.0:5000'
     while sleep 1; do
-        local x="$(find * -type f -newer "$tmp" -print)"
-        [[ -n "$x" ]] && render
+        [[ -n "$(find * -type f -newer "$tmp" -print)" ]] && render
         touch "$tmp"
     done
 }
@@ -244,3 +285,9 @@ case "${1:-${self##*/}}" in
     ;;
   *) daemon ;;
 esac
+
+# TODO  /gitpagestest
+# TODO performance testing. inbox.md is around 1400 lines right now and takes 10 seconds
+# TODO moustache array, not, and end blocks
+# TODO md [table](https://markdown.land/markdown-table) or two column layout
+# TODO extract url munging to its own function, autolink urls?

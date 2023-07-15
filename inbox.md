@@ -1400,3 +1400,6 @@ https://www.wealthofthecommons.org/contents
 * caustic lenses + optical neural nets for lightspeed ML vision
 * multimodal esperanto
 
+* h1 needs ids for 'jump to header'??
+* [alternate social network?](https://lostgarden.home.blog/2023/02/26/the-letter-circle/)
+* use a nerdfont to avoid falling back to system fonts for weird stuff. Not firacode so ligatures don't crop up.

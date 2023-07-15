@@ -11,9 +11,7 @@ with Waterman's Serenity Blue or Pilot's Iroshizuku Kon-peki ink, though I've li
 ## Hosting & Rendering
 This site is hosted on [github](https://github.com/toombs-caeman/toombs-caeman.github.io) currently. The content is not and probably never will be interactive, so pages are rendered statically.
 
-The format I write in is mostly [markdown](https://www.markdownguide.org/basic-syntax/) with a touch of [moustache templating](http://mustache.github.io/mustache.5.html), though it isn't fully compatible with either.
-Rendering to html is done through a [:pure bash](#why-bash) [script](blog.sh).
-{{! if you're reading the markdown, this is a comment gets removed during rendering. The first line of the file says to use the .note layout}}
+[:markup](markup.md)
 
 ## Directory Structure
 
@@ -41,6 +39,8 @@ mixing build artifacts into the source history!? Oh my...
 
 #### :x motivation?
 [blogging myths](https://jvns.ca/blog/2023/06/05/some-blogging-myths/)
+[why write](https://bastian.rieck.me/blog/posts/2023/writing_why/)
+[pg words](http://www.paulgraham.com/words.html)
 
 #### :x fellows
 [peppe.rs](https://peppe.rs/posts/static_sites_with_bash/)
