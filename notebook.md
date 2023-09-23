@@ -147,3 +147,10 @@ In the future I'll polish up a few sections of notes to add to the site.
 * describe planner
 * describe primer
 * describe D&D notes
+[Bullet Journal](https://bulletjournal.com/)
+I see value in being able to look back in time with some accuracy but I believe 'review-value' density is more important than exhaustiveness. There's enough info overload in my life.
+
+I prefer the [Sapphire A5 dot-grid Rhodiarama Soft Cover (~$18)](https://rhodiapads.com/collections_premium_rhodiarama_soft.php)  notebook
+with a black [Pilot Metropolitan (~$19)](http://pilotpen.us/brands/mr-metropolitan/mr-metropolitan-fountain/?product=1164) fountain pen
+and Noodler's [Heart of Darkness (~$19)](https://noodlersink.com/product/19808-heart-of-darkness-4-5-oz/) ink.
+* I consider the journal to be a 'permanent' record. The todo lists are deliberately transient. If I'm planning a larger project or something important happens it usually goes in the journal, but the day to day mechanics of doing it don't. I leave space by the index for a 'structured index' to be completed when the book is full. It groups pages by topic rather than the order in which I happened to write them.
