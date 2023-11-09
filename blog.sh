@@ -135,6 +135,10 @@ sub() {
 #overline=0
 #overline() { ((overline)) && final '</span>' || final '<span class="overline">'; overline=$((overline^1)); }
 
+register script '<script(?P<Rscript>([^<]*|<[^/])*)</script>'
+script() {
+    final '<script'; final "$Rscript"; final '</script>';
+}
 
 
 register code '`(?P<Rcode>[^`]*)`'

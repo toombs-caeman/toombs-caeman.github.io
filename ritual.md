@@ -15,6 +15,7 @@ think of the structure of a religious service, or spell work, or the daily caden
     * appreciate what you accomplished
     * make notes for next time
     * clean the space
+    * yoga has an asana that 'seals in' the benefit of the practice
 
 Transition in and out of altered states intentionally through ritual
 1. Prepare the space with purification

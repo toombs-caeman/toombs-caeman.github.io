@@ -357,7 +357,7 @@ b # 3
 </li></ul><p>
 <h1>operators (functions of one or two arguments)</h1><p>
 |base   | dyadic    | monadic   | <code>/</code> prefix    | <code>!</code> prefix    | <code>:</code> prefix |
-|<span class="overline"></span><span class="overline">-|</span><span class="overline"></span><span class="overline"></span>-|<span class="overline"></span><span class="overline"></span><span class="overline">-|</span><span class="overline"></span><span class="overline"></span><span class="overline"></span>-|<span class="overline"></span><span class="overline"></span><span class="overline"></span><span class="overline">-|</span><span class="overline"></span><span class="overline"></span><span class="overline">|
+|-------|-----------|-----------|---------------|---------------|------------|
 | <code>=</code>   | equation  |           | equal         | not equal     | assign     |
 | <code>*</code>   | multiply  |           | and           | nand          | bit and    |
 | <code>+</code>   | add       | abs       | or            | nor           | bit or     |
@@ -371,43 +371,43 @@ b # 3
 | <code>_</code>   |           | floor     |               | ceiling       |            |
 | <code>|</code>   | map/filter| lambda    |               |               | mask       |
 | <code>:</code>   |           |           | zip?          |               | parse      |
-|</span><span class="overline"></span>-|<span class="overline"></span><span class="overline"></span><span class="overline">-|</span><span class="overline"></span><span class="overline"></span>-|<span class="overline"></span><span class="overline"></span><span class="overline"></span><span class="overline">-|</span><span class="overline"></span><span class="overline"></span><span class="overline"></span>-|<span class="overline"></span><span class="overline"></span><span class="overline"></span>|
+|-------|-----------|-----------|---------------|---------------|------------|
 <p>
 <h1>special values</h1><p>
 | name | usage              |
-|<span class="overline"></span><span class="overline">|</span><span class="overline"></span><span class="overline"></span><span class="overline"></span><span class="overline"></span><span class="overline">|
+|------|--------------------|
 | <code>!|</code> | filter out         |
 | <code>$</code>  | mono argument      |
 | <code>.$</code> | left argument      |
 | <code>:$</code> | right argument     |
-|</span><span class="overline"></span>|<span class="overline"></span><span class="overline"></span><span class="overline"></span><span class="overline"></span><span class="overline"></span>|
+|------|--------------------|
 <p>
 <h1>unused symbols</h1><p>
 @#%^~\&quot;
 <p>
 <h1>literal types</h1><p>
 | delimiter     | name              |
-|<span class="overline"></span><span class="overline"></span><span class="overline"></span><span class="overline">-|</span><span class="overline"></span><span class="overline"></span><span class="overline"></span><span class="overline"></span>-|
+|---------------|-------------------|
 | <code>(</code> <code>,</code> <code>)</code>   | block/group       |
 | <code>[</code> <code>,</code> <code>]</code>   | list              |
 | <code>{</code> <code>,</code> <code>}</code>   | set               |
 |<code>{</code> <code>:</code> <code>,</code> <code>}</code>| dict              |
 | <code>&lt;</code> <code>&gt;</code>       | symbol            |
 | <code>'</code>           | string            |
-| <code></code> <code> </code><code>       | comment?          |
-| </code>r'<code> </code>'<code>      | raw string        |
-| </code>f'<code> </code>'<code>      | format string     |
-| </code>R'<code> </code>'<code>      | regex             |
+| <code> ` </code>       | comment?          |
+| <code>r'</code> <code>'</code>      | raw string        |
+| <code>f'</code> <code>'</code>      | format string     |
+| <code>R'</code> <code>'</code>      | regex             |
 |---------------|-------------------|
-
-# control flow
+<p>
+<h1>control flow</h1><p>
 | delimiter     | name              |
 |---------------|-------------------|
 | if then else  | ternary           |
-| </code>/?<code> </code>:<code> </code>:<code>  | cmp               |
-
-# Fibonacci sequence
-</code>fib := | $ !> 2 ? 1 : fib($-1) + fib($-2)`
+| <code>/?</code> <code>:</code> <code>:</code>  | cmp               |
+<p>
+<h1>Fibonacci sequence</h1><p>
+<code>fib := | $ !&gt; 2 ? 1 : fib($-1) + fib($-2)</code>
     </div>
     <hr>
     <footer>

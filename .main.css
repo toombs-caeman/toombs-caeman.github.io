@@ -52,6 +52,15 @@ pre, code {
     text-align: center;
     flex: 2;
 }
+button {
+    color: steelblue;
+    background-color: thistle;
+    border: 2px solid #D0B8D0; /* thistle but darker */
+    border-radius: 5px;
+    box-shadow: 0 0.25em 10px rgba(0 0 0 / 0.5);
+}
+button:hover { box-shadow: 0 0.2em 5px rgba(0 0 0 / 0.5); }
+button:active{ box-shadow: 0 0.1em 2px rgba(0 0 0 / 0.5); }
 /* https://stackoverflow.com/questions/3742975/subscript-and-superscript-for-the-same-element */
 sup, sub {
     font-size: .75em;

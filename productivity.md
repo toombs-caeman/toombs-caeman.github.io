@@ -72,7 +72,7 @@ While sharing an underlying goal, there are different ways of describing
     * workplace organization (physical context)
     * calendars (timely context)
 * avoiding specific failures and antidotes
-    * procrastination (tim pychl `6.49`)
+    * procrastination (tim pychyl `6.49`)
     * perfectionism - moving the goalpost to avoid starting, or the fear of achievement
     * distraction (pomodoro, deep work)
     * continuous improvement (kaizen, seinfeld calendar)

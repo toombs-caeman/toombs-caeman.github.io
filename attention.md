@@ -33,7 +33,7 @@ five obstacles to practice:
 2. Forgetfulness: losing the object of concentration
     * antidote: use an external image as an aid until you can recall all of its features. Do net worry about clarity in
     the beginning. If the memory fades, force it back.
-3. agitation and depression: forcing the mind into an unfamiliar position can cause a doain or wandering of mental energy.
+3. agitation and depression: forcing the mind into an unfamiliar position can cause a drain or wandering of mental energy.
     * types
         - gross depression
         - subtle depression

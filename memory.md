@@ -5,7 +5,7 @@
 * making the abstract concrete
 * [:spaced repetition](https://ncase.me/remember/)
 
-# Domain general techniques
+# Domain General techniques
 # Domain Specific Techniques
 ## Numbers
 * [PAO](https://artofmemory.com/blog/pao-system/)

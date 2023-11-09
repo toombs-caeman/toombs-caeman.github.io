@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>μ</title>
+    <script src=".nutshell.js"></script>
+    <link rel="stylesheet" href=".main.css" type="text/css">
+    <link rel="shortcut icon" href=".favicon.jpg" type=image/x-icon">
+</head>
+<body>
+    <div class="page-content">
+    
+<h1>μ</h1><p>
+<p>
+μ (a.k.a. MU a.k.a. Mark Up a.k.a. Made Up) is a markup/templating language heavily inspired by <a href="https://www.markdownguide.org/basic-syntax/">markdown</a> and <a href="http://mustache.github.io/mustache.5.html">moustache templating</a>, that is being slapped together on the fly to build this site.
+<p>
+<b>Note:</b> This document is itself written using μ; you can see the source for it by replacing '.html' with '.md' in the URL.
+<p>
+μ is intended to be as easy-to-read, easy-to-code, and easy-to-write as is feasible.
+Unlike markdown, μ provides only a single way to create most elements.
+<p>
+μ has a single <a href="blog.sh">canonical implementation</a> which defines the 'standard'. This file is more of a test bed for new features than any attempt at definition.
+<p>
+<h2>Block Elements</h2><p>
+<p>
+<h3>Paragraphs and Line Breaks</h3><p>
+<p>
+A paragraph is simply one or more consecutive lines of text, separated
+by one or more blank lines. 
+<p>
+<h3>Horizontal Rules</h3><p>
+Horizontal Rules are three or more <code>-</code> or <code>=</code> on a line by themselves.
+<p>
+<hr>
+<p>
+<h3>Headers</h3><p>
+<p>
+μ headers begin with one or more <code>#</code> on a newline followed by a space, and continue to the end of the line. The number of opening hashes determines the header level.
+<p>
+<h3>Lists</h3><p>
+<p>
+μ supports ordered (numbered) and unordered (bulleted) lists.
+<p>
+Unordered lists use asterisks, pluses, and hyphens -- interchangably -- as list markers:
+<p>
+<ul>
+<li>  Red
+</li>
+<li>  Green
+</li>
+<li>  Blue
+</li></ul><p>
+Ordered lists use numbers followed by periods:
+<p>
+<ol>
+<li> Bird
+</li>
+<li> McHale
+</li>
+<li> Parish
+</li></ol><p>
+The actual numbers you use to mark the list have no effect on the HTML output μ produces.
+<p>
+To make lists look nice, you can wrap items with hanging indents, but you don't have to.
+<p>
+<ul>
+<li>  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+    Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
+    viverra nec, fringilla in, laoreet vitae, risus.
+</li>
+<li>  Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
+Suspendisse id sem consectetuer libero luctus adipiscing.
+</li></ul><p>
+List nesting is determined by tab-level
+<p>
+<ol>
+<li>first level
+<ul>
+<li>second level, and unordered
+</li></ul><li>first level again
+</li></ol><p>
+<h3>Code Blocks</h3><p>
+<p>
+μ wraps a code block in both <code>&lt;pre&gt;</code> and <code>&lt;code&gt;</code> tags.
+<p>
+Regular μ syntax is not processed within code blocks. E.g.,
+asterisks are just literal asterisks within a code block. This means
+it's also easy to use μ to write about μ's own syntax.
+<p>
+<pre><code>tell application &quot;Foo&quot;
+    beep
+end tell
+</code></pre>
+<p>
+<h2>Span Elements</h2><p>
+<p>
+<h3>HTML Attributes</h3><p>
+μ enables html elements to use a shorthand for attributes similar to css.
+<ul>
+<li><code>.title .important</code> becomes <code>class=&quot;title important&quot;</code>
+</li>
+<li><code>#bourne</code> becomes <code>id=&quot;bourne&quot;</code>
+</li></ul><p>
+<h3>Links and Images</h3><p>
+<p>
+μ supports links like <code>[an example](http://example.com/ .exampleclass)</code> <a class="exampleclass" href="https://example.com/">an example</a>.
+<p>
+images follow the same convention, with a prefix <code>!</code> <code>![an example image](.favicon.jpg width=&quot;30&quot; height=&quot;30&quot;)</code>.
+<p>
+<img src=".favicon.jpg" alt="an example image" width="30" height="30">
+<p>
+<h3>More Span Elements</h3><p>
+Surrounding text with the following marks generates these elements:
+<ul>
+<li><em>single asterisks</em> - <code>&lt;em&gt;</code>
+</li>
+<li>😂 - emojis from short names (this one is <code>:joy:</code>). Not sure I like this, but it works.
+</li>
+<li><b>double asterisks</b> - <code>&lt;b&gt;</code>
+</li>
+<li><del>double tilde</del> - <code>&lt;del&gt;</code>
+</li>
+<li><sup>double carets</sup> - <code>&lt;sup&gt;</code>
+</li>
+<li><sub>double underscores</sub> - <code>&lt;sub&gt;</code>
+<ul>
+<li><span class="supsub"><sup>over</sup><sub>under</sub></span> - putting superscript directly before subscript will wrap both in <code>&lt;span .supsub&gt;</code>, which can be made to appear one above the other with a little css. This specifically looks for <code>^^__</code> with no space between.
+</li></ul><li><code>single backtick</code> - wraps in <code>&lt;code&gt;</code>, also escapes contents
+</li></ul><p>
+<h2>Templating</h2><p>
+<ul>
+<li><code>{{?layout}}</code> indicates that what follows should use the file <code>layout</code> to wrap the rendered output
+</li>
+<li> <code>{{.}}</code> indicates that the wrapped content should be placed here
+</li>
+<li><code>{{!comments}}</code> is a comment. It isn't included in the output html like <code>&lt;!--comments--&gt;</code>. I might remove this later
+</li>
+<li><code>{{&gt;include.md}}</code> - file <code>include.md</code> should be rendered and inlined here.
+</li>
+<li><code>{{var}}</code> - insert value of environment variable
+    </div>
+    <hr>
+    <footer>
+        <div style=text-align:center>
+            <a href="mailto:toombs.caeman@gmail.com"> <img class="icon" src=".mail.svg" alt="email"></a>
+            <a href="https://github.com/toombs-caeman"> <img class="icon" src=".github.svg" alt="github"></a>
+        </div>
+    </footer>
+</body>
+</html>
