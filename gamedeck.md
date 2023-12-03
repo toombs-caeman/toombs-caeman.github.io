@@ -72,13 +72,38 @@ Start with "Do Anything 1"
 [shoes in the dark](https://dozens.itch.io/shoes-in-the-dark)
 
 # Telestrations
-<pre></pre>
+<pre>
+X players sit in a circle
+with X sheets of paper. Write
+a phrase on the first sheet.
 
-# Skull / liars dice
-⚀⚁⚂⚃⚄⚅
-<pre></pre>
+For X rounds, pass the stack
+of papers to the right, look,
+then move the top sheet to the
+bottom. draw the phrase if
+a phrase was shown or write
+what was drawn
+each round lasts 60 seconds.
+</pre>
+
+# liars dice
+<pre>
+Players start with 5 dice.
+Round starts w/ secret rolls
+First player bids that ≥X dice
+among all show a specific face
+Following players must either
+raise: bid more dice, or
+  any amount of a higher face
+challenge: reveal the dice.
+  If the bid was valid the
+  challenger loses 1 die,
+  otherwise the bidder loses 1.
+The last player with dice wins.
+</pre>
+Some variations treat 1s as wild (counting towards the total of any face).
+
 
 # :x template
 ⚀⚁⚂⚃⚄⚅
 <pre></pre>
-

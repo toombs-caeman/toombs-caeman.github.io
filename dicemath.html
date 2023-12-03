@@ -84,9 +84,9 @@
 <p>
 <h1>DSL (Dice Specific Language)</h1><p>
 <ul>
-<li><code>&lt;count&gt;&lt;type&gt;</code> designates <code>count</code> dice of <code>type</code>
+<li><code><lt;count>gt;<lt;type>gt;</code> designates <code>count</code> dice of <code>type</code>
 <ul>
-<li><code>&lt;count&gt;</code> is a number
+<li><code><lt;count>gt;</code> is a number
 </li>
 <li>normal numerical dice are written as <code>d6</code> (6-sided dice, faces valued at 1 to 6).
 </li>
@@ -99,23 +99,23 @@
 </li>
 <li>advantage <code>^</code> takes the highest value of any die
 </li>
-<li>count <code>#/&lt;target&gt;</code> or <code>#\&lt;target&gt;</code> counts the dice that roll over or under target
+<li>count <code>#/<lt;target>gt;</code> or <code>#\<lt;target>gt;</code> counts the dice that roll over or under target
 </li>
-<li>target <code>/&lt;target&gt;</code> or <code>\&lt;target&gt;</code> successful if the previous
+<li>target <code>/<lt;target>gt;</code> or <code>\<lt;target>gt;</code> successful if the previous
 </li>
 <li>examples
 <ul>
 <li><code>+ /15</code> - add dice together. Success is greater or equal to 15
 </li>
 <li><code>#\3 /4</code> - count the number of dice that rolled under 3, looking for at least 4
-</li></ul></li></ul><li>names <code>&lt;name&gt; =</code> gives a name
+</li></ul></li></ul><li>names <code><lt;name>gt; =</code> gives a name
 </li>
 <li>unknown <code>?</code> designates a number which should be left as an input box
 </li></ul><p>
 <h1>aggregates</h1><p>
 <code>+</code> sum (default)
 <code>#</code> count of faces (pool)
-<code>= &gt; &lt; &gt;= &lt;= !=</code> target
+<code>= >gt; <lt; >gt;= <lt;= !=</code> target
 <h1>operators</h1><p>
 <code>+</code> add
 <code>^</code> <code>!^</code> advantage/disadvantage
@@ -134,7 +134,7 @@
 <p>
 probability for any number x in 2dN^ <code>p(x) = (2x-1)/N**2</code>
 average for 2dN^ <code>(N+1)*(4N-1)/(6N)</code> ~2/3
-average for 3dN^ ~&gt;3/4
+average for 3dN^ ~>gt;3/4
 <p>
 <h1>d10</h1><p>
 d10 vs 2d10^ vs 2d10%2
@@ -142,6 +142,10 @@ d10 vs 2d10^ vs 2d10%2
 <p>
 <h1>d6</h1><p>
 pips can modify the face of a die (star wars d6)
+<p>
+<h1>ref</h1><p>
+<ul>
+<li><a href="https://groups.google.com/g/sci.math/c/6BIYd0cafQo/m/Ucipn_5T_TMJ">mental rolls</a>
     </div>
     <hr>
     <footer>
