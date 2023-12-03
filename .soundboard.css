@@ -1,14 +1,17 @@
 body {
     background: slategrey;
     box-sizing: border-box;
+    font-size: 3.0vh;
 }
 .sound {
     background: lightsteelblue;
     margin-bottom: 1em;
     flex: 1 0 100%;
     padding: 0 1em;
-    min-height: 100px;
-    min-width: 100px;
+    min-height: 50px;
+    min-width: 50px;
+    max-height: 100px;
+    max-width: 100px;
 }
 .playing { background: oldlace; }
 .wrapper {
