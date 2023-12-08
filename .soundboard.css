@@ -1,0 +1,25 @@
+body {
+    background: slategrey;
+    box-sizing: border-box;
+    font-size: 7vh;
+}
+.sound {
+    background: lightsteelblue;
+    margin-bottom: 1em;
+    flex: 1 0 100%;
+    padding: 0 1em;
+    min-height: 50px;
+    min-width: 50px;
+    max-height: 100px;
+    max-width: 100px;
+}
+.playing { background: oldlace; }
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+@media screen and (min-width: 500px) { .sound { flex: 0 0 48%; } }
+@media screen and (min-width: 750px) { .sound { flex: 0 0 30%; } }
+@media screen and (min-width: 1000px) { .sound { flex: 0 0 24%; } }
