@@ -81,13 +81,13 @@ List nesting is determined by tab-level
 </li></ol><p>
 <h3>Code Blocks</h3><p>
 <p>
-μ wraps a code block in both <code>&lt;pre&gt;</code> and <code>&lt;code&gt;</code> tags.
+μ wraps a code block in both <code><lt;pre>gt;</code> and <code><lt;code>gt;</code> tags.
 <p>
 Regular μ syntax is not processed within code blocks. E.g.,
 asterisks are just literal asterisks within a code block. This means
 it's also easy to use μ to write about μ's own syntax.
 <p>
-<pre><code>tell application &quot;Foo&quot;
+<pre><code>tell application "quot;Foo"quot;
     beep
 end tell
 </code></pre>
@@ -97,35 +97,35 @@ end tell
 <h3>HTML Attributes</h3><p>
 μ enables html elements to use a shorthand for attributes similar to css.
 <ul>
-<li><code>.title .important</code> becomes <code>class=&quot;title important&quot;</code>
+<li><code>.title .important</code> becomes <code>class="quot;title important"quot;</code>
 </li>
-<li><code>#bourne</code> becomes <code>id=&quot;bourne&quot;</code>
+<li><code>#bourne</code> becomes <code>id="quot;bourne"quot;</code>
 </li></ul><p>
 <h3>Links and Images</h3><p>
 <p>
 μ supports links like <code>[an example](http://example.com/ .exampleclass)</code> <a class="exampleclass" href="https://example.com/">an example</a>.
 <p>
-images follow the same convention, with a prefix <code>!</code> <code>![an example image](.favicon.jpg width=&quot;30&quot; height=&quot;30&quot;)</code>.
+images follow the same convention, with a prefix <code>!</code> <code>![an example image](.favicon.jpg width="quot;30"quot; height="quot;30"quot;)</code>.
 <p>
 <img src=".favicon.jpg" alt="an example image" width="30" height="30">
 <p>
 <h3>More Span Elements</h3><p>
 Surrounding text with the following marks generates these elements:
 <ul>
-<li><em>single asterisks</em> - <code>&lt;em&gt;</code>
+<li><em>single asterisks</em> - <code><lt;em>gt;</code>
 </li>
 <li>😂 - emojis from short names (this one is <code>:joy:</code>). Not sure I like this, but it works.
 </li>
-<li><b>double asterisks</b> - <code>&lt;b&gt;</code>
+<li><b>double asterisks</b> - <code><lt;b>gt;</code>
 </li>
-<li><del>double tilde</del> - <code>&lt;del&gt;</code>
+<li><del>double tilde</del> - <code><lt;del>gt;</code>
 </li>
-<li><sup>double carets</sup> - <code>&lt;sup&gt;</code>
+<li><sup>double carets</sup> - <code><lt;sup>gt;</code>
 </li>
-<li><sub>double underscores</sub> - <code>&lt;sub&gt;</code>
+<li><sub>double underscores</sub> - <code><lt;sub>gt;</code>
 <ul>
-<li><span class="supsub"><sup>over</sup><sub>under</sub></span> - putting superscript directly before subscript will wrap both in <code>&lt;span .supsub&gt;</code>, which can be made to appear one above the other with a little css. This specifically looks for <code>^^__</code> with no space between.
-</li></ul><li><code>single backtick</code> - wraps in <code>&lt;code&gt;</code>, also escapes contents
+<li><span class="supsub"><sup>over</sup><sub>under</sub></span> - putting superscript directly before subscript will wrap both in <code><lt;span .supsub>gt;</code>, which can be made to appear one above the other with a little css. This specifically looks for <code>^^__</code> with no space between.
+</li></ul><li><code>single backtick</code> - wraps in <code><lt;code>gt;</code>, also escapes contents
 </li></ul><p>
 <h2>Templating</h2><p>
 <ul>
@@ -133,9 +133,9 @@ Surrounding text with the following marks generates these elements:
 </li>
 <li> <code>{{.}}</code> indicates that the wrapped content should be placed here
 </li>
-<li><code>{{!comments}}</code> is a comment. It isn't included in the output html like <code>&lt;!--comments--&gt;</code>. I might remove this later
+<li><code>{{!comments}}</code> is a comment. It isn't included in the output html like <code><lt;!--comments-->gt;</code>. I might remove this later
 </li>
-<li><code>{{&gt;include.md}}</code> - file <code>include.md</code> should be rendered and inlined here.
+<li><code>{{>gt;include.md}}</code> - file <code>include.md</code> should be rendered and inlined here.
 </li>
 <li><code>{{var}}</code> - insert value of environment variable
     </div>

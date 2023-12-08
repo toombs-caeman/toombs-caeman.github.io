@@ -85,6 +85,7 @@
     * examples
         * `+ /15` - add dice together. Success is greater or equal to 15
         * `#\3 /4` - count the number of dice that rolled under 3, looking for at least 4
+    * concatenate, as in for d66 tables
 * names `<name> =` gives a name
 * unknown `?` designates a number which should be left as an input box
 
@@ -117,6 +118,7 @@ d10 vs 2d10^ vs 2d10%2
 
 # d6
 pips can modify the face of a die (star wars d6)
+
 
 # ref
 * [mental rolls](https://groups.google.com/g/sci.math/c/6BIYd0cafQo/m/Ucipn_5T_TMJ)
