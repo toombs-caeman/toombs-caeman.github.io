@@ -164,6 +164,13 @@ gumshoe investigation abilities (probably level 3, under investigate). These all
     * aura reading
     * paradox prevention - useful for time travellers or ascension mages
     * timecraft - knowledge of rules and procedures used by the timeline protection agency
+
+# : Mystery, how to disclose information
+the three clue rule (not a rule, but advice really)
+
+[landmark, hidden, secret](https://diyanddragons.blogspot.com/2019/10/landmark-hidden-secret.html)
+* applies also to hexcrawls, and generally to scene descriptions
+
 # procedural genre (cop shows, csi) (gumshoe system)
 GUMSHOE speeds and streamlines the time-honored form of the investigative roleplaying
 game. The central question a traditional RPG asks is:
@@ -213,6 +220,64 @@ core insights
 * players should never fail to find a necessary clue. The story is about *how* they deal with the unfolding mystery, not *if* they can manage to piece it together. A high investigation check could provide extra flavor, or a more direct path, but rolling low shouldn't bring the narrative to a halt.
 * create at least three clues that may lead to every core conclusion (three clue rule). Pacing of the story is controlled by how quickly the players assemble the necessary information, not how fast they run through each lead.
 
+# hexcrawls exploration
+hexcrawls refer to relatively unstructured exploration where the party comes across features of the landscape while traveling.
+The name comes from the common practice of using a hex grid to track distances, often with a single hex representing 6 miles, or a third of a day's travel through most terrain.
+
+This has the potential to be extremely boring.
+
+each hex should have a table of meaningful encounters both active (monsters or travelers) and passive (structures and landmarks)
+make these a 1 in 6 chance.
+passive:
+* entrance to a dungeon/lair
+* an abandoned shack or built structure
+* unusual ingredients, plant or mineral
+* remains of a camp
+* signs of recent combat
+* a small hidden outpost
+
+active:
+* travelers in need of help
+* monsters/enemies
+* traders with wares
+* a passing caravan
+
+passive tables:
+* feature - what kind of place is it
+* theme - what's the vibe
+* detail - whats something small you'd notice on inspection
+
+[tall landmarks are visible from a few hexes away](https://www.youtube.com/watch?v=zBDdNuCtdog)
+* distant landmarks let players make informed decisions about direction
+* exploration and a sense of direction are in tension.
+* hexes
+
+visibility of landmarks by height, in hex distance
+* >10ft -> 1
+* >100ft -> 2
+* >200 -> 3
+* 2000 -> 10
+
+There is some debate about whether the hex map should be directly visible to the players, or if it should remain hidden information used by the GM.
+
+How you discribe the crawl also fits into the "landmark, hidden, secret" categories. Major landmarks are described wihtout prompting, they are always visible. Hidden landmarks are rolled on that hex's table and are small enough to be missed depending on how you cross the hex. Secret information may be available at the hidden landmarks, but would require the players to active engage.
+
+
+## getting lost
+how and when does the party get lost?
+
+## weather
+what mechanical effects does weather have?
+* necessitating certain supplies, increasing travel times or cost
+* affecting 
+
+
+
+# sanity / stability
+representing life-altering changes to player characters
+* call of cthulhu sanity
+* kult:divinity lost stability
+
 # tactical combat (XCOM, D&D)
 * cover: exposed, partial cover, full cover
 * square or hex grids, movement speeds, weapon reach, weapon/damage types, armor
@@ -221,7 +286,8 @@ core insights
 
 # strategic / logistic combat (war gaming)
 * square or hex grids, movement speeds, weapon reach, weapon/damage types, armor
-* how to model platoon vs platoon rather than soldier vs soldier combat (combat across scales?)
+* how to model platoon vs platoon rather than soldier vs soldier combat (combat across scales? different number or size)
+    * shadow of the colossus style combat, or the flipside, fighting a swarm of ants
 * supply lines
 * weather, terrain
 * morale of soldiers, support from the people. At what point does an enemy rout, rather than fighting to the death?
@@ -284,45 +350,111 @@ Does it require a skill check to butcher a monster, but not to loot a humanoid f
 consider how magic items are made, are the mundane versions of the item an ingredient?
 How many steps does it take to make an item on average, sequences of rolls affect overall probability
 
+# Chunks (ICRPG)
+Chunks are an abstraction that allows the GM to quickly create and guage the value of assets and the danger of enemeies.
+The idea is to create a exchange rate for each type of quantity in the game, given in terms of 'chunks'.
+When used to describe enemies, chunks roughly equate to 'challenge rating'.
+When describing loot or other assets that the players might buy, chunks give a price.
+When describing items that players can craft, it suggests how difficult the crafting process should be.
 
-# option: vehicles, buildings, mech suits
-How do you handle large modular assets that players may own?
-(ICRPG chunks)
-In ICRPG, vehicles and the like are represented mechanically as a set of chunks.
-Each "chunk" has 10 HP and 1 special ability, weighs 250lbs, and costs 250 COINs.
-This allows chunks to be individually destroyed or repaired (impairing the related function when broken)
-as well as providing a basic and consistent price for a huge range of property types.
+None of this is intended to be super exact. It's just to give ballpark values that won't create absurd in-world economies or player incentives.
+These are general guidelines. The point is to use round numbers and not overthink things too much.
 
-a motorcycle is a 1 chunk vehicle and can comfortably fit one rider, or two riders that squeeze.
-A 2 chunk light aircraft can seat 4 people, including the pilot.
+
+1 chunk = 1 level 3 skill = 3 stat points = 1 extra hit = 1 special ability = 1 action per turn
+1 chunk = 250 COINs = 250lbs = 1 month travel = 100sqft (or one small room).
+
+In combat chunks can be individually destroyed or repaired (impairing the related function when broken)
+
+## enemy chunks
+lets make a 5 chunk enemy.
+```
+goblin fighter
+6/6 HP
+2 actions per turn
+
+skills: fight 3, run away 3
+inventory: short sword 1
+```
+
+Fighting two of these goblin fighters would be a 10 chunk encounter.
+
+Lets look at a starting character
+```
+Brick - wandering orc chef
+5/5 STR
+3/3 DEX
+1/1 WIL
+
+do anything 1
+fight 2, bash 3
+cook 2, blazing soup 3
+poetry 2
+```
+Brick only has ~4 chunks, and only 3 that apply in a fight. He might have a hard time on his own against a single goblin fighter.
+
+## vehicle chunks
+vehicles can fit 2 riders per chunk by default. Including an engine counts as one chunk's special ability.
+Unpowered vehicles (like a wagon) can use that ability to add storage for cargo or people instead, but then it needs to be drawn by hand or with an animal.
+
+a motorcycle is a 1 chunk vehicle. It weighs 250lbs and costs 250 COINs and supports 2 riders.
+A 2 chunk light aircraft can seat 4 people, including the pilot. One ability is used for the engine, and the second for anything else (guns perhaps).
 
 Mech units generally fit only the pilot, and may be smaller than 250lbs per chunk, but are primarily priced by the number of functions they hold.
 
-For buildings, 1 chunk is 100sqft (a 10x10ft room). Max occupancy is 10 humans per chunk.
-A 1 chunk bedroom can house a single person, or two that squeeze.
+suggested vehicle abilities:
+* an engine
+* an FTL engine takes 2 chunks
+* 4 extra seats (on top of 2 per chunk)
+* 100 inventory slots
+* weapons
+* shields
+
+## building chunks
+A chunk grants 1 small room or ~100 sqft (10x10 ft) to a larger space.
+A 1 chunk bedroom can house a single person, or two that squeeze. Max occupancy is 10 humans per chunk.
 A 4 chunk great room is 20x20ft and can hold a maximum of 40 (human sized) people.
 
-These are general guidelines. The point is to use round numbers and not overthink things too much.
+A 3 chunk apartment cost 750 coins ([rent](#rent) is 8 coin per month, 1% rounded up) and is 300sqft. It has 3 rooms: a bedroom, bathroom and kitchen.
+
+## crafting in chunks
+When players want to create a weapon, spell, or some item that has mechanical impact, use chunks to figure out how impactful it will be.
+
+For example, consider a fireball spell (or flamethrower weapon) that fills a 20x20 ft square space (4c), does on average 2 hits (2c) of damage, and could potentially set things on fire (1 ability = 1c). This spell is roughly 7 chunks.
+
+So what? Well if making new spells to be primarily about crafting a catalyst in your setting, it will take 7 chunks of materials (worth ~1750 coins). If creating a new spell is primarily about research, it takes 7 months of downtime to design and test it. If the barrier is inspiration or intuition, your target is 7 hits vs tinkering/metamagic/etc.
+
+The chunk rating really represents the utility of having and using a thing, not necessarily the difficulty in acquiring it, so you may want to add a conversion factor in order as GM to balance the crafting economy.
 
 # companions, pets, and other NPC allies
 * how to manage action economy?
 Companions are passive in combat until asked to do something by a trusted PC. Asking is not an action, but it is a roll. They may act once per round.
 
-# : soak/armor
-'Soak' negates a number of hits for every roll against you.
-'Armor s1' could be an item that absorbs (negates or soaks up) one hit everytime someone hits you in physical combat.
+# : Armor and Weapons
+Weapons are items that provide bonus dice to attacks. Armor cuts against incoming attacks if it reasonably would block the incoming damage (for example energy shields might protect against lasers, but not kinetic weapons).
 
-Soak could be static (always soaks the same amount) or dynamic (roll, every hit absorbs one hit).
-Keep in mind that static soak is twice as effective on average compared to dynamic soak, and faster at the table.
-(mini d6)
+If weapons and armor are equally available and powerful in your setting, they will tend to just complicate combat without making any real mechanical difference. Often historically the technology behind weapons and armor were not at an equivalent level, and technological breakthroughs would cause one to leapfrog the other in a literal arms race.
 
-This can also be handled as cuts. 'Armor 1c' would cut against someone rolling physical damage against you.
+Making commonly available armor much better than common weapons leads to wars of attrition. The prevailing strategy becomes wearing down the enemy while fighting face to face. You see this is seige warfare and superhero slugfests, since superhero characters and castle walls can take lots of hits before going down. No single hit is a serious threat.
 
-# organizations, factions, legacy, countries, clans, guilds
-destruction of an army, not by natural means but by the [faults of a general](https://suntzusaid.com/book/10/14)
+When common weapons are much more powerful than common armor, standing face to face with your enemy is a death sentence. Stealth, positioning, recon, and hitting first become much more important strategies when a single hit can drop a character. In this situation guerilla tactics prevail.
+
+Neither style of combat is 'better', but they are different.
+
+There are a few ways to mix and match, perhaps magic is rare and defending against magic is very difficult in your setting, but conventional armor is common and effective against conventional weapons. In this situation, combat usually can be conducted out in the open, but you still need to be cautious if your enemy is likely to hire a mage. A well-armored knight can usually have free reign of the battlefield, but is an easy target for a mage. Mages are unlikely to outright duel, but deal with each other with stealth and subterfuge. A mage that reveals their position on a battlefield will absolutely be bombarded, even if many regular soldiers must sacrifice themselves to bring down the mage.
+
+Another way to mix is to contrive that static defenses like castle walls are not that effective against specialized piercing weapons, but that mobile defenses like body armor are rather effective, since the armor piercing weapons require a long setup. This would incentivize strongholds to be hidden, rather than sturdy, or lead to 'moving castles' that can get out of the way of the truly dangerous attacks.
+
+# difficult healing
+if you have magical healing that can take place during combat, consider making it mandatory for the healer to spend at least one pip, or make it such that they can only transfer pips from their magic pool to the receivers health pool. The players should never reach a point where they can remain in combat indefinitely without being worn down, even if the presence of a healer can greatly extend their effective stamina.
+
+# Factions
 BitD factions
 factions get a character sheet just like individuals (fractal description)
 curse of strahd escalation tree
+# Factions
+# organizations, factions, legacy, countries, clans, guilds
+destruction of an army, not by natural means but by the [faults of a general](https://suntzusaid.com/book/10/14)
 
 ## organizations over time
 * "wealth does not last beyond three generations"
@@ -352,6 +484,7 @@ curse of strahd escalation tree
     * human vs colossus/vehicle
     * human vs ant (swarm?)
     * human -> guild -> country
+    * can we unify this concept with chunks
 
 # Horror, Cosmic Horror, Body Horror
 * disempowerment
@@ -381,9 +514,10 @@ wildsea: "you'll never die before you're ready. Death is a narrative event, not 
 There is no mechanism by which a PC must die or be decommissioned. Consequences stacking up can make it impractical to continue, especially if the setting is such that they are difficult to remove, but it is usually on the player to decide how and when their character exits the story.
 If character death or permanent alteration is possible through consequences, this should be communicated in session 0.
 
+# age (vaesen)
+choose a starting age from brackets. Younger gets more starting attribute points and fewer skill points. Older characters are more skilled, but have fewer attributes
 
-# : Mystery
-the three clue rule (not a rule, but advice really)
+
 
 # : Epic Heroes
 * D&D
@@ -401,6 +535,8 @@ Impro status: comedy is when we are absolved of the need for empathy towards one
 Comedic characters cannot have gravitas unless it is undermined.
 
 # : Survival genre: hunger/thirst stats
+survival is about resource management and risk management. There are consequences for running out of torches in the cavern after all.
+
 take a hit against a hunger stat every day. re-gain 1 pip per meal.
 the max level for hunger is alway 6.
 rather than taking consequences when hunger is 0:
@@ -408,4 +544,14 @@ rather than taking consequences when hunger is 0:
 * take a hit against health every day
 * you don't regain health while resting.
 
+(the green rpg) the die type available to you for rolls is based on Maslow's heirarchy of needs. More fulfilled characters have more slack/energy to direct towards the current task, and more safety if it goes wrong.
+
+
+# miniature wargaming
+rules for large scale tactical rules?
+source?:
+* a billion suns - space fleet combat
+* one page rules - ground troops ([OPR](https://wiki.onepagerules.com/index.php/Main_Page))
+
+whatever rules we have at the small scale should scale up using chunk rules
 

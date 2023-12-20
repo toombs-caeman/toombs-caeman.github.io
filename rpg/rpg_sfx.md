@@ -14,10 +14,20 @@ Timers for abilities are usually kept using a bag of extra d6s. Tracks are only 
 
 You can use different colors of glass stones for enemies, to mark treasures or other points of interests on your map.
 
+# props
+* [potions](https://www.sunnyskyz.com/happy-videos/12925/Enchanting-Elixirs-The-Process-Of-Making-A-Potion) [tiktok](https://www.tiktok.com/@whiskers_and_witchcraft)
+* 3d printed items
 # paper props
 * maps - overview and battlemaps
 * letters - letter locking and wax seals
+
 ## handwriting
+* consistent x height
+* consistent ascender and descender angle
+* consistent letter forms
+
+how to create alternative handwritten fonts?
+
 ## distressing paper
 * tea/coffee
 * tearing
@@ -45,10 +55,20 @@ this just loads youtube videos in the background and plays the audio.
 gives some ambiance.
 [soundboard](soundboard.md)
 
-# printable minis
+# miniatures
+* 3d printing or purchasing
+* painting
+* kitbashing
+    * monster bashing (miscast)
+
+## printable minis
 The [ICRPG printable minis](https://icrpgcommunitycontent.com/resources/) are really good
 
 # costumes
+I've not done this, but it could be fun.
+
+# terrain
+
 
 # accents / voices
 This is not something I really do, but it could be fun.

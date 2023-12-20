@@ -21,6 +21,7 @@ until empty for 3 rounds
 2 use only 1 word
 3 use only gestures
 </pre>
+
 # Balderdash
 <pre>
 Each player picks random
@@ -34,7 +35,6 @@ bluff. Guess the real one
 1 pt for getting picked
 unless the guesser's right
 </pre>
-
 
 # Farkle
 <pre>
@@ -104,6 +104,12 @@ The last player with dice wins.
 Some variations treat 1s as wild (counting towards the total of any face).
 
 
+# powerpoint karaoke
+make a ridiculous 3 minute slide deck and have someone else present it unprepared.
+points for appearing professional, using made up jargon, and doing Q&A at the end.
+
+{{!
 # :x template
 ⚀⚁⚂⚃⚄⚅
 <pre></pre>
+}}

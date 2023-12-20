@@ -49,6 +49,7 @@ spectra of rules
 * light to heavy - how many numbers go on the character sheet?
 * mechanical to roleplay-based - do you reward role playing mechanically? Is it more board game or improv?
 * embedded vs universal - how heavily themed are your mechanics? honey heist vs GURPs
+* personal vs collective - does the story focus on individuals, a single faction, the relationship between factions or the lifetime of a universe?
 
 I'm [attempting](shark_rpg.md) to throw this together (and I'm ready for the heartbreak).
 
@@ -56,10 +57,9 @@ I'm [attempting](shark_rpg.md) to throw this together (and I'm ready for the hea
 [wealth systems](https://troypress.com/wealth-systems-in-rpgs/)
 
 
-# systems to check out
+# rpg systems to check out
 * wicked ones - dungeon keeping & keeping out adventurers
 * dungeon crawl classic - repeatedly show up as people's favorites
-* sandbox generator - extremely detailed rolling tables
 * the hidden isle tartot rpg
 * widerfeast - monsterhunter + cooking
 * the burning wheel
@@ -68,8 +68,8 @@ I'm [attempting](shark_rpg.md) to throw this together (and I'm ready for the hea
 * spire / heart
 * numenera (cypher system)
 * wildsea (wild words engine)
-* "powered by the apocalypse" games
-* lady blackbird
+* "powered by the apocalypse" games (PbtA)
+    * star crossed
 * cthulhu dark
 * scarlet heroes
 * solo games
@@ -80,13 +80,16 @@ I'm [attempting](shark_rpg.md) to throw this together (and I'm ready for the hea
     * vampire the masquerade
     * mage the ascension
     * hunter the reckoning
-
 * micro-rpgs
-    * laser & feelings
+    * [laser & feelings](http://onesevendesign.com/lasers_and_feelings_rpg.pdf)
     * honey heist
-    * roll for shoes
-    * tiny rpg library (50 business card sized rpgs)
-
+    * [roll for shoes](https://rollforshoes.com/)
+        * [shoes in the dark](https://dozens.itch.io/shoes-in-the-dark)
+    * tiny rpg library (50 business card sized rpgs) miniature wargames
+    * lady blackbird
+* miniature wargaming
+    * a billion suns - space fleet combat
+    * one page rules - ground troops ([OPR](https://wiki.onepagerules.com/index.php/Main_Page) [quickstart](https://www.onepagerules.com/quickstart/age-of-fantasy))
 * mouseguard
 * risus
 * traveler
@@ -114,4 +117,23 @@ I'm [attempting](shark_rpg.md) to throw this together (and I'm ready for the hea
 * stonetop (PbtA, focus on improving village life)
 * year zero engine
 * alice is missing
+* tiny dungeon 2e
+* lancer
+* vaesen - scandinavian horror
+* kult: divinity lost
+    * deals with very mature horror themes
+    * perhaps reference their horror contract as a safety tool
+    * contrast stability mechanic with call of cthulhu's sanity
+* the black hack
+* durf
+* [mini six](https://docs.google.com/document/d/1rwn1xW5sFJDRSIqzB0jjJPws6jVSU5qj6nmEfN5LM4k/edit?pli=1)
+* [blades in the dark](https://bladesinthedark.com/) and it's many "forged in the dark" derivatives
+* monster of the week
+* riddle of steel
+* actual fucking monsters
+* realms of pugmire
 
+# GM books
+* the monster overhaul
+* a folklore bestiary
+* sandbox generator - extremely detailed rolling tables

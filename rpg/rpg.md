@@ -1,3 +1,4 @@
+{{?.note}}
 {{!introduction, written for players and GMs}}
 
 # how to get started playing quickly
@@ -8,6 +9,7 @@
 # sections
 basic stuff
 * Introduction (this section)
+* [terminology, briefly](rpg_terms.md)
 * [core rules](rpg_core.md)
 * [GMs advice](rpg_gm.md)
 
@@ -31,3 +33,11 @@ Any setting works.
 
 etc etc.
 
+
+# what is an RPG
+{{! this section seems like its mandatory, even in RPGs that are ~15 pages long, but is it?}}
+
+* the magic circle
+* a game is a space where we set aside our natural interests for the goals of the game, and our usual ways of being with the rules of the game.
+* unlike board games, there is an imaginal space as well as the physical objects on the board. Imagination is freeform where the physical is more rigid, but ties to the physical with cues going both directions.
+* Whats really necessary (for a ruleset) is creating a coherence of the imagination between all players at the table.
