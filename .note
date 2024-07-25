@@ -14,8 +14,10 @@
     <hr>
     <footer>
         <div style=text-align:center>
-            <a href="mailto:toombs.caeman@gmail.com"-> <img .icon src=".mail.svg" alt="email">
-            <a href="https://github.com/toombs-caeman"-> <img .icon src=".github.svg" alt="github">
+            <a href="/"-><img .icon src=".home.svg" alt="home">
+            <a href="/intractable"-><img .icon src=".interrobang.svg" alt="intractable">
+            {{! <a href="/ideas"-><img .icon src=".lightbulb.svg" alt="ideas"> }}
+            <a href="https://github.com/toombs-caeman"-><img .icon src=".github.svg" alt="github">
         </div>
     </footer>
 </body>

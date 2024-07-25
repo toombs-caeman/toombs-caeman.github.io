@@ -90,6 +90,7 @@ I'm [attempting](shark_rpg.md) to throw this together (and I'm ready for the hea
 * miniature wargaming
     * a billion suns - space fleet combat
     * one page rules - ground troops ([OPR](https://wiki.onepagerules.com/index.php/Main_Page) [quickstart](https://www.onepagerules.com/quickstart/age-of-fantasy))
+* [dungeon world](https://dungeon-world.com/)
 * mouseguard
 * risus
 * traveler
@@ -132,6 +133,15 @@ I'm [attempting](shark_rpg.md) to throw this together (and I'm ready for the hea
 * riddle of steel
 * actual fucking monsters
 * realms of pugmire
+* [the contract](https://thecontractrpg.com/info/how-to-play/#guide-start)
+* city of mist
+
+* two player?
+    * gun & slinger
+    * ironsworn
+    * scarlet heroes
+* [mek 28](https://berserkerworks.itch.io/mek28)
+
 
 # GM books
 * the monster overhaul

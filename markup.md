@@ -87,6 +87,12 @@ images follow the same convention, with a prefix `!` `![an example image](.favic
 
 ![an example image](.favicon.jpg width="30" height="30")
 
+[^footnotes]
+
+[^footnotes]:
+A footnote `[^note]` is translated into a nutshell link to a marker `[:note](#note)` which jumps to the note.
+The corresponding `[^note]:` marker is translated into a hidden nutshell section.
+
 ### More Span Elements
 Surrounding text with the following marks generates these elements:
 * *single asterisks* - `<em>`

@@ -14,11 +14,7 @@
 <li>rules of thumb
 <ul>
 <li>it's not really real until its directly referenced at the table. Don't be afraid to scrap your plans
-</li></ul><li>session 0
-</li>
-<li>ttrpg safety tools
-</li>
-<li>scene card
+</li></ul><li>scene card
 </li>
 <li>oracles to replace gm for solo play, GMless play?
 </li></ul><li>solo mode/ oracle?
@@ -38,7 +34,33 @@ You should always understand the players intention when they get into a situatio
 <h1>dice probabilities</h1><p>
 how does the math shake out for this system.
 <p>
+transpose results
+<pre><code>\transpose results\
+loop DICE over {1..7} {
+ output (DICE d (d6 &gt;= 4) &gt; 0)+0 named &quot;[DICE]d&quot;
+ output (DICE d (d6 &gt;= 5) &gt; 0)+2 named &quot;[DICE]d&quot;
+ output (DICE d (d6 &gt;= 6) &gt; 0)+4 named &quot;[DICE]d&quot;
+}
+</code></pre>
+chance of at least mixed success (&gt;= 5)
+1d 33.33
+2d 55.56
+3d 70.37
+4d 80.25
+5d 86.83
+6d 91.22
+7d 94.15
 <p>
+chance of full success (= 6)
+1d 16.67
+2d 30.56
+3d 42.13
+4d 51.77
+5d 59.81
+6d 66.51
+7d 72.09
+<p>
+expected effort if theres a success is ~1/2 pool size, but always at least 1
 <p>
 <h1>cuts</h1><p>
 cuts are taken out of the dice pool after rolling and modifying the roll in order to make the players feel exactly how close they were and what they lost.
@@ -47,7 +69,22 @@ cuts are taken out of the dice pool after rolling and modifying the roll in orde
 This is a prepatory gathering where certain decisions need to be made about the tone, setting, and other expectations about the game.
 <p>
 <a href="https://bit.ly/ttrpgsafetytoolkit">ttrpg safety toolkit</a>
+see kult: divinity lost or vampire the masquerade for how to present mature tones
+<ul>
+<li>horror contract
+</li></ul><p>
+to read: wizards, warriors and wellness: the therapeutic applications of role playing games bodhana group
 <p>
+<h1>railroading</h1><p>
+<ul>
+<li>plot is what the players do
+</li>
+<li>make situations, don't dictate what will happen during the scene
+</li>
+<li>never take control of the PCs out of the players hands. You can say that the PCs spend a few days traveling, but if the player wants to stop in the middle of that travel and go somewhere else, the characters can do that.
+</li></ul><p>
+<h1>the most important rule (OPR)</h1><p>
+If the rules as you understand them are ambiguous in a case that comes up during a session, make a ruling and decide how it works. That ruling must be consistently applied for the rest of the session. You can look up the rule actually says later, and correct it for the next session if you want.
 <p>
 <h2>XP, stats and association.</h2><p>
 the XP mechanic is <a href="https://thealexandrian.net/wordpress/1545/roleplaying-games/dissociated-mechanic">disassociated</a>, while pips are intended to be associated.
@@ -81,8 +118,8 @@ advice
 <li>if you don't know what your players are trying to accomplish with an action, find out before adjudicating that action (especially if you think that the action is obviously suicidal).
 the descriptions you give of a room are not the same as would be given in a novel. Give general (but necessary) descriptions of a new room first, then describe the horrifying monsters within. This puts what the players will react to at the end, so their gut reaction (fight or flight) can match that of the PCs, rather than giving the players too much time to process by continuing with lesser (but necessary) detail.
 <a href="https://www.youtube.com/watch?v=ec0L5_Hje_s">reaction point</a>
+https://ericwbailey.website/published/dungeons-and-dragons-taught-me-how-to-write-alt-text/
 </li></ul><p>
-<p>
 <h1>anti-railroading</h1><p>
 <ul>
 <li>only plan one session at a time
@@ -132,7 +169,7 @@ example intrusions:
 </li>
 <li>narrative types
 <ul>
-<li>town ->gt; wilderness ->gt; dungeon. danger, discovery, rewards. similar to a heist structure. typical dnd
+<li>town -&gt; wilderness -&gt; dungeon. danger, discovery, rewards. similar to a heist structure. typical dnd
 </li>
 <li>doomed arc. for one shots. everyone dies at the end, but the horror/glory/sacrifice is worth experiencing
 </li>
@@ -169,7 +206,7 @@ example intrusions:
 </li>
 <li>unquestionable competence
 </li>
-<li>gloating "quot;i told you so"quot;
+<li>gloating &quot;i told you so&quot;
 </li>
 <li>sparkling repartee
 </li>
@@ -209,6 +246,11 @@ example intrusions:
 <li>speed of progression
 </li>
 <li>the passage of in-world time
+</li></ul><li>what fantasies are fulfilled through roleplay?
+<ul>
+<li>imaginal play - the 'what if' of being a different person
+</li>
+<li>exploring a beautiful/horrifying/fun world
 </li></ul></li></ul><p>
 <h1>arc design (story beats, session beats)</h1><p>
 ICRPG:
@@ -272,7 +314,7 @@ example skills by level:
 </li>
 <li>zweihander master, the best damn french onion soup you ever had, professor of tree law
 </li></ol><p>
-A player with "quot;the best damn french onion soup you ever had 4"quot; can only use that skill to make french onion soup.
+A player with &quot;the best damn french onion soup you ever had 4&quot; can only use that skill to make french onion soup.
 Other kinds of hearty soups can only use the level 3 skill.
 <p>
 You may prepare a skill tree ahead of time for categories of action you really want to get right.
@@ -307,6 +349,37 @@ record self reading boxed text
 <ul>
 <li>give that which prompts players into action last, even if its naturally what you would notice first
 </li></ul><li>camera cuts for split parties, cuts to other concurrent events in the world (if players should know, but the PCs won't), cuts to flashbacks.
+</li>
+<li><a href="https://improvclassesandcoaching.com/ultimate-guide-to-improv-101-improv-tips/">101 improv tips</a>
+</li></ul><p>
+'yes and' is a fairly common refrain in improv, but there is are extensions
+<p>
+the six results:
+<ol>
+<li>no and
+</li>
+<li>no
+</li>
+<li>no but
+</li>
+<li>yes but
+</li>
+<li>yes
+</li>
+<li>yes and
+</li></ol><p>
+The die system <em>could</em> be to map each of these results to all the possible outcomes of the dice, but that's a bit much.
+Instead, a success is 'yes' and a mixed success is a 'yes but'.
+<ul>
+<li>6 - yes
+</li>
+<li>5 - yes but
+</li>
+<li>4 - no but
+</li>
+<li>2/3 - no
+</li>
+<li>1 - no and
 </li></ul><p>
 <p>
 <h1>initiative, action economy</h1><p>
@@ -343,7 +416,7 @@ Individual targets within the room may be harder or easier, but the room target 
 </li>
 <li>most timers count a number of rounds, but can also count turns to be especially brutal
 </li>
-<li>timers can be used to indicate that an action doesn't need any more rolls to succeed, but will take some time. (to save time on rolling repeatedly) "quot;you will decode the password in 4 rounds"quot;
+<li>timers can be used to indicate that an action doesn't need any more rolls to succeed, but will take some time. (to save time on rolling repeatedly) &quot;you will decode the password in 4 rounds&quot;
 </li></ul></li></ul><p>
 <p>
 <p>

@@ -24,6 +24,7 @@ last forever so they will end, even with no effort on your part. So let themn pa
 What is left when there are no more thoughts? This is the true nature of mind. Thoughts are of the mind, but they are not
 its entirety. The space in between is not senselessness, but pure awareness. Sustain for effect.
 
+[five obstacles and eight antidotes](https://en.wikipedia.org/wiki/Five_faults_and_eight_antidotes)
 five obstacles to practice:
 1. laziness: the lack of will to continue practice
     * lesser antidote: contemplate the benefits of samahdi. Achieving this would allow for unheard of productivity and

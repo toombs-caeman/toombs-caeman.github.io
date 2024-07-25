@@ -325,7 +325,7 @@ b # 3
     * focus on functions (composition?)
     * focus on data (causal flow?)
 
-* comparators should return >0 if greater than, 0 if equal, <lt;0 if less than
+* comparators should return >0 if greater than, 0 if equal, &lt;0 if less than
 </li>
 <li>greater numbers hint at larger distances between values (relative to total type space).
 </li>
@@ -335,9 +335,9 @@ b # 3
 <li>filter in terms of sieve, define sort in terms fo permute
 <ul>
 <li>slice is filter
-</li></ul></li></ul><li>automatic function lifting (map) for <code>vector<lt;T>gt;</code> when <code>T</code> is expected
+</li></ul></li></ul><li>automatic function lifting (map) for <code>vector&lt;T&gt;</code> when <code>T</code> is expected
 <ul>
-<li><code>f(T)->gt;U</code> lifts to <code>f(vector<lt;T>gt;)->gt;vector<lt;U>gt;</code>
+<li><code>f(T)-&gt;U</code> lifts to <code>f(vector&lt;T&gt;)-&gt;vector&lt;U&gt;</code>
 </li></ul><li>null types
 <ul>
 <li><code>⊥</code> cannot appear in lists, so can map and filter are the same, a filtered out function returning <code>⊥</code>
@@ -363,8 +363,8 @@ b # 3
 | <code>+</code>   | add       | abs       | or            | nor           | bit or     |
 | <code>-</code>   | subtract  | invert    | xor           | xnor          | bit xor    |
 | <code>/</code>   | divide    |           | int div       | modulo        |            |
-| <code><lt;</code>   |           |           | less than     | not less than | lshift     |
-| <code>>gt;</code>   |           |           | greater than  | not less than | rshift     |
+| <code>&lt;</code>   |           |           | less than     | not less than | lshift     |
+| <code>&gt;</code>   |           |           | greater than  | not less than | rshift     |
 | <code>.</code>   | access    |           |               | safe access   |            |
 | <code>&amp;</code>   |           | ref to    |               | deref         |            |
 | <code>!</code>   |           | not       |               |               | bit not    |
@@ -383,7 +383,7 @@ b # 3
 |------|--------------------|
 <p>
 <h1>unused symbols</h1><p>
-@#%^~\"quot;
+@#%^~\&quot;
 <p>
 <h1>literal types</h1><p>
 | delimiter     | name              |
@@ -392,7 +392,7 @@ b # 3
 | <code>[</code> <code>,</code> <code>]</code>   | list              |
 | <code>{</code> <code>,</code> <code>}</code>   | set               |
 |<code>{</code> <code>:</code> <code>,</code> <code>}</code>| dict              |
-| <code><lt;</code> <code>>gt;</code>       | symbol            |
+| <code>&lt;</code> <code>&gt;</code>       | symbol            |
 | <code>'</code>           | string            |
 | <code> ` </code>       | comment?          |
 | <code>r'</code> <code>'</code>      | raw string        |
@@ -407,13 +407,15 @@ b # 3
 | <code>/?</code> <code>:</code> <code>:</code>  | cmp               |
 <p>
 <h1>Fibonacci sequence</h1><p>
-<code>fib := | $ !>gt; 2 ? 1 : fib($-1) + fib($-2)</code>
+<code>fib := | $ !&gt; 2 ? 1 : fib($-1) + fib($-2)</code>
     </div>
     <hr>
     <footer>
         <div style=text-align:center>
-            <a href="mailto:toombs.caeman@gmail.com"> <img class="icon" src=".mail.svg" alt="email"></a>
-            <a href="https://github.com/toombs-caeman"> <img class="icon" src=".github.svg" alt="github"></a>
+            <a href="/"><img class="icon" src=".home.svg" alt="home"></a>
+            <a href="/intractable"><img class="icon" src=".interrobang.svg" alt="intractable"></a>
+            
+            <a href="https://github.com/toombs-caeman"><img class="icon" src=".github.svg" alt="github"></a>
         </div>
     </footer>
 </body>

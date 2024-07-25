@@ -1,3 +1,4 @@
+{{?.note}}
 {{! this should be the narrative that ties together mostly discrete objects }}
 # purpose
 what is the purpose of this primer?
@@ -28,7 +29,7 @@ I have a sneaking suspicion that the mental model I consciously hold of myself d
 The result is that I, sometimes suddenly, realize I've gotten what I wanted and I hate it.
 
 # primer
-a philosophical journey through the [:anxiety](anxiety) of death, guilt, and meaninglessness that leads to the will towards existence.
+a philosophical journey through the anxiety of death, guilt, and meaninglessness that leads to the will towards existence.
 The foundation of the power to exist whcih lays in the first tools (the mind, body, community).
 # 
 I believe that [:what I do determines who I am](#essence).

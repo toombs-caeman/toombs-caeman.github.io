@@ -96,7 +96,7 @@ advice
 * if you don't know what your players are trying to accomplish with an action, find out before adjudicating that action (especially if you think that the action is obviously suicidal).
 the descriptions you give of a room are not the same as would be given in a novel. Give general (but necessary) descriptions of a new room first, then describe the horrifying monsters within. This puts what the players will react to at the end, so their gut reaction (fight or flight) can match that of the PCs, rather than giving the players too much time to process by continuing with lesser (but necessary) detail.
 [reaction point](https://www.youtube.com/watch?v=ec0L5_Hje_s)
-
+https://ericwbailey.website/published/dungeons-and-dragons-taught-me-how-to-write-alt-text/
 
 # anti-railroading
 * only plan one session at a time

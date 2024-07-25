@@ -6,8 +6,6 @@ beware half formed ideas, hot takes, and general nonsense. For you've entered:
 * [The tyranny of ideas](https://nadiaeghbal.com/ideas)
     * now [here](https://nadia.xyz/ideas)
 * [Rationality: A-Z](https://www.lesswrong.com/rationality)
-* [preventing the collapse of civilization](https://www.youtube.com/watch?v=pW-SOdj4Kkk) an excellent talk on technological complexity
-* [computer hardware from scratch](https://simplifier.neocities.org/)
 * [backstrap weaving](https://threadsofperu.com/pages/backstrap-weaving-in-peru)
 * [build your own x](https://github.com/danistefanovic/build-your-own-x)
 * [walkaway wiki](http://walkaway.wiki/) probably after the Cory Doctorow book by the same name.
@@ -18,7 +16,19 @@ beware half formed ideas, hot takes, and general nonsense. For you've entered:
 * [href cool](https://href.cool/)
 * [n-o-d-e](https://n-o-d-e.net/)
 * [CGP Grey](https://www.youtube.com/user/CGPGrey)
-[inventing on principle](https://www.youtube.com/watch?v=PUv66718DII)
+
+
+# tools for thought
+* [Vannevar Bush](https://en.wikipedia.org/wiki/Vannevar_Bush) - [memex](https://www.w3.org/History/1945/vbush/)
+    * Some people argue that [time is an essential component of organizing notes](https://thesephist.com/posts/inc/)
+* [andy matuschak notes](https://notes.andymatuschak.org/About_these_notes)
+* [bret victor](https://worrydream.com/)
+    * [inventing on principle](https://www.youtube.com/watch?v=PUv66718DII)
+    * [stop drawing dead fish](https://www.youtube.com/watch?v=ZfytHvgHybA)
+* [Andy Matuschak](https://andymatuschak.org/)
+    * quantum country / [transformative tools for thought](https://numinous.productions/ttft/#exploring-tools-for-thought)
+* Douglas Engelbart
+* Alan Kay
 
 ### spoke and hub (focus + creativity)
 * bonding and bridging (small world networks) [:social capital](https://en.wikipedia.org/wiki/Social_capital)
@@ -141,11 +151,6 @@ https://www.youtube.com/watch?v=rStL7niR7gs
   * difficulty management
   * illeism - psychology of third-person self reference
   * skill tree progression?
-* preventing a capability collapse  - maintaining craftsman in case industrialized production falls flat
-  * How To Invent Everything: The Time Traveler's Guide (ex prima)
-  * https://simplifier.neocities.org/
-  * https://www.opensourceecology.org/gvcs/
-* ex prima - reasoning from first principles
 
 # suggested object clusters
 * histories of a time and place
@@ -154,45 +159,7 @@ https://www.youtube.com/watch?v=rStL7niR7gs
     * [Map of Math](https://www.youtube.com/watch?v=OmJ-4B-mS-Y)
     * [better explained](https://betterexplained.com/articles/math-cartoonist/)
     * human scale data structures - [human scale process](https://news.ycombinator.com/item?id=30903335)
-* craft culture (Artes Mechanicae)
-    * a craftsman's approach to tools - not 'does this provide any value', but 'does this provide enough value'
-    * designing a workspace
-    * manufacturing - mass production methods
-    * creating precision tools out of imprecise materials?
-        * origin of precision - https://www.youtube.com/watch?v=gNRnrn5DE58
-        * bootstrapping principles
-        * methods
-            * flatness - three plate method
-            * angles - straight edge and compass
-            * roundness -
-            * twist - winding sticks
-        * tools
-            * lathe
-            * square
-    * physical sciences
-        * chemistry
-            * periodic table
-        * physics
-    * civil engineering
-        * logistics
-        * energy production
-        * architecture
-        * water/waste
-    * materials - [simplifier](https://simplifier.neocities.org/materials.html)
-        * fiber
-        * metal
-        * clay
-        * wood
-        * glass
-        * fire/energy
-    * basic chemicals
-      * oils
-      * wax
-      * alcohol
-      * vinegar
-      * soap
-    * surface treatments
-    * edge treatments
+
 * other people
     * political theory
       * lineage/succession - self-perpetuation trap in organizations (rules for rulers)
@@ -281,11 +248,10 @@ extending love to (self, loved ones, acquaintances, enemies, strangers)
     * autonomy
     * mission
 * traps (newport)
-    * 
 * social proof
 
 ### Fearful Words
-Few people will not abide liars, the weak willed, or idiots in serious conversation. The habits of speech common in
+Few people will abide liars, the weak willed, or idiots in serious conversation. The habits of speech common in
 these types of people take power away from their words. These habits all have fear as a common root.
 
 1. The fear of being left out leads to a desire to look good and to be affirmed. This can lead to one-upmanship,
@@ -331,8 +297,6 @@ https://www.theguardian.com/news/2017/oct/13/the-scientists-persuading-terrorist
 * as in greene's book
 * shock and awe
 * social proof
-# benjamin franklin method
-
 
 # creativity
 * interdependence meditation
@@ -397,7 +361,7 @@ are a slave to someone's whim, must always follow the script, or have zero meani
     * common pattern is focusing on the end product
     * overgeneralization - accept the mess
     * look for what didn't happen
-* engineered serendipity
+* engineered serendipity - fortune favors the bold / fortune favors the prepared
 
  https://www.youtube.com/watch?v=MJmqaWq7PJY&list=WL&index=9
 * learn speculatively, w/o a reason
@@ -564,6 +528,7 @@ essentially a trantric practice of visualizing the self as the ideal.
 1. once you have felt the feeling of accomplishment, add details to your vision. Exactly how do you look? where are you? how are people responding to you? add as much detail as possible
 1. repeat 1-2 times daily for 10-30 minutes. 
 1. each time you will find you are refining the vision in your unconscious
+mental contrasting?
 ## SMART
 
 Sometimes these components are framed differently as __SMART__. This method puts a slightly different emphasis on
@@ -746,12 +711,6 @@ by ensuring that your work
 will help someone else. Imagine just one person whose life could be made better by what you're doing, and do it for 
 them.
 
-#### mental contrasting
-a balanced approach to visualizing success (that you can in fact complete the task) and obstacles (a realistic account
- of future difficulty)
-* mental contrasting https://www.happierhuman.com/mental-contrasting/
-    - may have limited empirical evidence
-    - smells like it is placebo based
 
 #### Technique Summary
 If you find your motivation wavering, ask yourself these three questions:
@@ -1400,7 +1359,6 @@ https://www.wealthofthecommons.org/contents
 * caustic lenses + optical neural nets for lightspeed ML vision
 * multimodal esperanto
 
-* h1 needs ids for 'jump to header'??
 * [alternate social network?](https://lostgarden.home.blog/2023/02/26/the-letter-circle/)
 * use a nerdfont to avoid falling back to system fonts for weird stuff. Not firacode so ligatures don't crop up.
 
@@ -1416,9 +1374,6 @@ https://www.wealthofthecommons.org/contents
 * ref lesswrong/baysian method of rooting out co-supportive false beliefs
 * musk "first principles". it's a bit disingenuous the way he attributes his success to things other than massive startup capital and luck, but it's also not a bad idea just because he promotes it.
 # notes
-This idea hails back to the classic [memex](https://www.w3.org/History/1945/vbush/) of Vannevar Bush.
-    * Some people argue that [time is an essential component of organizing notes](https://thesephist.com/posts/inc/)
-* [andy matuschak notes](https://notes.andymatuschak.org/About_these_notes)
 # 
 * depth of learning
     * let this repo be the 'textbook' level, with full research, external links, and more powerful, computer-aided data manipulations
@@ -1445,6 +1400,7 @@ This idea hails back to the classic [memex](https://www.w3.org/History/1945/vbus
     * The max force limit depends on the max speed being finite and small, so simulated vehicles might be problematic, though
         relative force perception sensitivity decreases as absolute force increases, so perhaps this could be fudged.
     * the treadmill will essentially need to run some sort of [PID](https://en.wikipedia.org/wiki/PID_controller) loop based on the users location.
+    * see disney's treadmill (tilt-articulated spinning pucks)
 * trilateration problem - might be more readable with [KaTeX](https://github.com/KaTeX/KaTeX).
 * [discordant](https://www.youtube.com/watch?v=cyW5z-M2yzw) [fractals](https://en.wikipedia.org/wiki/Hausdorff_dimension).
     Does harmony have a visual analog in fractals, or do fractals with Hausdorff dimensions close to simple fractions
@@ -1454,12 +1410,11 @@ This idea hails back to the classic [memex](https://www.w3.org/History/1945/vbus
     If combined with a body cam, can you accurately locate the gaze on objects in the environment?
     search cervico-ocular reflex
 
-
-* clean room compilers
-  * what level of computing is it possible to audit and construct in 4 years (perhaps as a college degree) in order
-    to circumvent the thompson attack? [Trusting Trust - Ken Thompson](https://www.cs.cmu.edu/~rdriley/487/papers/Thompson_1984_ReflectionsonTrustingTrust.pdf)
-  * what gains could be made by having a vertically integrated hardware and software stack in the hands of an individual,
-    including the tools/process needed to implement it? related to craft heritage.
+* e-ink data chip
+  * credit card sized e-ink display w/~1GB internal memory
+  * wireless power and data
+  * alignment magnets
+  * use like an SD card
 
 
 * areas of (possibly ad hoc) computer research/development that most things fall into.
@@ -1475,34 +1430,6 @@ This idea hails back to the classic [memex](https://www.w3.org/History/1945/vbus
     * social - how do you manage a project? How do you manage project lifetimes, or attract maintainers? codes of conduct?
         diversity and inclusion?
     * domain understanding - understanding a clients needs well enough to represent domain specific knowledge in a program.
-
-
-* crafting heritage
-  * manufacturing (the production of goods, including software) lies on a spectrum between totally manual and totally automated.
-    * by manual I mean a single person (or small group) can create some functional version of the product with locally 
-      available and unrefined materials
-  * in all industries the extreme manual end can be done with very minimal tooling
-  * in some industries, the automated end can become self-recursive / self-reliant 
-    * using steel cauldrons to smelt steel
-    * using compiled compilers to compile compilers
-  * for a self-reliant goods, a failure to recurse necessitates a sudden shift toward the manual end.
-  * In our current economy there is an extreme emphasis on automated production, because it scales better and is therefore more profitable.
-  * In the case of hobbyists, most only have the resources to experiment with very manual production.
-  * The middle ground is neglected. Lets call it 'semi-auto' or early industrial
-  * *cue tinfoil hat*
-  * this creates a potential for failure where a good is very self-reliant but unable to recurse for a short period.
-  * in response its industry is unable to sustain itself at current levels, and cannot effectively scale back to
-    early industrial levels because that 'middle knowledge' isn't actively kept by anyone.
-  * If the failure is bad enough or the good sufficiently dependent on high quality recursion, it takes more than
-    a generation to recover enough semi-auto capacity to start rebuilding fully automated capacities. 
-  * at this point, not only has a generation been lost to re-industrialization, but the high end production knowledge
-    has also degraded. Hopefully those running fully automated plants had the forethought to write down what they knew
-    as the plants had to shut down. Hopefully that knowledge wasn't kept as an 'industry secret' for a company that
-    could not possibly survive a full generation of reduced capacity.
-  * *proceeds to solve a problem that probably doesn't exist*
-  * support the working class of production by seizing... this isn't a shit post I swear.
-  * create an industry conservatory that works to refine 'clean room' toolchains and regularly rebuilds tools from
-    the ground up as a way to ensure that there's always someone around who has done it.
 
 * there are a few classes of problems in computer science and engineering that get solved repeatedly in adhoc ways.
     * The huge prevalence of copypasta code is a testament to the failure to capture complexity in a library.
@@ -1552,8 +1479,6 @@ This idea hails back to the classic [memex](https://www.w3.org/History/1945/vbus
     
 * [mysterium](https://store.steampowered.com/app/556180/Mysterium_A_Psychic_Clue_Game/) (basically a simplified Clue)
     but instead of visions you have to send out a limited number of emojis. Could be played in chat with a bot or something.
-    
-* explore gemini/gopherspace?
 
 * nomography with [Cistercian numerals](https://en.wikipedia.org/wiki/Cistercian_numerals) to make functional and aesthetic 'magic' diagrams
     * [The Visual Display of Quantitative Information](https://www.goodreads.com/book/show/17744.The_Visual_Display_of_Quantitative_Information)
@@ -1602,6 +1527,7 @@ This idea hails back to the classic [memex](https://www.w3.org/History/1945/vbus
 
 
 ## dissect and reconstruct (benjamin franklin)
+# benjamin franklin method
 
 1. Take a short piece of writing, whose style you respect, and break it down to bullet points of the main ideas.
 2. Set both aside for a few days at least
@@ -1624,3 +1550,85 @@ For more complete mastery:
 For a given subject, what is the appropriate detail with which we should memorize it?
 What topics and perspectives should we allow to form our identity?
 For what topics is it enough to simply know the names of concepts, so they can be reached with google?
+
+https://cognitiveresearchjournal.springeropen.com/articles/10.1186/s41235-017-0087-y
+
+# musing 2024-5-03
+rationality (according to lesswrong) is the effective pursuit of goals. (rational thinking -> an agents pursuit of its goals)
+* altruism - personal goals can be altruistic
+* an altruistic person is incentivised to make their peers also rational and altruistic
+
+* theory of constraints - the optimized variable of a system is constrained by only a single thing at a time.
+
+personal growth
+* possible bounding factors
+    * motivation - executive dysfuntion, the desire for change
+    * agency - that change is possible, or out of one's control
+    * motivation + agency -> having a goal in mind, or wanting things to be 'different' (anything but this)
+    * method - having an effective method
+        * lack of feedback - unsure of method efficacy, negative loop with motivation
+    * unable to follow through b/c of emotional blockage
+
+motivation is the budget spent by the method
+* 'effective' methods lower cost below the barrier of effort (types of optimization??).
+* more potent methods go further for the same cost
+
+system mastery is a fundamental goal:
+* mastery is bounded by understanding. understanding is bounded by memory (fluency -> understanding)
+* it isn't the only goal
+
+'intelligence'
+* relevance realization - what is important
+* memory, priors, knowing ground truths
+
+goal types:
+* optimize system
+* system mastery
+* exploration / exploit
+* auxillary /maintenance goals
+
+# hamming
+quick napkin calculation is a way to verify incoming info:
+* check that incoming numbers are reasonable
+* check that you can create a model of the claim made (shows you understood and that there really was one made)
+* keeps up the ability to estimate
+* creates a body of healthy priors
+
+"the greatest works are gifts of knowledge to humanity" - richard hamming
+#### mental contrasting
+a balanced approach to visualizing success (that you can in fact complete the task) and obstacles (a realistic account
+ of future difficulty)
+* mental contrasting https://www.happierhuman.com/mental-contrasting/
+    - may have limited empirical evidence
+    - smells like it is placebo based
+
+# crypto tarot
+make a `fortune` like thing with ascii art tarot cards.
+* [businessmagik](https://tomcritchlow.com/wiki/businessmagik/)
+
+
+# [quote](https://matheducators.stackexchange.com/questions/27964/how-to-choose-a-textbook-that-is-pedagogically-optimal-for-oneself)
+https://en.wikipedia.org/wiki/Expertise_reversal_effect
+
+n other words, research indicates the best way to improve your problem-solving ability in any domain is simply by acquiring more foundational skills in that domain. The way you increase your ability to make mental leaps is not by learning to jump further, but by building bridges. 
+
+What you need to do is avoid the two failure modes -- that is, cutting corners on either of the two key attributes of deliberate practice ("mindful" and "repetition").
+
+Deliberate practice is not mindless repetition. If you're doing the same thing over and over again, then you're doing deliberate practice wrong. Deliberate practice is about making performance-improving adjustments on every single repetition. 
+
+If you don't have worked examples and instructional scaffolding to help carry you through once math becomes hard for you, then every problem basically blows up into a research project for you. That's okay if you're a research mathematician (or maybe late-stage graduate student) at the edge of your field, but if you're a student who still has a ways to go before reaching the edge of human mathematical knowledge, then it's just less efficient, even if you have fun with it.
+
+In general, a learner typically cannot construct their own deliberate practice experience without expert guidance since they are typically unable to construct information-rich & scaffolded practice problems, much less correctly identify their areas of weakness for targeted practice to begin with.
+# deliberate practice
+there are failures of conceptualization and failures of execution.
+can learners generate ad-hoc drills for focusing on failures of execution, but not those of conceptualization because they do not understand why they have failed.
+The field determines the necessary mix of concept and execution.
+
+what appears to be a problem of execution may in fact be a problem of framing. Why is dieting so hard? Everyone knows CICO. "Just eat less" is a solution to an insufficient conceptualization of the domain.
+
+failure of optimality - perceiving behaviour as optimal when it is not
+failure of overcorrection - perceiving behavior to be unoptimal, when other aspects have more room for improvement
+
+
+when to learn just enough vs learn in depth? 
+[about/ideas/now](https://aboutideasnow.com/about)

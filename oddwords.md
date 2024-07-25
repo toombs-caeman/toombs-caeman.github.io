@@ -1,10 +1,11 @@
-english words are a bit like legos, building meaning up from reusable components.
-On the other hand, it's not like that at all and never follows its own rules.
+# closely colocated words
+words that appear almost exclusively within a single phrase
+* (disgruntled) employees
+* (unbridled) rage
 
-For a moment, lets appreciate those words whose pieces are so firmly stuck together the pieces are almost fused.
-
-# (dis)gruntled
-# (dis)appointed
-# (im)mediately
-# (un)ravel
-which oddly enough, ravel and unravel are synonyms
+# usually prefixed word roots
+words that almost always are used with some prefix (usually negation), even though the base is also a word.
+* (dis)gruntled
+* (dis)appointed
+* (im)mediately
+* (un)ravel - oddly enough, ravel and unravel are synonyms

@@ -1350,4 +1350,4 @@ Is acting, not contending.
 
 # :x license
 Creative Commons Attribution-ShareAlike 2.0 Generic
-[source](https://en.wikisource.org/wiki/Translation:Tao_Te_Ching#Chapter_42_(%E7%AC%AC%E5%9B%9B%E5%8D%81%E4%BA%8C%E7%AB%A0e
+[source](https://en.wikisource.org/wiki/Translation:Tao_Te_Ching#Chapter_42_(%E7%AC%AC%E5%9B%9B%E5%8D%81%E4%BA%8C%E7%AB%A0e))

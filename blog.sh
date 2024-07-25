@@ -78,8 +78,8 @@ eof() { # <output>
 
 final() { stack+=(final "$1"); }
 escape() {
-    local s="${*//&/&amp\;}"; s="${s//</&lt\;}"; s="${s//>/&gt\;}";
-    final "${s//"\""/&quot\;}";
+    local s="${*//&/\&amp\;}"; s="${s//</\&lt\;}"; s="${s//>/\&gt\;}";
+    final "${s//'"'/\&quot\;}";
 }
 
 register em '\*'
@@ -150,6 +150,7 @@ register h "$n(?P<Rh>##*) "
 h=0
 h() { lf; h="${#Rh}"; final "<h$h>"; }
 
+
 register hr "$n(----*|====*)$n"
 hr() { lf; final '<hr>'; raw="$n$raw"; }
 
@@ -192,11 +193,26 @@ tag() { # <tag>
     final "<$x${id:+ id=\"${id}\"}${class:+ class=\"${class[*]}\"}${attr:+ ${attr[*]}}>"
 }
 
+register footnote '\[\^(?P<footnote>[^]]*)](?P<fndef>:?)'
+footnote() {
+    if [[ -n "$fndef" ]]; then
+        Rh='######'
+        h
+        raw=":x $footnote$n$raw"
+    else
+        url="#$footnote"
+        desc=":$footnote"
+        Rimg=''
+        Rwiki=''
+        aimg
+    fi
+}
+
 register aimg '(?P<Rimg>!?)\[(?P<desc>[^]]*)]\((?P<url>[^ )]*)(?P<meta>[^)]*)\)(?P<Rwiki>\)?)'
 aimg() {
     # let internal .md links be renamed to point to the rendered .html pages
     # so following the link works correctly in vim and in browser
-    [[ "$url" = *.md ]] && url="${url%.md}.html"
+    [[ "$url" = *.md ]] && url="${url%.md}"
     if [[ -n "$Rimg" ]]; then
         tag "<img src=\"$url$Rwiki\" alt=\"$desc\" $meta>"
     else
@@ -263,12 +279,23 @@ render() {
 }
 clean() { for filename in **/**.html; do rm "$filename"; done; echo "clean"; }
 daemon() {
-    render
     local tmp server_pid
     trap 'kill $server_pid;rm $tmp; exit' SIGINT
-    tmp="$(mktemp)"
-    python -m http.server 5000 & server_pid="$!"
+    python <<EOF & server_pid="$!"
+import os
+import http.server as hs
+class Handler(hs.SimpleHTTPRequestHandler):
+    def translate_path(self, path):
+        path = super().translate_path(path)
+        if path.endswith('/'):
+            return path
+        name, ext = os.path.splitext(path)
+        return f"{name}{ext if ext else '.html'}"
+hs.HTTPServer(('', 5000), Handler).serve_forever()
+EOF
     echo '    http://0.0.0.0:5000'
+    render
+    tmp="$(mktemp)"
     while sleep 1; do
         [[ -n "$(find * -type f -newer "$tmp" -print)" ]] && render
         touch "$tmp"
@@ -295,3 +322,7 @@ esac
 # TODO moustache array, not, and end blocks
 # TODO md [table](https://markdown.land/markdown-table) or two column layout
 # TODO extract url munging to its own function, autolink urls?
+# TODO h1 needs ids for 'jump to header'??
+# TODO support blog series? as a way to link together
+# TODO support sidenotes?
+# TODO codeblocks with links to originating file?

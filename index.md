@@ -1,5 +1,7 @@
 {{?.note}}
 # Index
-* [:Pen & Paper](pens.md)
+
 * [:Notebook System](notebook.md)
+* [:Programming Language Design](pl.md)
+
 * [:about this site](README.md)
