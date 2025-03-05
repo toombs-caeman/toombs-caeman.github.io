@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="shortcut icon" href="/inc/favicon.jpg" type=image/x-icon">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/inc/common.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/comic-mono@0.0.1/index.min.css">
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"></script>
+    <script src="/inc/common.js"></script>
+    <div class="cover">
+        <div class="page">
+            <a class="bookmark" href="/"></a>
+            <p>{{?.note}}</p>
+<p>inspired by <a href="https://uses.tech">uses.tech</a></p>
+<h1>Software</h1>
+<ul>
+<li>some Arch linux derivative with a reasonable installer</li>
+<li>neovim</li>
+<li>zsh</li>
+<li>FiraCode Nerd Mono</li>
+<li>fzf</li>
+<li>mpd + youtube-dl</li>
+<li>firefox</li>
+<li>i3</li>
+<li><a href="https://github.com/toombs-caeman/dotfiles/">dotfiles</a></li>
+<li>steam</li>
+<li>krita</li>
+<li>Android<ul>
+<li><a href="https://github.com/toombs-caeman/jist">jist</a></li>
+<li>Poweramp</li>
+</ul>
+</li>
+</ul>
+<h1>Hardware</h1>
+<ul>
+<li>old asf desktop</li>
+<li>cheapy Dell laptop for traveling</li>
+<li>Zenphone 8</li>
+<li>Logitech MX Master mouse</li>
+<li>WhiteFox mechanical keyboard</li>
+<li>Audiotechnica ATH-M50x headphones</li>
+<li>Uplift desk</li>
+<li>Crescent Saddle Stool by Uplift desk</li>
+</ul>
+<h1>Caffeine</h1>
+<ul>
+<li>electric gooseneck kettle with temperature set and hold</li>
+<li>side-handled tea pot (Yokode Kyusu)</li>
+<li>tea tray</li>
+<li>an assortment of white, green, oolong, and pu'er loose-leaf teas</li>
+<li>matcha bowl and whisk</li>
+</ul>
+<h1>Kitchen</h1>
+<ul>
+<li>IKEA pots, pans and plates</li>
+<li>Wüsthof knives</li>
+<li>OXO for most other things</li>
+</ul>
+
+            <footer>
+                <a href="/">Home</a>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

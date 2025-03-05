@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="shortcut icon" href="/inc/favicon.jpg" type=image/x-icon">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/inc/common.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/comic-mono@0.0.1/index.min.css">
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"></script>
+    <script src="/inc/common.js"></script>
+    <div class="cover">
+        <div class="page">
+            <a class="bookmark" href="/"></a>
+            <h2>speaking</h2>
+<ul>
+<li>toastmasters
+quote from the ents
+something about the value of things that grow slowly and live for a long time -- jrr tolkien</li>
+</ul>
+<p>Speaking is an art of giving. People give advice, commands, and consolation. Skillful speech then is to to speak in a
+way that guides the audience receive the message as intended. It is what you say, <em>and</em> how you say it.</p>
+<p>In order for the audience to understand, they first have to listen. This section will cover anti-patterns of speech
+which make it difficult to listen to. Then, the four practices which will lead to more powerful speaking.</p>
+<p>The purpose of speaking is to trade ideas, but ideas rarely fit neatly into the words that are said.</p>
+<h3>Other techniques and exercises</h3>
+<ul>
+<li>the three second rule<ul>
+<li>it's a practice which sounds easy</li>
+<li>simply wait three seconds after someone speaks before you speak
+It gets around interrupting people, gives them some space to express, and you time to respond.</li>
+</ul>
+</li>
+<li>decorate the silence<ul>
+<li>elizebethans used to describe conversation as decorated silence
+think of words a decoration, to completely cover silence is tacky</li>
+</ul>
+</li>
+<li>excessive precision<ul>
+<li>as an exercise, try extreme precision in language. watching out for words like 'really' or 'very'</li>
+</ul>
+</li>
+<li>develop your vocabulary<ul>
+<li>it is frustrating to be unable to express yourself accurately</li>
+<li>in the words of Dr. Jon Miller, the master of gravitas,
+'In order to say something interesting, you've first got to know something'</li>
+<li>good habits to develop vocabulary<ul>
+<li>read a lot</li>
+<li>do crosswords</li>
+<li>get a word a day app</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>avoid dangerous words<ul>
+<li>this is a good way to practice avoiding judging, embellishment, and the passive voice</li>
+<li>danger words - should, could, very, really, try, maybe, you made me(passive voice),
+alway/never/nobody/everybody(absolutes)</li>
+</ul>
+</li>
+</ul>
+<h3>the vocal toolbox</h3>
+<p>The voice is an instrument. Besides what you say, and the words that you pick, the sound of your voice also plays a part
+in how your message is received.</p>
+<ol>
+<li><p>accent &amp; timber</p>
+<ul>
+<li><p>understanding - purely comprehension</p>
+</li>
+<li><p>association - south with stupid, irish brogue with being friendly, etc.</p>
+</li>
+<li><p>preference for rich, warm, smooth timbre</p>
+</li>
+<li><p>dislike scratchy, gainy, squeaky, thin, cold</p>
+</li>
+</ul>
+</li>
+<li><p>register &amp; prosody</p>
+<ul>
+<li><p>4 registers</p>
+<ul>
+<li>whistle, very high</li>
+<li>falsetto(not often useful)</li>
+<li>modal,(head and chest) most common for speaking
+the chest provides a much more powerful sound
+people tend to vote for politicians with lower voices</li>
+<li>vocal fry (not often useful)</li>
+</ul>
+</li>
+<li><p>prosody is intonation</p>
+</li>
+<li><p>the sing song of speech</p>
+</li>
+<li><p>expressing emotion</p>
+</li>
+<li><p>paralinguistics</p>
+</li>
+<li><p>cultural, regional, and language</p>
+</li>
+<li><p>for example, uptalk is a very weak way of speaking</p>
+</li>
+<li><p>exercise: try to communicate only using prosidy, without words, ask a question or express happiness or fear</p>
+</li>
+</ul>
+</li>
+<li><p>pace &amp; pitch</p>
+<ul>
+<li>tends to go pitch</li>
+<li>both tend to indicate arousal (emotional charge)</li>
+<li>have a physiological effect on the heart rate of your listeners</li>
+<li>deep voices are associated with authority</li>
+</ul>
+</li>
+<li><p>space/silence &amp; volume</p>
+<ul>
+<li><p>silence at the end of the pace/pitch spectrum</p>
+</li>
+<li><p>can add emphasis</p>
+</li>
+<li><p>much better than ums and ahhs</p>
+</li>
+<li><p>people will stick with you if you just look composed and contemplative while silent</p>
+</li>
+<li><p>careless brashness comes off as arrogant and generally moronic</p>
+</li>
+<li><p>fall quiet for emphasis, or to draw in your listeners</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3>public speaking</h3>
+<p>public speaking is a high risk situation, and so fear can lead to the four leeches
+the antidote is to go into the situation with the correct attitude</p>
+<ul>
+<li>come from generousity<ul>
+<li>you are doing this for other people, the commitment is to them, not to your image</li>
+</ul>
+</li>
+<li>accept them, you can't judge them<ul>
+<li>you don't get mad or judge an oak tree for being an oak.</li>
+</ul>
+</li>
+<li>wish them well as they wish you well</li>
+</ul>
+<h3>essential preparation</h3>
+<ol>
+<li><p>practice</p>
+<ul>
+<li>practice speaking, not the speech</li>
+<li>toastmasters is a great opportunity</li>
+</ul>
+</li>
+<li><p>preparation</p>
+<ul>
+<li>structure - know what it is</li>
+<li>rehearse - practice the speech, rehearse as if for real</li>
+<li>specify - specify everything you will need during the speech, (even projection format, clicker, etc)</li>
+<li>check the stage on the day of<ul>
+<li>make sure everything is up to spec before you fill the room with people</li>
+<li>it is very inelegant to deal with problems in front of the audience</li>
+<li>expect the worst and have fallbacks</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>warmup voice
+exercises to warm up:</p>
+<ol>
+<li>breathe, moan and swing your arms - opens the chest</li>
+<li>hum so loud it tickles - clears throat and vocal cords</li>
+<li>BO BO BO - warms up the lips</li>
+<li>LA LA LA - wake up the tongue</li>
+<li>rolling R - also the tongue</li>
+<li>loud SSSHHH - for the diaphram</li>
+<li>lip roll BRR - for the lips</li>
+<li>siren high to low - weeaaw - for increasing dynamic range</li>
+</ol>
+</li>
+<li><p>stance &amp; gesture
+amy cuddy on power posing
+before getting on stage</p>
+<ul>
+<li>power poses (open and expansie) testosterone</li>
+<li>low-power poses reduce energy cortisol</li>
+</ul>
+</li>
+</ol>
+<p>on stage:
+- take a neutral stance
+- hands on the side, or hold a thumb, like the british royal family
+- avoid closed or defensive postures
+- pacing can be distracting</p>
+<p>gestures:
+- avoid overly strong or weak gestures (pointing, pleading with the hands up) unless you really mean it
+- anchor concepts to a place on stage, past to the right, future to the left for instance</p>
+<ol start="5">
+<li><p>breath
+when you get on stage, smile and breathe</p>
+<ul>
+<li>breathe for nerves</li>
+</ul>
+</li>
+<li><p>awareness</p>
+</li>
+<li><p>structure</p>
+</li>
+</ol>
+<p>aids:
+1. comfort monitor
+2. presenter view
+3. timer - best not to run over or look at your watch
+4. room captain / supporter</p>
+<p>common errors:
+* speaking to the screen
+* reading
+* one pace
+* physical and verbal tics
+* overtime
+* rushing off</p>
+<p>use emotion for impact
+speak in threes
+balanced statements 'ast not what your country can do for you - ask what you can do for your country'
+metaphor
+exaggeration
+rhyming
+look like you're trusting your gut and others will trust you</p>
+<ul>
+<li>powerful speaking udemy julian treasure</li>
+<li>marshal mclure - 'the medium is the message'</li>
+<li>the charisma myth</li>
+<li><a href="https://www.nytimes.com/2019/08/15/smarter-living/what-makes-people-charismatic-and-how-you-can-be-too.html">https://www.nytimes.com/2019/08/15/smarter-living/what-makes-people-charismatic-and-how-you-can-be-too.html</a></li>
+<li><a href="https://www.youtube.com/watch?v=SEDvD1IICfE">https://www.youtube.com/watch?v=SEDvD1IICfE</a></li>
+<li>into the magic shop - doty</li>
+<li><a href="https://www.psychologytoday.com/us/blog/your-personal-renaissance/201908/research-reveals-surprising-solution-anxiety">https://www.psychologytoday.com/us/blog/your-personal-renaissance/201908/research-reveals-surprising-solution-anxiety</a></li>
+</ul>
+<p><a href="https://www.theguardian.com/news/2017/oct/13/the-scientists-persuading-terrorists-to-spill-their-secrets">https://www.theguardian.com/news/2017/oct/13/the-scientists-persuading-terrorists-to-spill-their-secrets</a></p>
+
+            <footer>
+                <a href="/">Home</a>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

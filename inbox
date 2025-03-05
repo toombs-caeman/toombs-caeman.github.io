@@ -1,0 +1,2061 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="shortcut icon" href="/inc/favicon.jpg" type=image/x-icon">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/inc/common.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/comic-mono@0.0.1/index.min.css">
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"></script>
+    <script src="/inc/common.js"></script>
+    <div class="cover">
+        <div class="page">
+            <a class="bookmark" href="/"></a>
+            <p>{{?.note}}
+beware half formed ideas, hot takes, and general nonsense. For you've entered:</p>
+<h1>the Idea Inbox</h1>
+<ul>
+<li><a href="http://paulgraham.com/lesson.html">lessons to unlearn</a></li>
+<li><a href="https://nadiaeghbal.com/ideas">The tyranny of ideas</a><ul>
+<li>now <a href="https://nadia.xyz/ideas">here</a></li>
+</ul>
+</li>
+<li><a href="https://www.lesswrong.com/rationality">Rationality: A-Z</a></li>
+<li><a href="https://threadsofperu.com/pages/backstrap-weaving-in-peru">backstrap weaving</a></li>
+<li><a href="https://github.com/danistefanovic/build-your-own-x">build your own x</a></li>
+<li><a href="http://walkaway.wiki/">walkaway wiki</a> probably after the Cory Doctorow book by the same name.</li>
+<li><a href="https://solar.lowtechmagazine.com/">low tech magazine</a></li>
+<li><a href="https://billwurtz.com/">Bill Wurtz</a></li>
+<li><a href="https://www.mit.edu/~xela/tao.html">Tao of Programming</a></li>
+<li><a href="https://text.npr.org/">text only npr</a></li>
+<li><a href="https://href.cool/">href cool</a></li>
+<li><a href="https://n-o-d-e.net/">n-o-d-e</a></li>
+<li><a href="https://www.youtube.com/user/CGPGrey">CGP Grey</a></li>
+</ul>
+<h1>tools for thought</h1>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Vannevar_Bush">Vannevar Bush</a> - <a href="https://www.w3.org/History/1945/vbush/">memex</a><ul>
+<li>Some people argue that <a href="https://thesephist.com/posts/inc/">time is an essential component of organizing notes</a></li>
+</ul>
+</li>
+<li><a href="https://notes.andymatuschak.org/About_these_notes">andy matuschak notes</a></li>
+<li><a href="https://worrydream.com/">bret victor</a><ul>
+<li><a href="https://www.youtube.com/watch?v=PUv66718DII">inventing on principle</a></li>
+<li><a href="https://www.youtube.com/watch?v=ZfytHvgHybA">stop drawing dead fish</a></li>
+</ul>
+</li>
+<li><a href="https://andymatuschak.org/">Andy Matuschak</a><ul>
+<li>quantum country / <a href="https://numinous.productions/ttft/#exploring-tools-for-thought">transformative tools for thought</a></li>
+</ul>
+</li>
+<li>Douglas Engelbart</li>
+<li>Alan Kay</li>
+</ul>
+<h3>spoke and hub (focus + creativity)</h3>
+<ul>
+<li>bonding and bridging (small world networks) <a href="https://en.wikipedia.org/wiki/Social_capital">social capital</a></li>
+<li>disciplined creativity (serendipity+concentration)</li>
+<li>discipline -&gt; the beginners mind</li>
+<li>hub &amp; spoke physical spaces (deep work)</li>
+<li>the hero's journey (separation and reconnection)</li>
+</ul>
+<h1>old ideas</h1>
+<p><a href="https://www.vox.com/science-and-health/2016/11/3/13486940/self-control-psychology-myth">the myth of self control</a></p>
+<ul>
+<li><p><a href="https://www.inc.com/jeff-haden/want-to-be-super-successful-science-says-do-any-1-of-these-10-things.html">https://www.inc.com/jeff-haden/want-to-be-super-successful-science-says-do-any-1-of-these-10-things.html</a></p>
+</li>
+<li><p><a href="http://www.headless.org/">http://www.headless.org/</a>
+<a href="http://makerpedagogy.org/en/how-is-the-maker-ethos-relevant-to-pedagogy/">http://makerpedagogy.org/en/how-is-the-maker-ethos-relevant-to-pedagogy/</a></p>
+</li>
+<li><p>indistractable nir eyal</p>
+</li>
+<li><p><a href="https://onezero.medium.com/being-indistractable-will-be-the-skill-of-the-future-a07780cf36f4">https://onezero.medium.com/being-indistractable-will-be-the-skill-of-the-future-a07780cf36f4</a></p>
+</li>
+<li><p><a href="https://www.inc.com/bill-murphy-jr/19-things-future-multimillionaires-do-in-their-20s.html">https://www.inc.com/bill-murphy-jr/19-things-future-multimillionaires-do-in-their-20s.html</a></p>
+</li>
+<li><p><a href="https://www.divio.com/blog/documentation/">blog on documentation</a></p>
+</li>
+<li><p><a href="https://becomeawritertoday.com/how-to-write-a-book/">https://becomeawritertoday.com/how-to-write-a-book/</a>
+<a href="https://www.youtube.com/watch?v=rStL7niR7gs">https://www.youtube.com/watch?v=rStL7niR7gs</a></p>
+</li>
+<li><p><a href="https://www.youtube.com/watch?v=rStL7niR7gs">https://www.youtube.com/watch?v=rStL7niR7gs</a></p>
+</li>
+<li><p>naikan</p>
+</li>
+<li><p><a href="https://greatergood.berkeley.edu/article/item/tips_for_keeping_a_gratitude_journal">gratitude journaling</a></p>
+</li>
+<li><p>meta-moment ideas.ted.com</p>
+</li>
+<li><p>robert greene</p>
+</li>
+<li><p>the 50th law</p>
+</li>
+<li><p>inducing emotion https://journals.sagepub.com/doi/full/10.1177/1754073917749016#:~:text=Subjective%20Emotional%20Experience,-Table%203%20provides&amp;text=Looking%20down%20the%20columns%2C%20the,but%20less%20so%20for%20surprise.</p>
+</li>
+<li><p><a href="https://www.oxfordhandbooks.com/view/10.1093/oxfordhb/9780198795872.001.0001/oxfordhb-9780198795872">https://www.oxfordhandbooks.com/view/10.1093/oxfordhb/9780198795872.001.0001/oxfordhb-9780198795872</a></p>
+</li>
+<li><p>relativism</p>
+<ul>
+<li>codifying long-term useful ideas as religion (Alain de Botton atheism 2.0)</li>
+</ul>
+</li>
+<li><p>atheism 2.0 Alain de Botton</p>
+<ul>
+<li>using religion as a framework for creating cohesive secular social fabric, not just mystic value</li>
+<li>coming of age rituals</li>
+<li>pilgrimage</li>
+<li>cloisters</li>
+<li>oration</li>
+</ul>
+</li>
+</ul>
+<h1>sections</h1>
+<ol>
+<li>self<ul>
+<li>When a man starts out to build a world, he starts first with himself -- Langston Hughs</li>
+<li>intro to the model</li>
+<li>introspection / meditation in general<ul>
+<li>kims game</li>
+</ul>
+</li>
+<li>RPD - (recognition primed decision theory) augmenting decisions. what is knowledge, how is it applied<ul>
+<li>distributed knowledge</li>
+<li>explicit knowledge</li>
+<li>implicit/embodied knowledge</li>
+<li>what not to learn</li>
+<li>knowing who to ask</li>
+<li>knowing where to look</li>
+<li>RPD based questions practice visualization mirroring coaching</li>
+</ul>
+</li>
+<li>augmenting focus (shamatha, deathgazing, habits)<ul>
+<li>both focusing in the moment and sticking to long term goals</li>
+<li>fierce minimalism, memento mori</li>
+<li>addiction</li>
+</ul>
+</li>
+<li>augmenting creativity (serious play / deep work)</li>
+<li>HDS - (human data structures) (PAO/major/etc.) augmenting memory<ul>
+<li>memory techniques</li>
+<li>esoteric encoding / traditional symbolic systems</li>
+</ul>
+</li>
+<li>EXP - (expert pipeline) augmenting curiosity/knowledge</li>
+<li>handling specific emotions (procrastination, anger, etc)<ul>
+<li>The working theory is people have a variety of emotional energies which typically manifest in chaotic and mostly unhelpful ways. Most people learn how to cope with their tendencies well enough to adjust to whatever society they find themselves in, but intentional use of emotion is rarely taught except remedially.</li>
+<li>anger</li>
+<li>awe</li>
+<li>attraction</li>
+<li>amusement / surprise / fun</li>
+<li>calm abiding</li>
+<li>compassion / self-compassion</li>
+<li>boredom</li>
+<li>gratitude</li>
+<li>procrastination</li>
+<li>anxiety - improv</li>
+</ul>
+</li>
+<li>the human body<ul>
+<li>ergonomics, sleep, diet, exercise, sex, hygiene</li>
+<li>lucid dreaming</li>
+<li>medicine</li>
+<li>cooking</li>
+<li>exercise</li>
+</ul>
+</li>
+<li>yellow magic</li>
+</ul>
+</li>
+<li>tools and spaces<ul>
+<li>expanding capability through leveraging tools</li>
+<li>functional spaces (ergonomics and fengshui)</li>
+</ul>
+</li>
+<li>others<ul>
+<li>how can we interact effectively with other people?</li>
+<li>the cynical take is to collect people like tools in order to expand your own capabilities.</li>
+<li>relationships</li>
+<li>organizations<ul>
+<li>succession / inheritance</li>
+<li>beauracracy</li>
+<li>Any organization with a purpose other than self-perpetuation must at some point choose to end or to value perpetuation over it's supposed purpose. This severely limits the kinds of organizations that can exist over the long run. (rules for rulers).</li>
+</ul>
+</li>
+<li>seduction / charisma and marketing</li>
+<li>empathy / compassion</li>
+<li>speaking, writing, and non-verbal communication - <a href="http://rhetoric.byu.edu/">rhetoric</a></li>
+<li>status / dominance</li>
+<li>communications</li>
+<li>fellowship</li>
+<li>memetic theory</li>
+<li>conflict</li>
+<li>history/politics - how do things get done over larger timescales and populations</li>
+</ul>
+</li>
+<li>craft<ul>
+<li>money</li>
+<li>math, engineering, and computation</li>
+<li>history</li>
+<li>performance (music, dance, theater)</li>
+<li>martial arts</li>
+<li>art (making <em>things</em> both functional and beautiful)</li>
+</ul>
+</li>
+</ol>
+<h1>ancillary ideas</h1>
+<ul>
+<li>pulling techniques from historical practices, separately from meta-physics<ul>
+<li>acknowledge that practical matters may work, even if the underlying reasoning is suspect.</li>
+<li>tendency to go one too far when answering a child's endless 'why' questions</li>
+</ul>
+</li>
+<li>what is kept as an explicit object for thought and what is made implicit?<ul>
+<li>is there an 'optimal' level of abstraction within a given space, or is higher always better</li>
+</ul>
+</li>
+<li>gamification<ul>
+<li>what is the main quest? side quests?<ul>
+<li>breaking down tasks into manageable chunks</li>
+</ul>
+</li>
+<li>well-defined reward scheme</li>
+<li>difficulty management</li>
+<li>illeism - psychology of third-person self reference</li>
+<li>skill tree progression?</li>
+</ul>
+</li>
+</ul>
+<h1>suggested object clusters</h1>
+<ul>
+<li><p>histories of a time and place</p>
+<ul>
+<li>what is the theory of history? How does this inform how you think things happen/history is made?</li>
+</ul>
+</li>
+<li><p>mathematics and computation (theory and history)</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=OmJ-4B-mS-Y">Map of Math</a></li>
+<li><a href="https://betterexplained.com/articles/math-cartoonist/">better explained</a></li>
+<li>human scale data structures - <a href="https://news.ycombinator.com/item?id=30903335">human scale process</a></li>
+</ul>
+</li>
+<li><p>other people</p>
+<ul>
+<li>political theory<ul>
+<li>lineage/succession - self-perpetuation trap in organizations (rules for rulers)<ul>
+<li>triple of primary, teaching, and succession traditions.</li>
+<li><a href="https://samoburja.com/on-the-loss-and-preservation-of-knowledge/">loss and preservation of knowledge</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>social theory</li>
+<li>economic theory</li>
+<li>conflict / negotiation theory</li>
+<li>power and status</li>
+</ul>
+</li>
+<li><p>first aid / medicine</p>
+</li>
+<li><p>mind</p>
+<ul>
+<li>philosophy and theology</li>
+<li>memetic history - preservation of knowledge through generations</li>
+</ul>
+</li>
+<li><p>art</p>
+<ul>
+<li>short form prose / rhyme</li>
+<li>long form writing</li>
+<li>music</li>
+<li>visual art - painting and sculpture<ul>
+<li>supergiant art style. telepurte style</li>
+</ul>
+</li>
+<li>dance, plays and film</li>
+<li>craft arts</li>
+</ul>
+</li>
+</ul>
+<h1>society</h1>
+<ul>
+<li>compassion and equanimity will make you happier<ul>
+<li>direct antidote to the dark triad</li>
+</ul>
+</li>
+<li>selfish motives will out, cannot be maintained for long without driving people away</li>
+<li>choice of social interaction is highly correlated with happiness</li>
+</ul>
+<p>charisma is a skill that can be learned
+a person is perceived as charismatic when they project three things</p>
+<ul>
+<li>power</li>
+<li>presence<ul>
+<li>Give your full attention to the people in front of you. One way to bring yourself to the present is to focus on a bodily sensation, like the feeling in your toes. This shift in focus 'grounds' you.</li>
+</ul>
+</li>
+<li>warmth<ul>
+<li>equanimity</li>
+<li>gratitude meditations / journaling</li>
+<li>compassion meditation (into the magic shop)</li>
+<li>how to win friends and influence people</li>
+<li>warmth is like the goodwill of a mother to her children. Imagine that those around you have earned their angel wings.</li>
+<li>They have done good in the world and are good people. Be genuinely curious about them and their good deeds.</li>
+</ul>
+</li>
+</ul>
+<h1>compassion meditation (into the magic shop)</h1>
+<p>opening the heart ruth #3
+loving-compassion meditation
+extending love to (self, loved ones, acquaintances, enemies, strangers)</p>
+<ol>
+<li>relax the body</li>
+<li>focus on the breath, and decrease wandering</li>
+<li>empty the mind</li>
+<li>think of a person in your life who has given you unconditional love.j</li>
+</ol>
+<h1>social Power</h1>
+<ul>
+<li>following</li>
+<li>organizing</li>
+<li>leading</li>
+<li>how to run a campaign</li>
+<li>slytherin</li>
+<li>how to unionize</li>
+<li>envoys create a pack</li>
+<li>belief is power</li>
+<li>the tribes we lead by seth godin</li>
+<li>(laws of power, mastery, seduction) robert greene<ul>
+<li>the apprenticeship</li>
+</ul>
+</li>
+<li>detecting / creating cults<ul>
+<li>characteristics</li>
+<li>practices</li>
+</ul>
+</li>
+<li>the dangers of power</li>
+<li>the responsibilities of power</li>
+<li>effective and ineffective ways to weild power</li>
+<li>political capital</li>
+<li>how to inspire</li>
+<li>the laws of power<ul>
+<li><a href="https://www.nateliason.com/notes/48-laws-power-robert-greene">https://www.nateliason.com/notes/48-laws-power-robert-greene</a></li>
+</ul>
+</li>
+<li>the lessons and anti-lessons of machiavelli</li>
+<li>power posing<ul>
+<li>Imagine yourself as a gorilla, large powerful, and territorial. People must move out of your way.</li>
+</ul>
+</li>
+</ul>
+<h2>Social Capitol</h2>
+<ul>
+<li><a href="https://notebook.drmaciver.com/posts/2022-06-05-14:53.html">getting to know the right people</a></li>
+<li>career capitol (newport)<ul>
+<li>if you want a good job (something rare and valuable) then you need to have something to exchange for it that is
+rare and valuable (refined skills)</li>
+</ul>
+</li>
+<li>desirable career traits<ul>
+<li>creativity</li>
+<li>impact</li>
+<li>autonomy</li>
+<li>mission</li>
+</ul>
+</li>
+<li>traps (newport)</li>
+<li>social proof</li>
+</ul>
+<h3>Fearful Words</h3>
+<p>Few people will abide liars, the weak willed, or idiots in serious conversation. The habits of speech common in
+these types of people take power away from their words. These habits all have fear as a common root.</p>
+<ol>
+<li>The fear of being left out leads to a desire to look good and to be affirmed. This can lead to one-upmanship,
+self-aggrandising lies, a patronizing tone, and fake listening while really preparing what to say next.</li>
+<li>The fear of being wrong leads to a desire to always be right. This leads to aggressive convincing and kills true
+listening and learning.</li>
+<li>The fear of being disliked leads to people pleasing. This leads to yes-men type behavior which restricts you to a
+passive role in the conversation.</li>
+<li>The fear of hurting someone's feelings leads to the perpetual need to make things right, which can lead to
+withholding of useful information, and obstructs real solutions.</li>
+</ol>
+<p>These four fears lead to seven habits which make it difficult to be around people who have them.</p>
+<ol>
+<li>Gossiping, or speaking ill of someone who is absent, destroys your own reputation. Quickly everyone will realize that
+this person will be speaking ill behind their back as soon as they leave.</li>
+<li>Judging, not as careful evaluation, but condemning, makes it hard to take your words at face value, since your
+opinion is heavily colored by your prejudice<ul>
+<li>what they say comes loaded, so it's difficult to take at face value</li>
+</ul>
+</li>
+<li>Negativity is just hard to be around all of the time</li>
+<li>complaining can start viral misery<ul>
+<li>forgetting gratitude, which is important to a happy life</li>
+</ul>
+</li>
+<li>Excuses, excuses. Those that never accept responsibility for anything are full of shit.</li>
+<li>Embellishing or lying makes makes nuance hard to express when you want to, and make people question everything you
+say after a while. No one is interested in listening to a liar.</li>
+<li>dogmatism, or to confuse opinions and facts, again makes it hard for people to take your word.</li>
+</ol>
+<ul>
+<li>powerful speaking udemy julian treasure</li>
+<li>marshal mclure - 'the medium is the message'</li>
+<li>the charisma myth</li>
+<li><a href="https://www.nytimes.com/2019/08/15/smarter-living/what-makes-people-charismatic-and-how-you-can-be-too.html">https://www.nytimes.com/2019/08/15/smarter-living/what-makes-people-charismatic-and-how-you-can-be-too.html</a></li>
+<li><a href="https://www.youtube.com/watch?v=SEDvD1IICfE">https://www.youtube.com/watch?v=SEDvD1IICfE</a></li>
+<li>into the magic shop - doty</li>
+<li><a href="https://www.psychologytoday.com/us/blog/your-personal-renaissance/201908/research-reveals-surprising-solution-anxiety">https://www.psychologytoday.com/us/blog/your-personal-renaissance/201908/research-reveals-surprising-solution-anxiety</a></li>
+</ul>
+<p><a href="https://www.theguardian.com/news/2017/oct/13/the-scientists-persuading-terrorists-to-spill-their-secrets">https://www.theguardian.com/news/2017/oct/13/the-scientists-persuading-terrorists-to-spill-their-secrets</a></p>
+<h1>Relationship archetypes</h1>
+<ul>
+<li>how to win friends and influence people</li>
+<li>apprenticeship/mentoring/reading (mastery)<ul>
+<li>village of mentors</li>
+<li>leveraging experts in other domains to expand the ideascape available to the team w/o learning every field.</li>
+</ul>
+</li>
+<li>small world networks</li>
+</ul>
+<h1>Seduction</h1>
+<ul>
+<li>as in greene's book</li>
+<li>shock and awe</li>
+<li>social proof</li>
+</ul>
+<h1>creativity</h1>
+<ul>
+<li>interdependence meditation</li>
+<li>mastery<ul>
+<li>negative capability</li>
+<li>allow for serendipity</li>
+<li>alter perspective<ul>
+<li>avoid shorthand, get the feeling of the whole</li>
+<li>focus on the details rather than the big picture</li>
+<li>focus on the anomalies</li>
+<li>look for what isn't there</li>
+</ul>
+</li>
+<li>revert to primal forms of intelligence</li>
+<li>the authentic voice</li>
+<li>the fact of great yield</li>
+<li>mechanical intelligence</li>
+<li>natural powers</li>
+<li>the open field</li>
+<li>the high end</li>
+<li>the evolutionary hijack</li>
+<li>dimensional thinking</li>
+<li>alchemy</li>
+</ul>
+</li>
+<li>randonaut</li>
+</ul>
+<h2>grand rite of creativity</h2>
+<ol>
+<li>learn just enough</li>
+<li>determine the heuristic</li>
+<li>play</li>
+<li>consolidate the promising ideas</li>
+</ol>
+<h2>Intro</h2>
+<p>The gnosis is play, or the dream trance</p>
+<ul>
+<li><p>the beginners mind</p>
+</li>
+<li><p>power of habit
+Mastery is a quality difficult to cultivate, but which has enormous rewards both internally and externally. Mastery is
+the fusion of deep functional knowledge (the result of years of practice), creative application (breaking from
+established forms), and a return to the beginners mind (intuitive grasp). People who regularly experience mastery at
+work are highly paid, highly regarded, and report higher job and life satisfaction. Put another way, any existing
+passion you feel for your dream career/life will be chipped away unless you regularly feel like you have the autonomy
+to creatively express yourself in a way that has a real impact for the people you are helping. It truly sucks if you
+are a slave to someone's whim, must always follow the script, or have zero meaningful impact.</p>
+</li>
+<li><p>everyday joking and musing is a low level creativity. even children do this kind of simple association. It is a basic function of the brain (and essential to <a href="reality.md#memory">memory</a>)</p>
+</li>
+<li><p>a lifetime of learning expands the playground available for creativity</p>
+</li>
+<li><p>high level creativity requires vast knowledge and the willingness and ability to freely explore that space, connecting new ideas</p>
+</li>
+<li><p>return to childlike creativity, but an adult mindscape (serious play)</p>
+</li>
+</ul>
+<h2>comfort in uncertainty</h2>
+<ul>
+<li>negative capability - the continued tolerance of uncertainty</li>
+</ul>
+<h2>determining the game</h2>
+<ul>
+<li>finite and infinite games<ul>
+<li>notes on the balinese cockfight</li>
+</ul>
+</li>
+<li>what is the play/problem heuristic?</li>
+</ul>
+<h2>Improv</h2>
+<ul>
+<li>principles of chaos magic</li>
+<li>improv theatre</li>
+<li>envoys take what is given</li>
+<li>trance/divination/etc.</li>
+<li>fluidity of mind</li>
+<li>active imagination - imagine widely, then verify</li>
+<li>subvert patterns of thinking<ul>
+<li>common pattern is focusing on the end product</li>
+<li>overgeneralization - accept the mess</li>
+<li>look for what didn't happen</li>
+</ul>
+</li>
+<li>engineered serendipity - fortune favors the bold / fortune favors the prepared</li>
+</ul>
+<p><a href="https://www.youtube.com/watch?v=MJmqaWq7PJY&amp;list=WL&amp;index=9">https://www.youtube.com/watch?v=MJmqaWq7PJY&amp;list=WL&amp;index=9</a></p>
+<ul>
+<li>learn speculatively, w/o a reason</li>
+<li>find passionate nerds in various subjects<ul>
+<li>go to the comic store and ask 'what aren't people reading/ what should people be reading?'</li>
+</ul>
+</li>
+</ul>
+<h1>focus</h1>
+<p>micro</p>
+<ul>
+<li><p>holding the attention
+macro</p>
+</li>
+<li><p>goal setting</p>
+</li>
+<li><p>finding direction</p>
+</li>
+<li><p>what you look for is what you will see</p>
+</li>
+</ul>
+<h2>Intro</h2>
+<p>The mind does not crave rest, it craves change. Do not NOT think for a moment. Be ever present or plotting</p>
+<p>Focus is as much about figuring out what to pay attention to as about figuring out what to leave out.</p>
+<ul>
+<li>on social media/draining the shallows (deep work)</li>
+<li>purity/volume/value of information streams</li>
+</ul>
+<p>Your life is precious because it will end, so focus on the wildly important.
+Death is a non-thing, only an end of the thing we call life. You will not be there to experience it when it comes,
+because it is a non-experience. Why fear something that you will never experience? On the other hand, it will happen to
+you. Your time is limited and so remember to spend it well. Worrying about death is a particularly stupid way to do so.
+The purpose of remembering death is not to be depressed, but to serve as a reminder to focus on what you really care
+about. Remember death to intensify the experience of living. This is the purpose of 'Memento Mori'.</p>
+<ul>
+<li>memento mori</li>
+<li>precious human rebirth</li>
+<li>The gods are doomed because they will live forever</li>
+<li>focus on the wildly important, cut everything else (esp. vice)<ul>
+<li>fear is the mind-killer</li>
+</ul>
+</li>
+<li>avoid comfortable lies, constant outrage and wishful thinking</li>
+</ul>
+<h1>Cut out the unimportant</h1>
+<ul>
+<li><p>be lazy with the unimportant</p>
+</li>
+<li><p>virtual assistants (tim ferris)</p>
+</li>
+<li><p>putting things out of your mind (lists) or dealing with intrusive thoughts/obsessions</p>
+</li>
+<li><p>checklists</p>
+</li>
+<li><p>journaling</p>
+</li>
+<li><p>dissociation meditation</p>
+</li>
+<li><p>effective executive * time audits</p>
+<ul>
+<li>yearly &quot;intensive month&quot; for increased time tracking and moving forward, other long term calendars</li>
+</ul>
+</li>
+<li><p>draining the shallows</p>
+<ul>
+<li>be wary of taking on shallow work</li>
+<li>schedule every minute of the day to stay mindful of the value proposition.<ul>
+<li>the schedule is to force forethought, so it should flex and be updated continuously</li>
+</ul>
+</li>
+<li>in every moment: &quot;what is the most valuable thing to do right now?&quot;</li>
+<li>quantify the depth of every task: &quot;how long would it take to train a smart but naive new grad to complete the task?&quot;<ul>
+<li>for super shallow work, it might even be effective to actually do so</li>
+</ul>
+</li>
+<li>timebox your work, then optimize to fit the time</li>
+<li>be hard to reach, make them work for it, set expectations early, and cut down back and forths/low stakes negotiations. Don't respond.</li>
+</ul>
+</li>
+<li><p>cutting out distractions can reveal certain mental/emotional issues. Ignoring them will not make them go away. Need to
+deal with these as they arise or always be running.</p>
+</li>
+</ul>
+<h2>Cut to the heart</h2>
+<ul>
+<li>single pointed concentration</li>
+<li>attention training technique</li>
+</ul>
+<h2>taming the mind ruth#2</h2>
+<ol>
+<li>start by relaxing your body</li>
+<li>focus on the breath</li>
+<li>decrease wandering, perhaps with a mantra</li>
+<li>practice 20-30 minutes a day</li>
+</ol>
+<p>the reward for taming the mind is clarity of thought</p>
+<h2>Cut to the chase</h2>
+<ul>
+<li>death meditation</li>
+<li>mental subtraction (meditation on the absence of a present pleasure)</li>
+<li>making time</li>
+</ul>
+<h2>Cut yourself some slack</h2>
+<ul>
+<li>be lazy with the unimportant</li>
+<li>create a shutdown ritual<ul>
+<li>zeigarnik effect</li>
+<li>plan the next session and write it all down to truly rest</li>
+<li>don't work after the shutdown</li>
+</ul>
+</li>
+</ul>
+<h2>References</h2>
+<ul>
+<li><a href="http://onezero.medum.com/being-indistractable-will-be-the-skill-of-the-future-a07780cf36f4">http://onezero.medum.com/being-indistractable-will-be-the-skill-of-the-future-a07780cf36f4</a></li>
+<li>deep work cal newport</li>
+<li>flow</li>
+<li>the effective executive drucker</li>
+<li>the rise of superman kofler</li>
+<li>buddhist mind training</li>
+<li>the attention revolution</li>
+</ul>
+<h2>agency</h2>
+<blockquote>
+<p>You are radically responsible</p>
+</blockquote>
+<p>In taichi they say you are the axis and the whole world turns with
+you.</p>
+<p>You are the cause and effect. You can change all aspects of your mind with effort. Since you experience all things
+through your mind, that change will affect all things in your life. You are radically responsible for who you are as a
+person because you are radically in control of who you are.</p>
+<ul>
+<li>primal curiosity (greene)<ul>
+<li>(mastery) what did I naturally gravitate to before feeling social pressure?</li>
+</ul>
+</li>
+<li>learning objectives</li>
+<li>introspection</li>
+</ul>
+<h2>Self Responsibility</h2>
+<blockquote>
+<p>Let one walk alone, commiting no sin, with few wishes, like elephants in the forest.</p>
+</blockquote>
+<ul>
+<li>internal locus of control<ul>
+<li>passion mindset (what the world does for me) vs craftsman mindset (what I can do for the world)</li>
+<li>self-growth principle</li>
+<li>authority as authorship, not necessarily precise control</li>
+</ul>
+</li>
+<li>radical responsibility and authorship.(emerson)</li>
+<li>emerson</li>
+<li>maximal autonomy</li>
+<li>consult, but make your own decisions</li>
+<li>self reliance gives you the autonomy to refuse outside influence</li>
+</ul>
+<h3>principles by ray dalio</h3>
+<p>don't let failure stop you</p>
+<ul>
+<li>think of life as if it were a game in which each problem and failure is a puzzle that needs solving</li>
+<li>pain + reflection = progress
+how:</li>
+<li>be radically open-minded to feedback. ask 'what am I missing', and 'how can I get honest feedback'</li>
+<li>find the root cause of your problems. It often uncovers some character or process flaw. Don't shy away from self reflection.
+Once you've found the cause of failure</li>
+<li>put a process in place to mitigate the failure</li>
+<li>learn to eliminate the problem</li>
+<li>hire out someone to handle it</li>
+<li>DON'T just avoid the circumstances leading to failure
+Whatever process you come up with, write them down.; Making your process/principles clear and explicit (and reviewing them) will make them more consistent.</li>
+</ul>
+<h2>Goal Setting</h2>
+<ul>
+<li>set goals/practices/systems and iterate</li>
+<li>pre-commital</li>
+<li>thinking in bets</li>
+<li>john Boyd OODA loop</li>
+<li>effective executive * career/life experiments<ul>
+<li>career experiements</li>
+<li>occlumency as related to career experiments, fake it til you make it</li>
+</ul>
+</li>
+</ul>
+<p>The <strong>outcome</strong> should be framed directly in terms of the metric you chose.</p>
+<p>The <strong>metric</strong> is the way you will measure your progress. It is demoralizing not to be able to see progress over time.
+It is also hard to be sure you <em>are</em> progressing if you don't know how to measure.</p>
+<p>The <strong>deadline</strong> should leave plenty of time to account for unexpected hang ups, but not too far ahead. The main benefit
+behind a deadline is it gives you a way to measure how your progress stacks up to what it should be in order to hit
+your outcome at the set date. It allows you to focus on progress rather than only on the final number.</p>
+<p>The <strong>process</strong> is how you will work towards the goal. When you first are setting your goal, it is useful to know the
+process in at least broad terms so that you can effectively estimate the required effort to complete the goal. Knowing
+the process, and therefore the (approximate) effort, will help you decide if the goal is worth it.</p>
+<p><strong>Desire</strong> is the 'why' of your goal.</p>
+<p>Working on long term projects can be difficult, and sometimes it will suck so bad you won't want to continue.
+<strong>Commitment</strong> is useful to power through these times. It is a logic to temper the natural fluctuations in an emotional
+desire to complete the task.</p>
+<p><strong>Barriers</strong> to your success should be well understood. There is always a reason you haven't already completed your
+goal. When you explicitly acknowledge why, you can then form a plan to work around these barriers.</p>
+<h2>clarify intent ruth#4</h2>
+<p>essentially a trantric practice of visualizing the self as the ideal.</p>
+<ol>
+<li>sit quietly and close your eyes</li>
+<li>think of a goal</li>
+<li>relax the body</li>
+<li>empty the mind</li>
+<li>visualize yourself as having accomplished your goal. breath with it</li>
+<li>feel the positive emotions associated. experience the joy of turning a thought into reality</li>
+<li>once you have felt the feeling of accomplishment, add details to your vision. Exactly how do you look? where are you? how are people responding to you? add as much detail as possible</li>
+<li>repeat 1-2 times daily for 10-30 minutes.</li>
+<li>each time you will find you are refining the vision in your unconscious
+mental contrasting?</li>
+</ol>
+<h2>SMART</h2>
+<p>Sometimes these components are framed differently as <strong>SMART</strong>. This method puts a slightly different emphasis on
+various components.</p>
+<ul>
+<li><strong>S</strong> pecific - break goals down into the smallest component pieces that make sense.</li>
+<li><strong>M</strong> easureable - it's important to be able to see progress and know when you are done.</li>
+<li><strong>A</strong> ttainable - make sure the goal is possible for you and your situation.</li>
+<li><strong>R</strong> elevant - make sure the goal is relevant to you. This gets into the desire aspect. You should have a clear
+picture of <em>why</em> you want to accomplish this.</li>
+<li><strong>T</strong> imebound - deadlines are motivating to some people, and having one allows you to gauge if you are on track when
+taken together with your metric.</li>
+</ul>
+<p>alternative meanings: <a href="https://www.youtube.com/watch?v=0Mi9_XEXQqc">https://www.youtube.com/watch?v=0Mi9_XEXQqc</a>
+Agreed on
+Realistic
+Time-based</p>
+<p>While this covers many of the same bases, I believe it presents an incomplete picture.</p>
+<h4>Pitfalls | Goalsetting Anti-patterns</h4>
+<p>Let's explore what can happen when one of these components is missing or improperly constructed.</p>
+<p>If you don't know <em>what</em> you want to accomplish, you will waste time working hard on things which won't advance the
+goal. If you don't know <em>how</em> to complete the goal, you probably won't make progress. Spending the time to learn how is
+well worth it. If you don't really <em>want</em> to complete a difficult goal, you probably won't put in the effort. Desire is
+necessary to get through the tough bits.</p>
+<ul>
+<li><p>large goals (not specific, too many metrics)</p>
+</li>
+<li><p>vague goals (not measurable, no metric)</p>
+</li>
+<li><p>ambitious/unrealistic goals( not attainable)</p>
+</li>
+<li><p>spurious goals ( not relevant/desired)</p>
+</li>
+<li><p>half-ass goals ( not committed)</p>
+</li>
+<li><p>lack of followthrough (no commitment)</p>
+</li>
+<li><p>inaccurate effort estimates</p>
+</li>
+<li><p>insufficient progress (no deadline, ineffective process)</p>
+</li>
+</ul>
+<h3>the benefits and pitfalls of goal setting</h3>
+<h4>the benefits</h4>
+<ul>
+<li>if a person has the knowledge and skill, there is a linear relationship between goal difficulty and the person's
+performance.</li>
+<li>goals that are specific and difficult lead to a higher performance than a vague goal.</li>
+<li>feeling 'success' does not depend on absolute performance, but performance in relation to one's goals.</li>
+<li>when people perform well, they generalize the positive affect to the task, liking the task more than they did
+previously.</li>
+<li>goal setting can relieve boredom by imbuing tasks with a sense of purpose, leading to higher focus</li>
+<li>Potential rewards of praise, public recognition, and money have no effect on performance unless they lead to the
+setting of and commitment to a specific high goal.</li>
+<li>believing that you have taken on difficult goals leads to an increase in reported positive emotion, job satisfaction,
+and feelings of success in the workplace.</li>
+<li>the negative effects of a lack of personal goal achievement can be mitigated when goal progression is experienced at
+work.</li>
+<li>in summary, the benefits include<ul>
+<li>goals affect our choices and provide direction</li>
+<li>goals increase effort, persistence, and process efficiency</li>
+<li>a goal can provide meaning to an otherwise (personally) meaningless task</li>
+<li>goal attainment gives rise to a sense of personal accomplishment, which in turn increases our sense of personal
+effectiveness, a a basic psychological need.</li>
+</ul>
+</li>
+</ul>
+<h4>the pitfalls</h4>
+<ul>
+<li>when people lack the knowledge and skill to attain a specific performance goal, performance falters. A performance
+goal may direct cognitive resources to sheer effort when it would be more appropriate to first gather more
+information, or learn new skills.</li>
+<li>performance goals can have a negative effect on a group's performance if there is a perceived conflict of interest
+among group members.<ul>
+<li>when goals are perceived to be competitively related, members are tempted to pursue their own goal single-mindedly</li>
+<li>when goals are perceived to be independent, members are likely to keep interaction to a minimum.</li>
+<li>only when goals are perceived to be cooperatively aligned does the group experience a boost in productivity.</li>
+<li>therefore it is vitally important that high-level goals are framed in a cooperative way.</li>
+</ul>
+</li>
+<li>goals that are framed as a threat (a punishment for failure, rather than a reward for success) are not effective.</li>
+<li>goals can have an adverse effect on risk-taking.<ul>
+<li>this can lead to rigid and ineffective behavior</li>
+<li>It is important to frame failures as learning opportunities</li>
+<li>this allows failures to yield useful information, rather than being a waste of time.</li>
+<li>mistakes are inevitable in any non-trivial task. make the most of them through error management</li>
+<li>providing ample opportunity to make mistakes and make every effort to learn from them.</li>
+</ul>
+</li>
+<li>when failure is harshly punished, less difficult or vague goals are likely to become the norm.<ul>
+<li>it is better to view mistakes as transitory, and part of the learning process.</li>
+</ul>
+</li>
+<li>another barrier to goal setting is, paradoxically, goal attainment.<ul>
+<li>goal attainment leads to higher satisfaction and self-confidence which can frequently lead to a dysfunctional
+persistence of previously used strategies (rigid behaviour).</li>
+<li>there are two antidotes</li>
+<li>in dynamic situations, actively search for feedback and react to it. break down large goals and always be mindful
+of errors. Errors in previously successful tasks show where the mental model may not account for a changing
+situation.</li>
+<li>encourage constructive conflict. In groups, appoint 'nay sayers' and rotate the position frequently. The purpose is
+to combat group think, by always having someone question and look for flaws in the proposed solution.</li>
+</ul>
+</li>
+<li>goals that are tied to large rewards can encourage people to fudge the numbers when they are close to attainment, but
+can't quite close the deal. One approach to mitigate this effect is to implement a continuous linear reward. Hitting
+the goal receives the whole reward, but getting close also merits part of the reward.</li>
+<li>the next pitfall occurs when a goal becomes idealized and tied up in identity. this can lead to irrational and risky
+action to obtain the goal regardless of possible cost and consequence. Identity is an exceptionally powerful
+motivator. When a goal gets intermixed with identity, failure can be seen as personally threatening and is responded
+to with maladaptive, defensive behaviors.</li>
+<li>non-goal performance dimensions can be ignored. This is a function of the purpose of goals, which is to provide
+direction and focus efforts. By definition, less attention must be paid to other aspects. If a certain outcome or
+action is critical, a goal should be set for it.</li>
+<li>goals can be stressful. attempt to keep the number of goals reasonable. before committing to goals, make sure that
+there is a base level of relevant skill, resources, and self-confidence. Taking on too much at once is a recipe for
+failure.</li>
+</ul>
+<h4>The Goal Setting | The Process</h4>
+<p>this mirrors the grand rite</p>
+<ol>
+<li>get to the root desire</li>
+<li>determine the metrics</li>
+<li>break it down to single metrics</li>
+<li>set the desired outcome and deadline</li>
+<li>break it down again if you need to.</li>
+<li>come up with an initial process.</li>
+<li>determine what barriers exist and come up with a plan for dealing with them.</li>
+<li>start measuring the metrics (if you can) and let it sit for a little bit.</li>
+<li>fully commit, then get started. always record the metric.</li>
+</ol>
+<h4>Continuous Improvement | Kaizen continuous growth</h4>
+<ul>
+<li>continuous self improvement<ul>
+<li>record daily status</li>
+<li>look for opportunities to learn
+One application of this process is known as kaizen.
+This method, called kaizen in japan, is a simple method used to slowly and steadily effect personal change. There are no
+short cuts here. It is similar to the idea that being just 0.1% better every day will still lead to exponential growth
+if you keep at it (resulting in being twice as good over 2 years).</li>
+</ul>
+</li>
+</ul>
+<p>This is perhaps the most important section of the whole book. If you follow only one practice, follow this one. It can
+help determine the trajectory of your life.</p>
+<ol>
+<li>decide what you want to become<ul>
+<li>make a long list</li>
+<li>don't hold back</li>
+</ul>
+</li>
+<li>pick ONLY one</li>
+<li>write a list of reasons that this isn't you yet<ul>
+<li>bring out the blockers so they can be addressed</li>
+<li>pick one (small) and move up</li>
+<li>start at the end, what would have to happen to make this real and work backwards</li>
+</ul>
+</li>
+<li>pick one and stick with it until it becomes easy</li>
+</ol>
+<h2>Generating Emotion</h2>
+<ul>
+<li><a href="society.md#compassion">compassion</a></li>
+<li>motivation</li>
+</ul>
+<h3>Motivation</h3>
+<ul>
+<li>The grand gesture / sacrifice</li>
+<li>scoreboarding</li>
+<li>lead measures</li>
+<li>accountability cadence</li>
+<li>mantra</li>
+<li>mental contrasting</li>
+</ul>
+<p>Motivation will arise when you know three things:</p>
+<ul>
+<li>the task motivator, or why the task is important</li>
+<li>how to complete the task</li>
+<li>that you can finish the task</li>
+</ul>
+<p>The 6 Types of motivators
+There are 6 types of motivators, roughly ordered here by strength, which account for the vast majority of motivations
+behind all human accomplishments:</p>
+<ol>
+<li>survival (food, water, shelter, sex)</li>
+<li>identity (honor, integrity, in-group politics)</li>
+<li>compassion</li>
+<li>play</li>
+<li>internal motivators (for personal gain/satisfaction/curiosity)</li>
+<li>external motivators (to impress others, reputation)</li>
+</ol>
+<p>Deeply understanding the motivation behind each goal is essential to ensure that the goal will correctly address the
+underlying desire.</p>
+<p>Nothing kills motivation quite so quickly as feeling powerless to make change.
+The point is not to become an expert before beginning, but to gain an rough idea and reduce doubt about the process.</p>
+<p><img src="sources/dunning_kruger.jpg" alt="a chart showing the dunning-kruger effect"></p>
+<p>analysis paralysis
+dunning-kruger</p>
+<p>Knowing the different types of motivation can also be used as a catalyst for generating motivation. Playful intention
+can be created by gamifying
+the task. Internal motivators can be added by promising yourself a reward. Compassion based motivation can be generated
+by ensuring that your work
+will help someone else. Imagine just one person whose life could be made better by what you're doing, and do it for
+them.</p>
+<h4>Technique Summary</h4>
+<p>If you find your motivation wavering, ask yourself these three questions:</p>
+<ol>
+<li>Can you do it?<ul>
+<li>When asking yourself this, visualize not only the attainment of the goal, but also the struggles along the way.</li>
+</ul>
+</li>
+<li>Will it work?<ul>
+<li>Will completing this goal address the underlying issue?</li>
+</ul>
+</li>
+<li>Is it worth it?<ul>
+<li>After reflecting on the effort required and the benefit of pursuing your task, with the confidencethat you can do
+it if you make the effort, is the goal worth it?</li>
+</ul>
+</li>
+</ol>
+<p>will it work?</p>
+<ul>
+<li>Do you know enough about the problem to make a reasonable guess at a process that will be effective and that will solve the underlying issue?</li>
+<li>if you don't perhaps focus on learning more, but don't be afraid of uncertainty. A reasonable guess is all that you need to proceed.</li>
+</ul>
+<p>Can you do it?</p>
+<ul>
+<li>Visualize success and acknowledge obstacles as realistically as possible.</li>
+<li>acknowledge and address shortcomings in skill and knowledge if you can't yet.</li>
+</ul>
+<p>Is it worth it?</p>
+<ul>
+<li>now, knowing the path forward, and that you are capable, is the cost worth the reward? weight the consequences</li>
+</ul>
+<p>By focusing on and answering these three questions, you can maintain motivation for even the most grueling tasks, when
+it's really important.
+I recommend you commit them to memory. If you answer a hard no to any of the three, examine the reason why closely. This
+is a barrier that will keep you from success.
+It may be time to refine or even abandon the goal.</p>
+<h4>why new year's resolutions fail.</h4>
+<ul>
+<li>what the hell effect<ul>
+<li>or &quot;I've already failed, another bowl of icecream won't hurt&quot;</li>
+</ul>
+</li>
+<li>vague or poorly formed goals</li>
+<li>weak motivations<ul>
+<li>external or personally irrelevant goals</li>
+</ul>
+</li>
+</ul>
+<h2>gratitude</h2>
+<p>journaling
+gratitude has been shown to have a lasting impact on people's happiness</p>
+<p>Once or twice weekly, write down 5 things you are grateful for. That's it.</p>
+<p>tips</p>
+<ul>
+<li>the point is to 'feel' the gratitude, so don't just go through the motions</li>
+<li>get personal and drill down</li>
+<li>Imagine life without</li>
+<li>savor the surprises</li>
+<li>don't overdo it</li>
+</ul>
+<h2>Resisting Emotion</h2>
+<blockquote>
+<p>“I must not fear. Fear is the mind-killer. Fear is the little-death that brings total obliteration. I will face my
+fear. I will permit it to pass over me and through me. And when it has gone past I will turn the inner eye to see its
+path. Where the fear has gone there will be nothing. Only I will remain.” -- Frank Herbert, Dune</p>
+</blockquote>
+<ul>
+<li>mindfulness based emotional balance MBEB</li>
+<li>mindfulness based stress reduction MBSR</li>
+<li>resisting vice</li>
+<li>anxiety (into the magic shop)</li>
+<li>stoicism</li>
+<li>CBT</li>
+<li>managing anger</li>
+</ul>
+<h2>performing under pressure</h2>
+<p>Feeling social or time pressure to perform statistically has a hugely negative impact on performance, but there are ways to reframe these feelings.
+Get excited:</p>
+<ul>
+<li>interpret nervous energy as excitement rather than panic, or trying to suppress the feeling</li>
+</ul>
+<p>Equate:</p>
+<ul>
+<li>the effort needed to perform in a high stakes environment is exactly the same effort needed in a low stakes environment.</li>
+<li>equate the test to the practice exam, something you've handled already</li>
+</ul>
+<p>Control:</p>
+<ul>
+<li>focus only on the aspects you can control. Its more important that you give a presentation well (something you control) than that the presentation is well received (something you don't).</li>
+</ul>
+<p>These three aspects lead to three sentences which can be said before a high performance event.
+The high pressure mantra:
+I am excited to perform.
+In a way, it's just like how I prepared.
+I'll just focus on what I can control.</p>
+<h2>Conclusion</h2>
+<h2>References</h2>
+<p>thinking in bets - duke
+farsighted - johnson
+decision theory
+aspiration - callard
+decision journaling (hindsight bias and postmortems)
+generosity:</p>
+<ul>
+<li>mom's book</li>
+<li>mason's practice of giving anonymously</li>
+</ul>
+<p>motivation</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=pZT-FZqfxZA">https://www.youtube.com/watch?v=pZT-FZqfxZA</a>
+goal setting</li>
+<li><a href="sources/benefits_and_pitfalls_of_goal_setting.pdf">this paper</a></li>
+<li><a href="https://www.scienceofpeople.com/goal-setting/">https://www.scienceofpeople.com/goal-setting/</a></li>
+<li>see also:<ul>
+<li>goal setting theory</li>
+<li>error management</li>
+</ul>
+</li>
+</ul>
+<h1>Habit</h1>
+<ul>
+<li>keystone habits<ul>
+<li>introspection</li>
+<li>cadence</li>
+<li>journaling</li>
+<li>the golden pushup</li>
+</ul>
+</li>
+</ul>
+<h2>Forming and Breaking Habits</h2>
+<p>While constant self-control is a herculean task, forming a habit is the easiest thing in the world. Leveraging habits is
+an effective way to enact long term changes.</p>
+<p>The Anatomy of a Habit</p>
+<ul>
+<li>trigger</li>
+<li>expectation</li>
+<li>response</li>
+<li>feedback</li>
+</ul>
+<p>Often we think of the response as a single unit of action, but really, if the habit takes more than about 2 minutes to
+complete, then only the initial action is the response. This can be leveraged. habits are usefaul because they reduce
+the cognitive load associated iwth routine tasks and can be leveraged to make self-discipline easier. However, habit
+become maladaptive when they persist when the positive feedback is no longer a result of the response, or the habit has
+negative long term effects.</p>
+<p>habits form naturally when</p>
+<ul>
+<li>the trigger is noticable and regular</li>
+<li>the expectation is high</li>
+<li>the response is easy to do</li>
+<li>the feedback is intermittent/random, and matches the expectation
+habits are naturally time sensitive.</li>
+</ul>
+<p>The way to form and break habits are opposite sides of a coin. Each technique focuses on changing characteristics of the
+trigger, response, or feedback in a way that makes the habit as a whole more or less addictive. Let's treat each of
+these components in turn, first dissecting what makes them strong, then weak</p>
+<h4>strengthening triggers</h4>
+<ul>
+<li>stack habits together, use an established habit as the cue for a new one.</li>
+</ul>
+<h4>weakening triggers</h4>
+<p>The next best way is to eliminate the trigger by changing the environment. This is harder because often the trigger is
+mental, or the environment cannot be strictly controlled.</p>
+<h4>strengthening expectation</h4>
+<p>the expectation is strong when it is massively positive or negative. Also when it is intermittent, this is why gambling
+is so addictive.</p>
+<ul>
+<li>increase the expected value of a task by tying something enjoyable to the completion of a task</li>
+<li>also, make feedback slightly intermittent</li>
+</ul>
+<h4>weakening expectation</h4>
+<p>the expectation is weak when the feedback is predictable and mostly neutral.</p>
+<ul>
+<li>temper expectations by requiring an unpleasant activity to go along with the response you are trying to get rid of.
+It is important that the unpleasantness comes <em>before</em> the old response, and as soon as possible after the cue, so the
+cue becomes associated strongly with a new expected value.</li>
+<li>do something else, besides the conditioned response, that you enjoy at least as much. The trigger will start to be
+associated with that instead.</li>
+</ul>
+<h4>strengthening responses</h4>
+<p>a response is strong when it is easy.</p>
+<ul>
+<li>instead of thinking of all the parts of the habit, only consider the first step as the 'habit'. Reading just one page
+of a book after work is a habit that's easy enough,
+and you'll probably end up reading more anyway.</li>
+<li>set up the environment to make it easy to get started.</li>
+</ul>
+<h4>weakening responses</h4>
+<p>a response is hard when it takes a lot of time or energy to get started</p>
+<ul>
+<li>when you feel the trigger, consider every step and inconvenience along the whole reponse</li>
+<li>craft the environment to make it hard to get started. Put the cookie jar in a hard to reach place.</li>
+</ul>
+<h4>strengthening feedback</h4>
+<ul>
+<li>track your progress with a metric! keep that streak</li>
+</ul>
+<h4>weakening feedback</h4>
+<p>kill the positive feedback loop. This can be done by devaluing the anticipated reward by constraining the environment to
+eliminate the reward, or make it difficult to access, etc. This method still requires some effort, as habits have
+momentum, and often won't disappear even if positive feedback is limited or intermittent.</p>
+<h2>Conclusion</h2>
+<p>recommended habits to develop</p>
+<ul>
+<li>morning routine/mantra</li>
+<li>journaling</li>
+<li>reading</li>
+<li>meditation</li>
+<li>exercise</li>
+<li>reaching out to friends</li>
+<li>reaching out to experts of interesting fields</li>
+</ul>
+<ul>
+<li>when dealing with particularly sticky habits, it may be helpful to enlist a trusted friend as an accountability
+partner.</li>
+<li>when trying to form new habits it is useful to be aware of existing habits of action and thought. Mindfulness is super
+useful to figure out where you're at!</li>
+<li>some habits serve as cornerstones for a major change in behavior (james clear domino effect).</li>
+</ul>
+<h2>Reference</h2>
+<ul>
+<li>atomic habits</li>
+</ul>
+<h1>Memory</h1>
+<h2>how do we pass on knowledge?</h2>
+<p>This is an attempt to create a syncretic mnemonic device combining a variety of historic and modern memory techniques
+in order to produce a 'one-stop-shop' for memory training that balances complexity (and therefore time invested) with
+suitability for the kinds of memory tasks I care about.</p>
+<p>In contrast to popular historical techniques which are usually described very simply, or competition techniques, which
+require large investment for a very specific application, this tries to take the middle path.</p>
+<h1></h1>
+<ul>
+<li>idea/concept - a thought independent of any thinker/mind (egregore)</li>
+<li>knowledge - a concept as understood by a mind</li>
+<li>understanding - knowledge as it is applied in a particular moment<ul>
+<li>tacit understanding - the mind has an intuition about a concept, but the underlying theory is not strong enough to reason about it symbolically</li>
+<li>objective understanding - the mind takes a concept as an object of thought and effectively manipulates it symbolically</li>
+<li>ingrained understanding - intuitions about the concept influence the thoughts at the conscious level, but it is abstracted and not manipulated directly (as an object of thought)</li>
+</ul>
+</li>
+</ul>
+<p>at a great enough depth, all knowledge is tacit, the important factor is if ingrained understanding goes deep enough to capture the complexity needed
+to effectively work at the level of abstraction desired/required.</p>
+<p>distributed understanding is a very shallow kind of objecting knowledge in which deeper understanding is known to be accessible, but is not directly known.
+Knowing what to look for, or who to ask and when implies some understanding about the shape and use of the concept, but
+accessing distributed understanding is slow, which hinders effective use (if deeper understanding is necessary).</p>
+<p>abstract/objective dichotomy
+unable to become objective - lacks depth of understanding
+unable to become abstract - not ingrained through practice enough for intuition
+objective thought allows symbolic manipulation
+abstact thought allows faster intuition</p>
+<h2>theory of memory</h2>
+<p>when memorizing data, consider its shape and purpose, arrange it into an appropriate structure.
+Then, using insight into the underlying mechanics of the brain, encode that structure.</p>
+<ul>
+<li>mechanics of the brain<ul>
+<li>association &amp; salience</li>
+<li>forgetting curve</li>
+<li>spaced repetition</li>
+<li>active recall (modal transformation)</li>
+<li>specialized structures<ul>
+<li>spatial memory</li>
+<li>smell</li>
+<li>faces</li>
+<li>narrative</li>
+<li>external objects</li>
+<li>audio</li>
+<li>models</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>kinds of data<ul>
+<li>qualia<ul>
+<li>distributed - not existing within a single mind.<ul>
+<li>Could be organizational, or partially stored externally</li>
+</ul>
+</li>
+<li>explicit - consciously held.</li>
+<li>implicit - unconsciously held</li>
+<li>objective - consciously reasoned with</li>
+<li>embodied - unconsciously reasoned with</li>
+</ul>
+</li>
+<li>base collections<ul>
+<li>sequential</li>
+<li>branching</li>
+<li>sets</li>
+</ul>
+</li>
+<li>other considerations<ul>
+<li>complete, incomplete, append-only, modifiable</li>
+<li>depth</li>
+<li>ordered vs unordered access</li>
+<li>durability / permanence</li>
+<li>context sensitivity, time-relevance</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>extant techniques for explicit memory<ul>
+<li>memory palace</li>
+<li>spaced repetition</li>
+<li>peg,Major,PAO</li>
+<li>slant words, association, etc.</li>
+<li>abstraction/metaphor/modeling<ul>
+<li>a (good) model is necessarily less complicated but easier to reason about in most cases</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>RPD - transforming explicit/implicit and embodied/objective knowledge into explicit/objective knowledge for transfer and storage<ul>
+<li>through this, allowing the use of explicit memory techniques</li>
+<li>practice - objective to embodied transformation</li>
+<li>mirroring/coaching - implicit transfer</li>
+<li>introspection/interviewing - implicit to explicit transformation + transfer</li>
+<li>teaching - explicit transfer</li>
+<li>intergenerational knowledge transfer</li>
+</ul>
+</li>
+</ul>
+<h2>Design - how the system works</h2>
+<h2>Theory - how memory works</h2>
+<p>short-term memory and long-term consolidation</p>
+<p>things are easier to remember if they are:</p>
+<ul>
+<li>more concrete (as opposed to abstract)</li>
+<li>related to other things you know</li>
+<li>surprising/funny/alarming/sexy / disgusting / rage inducing</li>
+<li>personally important</li>
+</ul>
+<p>spaced repetition helps store things in long term memory. <a href="https://apps.ankiweb.net/">Anki</a> is a very powerful tool for this.
+In other words cramming doesn't work very well, especially if you want to remember it after the test.</p>
+<p>multimodal exposure</p>
+<ul>
+<li>provides a richer experience</li>
+<li>transforming data from one modality to another forces close attention</li>
+</ul>
+<h2>Source Techniques</h2>
+<p>Fundamental to all memory techniques is the encoding of abstract information in concrete symbolism.</p>
+<p>The Memory Palace is a common metaphor which places objects (ideas made concrete) in a physical place with the appropriate structure.</p>
+<ul>
+<li>ordered items are placed along a path</li>
+<li>unordered collections are placed in a room
+Once placed, mentally travelling through the space lets you 'see' the objects there as reminders.
+Many other techniques build upon this metaphor.</li>
+</ul>
+<p>The memory palace technique can be augmented with skipping indexes. Commonly every 5th element is associated. This
+allows for faster traversal of the list. It generates a <a href="https://en.wikipedia.org/wiki/Skip_list">skip list</a></p>
+<p>Another fundamental technique is grouping or clustering, which composes multiple points of data into a single object.
+This helps circumvent the issue of limited short-term memory.</p>
+<p>History walks are an application of the memory palace where distance represents time.</p>
+<p>Person-action-object is a competition system used to memorize numbers.
+It works by first memorizing a list of 100 people along with their distinct actions and objects
+which are numbered 00 through 99. In this way 6 digits (2 per person, action, or object) can be clustered into a single
+scene.</p>
+<p>Mandalas are used to organize topical knowledge around a theme. Typically, the central theme is placed centrally,
+with related knowledge around it in a circle.</p>
+<h2>The system</h2>
+<p>The core is PAO, with special consideration towards the selection of people so that they may also provide anchors
+for extended topics.
+A PAO memory system that doubles as anchors for other memory systems</p>
+<ul>
+<li>100 historical figures with actions and objects to remember long digits<ul>
+<li>selected to be spread out in time to remember historical dates</li>
+</ul>
+</li>
+<li>11 fictional characters (with actions and objects) to serve as single digits (or no digit)</li>
+</ul>
+<p>topics
+Start collecting Memory Palaces</p>
+<ul>
+<li>paths</li>
+<li>rooms (order locations in the room so it can be used as a list or a set)</li>
+<li>grid</li>
+</ul>
+<h2>Mechanics - how the system is represented by the computer</h2>
+<p>I do not want to the mnemonic device to be reliant upon computers for either construction or training.
+I think it important to keep the method workable by hand, even if a computer speeds things along.
+To this end, the data is written by hand in a csv format that emphasizes readability and the script is deliberately
+straightforward and readable.</p>
+<h2>Memory</h2>
+<blockquote>
+<p>“One book, printed in the Heart's own wax / Is worth a thousand in the stack's” -- Jan Luyken</p>
+</blockquote>
+<ul>
+<li>memory work</li>
+<li>language effects on memory, expressibility</li>
+<li>tanka/tantra, deep symbolism</li>
+</ul>
+<h3>the black box / quantum principle (reality)</h3>
+<ul>
+<li>lead/lag indicators (metrics)<ul>
+<li><a href="https://bulletjournal.com/">https://bulletjournal.com/</a></li>
+<li>gratitude journaling</li>
+<li>accountability partners</li>
+<li>learning opportunities</li>
+</ul>
+</li>
+<li>why we need to record<ul>
+<li>memory limits</li>
+<li>subtle trends</li>
+<li>misremembering affect</li>
+<li>time chunking, recording activities every half hour to see where you are. schedule regular time to work on things.</li>
+</ul>
+</li>
+</ul>
+<h3>memory book</h3>
+<p>A good memory is always useful.</p>
+<p>The trained memory is an art of attention and association. All systems are tuned to promote original awareness of the
+object. Also, tangible and meaningful things are easier to remember, so other techniques exist to convert the abstract
+and random  into concrete ideas. Periodic recall will solidify the memory once made. In order to remember any new thing
+it must be associated to something already known. Bonus points if it's done in some ridiculous, inspiring or profound
+way. This creates what's called a link. The whole rest of the art is practice, the willingness to apply it, and
+acquiring the symbolic language necessary to concretize the abstract.
+Place more value in memorizing things which change slowly, and that will be useful in uncertain circumstances.</p>
+<p>meta:</p>
+<ul>
+<li>the true art is original awareness</li>
+<li>learn the symbols</li>
+<li>practice makes perfect. apply it everywhere</li>
+</ul>
+<p>make it easy:</p>
+<ul>
+<li><p>concretize</p>
+</li>
+<li><p>link to what you know</p>
+</li>
+<li><p>make it ridiculous, inspiring, profound, or startling</p>
+</li>
+<li><p>set up a cadence of periodic recall</p>
+</li>
+<li><p>value on things that won't change more highly</p>
+</li>
+<li><p>In order to remember an object, you first must be intensely aware of the the object</p>
+</li>
+<li><p>Images and tangible things are much easier to remember than the abstract</p>
+</li>
+<li><p>memory is formed by the association of the new to an established memory</p>
+</li>
+<li><p>abstractions can be given tangible approximations in order to make them easier to remember</p>
+</li>
+</ul>
+<p>the memory palace
+If you've heard of any of these memory techniques, it's probably the memory palace.
+The traditional practice of memory techniques is centered around the memory palace. It uses to mind's particular ability
+to picture tangible objects in relation to each other to codify associations between thngs. Sequential data is codified
+in a 'walk' of a place, which puts distinct places into an order. This has been used for centuries to prepare speeches.</p>
+<p>example concretizers:</p>
+<ul>
+<li>slant words - similar sounding, but concrete phrases</li>
+<li>key words - representing whole ideas, especially good for presentations</li>
+<li>start and stop - link the first item of the list to a cue in the environment where you will need to remember. link the last item to a stopping symbol, or back to the cue.</li>
+<li>names - slant the name and link it to a caricature of their face.</li>
+<li>out of place objects can serve as cues</li>
+<li>numbers</li>
+<li>peg words - use number words as an index to access a list of items out of order.</li>
+<li>mutilation - destroy or alter a linked item to mark it as complete, or in another way. Use multiple methods of desctruction for multiple markers.
+eg: water, fire, animals</li>
+<li>day of the week - talk about the time sigil 622502514624</li>
+<li>speed reading - there is a limit to your eye speed, but most slow downs come from regressions. Link, summarize and cross reference as you go to read once and know it.
+use page numbers as pegs for bonus points</li>
+<li>mem graphs - overlay tabular or map data with a grid of numbers and letters. the quadrant word is linked to the data.</li>
+</ul>
+<h4>grouping ideas</h4>
+<p>Short term memory seems to be about 7 things, but those things can be information dense groupings</p>
+<p>idea compactions</p>
+<ul>
+<li><p>groupings (heirarchy)</p>
+</li>
+<li><p>PAO</p>
+<ul>
+<li>consider writing up GPAO separately</li>
+<li>integrate with<ul>
+<li>major system</li>
+<li>pitman shorthand</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>just the gist</p>
+</li>
+<li><p>compact representations</p>
+</li>
+<li><p>numbers as words
+reuse the same structure or relations for similar objects.</p>
+</li>
+<li><p>advanced data structures in as memory techniques?</p>
+<ul>
+<li>trees</li>
+<li>linked lists</li>
+<li>quad trees</li>
+<li>geographic maps</li>
+</ul>
+</li>
+<li><p>static vs dynamic groups</p>
+</li>
+<li><p>trees</p>
+</li>
+<li><p>proximity</p>
+</li>
+<li><p>sequences</p>
+<ul>
+<li>linked placement</li>
+<li>narrative</li>
+</ul>
+</li>
+</ul>
+<h4>numbers</h4>
+<ul>
+<li>PAO exists, but is probably overkill (pareto)
+digit &lt;-&gt; sound</li>
+<li>1 -&gt; t d</li>
+<li>2 -&gt; n</li>
+<li>3 -&gt; m</li>
+<li>4 -&gt; r</li>
+<li>5 -&gt; l</li>
+<li>6 -&gt; j sh ch</li>
+<li>7 -&gt; k c g</li>
+<li>8 -&gt; f v ph</li>
+<li>9 -&gt; p b</li>
+<li>0 -&gt; z s c
+add vowels as necessary to create words
+focus on phonetics, not spelling</li>
+</ul>
+<p>A deep understanding of various simple datastructures will help in coming up with more advanced applications</p>
+<h2>references and inspiration</h2>
+<p>Memory Craft - Lynne Kelly
+The Memory Book - Harry Lorayne &amp; Jerry Lucas</p>
+<p>Algorithms to Live By - Brian Christian
+there is a whole subfield of computer science studying efficient data structures,
+but optimal for a computer is not necessarily optimal for a brain. Still we can take inspiration.</p>
+<ul>
+<li>recall based indexing?</li>
+</ul>
+<h1>The satanic temple 7 tenets</h1>
+<p><a href="https://thesatanictemple.com/">https://thesatanictemple.com/</a></p>
+<h1>LW</h1>
+<p><a href="https://www.readthesequences.com/">https://www.readthesequences.com/</a></p>
+<h1>shakespeare</h1>
+<h1>knowledge</h1>
+<p>The gnosis is close understanding and clear observation
+Reality will assert itself whether you are prepared for it or not. Wishful thinking will leave you blindsided.
+Therefore try to be informed enough to spot the most obvious bullshit in the widest range of topics.
+Learn deeply the topics you care about, and validate what you learn for yourself as much as possible.
+Also, tolerate uncertainty. Thinking in black and white is a gross simplification of the world that is much more dangerous than people realize.
+The world at large is an too vast for the human mind to fully comprehend every detail and professing certainty where
+there is none will only trick yourself into trusting your faulty model of the world instead of your actual experience of it.</p>
+<ul>
+<li>be informed and validate for yourself</li>
+<li>tolerate uncertainty, (negative capability)</li>
+<li>grow the ideascape. make this a priority</li>
+</ul>
+<h2>grand rite of skill learning</h2>
+<p>The grand rite is a meta-pattern that describes a way to tackle a problem. The applications (and therefore the forms)
+of this ritual are nearly endless. I'll describe the pattern, then a few applications.</p>
+<ul>
+<li>the ULP</li>
+</ul>
+<p>Stated in the purest form:</p>
+<ol>
+<li>Learn just enough to self correct
+seek source material, mentors and other outside perspectives to jump start your mental model of the problem.</li>
+<li>Identify barriers
+note what might hinder practice and specific failures that might arise.</li>
+<li>make an effort to eliminate the barriers
+Any potential failure becomes a pain point to work through. Make use of mental contrasting</li>
+<li>break down the task into its smallest components
+identify single aspects of the task as they relate to a specific failure mode, rank by importance / frequency in
+the high level skill</li>
+<li>Identify the desired outcome
+create a SMART goal. Take your metric and simply measure where you are for a while.</li>
+<li>Identify the process
+how do you move in the right direction considering where you are?</li>
+<li>Accelerate towards failure
+iterate. fail early and often. Figure out how to fail softly. Iterate on your process to speed up feedback loops
+and fail faster. Form new theories and learn to test quickly.<ul>
+<li>deliberate practice as a series of methodical micro-experiments (so good they can't ignore you)</li>
+</ul>
+</li>
+<li>Review and consolidate
+simplify the model. Generalize and recontextualize your findings. Go through a retrospective or recap, and review it
+periodically as needed.</li>
+</ol>
+<h2>learning</h2>
+<ul>
+<li>pomodoro technique</li>
+<li>spaced repetition (<a href="https://en.wikipedia.org/wiki/Leitner_system">https://en.wikipedia.org/wiki/Leitner_system</a>)</li>
+<li>20 hr rule<ul>
+<li>imagine disaster - as a way to break down the most essential parts and get a clear picture of a target performance
+level</li>
+<li>know just enough - to get started, anything more is procrastination. Academic knowledge of a skill rarely is
+sufficient, figure out the flow and feel, then start practicing to really get it.<ul>
+<li>monitor hypothesis<ul>
+<li>learning is only valuable if it allows you to plan edit and correct yourself while practicing</li>
+</ul>
+</li>
+<li>practice raises more questions, and can lead to informed discussions with experts</li>
+</ul>
+</li>
+<li>struggle &amp; sleep - break practice into short sessions followed by a nap/sleep, within four hours of sleep.
+Intensity is important too.</li>
+</ul>
+</li>
+</ul>
+<p>Effective practice</p>
+<ul>
+<li>peak - anders ericsson &amp; robert pool on deliberate practice<ul>
+<li>deliberate practice generate effective mental representations</li>
+<li>these representations allow<ul>
+<li>recreating experiences</li>
+<li>making accurate predictions</li>
+<li>condensing information</li>
+</ul>
+</li>
+<li>four components of purposeful practice<ul>
+<li>have a specific goal</li>
+<li>practice sessions were intense</li>
+<li>received immediate feedback</li>
+<li>frequent discomfort, frequent mistakes</li>
+</ul>
+</li>
+<li>force a creative insight, or feel repeated discomfort</li>
+<li>with expert coaching, we can adopt effective mental representations to jump start the practice</li>
+<li>purposeful methods + expert coaching = deliberate practice</li>
+<li>deliberate practice by nature is uncomfortable because it is a process of stretching your limits</li>
+</ul>
+</li>
+<li>logical fallacies as barriers to learning
+also, how to deal with false information? guarding against epistemic closure (in the sense of confirmation bias) in
+adaptive information systems. The quality of learning is highly dependant on the correctness of the input data.</li>
+<li>feynman technique often the best way to learn something is to teach it to others<ul>
+<li>also from feynman, keep a set of problems, and whenever you get something new, apply it all of those problems
+if something pans out you'll be seen as a genius.<ul>
+<li>problems and techniques (research and development) are opposite ends of the solution path. Applying A* dijkstra's reduces the search space.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>a curriculum is set up to change behavior and supply a context for that behavioral change, not only to supply
+information. thus curricular objectives should specify context and behavior, bound together by high level philosophy
+(since not everything can be covered, every exclusion is political), not necessarily specific information to be
+conveyed. basic principles of curriculum and instruction by ralph w tyler</p>
+<p>the philosophical basis of learning should be self consistent, focused, partially derived from norms and balanced with
+necessities of reality and the interests of the student.</p>
+<p>5 elements of effective thinking</p>
+<ul>
+<li>earth: what are the core components?
+box the unknowns and get the structure</li>
+<li>air: perspective shifting questions &quot;what if I...?&quot;
+look at things like a beginner, a pro, or a customer</li>
+<li>fire: how can I make more mistakes?
+run experiments and check failure modes</li>
+<li>water: how can I build on whats working/iterate?</li>
+<li>wood: identify as a life long learner
+the only constant in your thinking should be change</li>
+</ul>
+<p>goal setting in a group context
+In order to make progress towards a goal, you first have to know what the goal is.
+In this section we cover the anatomy of a goal and a process for goal creation. Then, we describe one way that you could
+apply these methods in a process of continuous self improvement.</p>
+<h2>the grand rite of seeing the truth</h2>
+<p>the scientific method</p>
+<ol>
+<li>observe and ask questions, research<ul>
+<li>when do you trust authority, or work it out yourself</li>
+<li>direct experience</li>
+<li>how much information, and of what type is necessary for a decent hypothesis?</li>
+</ul>
+</li>
+<li>formulate a hypothesis<ul>
+<li>how to make a testable hypothesis</li>
+</ul>
+</li>
+<li>test your hypothesis<ul>
+<li>crafting experiments that look to falsify your hypothesis</li>
+</ul>
+</li>
+<li>conclude<ul>
+<li>simplify the model</li>
+<li>review</li>
+<li>share the results</li>
+</ul>
+</li>
+</ol>
+<h2>Observation</h2>
+<ul>
+<li>simple awareness training</li>
+<li>observation meditations</li>
+<li>internal and external contexts</li>
+<li>seeing more clearly</li>
+</ul>
+<h4>The test of time and distance</h4>
+<p>Another consideration is ensuring that the information here isn't lost through the ages. some encodings are effective
+only in the short term. Stories that rely heavily on cultural touchstones will lose meaning across the world. Songs that
+use clever rhyme may lose their cleverness through shifts in accent and across languages. Memes usually die within the
+week.</p>
+<h3>Chaos Magic</h3>
+<p>Symbolic ritual (psychodrama) that is focused on results rather than tradition.
+Belief, symbolism and ritual become tools to be experimented with and used when useful rather than dogmatically
+That is not to say that the tools are interchangable. The specifics of the spell have a major impact ofn its efficacy, but the necessary specifics vary on an individual basis.
+Understand the pattern so you can improvise.</p>
+<p>principles</p>
+<ul>
+<li>avoid dogma</li>
+<li>validate through personal experience</li>
+<li>strive for technical excellence, rigorous experimantation and iteration</li>
+<li>de-condition old patterns of thought. unify the force and create fluidity of perspective</li>
+<li>value diverse approaches</li>
+<li>gnosis</li>
+</ul>
+<h2>Reasoning</h2>
+<ul>
+<li><p>formal logic</p>
+</li>
+<li><p>baysian reasoning</p>
+</li>
+<li><p>lesswrong</p>
+</li>
+<li><p>cognitive bias</p>
+<ul>
+<li>confirmation bias</li>
+</ul>
+</li>
+<li><p><a href="https://www.outsideonline.com/2146421/limits-endurance">https://www.outsideonline.com/2146421/limits-endurance</a>
+<a href="https://www.theatlantic.com/politics/archive/2018/02/a-better-way-to-look-at-most-every-political-issue/552752/">https://www.theatlantic.com/politics/archive/2018/02/a-better-way-to-look-at-most-every-political-issue/552752/</a>
+reasoning from first principles.</p>
+</li>
+</ul>
+<h1>liber augmen</h1>
+<p><a href="https://www.liberaugmen.com/">liber augmen</a>
+The Manhood of Humanity is a book whose essential thesis is that man is a time binder, differentiated from the rest of nature by the ability to retain experiences and transmit them across generations. --Alfred Korzybski</p>
+<h1>jist</h1>
+<p>play store link, github link</p>
+<h1>living artfully</h1>
+<ul>
+<li>taste-ability gap</li>
+<li>skill starts from the mechanical level<ul>
+<li>if you want to draw it starts by making marks on a page, how to hold the pen, etc. really care directly about these things, but they are necessary to get to the part you care about.</li>
+<li>eventually you do these things automatically, without conscious thought</li>
+<li>your thoughts turn to higher levels (color, shape, weight..)</li>
+<li>eventually you forget about these things and think instead about the gestalt</li>
+</ul>
+</li>
+</ul>
+<h1>javascript</h1>
+<ul>
+<li>animation <a href="https://animejs.com/documentation/">animejs</a></li>
+<li>laTex <a href="https://www.mathjax.org/">mathjax</a></li>
+</ul>
+<h1>attention revolution</h1>
+<h1>conscilience</h1>
+<p>rejection games</p>
+<p>targetted skill acquisition <code>7.69</code></p>
+<ul>
+<li><p><a href="https://miscellaneplans.gumroad.com/l/kjv-bible-markdown">markdown bible</a>. Each book should be its own page probably</p>
+<ul>
+<li>this will most definitely be too large and slow for the current renderer.</li>
+</ul>
+</li>
+<li><p><a href="https://mythopedia.com/library/poetic-edda-bellows-1936">poetic edda</a>
+<a href="https://www.supermemo.com/en/blog/twenty-rules-of-formulating-knowledge">https://www.supermemo.com/en/blog/twenty-rules-of-formulating-knowledge</a>
+<a href="https://www.wealthofthecommons.org/contents">https://www.wealthofthecommons.org/contents</a></p>
+</li>
+<li><p>caustic lenses + optical neural nets for lightspeed ML vision</p>
+</li>
+<li><p>multimodal esperanto</p>
+</li>
+<li><p><a href="https://lostgarden.home.blog/2023/02/26/the-letter-circle/">alternate social network?</a></p>
+</li>
+<li><p>use a nerdfont to avoid falling back to system fonts for weird stuff. Not firacode so ligatures don't crop up.</p>
+</li>
+<li><p><a href="https://moq.org">moq</a>, <a href="https://en.wikipedia.org/wiki/Pirsig%27s_Metaphysics_of_Quality">moq^wiki</a></p>
+</li>
+<li><p><a href="https://github.com/ContextLab/human-memory">human memory</a></p>
+</li>
+<li><p><a href="https://greatergood.berkeley.edu/article/item/dear_christine_why_cant_i_sleep">why can't I sleep</a></p>
+</li>
+<li><p><a href="http://ajroach42.com/thoughts-on-digital-preservation/">archiving</a></p>
+</li>
+<li><p><a href="https://en.wikipedia.org/wiki/Category_theory">category theory</a></p>
+</li>
+<li><p><a href="https://en.wikipedia.org/wiki/Yoneda_lemma">yoneda lemma</a></p>
+</li>
+</ul>
+<h2>How to actually change your mind</h2>
+<ul>
+<li>ref lesswrong/baysian method of rooting out co-supportive false beliefs</li>
+<li>musk &quot;first principles&quot;. it's a bit disingenuous the way he attributes his success to things other than massive startup capital and luck, but it's also not a bad idea just because he promotes it.</li>
+</ul>
+<h1>notes</h1>
+<h1></h1>
+<ul>
+<li><p>depth of learning</p>
+<ul>
+<li>let this repo be the 'textbook' level, with full research, external links, and more powerful, computer-aided data manipulations</li>
+<li>let the notebook be more of a work in progress, include some personalizations</li>
+<li>make the esoterica for the final version, fully personalized</li>
+<li>internal memory is based on esoterica</li>
+</ul>
+</li>
+<li><p>journey - method of loci</p>
+</li>
+<li><p>explicit theory</p>
+</li>
+<li><p>theory of mind / theory of learning</p>
+</li>
+<li><p>memory</p>
+</li>
+<li><p>mechanical reasoning <a href="https://en.wikipedia.org/wiki/TRIZ">TRIZ</a></p>
+<ul>
+<li>the tricky part of seeing the beauty of mathematical proof is knowing enough to know which parts are mechanical thought
+and which are leaps of insight</li>
+<li>by automatically generating links between related ideas with no assistance from a human, a computer can suggest previously unknown associations</li>
+</ul>
+</li>
+<li><p>A <a href="https://web.stanford.edu/~engler/tickc.pdf">tcc</a> <a href="http://canonical.org/~kragen/bytebeat/">bytebeat</a> interpreter/sample generator</p>
+</li>
+<li><p>treadmill problem - given that the human senses are all limited by an <a href="https://en.wikipedia.org/wiki/Absolute_threshold">absolute threshold</a>
+some small force could be applied to the body which would be guaranteed to be unnoticeable.
+Additionally, there is a maximum force that the human body can exert.
+If we built an omni-directional treadmill (or equivalent harness for 3d), which accelerated below that threshold in
+order to dynamically keep it's user in the center, that would lay the framework for effectively infinite/boundaryless
+virtual spaces (since in all cases the 'corrective' force applied to the user would be undetectable).</p>
+<ul>
+<li>Given that these limits exist, how large does the treadmill need to be?</li>
+<li>The max force limit depends on the max speed being finite and small, so simulated vehicles might be problematic, though
+relative force perception sensitivity decreases as absolute force increases, so perhaps this could be fudged.</li>
+<li>the treadmill will essentially need to run some sort of <a href="https://en.wikipedia.org/wiki/PID_controller">PID</a> loop based on the users location.</li>
+<li>see disney's treadmill (tilt-articulated spinning pucks)</li>
+</ul>
+</li>
+<li><p>trilateration problem - might be more readable with <a href="https://github.com/KaTeX/KaTeX">KaTeX</a>.</p>
+</li>
+<li><p><a href="https://www.youtube.com/watch?v=cyW5z-M2yzw">discordant</a> <a href="https://en.wikipedia.org/wiki/Hausdorff_dimension">fractals</a>.
+Does harmony have a visual analog in fractals, or do fractals with Hausdorff dimensions close to simple fractions
+appear more orderly or aesthetic? Is there a way to generate diverse fractals with a specific hausdorff dimension?</p>
+</li>
+<li><p>can an EEG placed on the back of the neck do eye tracking based on detecting unconscious neck muscle twitches that correlate to eye movement?
+This could offer a way to do eye tracking 'in the field' where you don't have anything obstructing the field of view.
+If combined with a body cam, can you accurately locate the gaze on objects in the environment?
+search cervico-ocular reflex</p>
+</li>
+<li><p>e-ink data chip</p>
+<ul>
+<li>credit card sized e-ink display w/~1GB internal memory</li>
+<li>wireless power and data</li>
+<li>alignment magnets</li>
+<li>use like an SD card</li>
+</ul>
+</li>
+<li><p>areas of (possibly ad hoc) computer research/development that most things fall into.</p>
+<ul>
+<li>algorithmic - applied math. How can computers do things correctly and efficiently?</li>
+<li>ergonomic - how can the language/tools/etc we use be more expressive/powerful/high-level/transparent/learnable
+and help us avoid pitfalls.<ul>
+<li>whereas algorithms can be as esoteric and complicated as they need to be, the tools we use cannot be because we are only human.
+It must be possible to package performance code into a library with a relatively simple interface so that
+most people won't have to interact with that complexity most of the time.</li>
+<li>all (most) of the effort being put into new languages (or the constant rotation of new javascript frameworks) belongs here.</li>
+</ul>
+</li>
+<li>hardware - applied physics. how do we put lightning in a bottle?</li>
+<li>legal - licensing, right to privacy, right to repair, ethical hacking,</li>
+<li>social - how do you manage a project? How do you manage project lifetimes, or attract maintainers? codes of conduct?
+diversity and inclusion?</li>
+<li>domain understanding - understanding a clients needs well enough to represent domain specific knowledge in a program.</li>
+</ul>
+</li>
+<li><p>there are a few classes of problems in computer science and engineering that get solved repeatedly in adhoc ways.</p>
+<ul>
+<li>The huge prevalence of copypasta code is a testament to the failure to capture complexity in a library.</li>
+<li>can we use stats on copied code from StackOverflow as a way to design libraries/languages and better cover common complexity?</li>
+</ul>
+</li>
+<li><p>there's a very important class of computation that translates one set of symbols into another, sometimes called compiling or compilation.</p>
+<ul>
+<li>we can think of compiling abstractly as a translation (reversible or lossy) of a structured set of symbols into another.</li>
+<li>The elements of the input don't necessarily need to be from the same set as elements in the output, nor does their structure (list, tree, etc) need to be the same.</li>
+<li>my point is that there is a structural similarity between json-munging and compilers, between Terraform and LLVM.<ul>
+<li>Perhaps this structure could be exploited to propagate optimizations up and down the tech stack (manually).
+What can compiler developers learn from web developers, and vice versa?</li>
+<li>Perhaps also this could be used to define a 'core' compute engine that self-optimizes (self-compiles?) based on properties
+of the input and output  <a href="https://en.wikipedia.org/wiki/Category_theory">languages</a>, but is capable of running
+in a number of environments (bare metal, posix, JVM, etc.)</li>
+<li>could we describe the various instruction sets and the translations between them in a unified, rigorous way?
+all the way through logic gates -&gt; x86 -&gt; system calls -&gt; JVM -&gt; javascript. Could a monolithic 'compiler'
+understand how to optimize in each of these contexts?</li>
+</ul>
+</li>
+<li>example applications:<ul>
+<li>compiling typescript to javascript</li>
+<li>compiling javascript to bye code</li>
+<li>generating configuration on the fly (aka turing complete wrappers for inept 'no code' tools)</li>
+<li>translating between human languages</li>
+<li>parsing a string into json</li>
+<li>data normalization in general</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>the study of magic and magical thinking is useful because people turn towards alternative solutions when</p>
+<ul>
+<li>they can't or haven't been able to formulate the issue they're facing distinctly enough to address it directly</li>
+<li>there isn't an accepted/comprehensible/workable solution to the problems they face</li>
+<li>the magic works in some sense, though not necessarily through the proposed mechanisms.
+Most likely for psychological or social issues.</li>
+<li>in all cases</li>
+</ul>
+</li>
+<li><p>tulpa/rapscallion/servitor</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Tulpa">https://en.wikipedia.org/wiki/Tulpa</a></li>
+<li><a href="https://tulpanomicon.guide/">https://tulpanomicon.guide/</a></li>
+</ul>
+</li>
+<li><p>the point of metaphysics isn't truth but ease of reasoning about physics</p>
+<ul>
+<li>this is why occam's razor is so powerful</li>
+<li>given two models that 'effectively' give the same predictions, using the one that requires less computation
+allows us to predict more. and is therefore more pragmatic</li>
+<li>it isn't just about getting the right answer, but also doing so in time, with our limited brains</li>
+<li>once we move beyond the edge of where we can effectively find a 'correct' answer (which isn't very far)
+we need to consider answers which instead have desirable consequences
+(desirable here being subjective, and subject to manipulation)</li>
+<li>occam's razor then gives us a tool by which we can reason about belief.</li>
+<li>complex metaphysics are less performant and so would naturally be selected against (memetics) unless they had a hidden benefit.</li>
+</ul>
+</li>
+<li><p><a href="https://store.steampowered.com/app/556180/Mysterium_A_Psychic_Clue_Game/">mysterium</a> (basically a simplified Clue)
+but instead of visions you have to send out a limited number of emojis. Could be played in chat with a bot or something.</p>
+</li>
+<li><p>nomography with <a href="https://en.wikipedia.org/wiki/Cistercian_numerals">Cistercian numerals</a> to make functional and aesthetic 'magic' diagrams</p>
+<ul>
+<li><a href="https://www.goodreads.com/book/show/17744.The_Visual_Display_of_Quantitative_Information">The Visual Display of Quantitative Information</a></li>
+<li><a href="https://deadreckonings.com/category/nomography/">nomography</a></li>
+<li><a href="https://music.ishkur.com/">Iskur's Guide to Electronic Music</a> is an excellent example of dense data visualization.</li>
+<li>Roche metabolic pathways map</li>
+<li>culinary nomogram - imperial/metric volume on left, imperial/metric weight on right, densities of common ingredients on middle line<ul>
+<li>perhaps include an unrelated Fahrenheit/Celsius temperature line</li>
+<li>how to make it physically easy to read with one hand? maybe a simple pivot lock on material?</li>
+</ul>
+</li>
+<li>DnD nomogram to represent enemy stats, percentage to make various dice checks<ul>
+<li>can we represent game state with dice / rulers placed on a a nomogram</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>fortune telling as rorschach test</p>
+<ul>
+<li>many historical magics fall into this category<ul>
+<li>astrology</li>
+<li>tarot</li>
+<li>bibliomancy (I Ching)</li>
+<li><a href="http://www.princeton.edu/~ezb/geomancy/geohome.html">geomancy</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Astragalomancy">astragalomancy</a></li>
+<li>flipping a coin to see if you're disappointed with the result</li>
+</ul>
+</li>
+<li>shared characteristics<ol>
+<li>starting with some random process.</li>
+<li>Each possible result is associated with a huge variety of attributes/archetypes</li>
+<li>interpretation is largely subjective, despite sometimes being legitimized through complicated process.<ul>
+<li>it forces the brain to have an emotional response to a 'reality' rather than a 'possibility'</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>'the sea isn't maliciously trying to kill you, it's just completely indifferent, which is worse'</p>
+<ul>
+<li>eldritch</li>
+</ul>
+</li>
+<li><p>practices of collective imagination/storytelling</p>
+<ul>
+<li>D&amp;D</li>
+<li>dream culture</li>
+<li>mysterium</li>
+<li>rhapsodies/epic poetry traditions</li>
+</ul>
+</li>
+<li><p>enabling environments</p>
+<ul>
+<li>designing spaces not necessarily for the physical activities they enable, but the mental processes they enable.</li>
+<li>what is the long term mental effect of living in a particular place?</li>
+<li>eudaimonia machine - david dewane via cal newport</li>
+<li>adaptation facilitation machine - bioneer</li>
+<li>what is the psychological effect of having a library at home instead of a tv?</li>
+</ul>
+</li>
+</ul>
+<h2>components of the mind</h2>
+<ul>
+<li>identity boundary</li>
+<li>executive function</li>
+<li>memory</li>
+</ul>
+<h2>dissect and reconstruct (benjamin franklin)</h2>
+<h1>benjamin franklin method</h1>
+<ol>
+<li>Take a short piece of writing, whose style you respect, and break it down to bullet points of the main ideas.</li>
+<li>Set both aside for a few days at least</li>
+<li>From your notes only, try to re-express the piece as completely as the original</li>
+<li>Compare your recreation with the original, correcting any faults<ul>
+<li>note any points missed in your summary</li>
+<li>note awkwardness in phrasing, or dullness of vocabulary in the recreation</li>
+</ul>
+</li>
+</ol>
+<p>For more complete mastery:</p>
+<ul>
+<li><p>jumble the bullet points and compare and recreate the structure of the essay as well</p>
+</li>
+<li><p>do not keep notes, but keep the summary in memory only</p>
+</li>
+<li><p>instead, record your recreation as a speech to force a single chance at recreation</p>
+</li>
+<li><p>convert the prose to verse instead of bullets to train vocabulary and strength of metaphor and rhythm</p>
+</li>
+<li><p><a href="https://learnxinyminutes.com/">programming languages</a></p>
+</li>
+<li><p><a href="https://pages.gseis.ucla.edu/faculty/agre/how-to-help.html">how to help someone use a computer</a></p>
+</li>
+</ul>
+<h2>depth of learning</h2>
+<p>For a given subject, what is the appropriate detail with which we should memorize it?
+What topics and perspectives should we allow to form our identity?
+For what topics is it enough to simply know the names of concepts, so they can be reached with google?</p>
+<p><a href="https://cognitiveresearchjournal.springeropen.com/articles/10.1186/s41235-017-0087-y">https://cognitiveresearchjournal.springeropen.com/articles/10.1186/s41235-017-0087-y</a></p>
+<h1>musing 2024-5-03</h1>
+<p>rationality (according to lesswrong) is the effective pursuit of goals. (rational thinking -&gt; an agents pursuit of its goals)</p>
+<ul>
+<li><p>altruism - personal goals can be altruistic</p>
+</li>
+<li><p>an altruistic person is incentivised to make their peers also rational and altruistic</p>
+</li>
+<li><p>theory of constraints - the optimized variable of a system is constrained by only a single thing at a time.</p>
+</li>
+</ul>
+<p>personal growth</p>
+<ul>
+<li>possible bounding factors<ul>
+<li>motivation - executive dysfuntion, the desire for change</li>
+<li>agency - that change is possible, or out of one's control</li>
+<li>motivation + agency -&gt; having a goal in mind, or wanting things to be 'different' (anything but this)</li>
+<li>method - having an effective method<ul>
+<li>lack of feedback - unsure of method efficacy, negative loop with motivation</li>
+</ul>
+</li>
+<li>unable to follow through b/c of emotional blockage</li>
+</ul>
+</li>
+</ul>
+<p>motivation is the budget spent by the method</p>
+<ul>
+<li>'effective' methods lower cost below the barrier of effort (types of optimization??).</li>
+<li>more potent methods go further for the same cost</li>
+</ul>
+<p>system mastery is a fundamental goal:</p>
+<ul>
+<li>mastery is bounded by understanding. understanding is bounded by memory (fluency -&gt; understanding)</li>
+<li>it isn't the only goal</li>
+</ul>
+<p>'intelligence'</p>
+<ul>
+<li>relevance realization - what is important</li>
+<li>memory, priors, knowing ground truths</li>
+</ul>
+<p>goal types:</p>
+<ul>
+<li>optimize system</li>
+<li>system mastery</li>
+<li>exploration / exploit</li>
+<li>auxillary /maintenance goals</li>
+</ul>
+<h1>hamming</h1>
+<p>quick napkin calculation is a way to verify incoming info:</p>
+<ul>
+<li>check that incoming numbers are reasonable</li>
+<li>check that you can create a model of the claim made (shows you understood and that there really was one made)</li>
+<li>keeps up the ability to estimate</li>
+<li>creates a body of healthy priors</li>
+</ul>
+<p>&quot;the greatest works are gifts of knowledge to humanity&quot; - richard hamming</p>
+<h4>mental contrasting</h4>
+<p>a balanced approach to visualizing success (that you can in fact complete the task) and obstacles (a realistic account
+of future difficulty)</p>
+<ul>
+<li>mental contrasting <a href="https://www.happierhuman.com/mental-contrasting/">https://www.happierhuman.com/mental-contrasting/</a><ul>
+<li>may have limited empirical evidence</li>
+<li>smells like it is placebo based</li>
+</ul>
+</li>
+</ul>
+<h1>crypto tarot</h1>
+<p>make a <code>fortune</code> like thing with ascii art tarot cards.</p>
+<ul>
+<li><a href="https://tomcritchlow.com/wiki/businessmagik/">businessmagik</a></li>
+</ul>
+<h1><a href="https://matheducators.stackexchange.com/questions/27964/how-to-choose-a-textbook-that-is-pedagogically-optimal-for-oneself">quote</a></h1>
+<p><a href="https://en.wikipedia.org/wiki/Expertise_reversal_effect">https://en.wikipedia.org/wiki/Expertise_reversal_effect</a></p>
+<p>n other words, research indicates the best way to improve your problem-solving ability in any domain is simply by acquiring more foundational skills in that domain. The way you increase your ability to make mental leaps is not by learning to jump further, but by building bridges.</p>
+<p>What you need to do is avoid the two failure modes -- that is, cutting corners on either of the two key attributes of deliberate practice (&quot;mindful&quot; and &quot;repetition&quot;).</p>
+<p>Deliberate practice is not mindless repetition. If you're doing the same thing over and over again, then you're doing deliberate practice wrong. Deliberate practice is about making performance-improving adjustments on every single repetition.</p>
+<p>If you don't have worked examples and instructional scaffolding to help carry you through once math becomes hard for you, then every problem basically blows up into a research project for you. That's okay if you're a research mathematician (or maybe late-stage graduate student) at the edge of your field, but if you're a student who still has a ways to go before reaching the edge of human mathematical knowledge, then it's just less efficient, even if you have fun with it.</p>
+<p>In general, a learner typically cannot construct their own deliberate practice experience without expert guidance since they are typically unable to construct information-rich &amp; scaffolded practice problems, much less correctly identify their areas of weakness for targeted practice to begin with.</p>
+<h1>deliberate practice</h1>
+<p>there are failures of conceptualization and failures of execution.
+can learners generate ad-hoc drills for focusing on failures of execution, but not those of conceptualization because they do not understand why they have failed.
+The field determines the necessary mix of concept and execution.</p>
+<p>what appears to be a problem of execution may in fact be a problem of framing. Why is dieting so hard? Everyone knows CICO. &quot;Just eat less&quot; is a solution to an insufficient conceptualization of the domain.</p>
+<p>failure of optimality - perceiving behaviour as optimal when it is not
+failure of overcorrection - perceiving behavior to be unoptimal, when other aspects have more room for improvement</p>
+<p>when to learn just enough vs learn in depth?
+<a href="https://aboutideasnow.com/about">about/ideas/now</a></p>
+
+            <footer>
+                <a href="/">Home</a>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

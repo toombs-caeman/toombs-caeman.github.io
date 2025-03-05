@@ -18,7 +18,8 @@
     <div class="cover">
         <div class="page">
             <a class="bookmark" href="/"></a>
-            <p>{{?.note}}</p>
+            <p><a href="https://cooklang.org/">cooklang</a>
+<a href="https://www.cookingforengineers.com/">cooking for engineers</a></p>
 
             <footer>
                 <a href="/">Home</a>

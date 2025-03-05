@@ -18,7 +18,7 @@
     <div class="cover">
         <div class="page">
             <a class="bookmark" href="/"></a>
-            <p>{{?.note}}</p>
+            
 
             <footer>
                 <a href="/">Home</a>

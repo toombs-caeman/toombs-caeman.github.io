@@ -18,7 +18,13 @@
     <div class="cover">
         <div class="page">
             <a class="bookmark" href="/"></a>
-            <p>{{?.note}}</p>
+            <p>internalizing the sage
+IFS</p>
+<ul>
+<li>illeism <a href="https://aeon.co/ideas/why-speaking-to-yourself-in-the-third-person-makes-you-wiser">https://aeon.co/ideas/why-speaking-to-yourself-in-the-third-person-makes-you-wiser</a></li>
+</ul>
+<p>in contrast, re-identifying with the future self can alleviate procrastination</p>
+<p>tulpa</p>
 
             <footer>
                 <a href="/">Home</a>

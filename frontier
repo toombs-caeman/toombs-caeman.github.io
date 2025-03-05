@@ -18,7 +18,15 @@
     <div class="cover">
         <div class="page">
             <a class="bookmark" href="/"></a>
-            <p>{{?.note}}</p>
+            <ul>
+<li><p>samo burja</p>
+<ul>
+<li>finding frontiers of knowledge <a href="http://samoburja.com/how-to-find-the-frontier-of-knowledge/">http://samoburja.com/how-to-find-the-frontier-of-knowledge/</a></li>
+</ul>
+</li>
+<li><p>robert greene, in mastery suggests combining two uncommon fields to reach the edge faster</p>
+</li>
+</ul>
 
             <footer>
                 <a href="/">Home</a>

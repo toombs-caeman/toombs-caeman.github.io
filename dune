@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="shortcut icon" href="/inc/favicon.jpg" type=image/x-icon">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/inc/common.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/comic-mono@0.0.1/index.min.css">
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"></script>
+    <script src="/inc/common.js"></script>
+    <div class="cover">
+        <div class="page">
+            <a class="bookmark" href="/"></a>
+            <p>{{?.note}}</p>
+<h1>Dune</h1>
+<p>I love <a href="https://www.goodreads.com/book/show/44767458-dune">Dune</a> as a novel.</p>
+<p>The superhuman abilities shown in the novel are described in a way that seems all too possible, if training was deliberate and complete enough. Not that this would be necessarily healthy, but what <em>is</em> the limit of human performance?</p>
+<h1>Mentats</h1>
+<p><a href="https://dune.fandom.com/wiki/Mentat">Mentats</a> are an order trained as 'human computers' which become necessary for the ruling class as 'thinking machines' are outlawed. They are trained to suppress all emotions and to devote themselves to logical rigour.</p>
+<pre><code>Once men turned their thinking over to machines in the hope that this would set them free. But that only permitted other men with machines to enslave them.
+</code></pre>
+<p>— Frank Herbert, Dune</p>
+<ul>
+<li><a href="memory">memory training</a><ul>
+<li>working memory</li>
+</ul>
+</li>
+<li>logical inference (boolean, bayesian)</li>
+<li>wide knowledge basis upon which to do inference (strong <a href="https://en.wikipedia.org/wiki/Prior_probability">priors</a> across many disciplines)</li>
+<li>Samadhi - focus by withdrawing the senses</li>
+<li>'deciding like a computer' <code>6.36</code> <code>6.114</code><ul>
+<li>human data structures - adapt known compsci data structures to inform organization of human ideas.</li>
+</ul>
+</li>
+</ul>
+<h1>Bene Gesserit</h1>
+<p><code>6.113</code>
+The <a href="https://dune.fandom.com/wiki/Bene_Gesserit">Bene Gesserit</a> are an order of mostly women that control politics behind the scenes in order to advance a number of initiatives.</p>
+<ul>
+<li><p>prana-bindu - total control over the musculature</p>
+<ul>
+<li>yoga</li>
+<li>some martial art</li>
+<li>muscle control (maxick) - emphasizing the mind-muscle connection</li>
+</ul>
+</li>
+<li><p>cold reading</p>
+</li>
+<li><p>vocal training + rhetoric</p>
+</li>
+<li><p><a href="https://dune.fandom.com/wiki/Missionaria_Protectiva">Missionaria Protectiva</a> gaining control by flowing expecations into predictable patterns</p>
+</li>
+</ul>
+
+            <footer>
+                <a href="/">Home</a>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

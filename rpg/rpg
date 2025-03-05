@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="shortcut icon" href="/inc/favicon.jpg" type=image/x-icon">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/inc/common.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/comic-mono@0.0.1/index.min.css">
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"></script>
+    <script src="/inc/common.js"></script>
+    <div class="cover">
+        <div class="page">
+            <a class="bookmark" href="/"></a>
+            <p>{{?.note}}
+{{!introduction, written for players and GMs}}</p>
+<h1>how to get started playing quickly</h1>
+<ul>
+<li>the GM reads the <a href="rpg_core">core rules</a> and <a href="rpg_example_scenario">example scenario</a> ahead of time.</li>
+<li>the GM explains the core rules at the start of the session.</li>
+<li>start playing</li>
+</ul>
+<h1>sections</h1>
+<p>basic stuff</p>
+<ul>
+<li>Introduction (this section)</li>
+<li><a href="rpg_terms">terminology, briefly</a></li>
+<li><a href="rpg_core">core rules</a></li>
+<li><a href="rpg_gm">GMs advice</a></li>
+</ul>
+<p>example stuff</p>
+<ul>
+<li><a href="rpg_example_settings">example settings</a></li>
+<li><a href="rpg_example_scenario">example scenario</a></li>
+</ul>
+<p>going your own way, upping the game</p>
+<ul>
+<li><a href="rpg_opt">optional rules</a></li>
+<li><a href="rpg_setting">creating your own setting</a></li>
+<li><a href="rpg_design">designing your own game</a></li>
+<li><a href="rpg_sfx">table SFX</a></li>
+</ul>
+<h1>modular TTRPG</h1>
+<p>This RPG is more a collection of optional rules which play nicely with each other.
+By choosing which rules to use for your specific game, you can make the system as crunchy or freeform as you like.</p>
+<p>Any setting works.</p>
+<p>etc etc.</p>
+<h1>what is an RPG</h1>
+<p>{{! this section seems like its mandatory, even in RPGs that are ~15 pages long, but is it?}}</p>
+<ul>
+<li>the magic circle</li>
+<li>a game is a space where we set aside our natural interests for the goals of the game, and our usual ways of being with the rules of the game.</li>
+<li>unlike board games, there is an imaginal space as well as the physical objects on the board. Imagination is freeform where the physical is more rigid, but ties to the physical with cues going both directions.</li>
+<li>Whats really necessary (for a ruleset) is creating a coherence of the imagination between all players at the table.</li>
+</ul>
+
+            <footer>
+                <a href="/">Home</a>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

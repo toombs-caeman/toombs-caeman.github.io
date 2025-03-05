@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="shortcut icon" href="/inc/favicon.jpg" type=image/x-icon">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/inc/common.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/comic-mono@0.0.1/index.min.css">
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"></script>
+    <script src="/inc/common.js"></script>
+    <div class="cover">
+        <div class="page">
+            <a class="bookmark" href="/"></a>
+            <h2>ritual space</h2>
+<p>opening and closing a psycho-spatial context. zeigarnik effect
+think of the structure of a religious service, or spell work, or the daily cadence</p>
+<ol>
+<li>prepare the space<ul>
+<li>cut out distractions</li>
+<li>prepare tools</li>
+<li>get in the right headspace</li>
+</ul>
+</li>
+<li>make the decision<ul>
+<li>state the goal and duration of practice</li>
+<li>make sure everything is prepared</li>
+</ul>
+</li>
+<li>practice
+*</li>
+<li>dedication<ul>
+<li>appreciate what you accomplished</li>
+<li>make notes for next time</li>
+<li>clean the space</li>
+<li>yoga has an asana that 'seals in' the benefit of the practice</li>
+</ul>
+</li>
+</ol>
+<p>Transition in and out of altered states intentionally through ritual</p>
+<ol>
+<li>Prepare the space with purification</li>
+<li>set the intention<ul>
+<li>where you will work and for how long</li>
+<li>how you will work, what distractions are banned</li>
+<li>how you'll support your work. coffee, walks, reference materials, etc.</li>
+</ul>
+</li>
+<li>open the space by marking the limits and ritually entering</li>
+<li>do the work</li>
+<li>close the space ritually. consolidate and review. Return to the normal world</li>
+</ol>
+
+            <footer>
+                <a href="/">Home</a>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

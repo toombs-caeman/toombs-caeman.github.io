@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>TODO</title>
     <link rel="shortcut icon" href="/inc/favicon.jpg" type=image/x-icon">
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -18,7 +18,33 @@
     <div class="cover">
         <div class="page">
             <a class="bookmark" href="/"></a>
-            <p>{{?.note}}</p>
+            <h1>Potential Site Changes</h1>
+<ul>
+<li>clean up asides from nutshell</li>
+<li>check mobile experience</li>
+<li>professional landing page /pro?<ul>
+<li>resume</li>
+<li>linkedin</li>
+<li>write up git repos</li>
+</ul>
+</li>
+<li>measure progress down the page with the length of the bookmark?</li>
+<li>'flip page' animation for internal links</li>
+<li>keep nav menu on the left half of the book<ul>
+<li>swipe to the left on clicking the bookmark</li>
+</ul>
+</li>
+<li>series links in the footer</li>
+<li>date in top corner</li>
+<li>align dotgrid with line spacing</li>
+<li>play with mermaid diagrams</li>
+</ul>
+<pre><code class="language-mermaid">graph TD;
+    A--&gt;B;
+    A--&gt;C;
+    B--&gt;D;
+    C--&gt;D;
+</code></pre>
 
             <footer>
                 <a href="/">Home</a>

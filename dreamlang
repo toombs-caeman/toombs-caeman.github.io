@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="shortcut icon" href="/inc/favicon.jpg" type=image/x-icon">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/inc/common.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/comic-mono@0.0.1/index.min.css">
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"></script>
+    <script src="/inc/common.js"></script>
+    <div class="cover">
+        <div class="page">
+            <a class="bookmark" href="/"></a>
+            <p>{{?.note}}</p>
+<h1>Features of a Dream Language</h1>
+<p>my dream answer to the questions of <a href="pl">programming language design</a></p>
+<h1>feature list | elevator pitch</h1>
+<ul>
+<li></li>
+</ul>
+<h1>TOC</h1>
+<ul>
+<li><a href="#values">values</a></li>
+<li><a href="#syntax">syntax</a></li>
+<li>execution<ul>
+<li><a href="#distributed">distributed</a></li>
+<li><a href="#concurrency">parallel</a></li>
+</ul>
+</li>
+</ul>
+<h1>base properties</h1>
+<h2>value properties</h2>
+<ul>
+<li>lazy, symbol, async</li>
+</ul>
+<h2>variable properties</h2>
+<ul>
+<li>&amp;reference, * dereference</li>
+<li>persistent, mutable</li>
+</ul>
+<h2>type properties</h2>
+<h1>variables | variable flags</h1>
+<p>variables are references to values
+types are (potentially infinite) sets of values with common properties</p>
+<h2>values</h2>
+<p>kinds of values:</p>
+<ul>
+<li><code>immediate</code> - value is evaluated when defined (assigned).</li>
+<li><code>symbol</code> - value is an ast, which must be explicitly evaluated<ul>
+<li>this is the homoiconic type, like lisp quote</li>
+<li>syntactically, symbols are functions of zero arguments</li>
+</ul>
+</li>
+<li><code>lazy</code> - value is implicitly evaluated when required, but not when defined.<ul>
+<li>Current thread blocks during evaluation.</li>
+<li>implicitly memoized (threadsafe eval once? unless marked pure)</li>
+<li>can be used to create infinite lists and such</li>
+<li>how about pythonic <a href="https://docs.python.org/3/howto/descriptor.html">descriptors</a>?</li>
+<li>laziness is <a href="https://en.wikipedia.org/wiki/Referential_transparency">transparent</a>.</li>
+</ul>
+</li>
+<li><code>async</code><ul>
+<li>computation starts in a separate thread when the value is defined</li>
+<li>unlike a lazy value, all async values will be evaluated eventually (unless program hard exits without join).</li>
+<li>current thread will block if async value isn't ready</li>
+<li>need an operator to check if a value has finished computing.</li>
+</ul>
+</li>
+</ul>
+<h2>references</h2>
+<p>reference flags:</p>
+<ul>
+<li><code>persistent</code> initialized to types zero value or saved value. guaranteed to save to disk on program exit.</li>
+<li><code>mutable</code> like rust.</li>
+<li><code>scope</code> change the scoping of the reference (local)</li>
+</ul>
+<h2>memory management</h2>
+<ul>
+<li>rusty borrowing?</li>
+</ul>
+<h2>types | properties</h2>
+<p>types can be derived from 'properties' which may be interfaces, or may give guarantees about behavior.
+Properties themselves may be derived from implementations.</p>
+<ul>
+<li>Compile-time exception when there is no implementation that matches the requested property</li>
+<li>Compiler chooses among options when multiple implementations exist.</li>
+</ul>
+<p>property types:</p>
+<ul>
+<li><code>interface</code> type implements some method(s)</li>
+<li><code>algebraic</code> type has algebraic property (eg <a href="https://en.wikipedia.org/wiki/Commutative_property">commutative</a>)<ul>
+<li>in order to enable compile-time optimizations by symbolic algebra</li>
+</ul>
+</li>
+<li><code>side effect</code> type mutates global reference, depends on IO, or is pure.<ul>
+<li>functions may be <code>idempotent</code> even if they aren't pure</li>
+</ul>
+</li>
+<li><code>threadsafe</code></li>
+<li><code>ordering</code> type exhibits certain <a href="https://en.wikipedia.org/wiki/Total_order">ordering properties</a></li>
+<li><code>scale</code> efficient implementation may depend on the size of the input<ul>
+<li>a hash map may use a simpler hashing function for ~10 keys than ~10k</li>
+<li>a list that's &lt; n items might sort faster with <a href="https://en.wikipedia.org/wiki/Insertion_sort">insertion sort</a></li>
+<li>10 threads may run faster on a single cpu, while 10k threads may be faster to run on a distributed cluster (if one is available)</li>
+<li>base on collecting runtime statistics?</li>
+<li>efficiency depends on size of input, but also number of cpu cores</li>
+</ul>
+</li>
+</ul>
+<h2>builtin types</h2>
+<ul>
+<li><code>ast</code> lisp's quote type</li>
+<li><code>number</code> the programmer shouldn't have to decide if 32f or 64i unless they care</li>
+<li><code>collection</code> like python's collections</li>
+</ul>
+<h1>execution</h1>
+<h2>repl | compile-time | reflection</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Compile-time_function_execution">pure compile time</a></li>
+<li>homoiconic</li>
+<li>the full language should be available in compile-time macros</li>
+<li>the repl is the compiler. Pausing the repl to create an executable</li>
+</ul>
+<h2>concurrency</h2>
+<ul>
+<li><a href="https://graphitemaster.github.io/fibers/">fibers oh my</a></li>
+<li><a href="https://go.dev/tour/concurrency/2">go channels</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Semaphore_(programming)">mutex/semaphore</a></li>
+</ul>
+<h2>distribution</h2>
+<ul>
+<li>highly parallel declarative functions should run on the gpu when it is efficient to do so. <em>This should not require any explicit change to the code</em></li>
+<li>serialization &amp; networking should be such configuring a cluster of CPUs to distribute a program is straightforward and does not require special handling (the same code will run threads locally or distribute threads to the cluster if one is configured and it is efficient to do so.)</li>
+</ul>
+<h1>control flow</h1>
+<p>lets enumerate the types of control flow using the concept of an evaluation atom.
+An atom consumes a <a href="#composite">single</a> value at the beginning and produces a <a href="#return">single value</a> at the end, and otherwise may be considered pure and atomic. The <a href="https://en.wikipedia.org/wiki/Degree_(graph_theory)">valence</a> of an atom is always 2.</p>
+<p><strong>Note:</strong> atoms only need to be <em>considered</em> pure and atomic, but this may not be literally true.</p>
+<p>&quot;Control Flow&quot; usually refers to stuff like loops and ifs, but lets define it more exactly as any construct connects atoms together (like chemical bonds).</p>
+<h2>Boundary of Computation</h2>
+<p>Say a computer is hooked up to a light switch. The computer can both flip the switch and query its state.
+You could say that the state of the switch acts as a single bit of 'switch memory', where writing that bit sets the state of the switch, and reading queries the state.</p>
+<p>However, unlike memory a human could also flip the switch. Or the switch could be taped to the off position.</p>
+<p>Therefore writing <code>1</code> to the 'switch memory' does not causally imply that reading the 'switch memory' will result in <code>1</code> in the same way as normal memory.</p>
+<p>For the purpose of our model, the written and read value cannot be considered the same value. One value was written, and another was read, with only a tenuous correlational link between the two.</p>
+<p>Thus we can meaningfully talk about values being 'created' as they enter the boundary of computation, and 'destroyed' as they exit. They are <a href="https://en.wikipedia.org/wiki/A_priori_and_a_posteriori">a posteriori</a>.</p>
+<h2>purity</h2>
+<p>A function is usually considered pure if the function alway evaluates to the same result given the same arguments.
+The usual understanding is that 'arguments' refers to those explicitly passed.</p>
+<h2>Input Flow</h2>
+<p>evaluation that produces a value 'from nothing'.</p>
+<ul>
+<li>values are 'created' through input to the program</li>
+<li>Literal values can be considered in this category, though they 'exist' within the boundary of computation as it is initialized.</li>
+<li>the result of a random function is intended to be causally independent from the program state and so has to be treated as information entering the boundary of computation, regardless of whether or not the function is truly random.</li>
+</ul>
+<h2>Output Flow</h2>
+<p>Evaluation that consumes a value and does not produce one (within the boundary).
+Evaluation can always be culled unless it potentially causes an effect outside the boundary.</p>
+<h2>Sequential Flow</h2>
+<p>The simplest bond is to connect the output of one atom to the input of another atom.
+The molecule may be considered itself an atom, as it has a single input and a single result.</p>
+<p>This is like a list.</p>
+<h2>Duplicating Flow</h2>
+<p>A single value is copied to the inputs of 2+ atoms</p>
+<ul>
+<li>forth's <code>dup</code> is a very direct example of this</li>
+<li>assignment is often used as preparation for duplication</li>
+</ul>
+<h2>Parallel Flow</h2>
+<p>A single value may need to be routed to multiple independent atoms. These are explicitly copies, not references, as each atom must be independent.</p>
+<h2>Aggregating Flow</h2>
+<p>Aggregation takes 2 or more and produces a single value.</p>
+<ul>
+<li>functions of multiple arguments <code>f(a, b, c)</code></li>
+<li>dyadic operators</li>
+<li>This can be like python's <code>functools.reduce()</code></li>
+<li>or simply <code>[x, y, z]</code> that produces a single list from many values</li>
+</ul>
+<h2>Conditional Flow</h2>
+<p>Consumes
+* if - equivalent to case(true, false)
+* case
+* match</p>
+<ul>
+<li>functions of one value, that return</li>
+<li>assignment gives a name to the end of a chain of atoms</li>
+<li>variables are a way of giving a name to a partial execution</li>
+<li>sequential flow (single atom) - order of execution impacts final result<ul>
+<li>line to line 'normal' flow</li>
+<li>function calls (which <em>could</em> be inlined)</li>
+<li>while loops - control is sequential until the condition returns</li>
+<li>non-pure for loops</li>
+</ul>
+</li>
+<li>parallel flow - the order of execution does not change the outcome<ul>
+<li>foreach (w/o break) (ie pure for loops)</li>
+<li>atoms</li>
+</ul>
+</li>
+<li>aggregating flow - multiple branch
+let <code>if</code> be a special case of <code>match case</code>
+unify <code>for</code> and <code>while</code> using lazy generators</li>
+</ul>
+<p>This is like a dict</p>
+<h1>dataflow based editing primitives</h1>
+<ul>
+<li>find usage of a variable, push name up or down the evaluation flow</li>
+<li>intersect a computation, putting it on a new line and assigning a name</li>
+</ul>
+<h1>:x composite</h1>
+<p>The 'single' value may be a composite or aggregate type. The idea is that all arguments must be prepared before any evaluation of the thread may take place.
+Specifying 'one' value is useful so we can talk about aggregation separately.</p>
+<h1>:x return</h1>
+<p>Again, the return type may be composite.
+A thread may also mutate a reference rather than explicitly returning a value, however the reference must be exclusive (like rust's mutable reference), write-only, or otherwise unable to affect the result after evaluation has begun.</p>
+<h2>: thread examples</h2>
+<p>Some examples:</p>
+<h2>algebraic effects</h2>
+<p><a href="https://overreacted.io/algebraic-effects-for-the-rest-of-us/">algebraic effects</a></p>
+<h2>option for declarative function interfaces</h2>
+<ul>
+<li>why let sql be the king of declarative syntax?
+sql as an embedded dsl interacting with native types. APL with permanence and transaction guarantees</li>
+</ul>
+<h1>syntax</h1>
+<ul>
+<li>modify syntax at compile-time</li>
+</ul>
+<h1>= | := | ==</h1>
+<ul>
+<li><code>==</code> is equality<ul>
+<li>returns true if the left and right values are the same otherwise returns false</li>
+<li><code>1 == 1</code> returns true</li>
+</ul>
+</li>
+<li><code>:=</code> is assignment<ul>
+<li>the left expression is made to be equal to the right expression at the time of evaluation.</li>
+<li>as an expression, return the left expression.</li>
+<li>equality may not hold as values are re-assigned.</li>
+<li><code>x := 3</code> returns <code>'x</code> and the value of <code>x</code> is 3</li>
+</ul>
+</li>
+</ul>
+<pre><code>x := 3
+y := x - 1
+x := 2
+x # 2
+y # 2
+</code></pre>
+<ul>
+<li><code>=</code> is a bi-directional constraint<ul>
+<li>the left expression will always equal the right expression (within the current scope)</li>
+<li>functions on the left and right expressions must have an algebraic inverse</li>
+<li>underdetermined systems of equations are considered uninitialized</li>
+<li>adding a contradictory constraint is an error</li>
+</ul>
+</li>
+</ul>
+<pre><code>x := 3
+y = x - 1
+x := 2
+x # 2
+y # 1 !!!
+y := 3
+x # 4 !!!
+2 * a + 5 * b = 19
+a - 2 * b = -4
+a # 2
+b # 3
+</code></pre>
+<h1>tooling | ecosystem</h1>
+<ul>
+<li>source uses <a href="https://en.wikipedia.org/wiki/UTF-8">utf-8</a></li>
+<li>imports like golang<ul>
+<li>vendoring?</li>
+<li>versioning freezing</li>
+</ul>
+</li>
+<li>git aware<ul>
+<li>should be able to prove that all required source/resources are tracked in git</li>
+<li><a href="https://news.ycombinator.com/item?id=36465886">report config files</a></li>
+</ul>
+</li>
+<li>'make'-like runbook</li>
+<li>syntax highlighting lsp</li>
+<li>linter</li>
+<li>official color theme?</li>
+<li>official standard setup for common editors</li>
+<li>documentation generator / comment syntax</li>
+<li>serialization</li>
+<li>repl, despite having static types</li>
+<li>testing framework</li>
+<li>logging</li>
+<li>debugging</li>
+<li>FFI, calling shell utilities</li>
+<li>cross compiling</li>
+<li>a page like <a href="https://learnxinyminutes.com/">learnxiny</a></li>
+</ul>
+<h1>inbox</h1>
+<ul>
+<li><p><a href="https://youtu.be/HB5TrK7A4pI?t=2346"> a real engineer doesn't want just a religion about how to solve a problem</a></p>
+<ul>
+<li>strangeloop 2011 gerald sussman <a href="https://youtu.be/HB5TrK7A4pI?t=3701">summary</a></li>
+<li>how can differing paradigms all fit into a language and talk, so the type of programming matches the thing it models</li>
+<li><a href="https://youtu.be/HB5TrK7A4pI?t=2431">constraint propogation (bi-directional equations)</a></li>
+<li>advances in science are based on useful lies</li>
+<li>hardware design that implements information propogation instead of logic gates. Highly parallel machines that don't need to sync</li>
+</ul>
+</li>
+<li><p>pointers?</p>
+</li>
+<li><p>memoized functions</p>
+</li>
+<li><p>assume lazy or assume eager? probably not assume async</p>
+<ul>
+<li>pure values assumed lazy. non-local or threadsafe references assumed eager. IO is ordered async</li>
+</ul>
+</li>
+<li><p><a href="https://whileydave.com/2022/06/15/type-checking-in-whiley-goes-both-ways/">bi-directional type inference</a></p>
+</li>
+<li><p>formal verification/probabilistic verification?</p>
+<ul>
+<li>verification of declared properties rather than full</li>
+</ul>
+</li>
+<li><p>resumable exceptions are just calls to undefined functions? Unwind the call stack to find a namespace containing the matching signature, or a traditional try/catch</p>
+</li>
+<li><p>un/boxing | splat | un/packing</p>
+<ul>
+<li>⊙ ∈ (set containing, or element of)</li>
+</ul>
+</li>
+<li><p><a href="https://en.wikipedia.org/wiki/Domain_of_a_function">function domain</a></p>
+</li>
+<li><p><a href="https://en.wikipedia.org/wiki/Information_flow_diagram">information flow diagram</a></p>
+</li>
+<li><p>abstract away the order of evaluation (which is the focus of procedural programming)</p>
+<ul>
+<li>focus on functions (composition?)</li>
+<li>focus on data (causal flow?)</li>
+</ul>
+</li>
+<li><p>comparators should return &gt;0 if greater than, 0 if equal, &lt;0 if less than</p>
+<ul>
+<li>greater numbers hint at larger distances between values (relative to total type space).</li>
+<li>for numbers, cmp(n, o) =: n-o</li>
+</ul>
+</li>
+<li><p><a href="https://code.jsoftware.com/wiki/NuVoc">j nuvoc</a></p>
+<ul>
+<li>filter in terms of sieve, define sort in terms fo permute<ul>
+<li>slice is filter</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>automatic function lifting (map) for <code>vector&lt;T&gt;</code> when <code>T</code> is expected</p>
+<ul>
+<li><code>f(T)-&gt;U</code> lifts to <code>f(vector&lt;T&gt;)-&gt;vector&lt;U&gt;</code></li>
+</ul>
+</li>
+<li><p>null types</p>
+<ul>
+<li><code>⊥</code> cannot appear in lists, so can map and filter are the same, a filtered out function returning <code>⊥</code></li>
+</ul>
+</li>
+<li><p>enums are numbers given names and treated as a distinct unit, finite const set?</p>
+</li>
+<li><p><code>count of element</code> operator defined for containers is equivalent to <code>contains</code> for sets</p>
+</li>
+<li><p>list comprehensions</p>
+</li>
+<li><p>partials + assignment allow for naming any stage of evaluation</p>
+</li>
+<li><p>can we do auto AOS↔SOA conversion</p>
+</li>
+<li><p>functions are closures, symbols are not
+«a b c»</p>
+</li>
+</ul>
+<h1>operators (functions of one or two arguments)</h1>
+<table>
+<thead>
+<tr>
+<th>base</th>
+<th>dyadic</th>
+<th>monadic</th>
+<th><code>/</code> prefix</th>
+<th><code>!</code> prefix</th>
+<th><code>:</code> prefix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>=</code></td>
+<td>equation</td>
+<td></td>
+<td>equal</td>
+<td>not equal</td>
+<td>assign</td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>multiply</td>
+<td></td>
+<td>and</td>
+<td>nand</td>
+<td>bit and</td>
+</tr>
+<tr>
+<td><code>+</code></td>
+<td>add</td>
+<td>abs</td>
+<td>or</td>
+<td>nor</td>
+<td>bit or</td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td>subtract</td>
+<td>invert</td>
+<td>xor</td>
+<td>xnor</td>
+<td>bit xor</td>
+</tr>
+<tr>
+<td><code>/</code></td>
+<td>divide</td>
+<td></td>
+<td>int div</td>
+<td>modulo</td>
+<td></td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td></td>
+<td></td>
+<td>less than</td>
+<td>not less than</td>
+<td>lshift</td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td></td>
+<td></td>
+<td>greater than</td>
+<td>not less than</td>
+<td>rshift</td>
+</tr>
+<tr>
+<td><code>.</code></td>
+<td>access</td>
+<td></td>
+<td></td>
+<td>safe access</td>
+<td></td>
+</tr>
+<tr>
+<td><code>&amp;</code></td>
+<td></td>
+<td>ref to</td>
+<td></td>
+<td>deref</td>
+<td></td>
+</tr>
+<tr>
+<td><code>!</code></td>
+<td></td>
+<td>not</td>
+<td></td>
+<td></td>
+<td>bit not</td>
+</tr>
+<tr>
+<td><code>_</code></td>
+<td></td>
+<td>floor</td>
+<td></td>
+<td>ceiling</td>
+<td></td>
+</tr>
+<tr>
+<td><code>|</code></td>
+<td>map/filter</td>
+<td>lambda</td>
+<td></td>
+<td></td>
+<td>mask</td>
+</tr>
+<tr>
+<td><code>:</code></td>
+<td></td>
+<td></td>
+<td>zip?</td>
+<td></td>
+<td>parse</td>
+</tr>
+<tr>
+<td>-------</td>
+<td>-----------</td>
+<td>-----------</td>
+<td>---------------</td>
+<td>---------------</td>
+<td>------------</td>
+</tr>
+</tbody>
+</table>
+<h1>special values</h1>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>!|</code></td>
+<td>filter out</td>
+</tr>
+<tr>
+<td><code>$</code></td>
+<td>mono argument</td>
+</tr>
+<tr>
+<td><code>.$</code></td>
+<td>left argument</td>
+</tr>
+<tr>
+<td><code>:$</code></td>
+<td>right argument</td>
+</tr>
+<tr>
+<td>------</td>
+<td>--------------------</td>
+</tr>
+</tbody>
+</table>
+<h1>unused symbols</h1>
+<p>@#%^~&quot;</p>
+<h1>literal types</h1>
+<table>
+<thead>
+<tr>
+<th>delimiter</th>
+<th>name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>(</code> <code>,</code> <code>)</code></td>
+<td>block/group</td>
+</tr>
+<tr>
+<td><code>[</code> <code>,</code> <code>]</code></td>
+<td>list</td>
+</tr>
+<tr>
+<td><code>{</code> <code>,</code> <code>}</code></td>
+<td>set</td>
+</tr>
+<tr>
+<td><code>{</code> <code>:</code> <code>,</code> <code>}</code></td>
+<td>dict</td>
+</tr>
+<tr>
+<td><code>&lt;</code> <code>&gt;</code></td>
+<td>symbol</td>
+</tr>
+<tr>
+<td><code>'</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>`</code></td>
+<td>comment?</td>
+</tr>
+<tr>
+<td><code>r'</code> <code>'</code></td>
+<td>raw string</td>
+</tr>
+<tr>
+<td><code>f'</code> <code>'</code></td>
+<td>format string</td>
+</tr>
+<tr>
+<td><code>R'</code> <code>'</code></td>
+<td>regex</td>
+</tr>
+<tr>
+<td>---------------</td>
+<td>-------------------</td>
+</tr>
+</tbody>
+</table>
+<h1>control flow</h1>
+<table>
+<thead>
+<tr>
+<th>delimiter</th>
+<th>name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>if then else</td>
+<td>ternary</td>
+</tr>
+<tr>
+<td><code>/?</code> <code>:</code> <code>:</code></td>
+<td>cmp</td>
+</tr>
+</tbody>
+</table>
+<h1>Fibonacci sequence</h1>
+<p><code>fib := | $ !&gt; 2 ? 1 : fib($-1) + fib($-2)</code></p>
+
+            <footer>
+                <a href="/">Home</a>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

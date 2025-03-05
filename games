@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="shortcut icon" href="/inc/favicon.jpg" type=image/x-icon">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/inc/common.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/comic-mono@0.0.1/index.min.css">
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"></script>
+    <script src="/inc/common.js"></script>
+    <div class="cover">
+        <div class="page">
+            <a class="bookmark" href="/"></a>
+            <p>a collection of games that I like</p>
+<h1>board games</h1>
+<h2>card games</h2>
+<p>played with a standard deck</p>
+<ul>
+<li>euchre<ul>
+<li>5-hand euchre</li>
+</ul>
+</li>
+</ul>
+<h1>tabletop roleplaying games</h1>
+<ul>
+<li>index card rpg</li>
+<li><a href="https://rollforshoes.com/">roll for shoes</a></li>
+</ul>
+<h1>video games</h1>
+<ul>
+<li><p>platformer</p>
+<ul>
+<li>portal</li>
+<li>celeste</li>
+<li>hollow knight</li>
+</ul>
+</li>
+<li><p>tactical</p>
+<ul>
+<li>into the breach</li>
+<li>xcom 2</li>
+</ul>
+</li>
+<li><p>cards</p>
+<ul>
+<li>inscryption</li>
+<li>slay the spire</li>
+</ul>
+</li>
+<li><p>arcade-like</p>
+<ul>
+<li>downwell</li>
+<li>beat saber</li>
+</ul>
+</li>
+<li><p>shooter</p>
+<ul>
+<li>borderlands 2</li>
+<li>bpm: bullets per minute</li>
+</ul>
+</li>
+<li><p>vibes</p>
+<ul>
+<li>horizon zero dawn</li>
+<li>outer wilds</li>
+<li>witcher 3</li>
+<li>dishonored</li>
+<li>subnautica</li>
+</ul>
+</li>
+<li><p>into the mines</p>
+<ul>
+<li>deep rock galactic</li>
+<li>terraria</li>
+<li>minecraft</li>
+</ul>
+</li>
+</ul>
+
+            <footer>
+                <a href="/">Home</a>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

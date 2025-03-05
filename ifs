@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="shortcut icon" href="/inc/favicon.jpg" type=image/x-icon">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/inc/common.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/comic-mono@0.0.1/index.min.css">
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"></script>
+    <script src="/inc/common.js"></script>
+    <div class="cover">
+        <div class="page">
+            <a class="bookmark" href="/"></a>
+            <p>{{?.note}}</p>
+<h1>Internal Family Systems</h1>
+<p>The <a href="https://en.wikipedia.org/wiki/Internal_Family_Systems_Model">Internal Family Systems Model</a> is a bit <a href="#demonic">strange</a>.
+<a href="disclaim#doctor">disclaimer</a></p>
+<p><a href="illeism">illeism</a></p>
+<p><code>7.61</code></p>
+<h2>terminology</h2>
+<h3>polarization</h3>
+<p>internal turmoil. Parts pull in opposing directions, because one part is seen as 'bad' or too extreme.</p>
+<h1>:x diy</h1>
+<p>Doing self-therapy is probably not as reliable/safe/effective as seeking out a trained therapist, but it's better than nothing.</p>
+<h1>:x demonic</h1>
+<p>Mark 5:9 Then Jesus asked him, “What is your name?” “My name is Legion,” he replied, “for we are many.”</p>
+<h1>:x self therapy</h1>
+<p>by Jay Earley</p>
+<h1>inbox</h1>
+<ul>
+<li><a href="https://www.theguardian.com/science/2016/jan/07/therapy-wars-revenge-of-freud-cognitive-behavioural-therapy">https://www.theguardian.com/science/2016/jan/07/therapy-wars-revenge-of-freud-cognitive-behavioural-therapy</a></li>
+</ul>
+
+            <footer>
+                <a href="/">Home</a>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

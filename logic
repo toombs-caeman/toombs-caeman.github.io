@@ -18,7 +18,17 @@
     <div class="cover">
         <div class="page">
             <a class="bookmark" href="/"></a>
-            <p>{{?.note}}</p>
+            <p>{{?.note}}
+augmenting the minds ability to predict the world through systems of symbolic manipulation.</p>
+<ul>
+<li>literacy</li>
+<li>numeracy<ul>
+<li>bayes, statistical reasoning</li>
+</ul>
+</li>
+<li>boolean logic</li>
+<li>logical fallacies</li>
+</ul>
 
             <footer>
                 <a href="/">Home</a>

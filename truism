@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="shortcut icon" href="/inc/favicon.jpg" type=image/x-icon">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/inc/common.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/comic-mono@0.0.1/index.min.css">
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"></script>
+    <script src="/inc/common.js"></script>
+    <div class="cover">
+        <div class="page">
+            <a class="bookmark" href="/"></a>
+            <p>{{?.note}}</p>
+<h1>Truisms</h1>
+<h2>Pareto 80-20</h2>
+<p>Usually phrased as '80% of the benefit comes from 20% of the effort'.
+Across many different fields, <a href="https://en.wikipedia.org/wiki/Pareto_principle">roughly 80% of consequences come from 20% of causes</a></p>
+<h2>Litany of Gendlin</h2>
+<pre><code>What is true is already so.
+Owning up to it doesn't make it worse.
+Not being open about it doesn't make it go away.
+And because it's true, it is what is there to be interacted with.
+Anything untrue isn't there to be lived.
+People can stand what is true,
+for they are already enduring it.
+-- [Eugene Gendlin](http://en.wikipedia.org/wiki/Eugene_Gendlin)
+</code></pre>
+<p><a href="https://www.lesswrong.com/tag/litany-of-gendlin">lw</a></p>
+<h2>Practice vs Theory</h2>
+<p>The difference between practice and theory is greater in practice than in theory.</p>
+<h2>Clarke's three laws</h2>
+<p>Any sufficiently advanced technology is indistinguishable from magic -- <a href="https://en.wikipedia.org/wiki/Arthur_C._Clarke">Arthur C. Clarke</a></p>
+<h2>Know Thyself</h2>
+<p><a href="https://en.wikipedia.org/wiki/Know_thyself">Know Thyself</a>,
+not as in thy autobiography, but as in thy operators's manual</p>
+
+            <footer>
+                <a href="/">Home</a>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

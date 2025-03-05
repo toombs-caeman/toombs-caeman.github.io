@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>vi</title>
+    <link rel="shortcut icon" href="/inc/favicon.jpg" type=image/x-icon">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/inc/common.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/comic-mono@0.0.1/index.min.css">
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"></script>
+    <script src="/inc/common.js"></script>
+    <div class="cover">
+        <div class="page">
+            <a class="bookmark" href="/"></a>
+            <h1>Learning Vim</h1>
+<h1>What is Vim</h1>
+<p>A venerable editor with a long history and a few different versions.</p>
+<p><a href="https://en.wikipedia.org/wiki/Ex_(text_editor)">ex</a> -&gt;
+<a href="https://en.wikipedia.org/wiki/Vi_(text_editor)">vi</a> -&gt;
+<a href="https://www.vim.org/">vim</a> -&gt;
+<a href="https://neovim.io/">neovim</a></p>
+<h1>Why learn (Neo)Vim?</h1>
+<ul>
+<li>If you spend a lot of time writing / editing text</li>
+<li>If you want to use the mouse less.</li>
+<li>If you program:<ul>
+<li>It is a powerful editor that can replicate all the features of a 'modern' IDE while being totally free, infinitely more configurable.</li>
+<li>It is (strictly, objectively) better than nano, and is almost always already available in any situation where one would use nano, such as in a restricted environment.</li>
+</ul>
+</li>
+<li>you can learn the basics of vim while using another editor by using a plugin (in vscode or intellij)<ul>
+<li><a href="https://www.youtube.com/watch?v=X6AR2RMB5tE">https://www.youtube.com/watch?v=X6AR2RMB5tE</a></li>
+</ul>
+</li>
+</ul>
+<h2>When not to learn vim</h2>
+<ul>
+<li>You rarely need to edit text. Vim does have a bit of a learning curve, and it takes consistent practice in the beginning to &quot;get it&quot;.</li>
+<li>Sublime text is everything you want from your editor.</li>
+<li>you don't have time to learn about and configure your tools.</li>
+</ul>
+<h1>Learning Vim</h1>
+<ol start="0">
+<li><p>install neovim</p>
+<ul>
+<li><code>winget install Neovim</code></li>
+<li><code>apt install neovim</code></li>
+<li>optionally install a <a href="https://neovim.io/doc/user/gui.html#third-party-guis">gui</a></li>
+</ul>
+</li>
+<li><p>In a terminal, run <code>nvim +Tutor</code>, then complete the tutorial.</p>
+</li>
+<li><p>Take a coffee break. You've earned it!</p>
+<ul>
+<li>You can stop here if you want. It's good to understand the defaults configuration and it's definitely usable but half the power of nvim is the ability to add plugins and your own configuration.</li>
+</ul>
+</li>
+<li><p>Kickstart your own configuration with <a href="https://github.com/nvim-lua/kickstart.nvim">kickstart.nvim</a></p>
+<ul>
+<li>follow the installation instructions in the README</li>
+</ul>
+</li>
+<li><p>Read kickstart's init.lua</p>
+<ul>
+<li>Go read the init.lua that kickstart installed. Having the best config in the world won't help you if you don't understand what it can do.</li>
+<li>Neovim (but not vim) is configured using the <a href="https://www.lua.org/">Lua Programming Language</a>.<ul>
+<li>If you have prior programming experience, but are unfamiliar with lua, check out <a href="https://learnxinyminutes.com/lua/">learnXinY:lua</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h1>Finding Plugins</h1>
+<p>After you've settled into using vim for a while, you may be looking for additional plugins. Here's a short list of where to find the goodies.</p>
+<ul>
+<li>nvim distributions package many plugins together. You may want to fully adopt one that aligns with what you want, or you can just explore what plugins they package, and copy the parts you like.<ul>
+<li><a href="http://www.lazyvim.org/">lazyvim</a></li>
+<li><a href="https://nvchad.com/">nvchad</a></li>
+<li><a href="https://www.lunarvim.org/">lunarvim</a></li>
+<li><a href="https://github.com/echasnovski/mini.nvim">mini</a> doesn't market itself as a distribution, but it pretty much is.</li>
+</ul>
+</li>
+<li><a href="https://github.com/akrawchyk/awesome-vim">vim plugin shortlist</a></li>
+<li>With a history of quality plugins: <a href="https://github.com/tpope?tab=repositories">tpope</a></li>
+<li>Creator of the package manager lazy.nvim <a href="https://github.com/folke?tab=repositories">folke</a></li>
+<li>Explore the <a href="https://github.com/echasnovski/mini.nvim/tree/main/readmes">mini library</a></li>
+<li>You can copy <a href="https://github.com/search?q=vim%20dotfiles&amp;type=repositories">other peoples dotfiles</a><ul>
+<li>you can copy <a href="https://github.com/toombs-caeman/dotfiles">mine</a> too</li>
+</ul>
+</li>
+</ul>
+<h1>advanced topics</h1>
+<ul>
+<li>marks</li>
+<li>macros</li>
+<li>vim.ui.select</li>
+</ul>
+<h1>Wrapping Up</h1>
+<p>What's more to be said? Nvim rocks</p>
+
+            <footer>
+                <a href="/">Home</a>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

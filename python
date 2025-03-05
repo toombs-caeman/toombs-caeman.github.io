@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="shortcut icon" href="/inc/favicon.jpg" type=image/x-icon">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/inc/common.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/comic-mono@0.0.1/index.min.css">
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"></script>
+    <script src="/inc/common.js"></script>
+    <div class="cover">
+        <div class="page">
+            <a class="bookmark" href="/"></a>
+            <h1>python programming</h1>
+<h2>getting started by level</h2>
+<ul>
+<li><p>for non-programmers</p>
+<ul>
+<li><a href="https://wiki.python.org/moin/BeginnersGuide/NonProgrammers">resource guide</a></li>
+<li><a href="https://automatetheboringstuff.com/">automate the boring stuff</a> (free online book)</li>
+</ul>
+</li>
+<li><p>for programmers</p>
+<ul>
+<li><a href="https://learnxinyminutes.com/docs/python/">basics syntax and usage</a></li>
+<li><a href="https://docs.python.org/3/library/functions.html">built-in functions</a></li>
+<li><a href="https://docs.python.org/3/library/stdtypes.html">standard types</a><ul>
+<li>most important: int, float, str, list, set, dict, range, iter</li>
+</ul>
+</li>
+<li><a href="https://docs.python.org/3/library/index.html">overview of standard library</a><ul>
+<li>most important: re, time, datetime, enum, math, random, itertools, functools, os, sys, logging, typing, unittest, pdb, venv, dataclasses</li>
+</ul>
+</li>
+<li>other important libraries<ul>
+<li>requests, beautifulsoup - working over HTTP</li>
+<li>numpy, pandas - number crunching</li>
+<li>matplotlib - data plotting</li>
+<li>django - web framework</li>
+<li>tk, wx - GUI development</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>advanced python stuff</p>
+<ul>
+<li><a href="https://docs.python.org/3/reference/datamodel.html">data model</a></li>
+</ul>
+</li>
+</ul>
+<h2>quickest start</h2>
+<ol>
+<li>check to see if python is already installed.<ul>
+<li>in the terminal, the python interpreter is accessed with the command <code>python</code>. You can exit the interpreter with Ctrl-D.</li>
+<li>If not available, install through your system package manager or by <a href="https://www.python.org/downloads/">downloading</a></li>
+<li>The package is probably called <code>python</code></li>
+</ul>
+</li>
+<li>create a file <code>hello.py</code> which contains the line <code>print(&quot;Hello World!&quot;)</code></li>
+<li>run the command <code>python hello.py</code><ul>
+<li>should see output <code>Hello World!</code></li>
+</ul>
+</li>
+</ol>
+
+            <footer>
+                <a href="/">Home</a>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -18,7 +18,20 @@
     <div class="cover">
         <div class="page">
             <a class="bookmark" href="/"></a>
-            <p>{{?.note}}</p>
+            <h1>Values</h1>
+<ul>
+<li>what is it that you value?<ul>
+<li>how do you find out</li>
+</ul>
+</li>
+<li>philosophical exploration of value<ul>
+<li>utilitarianism</li>
+<li>value of a human life</li>
+</ul>
+</li>
+<li>draining the shallows</li>
+<li>what is it that I value</li>
+</ul>
 
             <footer>
                 <a href="/">Home</a>

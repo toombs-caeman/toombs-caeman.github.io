@@ -1,0 +1,127 @@
+* { font-family: "Comic Mono"; }
+html { background: gainsboro; }
+body {
+    color:royalblue;
+    line-height: 1.5rem;
+    height: 100%;
+}
+
+a:link {
+    color: steelblue ;
+    text-decoration-style: dotted;
+}
+a:active { color: midnightblue; }
+a:visited { color: mediumslateblue; }
+a:hover {color: darkorange;}
+b { color:darkorange; }
+h1, h2, h3, h4, h5, h6, hr { color:midnightblue; }
+h1:first-of-type {
+    text-align: center;
+    flex: 2;
+}
+pre, code {
+    color:darkslategray;
+    background-color: lavender;
+    border-radius: 0.5rem;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+}
+.icon {
+    width: 2ch;
+    height: 2ch;
+}
+.title {
+    text-align: center;
+    flex: 2;
+}
+button {
+    color: steelblue;
+    background-color: thistle;
+    border: 2px solid #D0B8D0; /* thistle but darker */
+    border-radius: 5px;
+    box-shadow: 0 0.25rem 10px rgba(0 0 0 / 0.5);
+}
+button:hover { box-shadow: 0 0.2rem 5px rgba(0 0 0 / 0.5); }
+button:active{ box-shadow: 0 0.1rem 2px rgba(0 0 0 / 0.5); }
+/* https://stackoverflow.com/questions/3742975/subscript-and-superscript-for-the-same-element */
+sup, sub {
+    font-size: .75rem;
+    line-height: 1.0;
+}
+.supsub {
+    display: inline-block;
+}
+.supsub sup, .supsub sub {
+    position: relative;
+    display: block;
+}
+.supsub sub {
+    top: .3rem;
+}
+.overline {
+    text-decoration: overline;
+}
+
+.cover {
+    border-radius: 0 1rem 1rem 0;
+    padding: 0.25rem 1.25rem 1.20rem 0;
+    background-color: royalblue;
+    width: 65%;
+    margin: auto;
+}
+@media (max-width:1200px) {
+  .cover {
+    width: 75%;
+  }
+}
+@media (max-width:800px) {
+  .cover {
+    width: 95%;
+  }
+}
+.page {
+    padding: 1rem 2.5% 1rem 2.5%;
+    position: relative;
+    /*
+     * try to imitate the look of the edge of the stack of pages
+     * the colors are slightly darker cornsilk
+    */
+    box-shadow: 
+        inset 20px 0 20px -20px #BBB598,
+        0.25rem 3px 0 0 #EEE7CB,
+        0.50rem  6px 0 0 #DDD6BA,
+        0.75rem 9px 0 0 #CCC5A9;
+    /* dotgrid https://stackoverflow.com/questions/58391201/how-to-create-a-dotted-grid-graph-sheet-background-using-css */
+    --d: 0.1rem;
+    background : radial-gradient(
+     circle at
+        var(--d)
+        var(--d),
+     lightgray calc(var(--d) - 1px),
+     cornsilk var(--d)
+    )
+    1rem 1rem / 3rem 3rem;
+    min-height: 90vh;
+}
+
+.bookmark {
+    padding: 1rem;
+    --f: .4rem; /* control the folded part */
+    --r: .8rem; /* control the cutout */
+    position: absolute;
+    left: 1rem;
+    top: calc(-1*var(--f));
+    border: solid #0000;
+    border-width: 0 calc(2*var(--f)) var(--r) 0;
+    background: 
+    radial-gradient(50% 100% at bottom,#0005 98%,#0000 101%) 
+    100% 0/calc(2*var(--f)) var(--f) no-repeat border-box;
+    background-color: darkorange;
+    border-radius: var(--f) var(--f) 0 0;
+    clip-path: polygon(100% 0,0 0,0 100%,calc(50% - var(--f)) calc(100% - var(--r)),calc(100% - 2*var(--f)) 100%,calc(100% - 2*var(--f)) var(--f),100% var(--f));
+}
+
+footer { text-align: right; }
+
+/* animated nav icon https://www.w3schools.com/howto/howto_css_menu_icon.asp */
+

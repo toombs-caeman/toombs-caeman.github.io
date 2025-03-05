@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="shortcut icon" href="/inc/favicon.jpg" type=image/x-icon">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/inc/common.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/comic-mono@0.0.1/index.min.css">
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"></script>
+    <script src="/inc/common.js"></script>
+    <div class="cover">
+        <div class="page">
+            <a class="bookmark" href="/"></a>
+            <h1>preventing the collapse of civilization</h1>
+<p>terms</p>
+<ul>
+<li>industry - the modern mode of industrial production of goods, producing shoes in factories and farming with pesticides</li>
+<li>craft - the traditional craft of goods, making shoes from locally sourced leather and growing your own food</li>
+</ul>
+<h1>the situation</h1>
+<ul>
+<li>industry was bootstrapped from craft, which was itself bootstrapped by banging rocks together to make tools</li>
+<li>craft, once established, was relatively self sustaining, easing producing its own tools</li>
+<li>industry is now also self sustaining, as factories are built using factory produced standard parts<ul>
+<li>furthermore, toolchains are depending on ever more advanced materials (computers and modern metallurgy).</li>
+</ul>
+</li>
+<li>the many economic efficiencies of industry have hollowed out craft, as it is no longer profitable to be a craftsman.<ul>
+<li>industrial processes benefit from efficiencies of scale</li>
+</ul>
+</li>
+</ul>
+<h1>the horrible possibility</h1>
+<ul>
+<li>however unlikely, industry could collapse through a sufficient disruption of trade, material or energy availability, or knowledge transmission</li>
+<li>as knowledge of craft is no longer widely distributed, bootstrapping industry would be heavily delayed, even for a disruption as short as a single generation.</li>
+</ul>
+<h1>a potential bet against collapse</h1>
+<ul>
+<li>keeping craft alive<ul>
+<li>through subsidy?</li>
+</ul>
+</li>
+<li>graceful degradation of supply chains</li>
+</ul>
+<h1>:x other</h1>
+<p>what would it take to build a metal working shop capable of:</p>
+<ul>
+<li>originating cutting tools</li>
+<li>originating precision tools (precision lathe)</li>
+<li>reproducing itself using only human labor, scrap iron and wood as inputs</li>
+<li>producing increasingly advanced and automated tools:</li>
+<li>automating the production of:<ul>
+<li>wire</li>
+<li>springs</li>
+<li>screws</li>
+<li>nails</li>
+</ul>
+</li>
+</ul>
+<p>how much of a gap would there be between a shop like that, and reproducing early computers?</p>
+<ul>
+<li><p>vacuum tubes?</p>
+</li>
+<li><p><a href="https://simplifier.neocities.org/">computer hardware from scratch</a></p>
+</li>
+<li><p><a href="https://www.youtube.com/watch?v=pW-SOdj4Kkk">preventing the collapse of civilization</a> an excellent talk on technological complexity</p>
+</li>
+<li><p>clean room compilers</p>
+<ul>
+<li>what level of computing is it possible to audit and construct in 4 years (perhaps as a college degree) in order
+to circumvent the thompson attack? <a href="https://www.cs.cmu.edu/~rdriley/487/papers/Thompson_1984_ReflectionsonTrustingTrust.pdf">Trusting Trust - Ken Thompson</a></li>
+<li>what gains could be made by having a vertically integrated hardware and software stack in the hands of an individual,
+including the tools/process needed to implement it?</li>
+</ul>
+</li>
+<li><p>crafting heritage</p>
+<ul>
+<li>manufacturing (the production of goods, including software) lies on a spectrum between totally manual and totally automated.<ul>
+<li>by manual I mean a single person (or small group) can create some functional version of the product with locally
+available and unrefined materials</li>
+</ul>
+</li>
+<li>in all industries the extreme manual end can be done with very minimal tooling</li>
+<li>in some industries, the automated end can become self-recursive / self-reliant<ul>
+<li>using steel cauldrons to smelt steel</li>
+<li>using compiled compilers to compile compilers</li>
+<li>using computers to control the machines that make computers</li>
+</ul>
+</li>
+<li>for a self-reliant goods, a failure to recurse necessitates a sudden shift toward the manual end.</li>
+<li>In our current economy there is an extreme emphasis on automated production, because it scales better and is therefore more profitable.</li>
+<li>In the case of hobbyists, most only have the resources to experiment with very manual production.</li>
+<li>The middle ground is neglected. Lets call it 'semi-auto' or early industrial</li>
+<li><em>cue tinfoil hat</em></li>
+<li>this creates a potential for failure where a good is very self-reliant but unable to recurse for a short period.</li>
+<li>in response its industry is unable to sustain itself at current levels, and cannot effectively scale back to
+early industrial levels because that 'middle knowledge' isn't actively kept by anyone.</li>
+<li>If the failure is bad enough or the good sufficiently dependent on high quality recursion, it takes more than
+a generation to recover enough semi-auto capacity to start rebuilding fully automated capacities.</li>
+<li>at this point, not only has a generation been lost to re-industrialization, but the high end production knowledge
+has also degraded. Hopefully those running fully automated plants had the forethought to write down what they knew
+as the plants had to shut down. Hopefully that knowledge wasn't kept as an 'industry secret' for a company that
+could not possibly survive a full generation of reduced capacity.</li>
+<li><em>proceeds to solve a problem that probably doesn't exist</em></li>
+<li>support the working class of production by seizing... this isn't a shit post I swear.</li>
+<li>create an industry conservatory that works to refine 'clean room' toolchains and regularly rebuilds tools from
+the ground up as a way to ensure that there's always someone around who has done it.</li>
+</ul>
+</li>
+</ul>
+<h1>:x craft culture (Artes Mechanicae)</h1>
+<ul>
+<li><p>a craftsman's approach to tools - not 'does this provide any value', but 'does this provide enough value'</p>
+</li>
+<li><p>designing a workspace</p>
+</li>
+<li><p>manufacturing - mass production methods</p>
+</li>
+<li><p>creating precision tools out of imprecise materials?</p>
+<ul>
+<li>origin of precision - <a href="https://www.youtube.com/watch?v=gNRnrn5DE58">https://www.youtube.com/watch?v=gNRnrn5DE58</a></li>
+<li>bootstrapping principles</li>
+<li>methods<ul>
+<li>flatness - three plate method</li>
+<li>angles - straight edge and compass</li>
+<li>roundness -</li>
+<li>twist - winding sticks</li>
+<li>screw origination</li>
+</ul>
+</li>
+<li>tools<ul>
+<li>lathe</li>
+<li>square</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>physical sciences</p>
+<ul>
+<li>chemistry<ul>
+<li>periodic table</li>
+</ul>
+</li>
+<li>physics</li>
+</ul>
+</li>
+<li><p>civil engineering</p>
+<ul>
+<li>logistics</li>
+<li>energy production</li>
+<li>architecture</li>
+<li>water/waste</li>
+</ul>
+</li>
+<li><p>materials - <a href="https://simplifier.neocities.org/materials.html">simplifier</a></p>
+<ul>
+<li>fiber</li>
+<li>metal</li>
+<li>clay</li>
+<li>wood</li>
+<li>glass</li>
+<li>fire/energy</li>
+</ul>
+</li>
+<li><p>basic chemicals</p>
+<ul>
+<li>oils</li>
+<li>wax</li>
+<li>alcohol</li>
+<li>vinegar</li>
+<li>soap</li>
+</ul>
+</li>
+<li><p>surface treatments</p>
+</li>
+<li><p>edge treatments</p>
+</li>
+<li><p><a href="https://samoburja.com/on-the-loss-and-preservation-of-knowledge/">loss and preservation of knowledge</a></p>
+</li>
+<li><p>preventing a capability collapse  - maintaining craftsman in case industrialized production falls flat</p>
+<ul>
+<li>How To Invent Everything: The Time Traveler's Guide (ex prima)</li>
+<li><a href="https://simplifier.neocities.org/">https://simplifier.neocities.org/</a></li>
+<li><a href="https://www.opensourceecology.org/gvcs/">https://www.opensourceecology.org/gvcs/</a></li>
+</ul>
+</li>
+<li><p>ex prima - reasoning from first principles</p>
+</li>
+</ul>
+
+            <footer>
+                <a href="/">Home</a>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="shortcut icon" href="/inc/favicon.jpg" type=image/x-icon">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/inc/common.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/comic-mono@0.0.1/index.min.css">
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"></script>
+    <script src="/inc/common.js"></script>
+    <div class="cover">
+        <div class="page">
+            <a class="bookmark" href="/"></a>
+            <ul>
+<li>sfx, general tools and tips<ul>
+<li>GM travel kits</li>
+<li>VTT</li>
+</ul>
+</li>
+</ul>
+<h1>setting the stage</h1>
+<p>if you're lucky enough to have your own space to play in, invest in some candles or other props to set the mood</p>
+<h1>chits</h1>
+<p>You can always right down a number to track XP and pips, but the extra physicality of having physical markers is nice.</p>
+<p>I like using old public transit coins to hand out as XP counters. You can buy an assorted set of them on ebay for pretty cheap.</p>
+<p>Timers for abilities are usually kept using a bag of extra d6s. Tracks are only used for long term stuff which sticks around for a while.</p>
+<p>You can use different colors of glass stones for enemies, to mark treasures or other points of interests on your map.</p>
+<h1>props</h1>
+<ul>
+<li><a href="https://www.sunnyskyz.com/happy-videos/12925/Enchanting-Elixirs-The-Process-Of-Making-A-Potion">potions</a> <a href="https://www.tiktok.com/@whiskers_and_witchcraft">tiktok</a></li>
+<li>3d printed items</li>
+</ul>
+<h1>paper props</h1>
+<ul>
+<li>maps - overview and battlemaps</li>
+<li>letters - letter locking and wax seals</li>
+</ul>
+<h2>handwriting</h2>
+<ul>
+<li>consistent x height</li>
+<li>consistent ascender and descender angle</li>
+<li>consistent letter forms</li>
+</ul>
+<p>how to create alternative handwritten fonts?</p>
+<h2>distressing paper</h2>
+<ul>
+<li>tea/coffee</li>
+<li>tearing</li>
+<li>burning</li>
+</ul>
+<h1>custom dice</h1>
+<p>You can buy a bag of blank dice for very cheap on Amazon.
+I use a wet erase marker to test out custom markings.</p>
+<p>Once I'm happy with it, I'll go over the marker with an engraving pen / dremel to make a groove.
+You can fill the groove with craft paint and wipe the die face over a sheet of paper on a flat surface to get a crisp edge.</p>
+<h1>ai image generation</h1>
+<p>I use <a href="https://github.com/Acly/krita-ai-diffusion">krita ai diffusion</a> to create quick environmental backdrops and character art.</p>
+<ol>
+<li><p>generate image from base prompt at 100% strength</p>
+</li>
+<li><p>lightly edit AI glitches. Don't worry about fine details, just get the large shapes and color blocks right.</p>
+</li>
+<li><p>regenerate image with the same prompt at ~80% strength</p>
+</li>
+<li><p>chuck all the images in a google slides presentation</p>
+</li>
+<li><p>give a title to each slide so that they can be jumped to easily from the presenter view</p>
+</li>
+<li><p>you can use presenter notes for room descriptions, etc. They can't be edited live though. I use a physical notebook instead.</p>
+</li>
+</ol>
+<h1>soundboard</h1>
+<p>this just loads youtube videos in the background and plays the audio.
+gives some ambiance.
+<a href="soundboard">soundboard</a></p>
+<h1>miniatures</h1>
+<ul>
+<li>3d printing or purchasing</li>
+<li>painting</li>
+<li>kitbashing<ul>
+<li>monster bashing (miscast)</li>
+</ul>
+</li>
+</ul>
+<h2>printable minis</h2>
+<p>The <a href="https://icrpgcommunitycontent.com/resources/">ICRPG printable minis</a> are really good</p>
+<h1>costumes</h1>
+<p>I've not done this, but it could be fun.</p>
+<h1>terrain</h1>
+<h1>accents / voices</h1>
+<p>This is not something I really do, but it could be fun.
+<a href="https://www.youtube.com/watch?v=FVmAEezr6ao">100 different voices</a></p>
+<h1>scene card</h1>
+<p>Write SCENE on an index card that you can show to the players when they should end a scene, either because it's dragging or because there's nothing left to find there.</p>
+
+            <footer>
+                <a href="/">Home</a>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
