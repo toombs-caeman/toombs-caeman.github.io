@@ -19,74 +19,117 @@
         <div class="page">
             <a class="bookmark" href="/"></a>
             <h1>Notebook System</h1>
-<p>I've kept <a href="pens">physical notebooks</a> for over a decade now, I've used various analog task-tracking/planner systems and for the past five years or so I've been working on a project I call the <strong>primer</strong>. I'll spare you the <a href="#story">origin story</a> and just focus on the method I use now.</p>
+<p>I've kept <a href="pens">physical notebooks</a> for over a decade now, and over the years I've tried a few of the popular journaling and analog task-tracking/planner systems, but they've never stuck. I've found a few good ideas here and there, but most systems are too rigid or require too much upkeep. Here I'll talk about the system I currently use, and a little about how I came to that system.</p>
+<h2>Notebook Setup</h2>
 <p>Every notebook gets the same setup:</p>
 <ul>
 <li>With the front of the notebook up, write along fore-edge in black.<ul>
-<li>The name of the book goes on the left and its number goes on the right.</li>
-<li>The name is usually the year in which it's started and the role it plays.</li>
-<li>The number just goes in sequence.</li>
+<li>First is (usually) the year in which the notebook is started.</li>
+<li>Then, the name of the book, usually what it's for.</li>
+<li>Finally, all the way to the right is the notebooks serial number, which is unique among all my notebooks.</li>
 </ul>
 </li>
-<li>Title page - the first page (on the right side) gets my name, contact info, and the name of the notebook. This is page zero.</li>
+<li>Title page - page 0 gets my name, contact info, and the name of the notebook. This is page zero.</li>
+<li>Index - The first two page spread (page 1 and 2)<ul>
+<li>Pages are referenced like <code>topic:20</code>. topic <em>then</em> page number, so theres' room add more pages later, if I keep writing about the same topic.</li>
+<li>topics here tend to be more general than page titles</li>
+<li>A page may be indexed under multiple topics, or none at all, depending on when I expect to want to find that page again.</li>
+</ul>
+</li>
+<li>Structured Index - the second two page spread<ul>
+<li>This is written after a notebook is full, and is mostly a second attempt at writing the optimal index.</li>
+<li>This helps to make the older notebooks easier to quickly flip through and therefore more useful.</li>
+</ul>
+</li>
+</ul>
+<h2>Page Layout</h2>
+<ul>
+<li>Titles are centered on the first line.</li>
 <li>Even number pages are numbered in the top right corner (zero is even).</li>
-<li>Index spread - the first two page spread is for the Index.<ul>
-<li>Pages are referenced like <code>title:20</code>. Title <em>then</em> page number, so theres' room add more pages later.</li>
+<li>I try to keep pages atomic, meaning that they represent a single idea (or cluster of ideas), since the reference system links to a page but isn't more granular.</li>
+<li>General references and backlinks go on the last line. Don't write content on the last line of the page.</li>
 </ul>
-</li>
-<li>Page titles are centered.</li>
-</ul>
-<p>I usually have a few notebooks active at any given time. The division isn't so much topical as it is related to the context in which I would want to look back at something I've written.
-Right now I've got:</p>
+<h2>Multiple Notebooks</h2>
+<p>I usually have a few notebooks active at any given time. The division isn't so much topical as it is related to the context in which I would want to look back at something I've written.</p>
+<p>Right now I've got:</p>
 <ul>
-<li>a journal/planner</li>
-<li>one for extended notes (usually for the primer)</li>
-<li>one for D&amp;D stuff</li>
+<li>a journal/scratchpad/planner - I keep this with me while working, but usually don't reference notes more than a few days old. I usually don't write long-form ideas in this kind of notebook.</li>
+<li>one for extended notes - I write in this less frequently, but I am more likely to refer back to it later.</li>
+<li>one for D&amp;D stuff - used when prepping or running a session</li>
 </ul>
-<p>Everything of importance is written into the notebooks. This ensures no writing can get lost without it being very obvious and also ensures that everything can be referenced in a uniform way.</p>
-<h1>:x story</h1>
-<p>I started out using the <strong>Bullet Journal</strong> method but found it didn't suit me.</p>
-<ul>
-<li>calendar bound tasks are better tracked on an electronic calendar which can send notifications (push rather than poll)</li>
-<li>some of the journaling and writing I do is worth revisiting but most of my day to day tasks are not. Keeping the two interspersed diluted both efforts. I keep two separate notebooks now.</li>
-<li>migration, which is central to the method, seemed wasteful and tedious.</li>
-</ul>
-<p>While I still use something like the bullet journal method of marking tasks, the higher level process is much more in the style of <strong>Getting Things Done</strong>.</p>
-<p>I've also taken some inspiration from the principles of <strong>Zettelkasten</strong>, but the idea of using loose index cards doesn't appeal to me (except for <strong>recipes</strong>).</p>
 <h2>References</h2>
-<p>References are written shorthand that [^links] things together.
-I try to keep the topic of each page <strong>atomic</strong> so that references point to a <a href="#single">single idea</a>.</p>
+<p>References are written shorthand that links things together.</p>
 <p>here are some examples:</p>
 <ul>
 <li><code>71</code> or <code>(71)</code> - page 71 in the current notebook (current as in the notebook containing the reference).</li>
 <li><code>7.71</code> - page 71 in notebook 7</li>
 <li><code>(dune 106)</code> - page 106 of the book <em>Dune</em>. (at least of my copy, and if I care to reference it I probably have one)</li>
-<li><code>YYYY-MM-DD</code> - date format</li>
 </ul>
-<h1>:x single ideas</h1>
-<p>This is tricky when some 'single ideas' are actually a connection between other ideas, some sort of narrative, or an argument that connects ideas in sequence. If an idea is worth refering to in isolation it gets its own page (and a backlink from the sequence).</p>
-<p>[^links]:
-In the messy world of ideas, I've found that organizing things is a struggle.</p>
+<p>It's that simple.</p>
+<h2>Task Bullets</h2>
+<ul>
+<li>tasks in the planner are marked with a bullet point <code>•</code></li>
+<li>complete tasks are have their bullet crossed out <code>X</code><ul>
+<li>questions have the answer written inline.</li>
+</ul>
+</li>
+<li>tasks that are not complete, but no longer relevent are <del>struck through</del></li>
+<li>tasks that have been scheduled (put on my calendar) use the bullet <code>&lt;</code></li>
+<li>tasks that have been moved elsewhere (but not scheduled) use the <code>&gt;</code> bullet<ul>
+<li>this could happen if I move a task to a project specific task tracker or I could just be consolidating stuff within the notebook.</li>
+</ul>
+</li>
+</ul>
+<h2>External Tools</h2>
+<p>Besides just the notebooks, some things are essential for the system to work.</p>
+<ul>
+<li>google calendar</li>
+<li>a bookshelf - for notebooks, and also books that I reference in them.</li>
+</ul>
+<p>It is essential to always be able to 'capture' an idea in the moment. Ideally the notebook is on hand, but if it isn't. I have standard places to get it out of my head.</p>
+<ul>
+<li>jist, a note taking app for my phone</li>
+<li>notes.md, a file on my computer</li>
+<li>I've also emailed myself before</li>
+</ul>
+<h1>Why this system?</h1>
+<p>Everything of importance is written into the notebooks. The notebook and page numbering ensures no writing can get lost without it being very obvious and also ensures that everything can be referenced in a uniform way.</p>
+<p>I see value in being able to look back in time with some accuracy (ie a complete snapshot of that point in time) but I believe 'review-value' density is more important than exhaustiveness. This is a major reason that the planner is separate from the long-form notes. There's enough info overload in my life.</p>
+<p>References are quick and easy to write. They're simple enough that I won't ever forget what they're supposed to mean.</p>
+<p>The system needs to be as low maintenance, low friction and uncomplicated as possible, or I'll procrastinate, use something else, or forget how it works. The system is pretty bare bones, but manages to provide 90% of the value I ever got out of more complete systems.</p>
+<h1>Rough edges</h1>
+<h2>jist vs calendar vs notebooks</h2>
+<ul>
+<li><p>sometimes I don't have my notebooks on hand and only have my phone, but I need to write something down quickly. I <a href="https://github.com/toombs-caeman/jist">wrote an app</a> for it. Things of this nature are almost always transitory anyway.</p>
+</li>
+<li><p>calendar bound tasks are better tracked on an electronic calendar which can send notifications (push rather than poll)</p>
+</li>
+<li><p>Sometimes there are ideas which you want to be sure to revisit <strong>at some point</strong>, but not on any specific day. I keep a note associated with each solstice and equinox, and then I have a calendar notification remind me to check it on those days.</p>
+</li>
+</ul>
+<p>It can be easy to forget about one of these places and not check it for a long time. Ideas can get lost/waylaid this way.</p>
+<h2>tag vs category vs topic</h2>
+<p>In the messy world of ideas, I've found that organizing things is a struggle.</p>
 <p>The idea of tagging generally implies a duality between the task of generating content and categorizing it. One side or the other inevitably gets neglected, and ultimately it's a false duality anyway, since metadata is just data. What happens if you have thoughts on the category as a whole? Is there a privileged index which is somehow special? Pretty soon you'll have <a href="tao#42">ten thousand kinds of data</a>.</p>
-<p>Categories are like tags but worse, since they also enforce an unwarrented heirarchy. Also, because namespaces within two categories are separate, you must always copy the whole path to disambiguate references</p>
+<p>Categories are like tags but worse, since they also enforce an unwarranted heirarchy. Also, because namespaces within two categories are separate, you must always copy the whole path to disambiguate references</p>
 <p>I haven't gotten completely away from these problems with this reference system, but it's simple enough to keep using. References are unintrusive as possible. 'Categories' or 'Collections' and even the 'Index' are just pages that are referenced like any other.</p>
-<h2>Closing Thoughts</h2>
-<p>This is the core of the system, just a uniform way to number things so they can be referenced, yet I've found it incredibly valuable to look back through my thoughts on occassion. Its simplicity and flexibility are the real strengths.</p>
+<h2>atomic ideas</h2>
+<p>I try to keep the topic of each page <strong>atomic</strong> so that references point to a single idea. This doesn't always work.
+This is tricky when some 'single ideas' are actually a connection between other ideas, some sort of narrative, or an argument that connects ideas in sequence. If an idea is worth refering to in isolation it gets its own page (and a backlink from the sequence).</p>
+<h2>referencing urls</h2>
+<p>I haven't figured out a good way to write about websites. Ideally I'd have something as easy as a page reference, but for a wayback machine link. I want an archive of that page as it exists when I'm writing about it.</p>
+<h1>How it came to this?</h1>
+<p>I started out using the <a href="https://bulletjournal.com/"><strong>Bullet Journal</strong></a> method but found it didn't suit me. I never got around to doing the 'migration' that bullet journalling requires. It just seemed wasteful and tedious. The task bullet systems I still use is derived from that.</p>
+<ul>
+<li>some of the journaling and writing I do is worth revisiting but most of my day to day tasks are not. Keeping the two interspersed diluted both efforts. I keep two separate notebooks now.</li>
+</ul>
+<p>While I still use something like the bullet journal method of marking tasks, the higher level process is much more in the style of <strong>Getting Things Done</strong>.</p>
+<p>I've also taken some inspiration from the principles of <strong>Zettelkasten</strong>, but the idea of using loose index cards doesn't appeal to me (except for <strong>recipes</strong>).
+It is too easy to misplace an idea. I can lose my thoughts well enough on my own. Paper is supposed to prevent that.</p>
+<p>I consider the journal to be a 'permanent' record. The todo lists are deliberately transient. If I'm planning a larger project or something important happens it usually goes in the journal, but the day to day mechanics of doing it don't.</p>
+<h1>Closing Thoughts</h1>
+<p>This is the core of the system, just a place to store my thoughts and a uniform way to number them so they can be referenced, yet I've found it incredibly valuable to look back through my thinking on occassion. Its simplicity and flexibility are the real strengths.</p>
 <p>In the future I'll polish up a few sections of notes to add to the site.</p>
-<h1>:x TODO</h1>
-<ul>
-<li>describe planner</li>
-<li>describe primer</li>
-<li>describe D&amp;D notes
-<a href="https://bulletjournal.com/">Bullet Journal</a>
-I see value in being able to look back in time with some accuracy but I believe 'review-value' density is more important than exhaustiveness. There's enough info overload in my life.</li>
-</ul>
-<p>I prefer the <a href="https://rhodiapads.com/collections_premium_rhodiarama_soft.php">Sapphire A5 dot-grid Rhodiarama Soft Cover (~$18)</a>  notebook
-with a black <a href="http://pilotpen.us/brands/mr-metropolitan/mr-metropolitan-fountain/?product=1164">Pilot Metropolitan (~$19)</a> fountain pen
-and Noodler's <a href="https://noodlersink.com/product/19808-heart-of-darkness-4-5-oz/">Heart of Darkness (~$19)</a> ink.</p>
-<ul>
-<li>I consider the journal to be a 'permanent' record. The todo lists are deliberately transient. If I'm planning a larger project or something important happens it usually goes in the journal, but the day to day mechanics of doing it don't. I leave space by the index for a 'structured index' to be completed when the book is full. It groups pages by topic rather than the order in which I happened to write them.</li>
-</ul>
 
             <footer>
                 <a href="/">Home</a>

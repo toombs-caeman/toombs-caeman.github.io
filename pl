@@ -507,7 +507,7 @@ The monolith can compile real world performance analytics into verilog, to produ
 <h3>computer literacy</h3>
 <p>the day everyone has a basic understanding of computing we will see a fundamental shift in our society similar to the shift seen in preliterate to literate societies.
 It think it may be useful to develop a lingua franca for this situation while we have the opportunity.</p>
-<h1>:x fractal</h1>
+<h2>fractal</h2>
 <p>the same ideas recur, with varying levels of sophistication, in widely different contexts.</p>
 <p><a href="https://en.wikipedia.org/wiki/Inter-process_communication">IPC</a> is just <a href="https://en.wikipedia.org/wiki/Computer_network">networking</a>.</p>
 <p>ISAs are DSLs</p>
@@ -517,8 +517,6 @@ It think it may be useful to develop a lingua franca for this situation while we
 If a program can be programmatically re-installed or updated when needed, how is that different than a cached web resource?
 Even a compiled binary could be considered a cache of the source (again if it could be dynamically recompiled when needed).</p>
 <p>compilation and compression are intimately linked.</p>
-<h1>:x inbox</h1>
-<p>finish treerat maybe?</p>
 
             <footer>
                 <a href="/">Home</a>

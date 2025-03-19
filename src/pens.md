@@ -1,4 +1,3 @@
-{{?.note}}
 # Pen & Paper
 
 Writing by hand just feels *different* than typing. My thoughts tend to be more collected. Each word is slower to write but also more deliberate. The words are denser. Sentences less stuffed with filler. Hestitation, timidity or certainty are conveyed in the nuance of line weight and cramped half<span style="font-size:0.25em"> </span>space between words.
@@ -7,11 +6,11 @@ I fell in love with fountain pens a few years ago.
 
 Fountain pens in particular have a certain grace. You don't have to force it. The lines flow and the inks are beautiful.
 
-The [permanence](#permanence) of pens is comforting. There is no erasing mistakes, so I don't have to worry about editing and re-doing [sections](#website). It's a stark contrast to the ever-changing nature of my profession.
+The permanence of pens is comforting. There is no erasing mistakes, so I don't have to worry about editing and re-doing sections. It's a stark contrast to the ever-changing nature of my profession.
 
 Like any hobby, you can spend as much as you want on pens and paper, but it doesn't have to break the bank to be fulfilling.
 For me it's about enhancing the experience of writing, not having some *thing*.
-Some people seek out a [grail pen](#grail) and that's cool, but not why I'm here.
+Some people seek out a grail pen and that's cool, but not why I'm here.
 
 so anyway, here's some stuff I liked and some I didn't.
 
@@ -52,7 +51,7 @@ The vintage stuff is a whole other side I haven't explored yet.
 * Pilot kon-peki - a little lighter than Waterman Serentiy Blue, and with more variation in light and dark, which I like. My current goto. Not [water safe](https://www.jetpens.com/blog/The-Best-Waterproof-Fountain-Pen-Inks/pt/829) though, easily smudges with your finger
 
 ## Paper
-I write almost exclusively in rhodia dotgrid notebooks for things I intend to keep, or on loose copier paper for things I don't.
+I write almost exclusively in rhodia dotgrid notebooks (specifically the Sapphire A5 dot-grid Rhodiarama Soft Cover) for things I intend to keep, or on loose copier paper for things I don't.
 The notebooks are more expensive than I'd like, but I'll be darned if they aren't everything I want.
 
 Moleskine notebooks don't do it for me. Leuchtturm is ok, not my preference.
@@ -61,17 +60,10 @@ Moleskine notebooks don't do it for me. Leuchtturm is ok, not my preference.
 [Book Darts](https://www.bookdarts.com/) are little points of folded metal that clip on the edge of the page like a fancy paperclip. The notebook closes flat even with them, and they don't bend the paper.
 I keep a few tucked in the back of each notebook just in case.
 
+I don't plan to every buy any super expensive pens but if I did it would be the black striped [Pilot Murex](https://stutler.cc/pens/murex/index.html).
+
 ## But what do I write?
 Journal entries, task planning stuff, fiction.
 I'll publish more of that later.
 For now, here's [how it's all organized](notebook.md).
-
-# :x website
-unlike writing this website. I've written this introduction about five times and I still don't know if it would make sense to anyone else. Ugh, editing sucks.
-
-# :x permanence
-[pants are an illusion](https://www.youtube.com/watch?v=0APlRcQMJac) and so is permanence.
-
-# :x grail
-I don't plan to buy one but if I did it would be the black striped [Pilot Murex](https://stutler.cc/pens/murex/index.html).
 

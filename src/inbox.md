@@ -1631,4 +1631,8 @@ failure of overcorrection - perceiving behavior to be unoptimal, when other aspe
 
 
 when to learn just enough vs learn in depth? 
-[about/ideas/now](https://aboutideasnow.com/about)
+
+* [about/ideas/now](https://aboutideasnow.com/about)
+* [personal capitol](https://training.kalzumeus.com/newsletters/archive/do-not-end-the-week-with-nothing)
+* not sure how I feel about this one [learn in public](https://www.swyx.io/learn-in-public)
+* https://diataxis.fr/

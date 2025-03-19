@@ -363,7 +363,7 @@ I believe all the pieces exist, in one form or another. The only question is if 
 the day everyone has a basic understanding of computing we will see a fundamental shift in our society similar to the shift seen in preliterate to literate societies.
 It think it may be useful to develop a lingua franca for this situation while we have the opportunity.
 
-# :x fractal
+## fractal
 the same ideas recur, with varying levels of sophistication, in widely different contexts.
 
 [IPC](https://en.wikipedia.org/wiki/Inter-process_communication) is just [networking](https://en.wikipedia.org/wiki/Computer_network).
@@ -379,6 +379,3 @@ If a program can be programmatically re-installed or updated when needed, how is
 Even a compiled binary could be considered a cache of the source (again if it could be dynamically recompiled when needed).
 
 compilation and compression are intimately linked.
-
-# :x inbox
-finish treerat maybe?
