@@ -25,6 +25,7 @@ title: TODO
 * go through [inbox](inbox.md)
 * publish from notebooks
 * link/blog roll
+* allow [comments](https://giscus.app/)?
 ```mermaid
 graph TD;
     A-->B;
